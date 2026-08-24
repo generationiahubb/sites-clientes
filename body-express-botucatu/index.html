@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body Express Botucatu | Treino que transforma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --brand-900:#0A1B3D;
+    --brand-800:#12295C;
+    --brand-700:#1B3F87;
+    --brand-600:#2554B3;
+    --brand-500:#2D6CDF;
+    --brand-400:#5C97FF;
+    --brand-100:#DCE9FF;
+    --brand-50:#F0F6FF;
+    --ink:#101826;
+    --gray-600:#58657A;
+    --gray-400:#92A0B5;
+    --white:#FFFFFF;
+    --star:#FFB020;
+    --shadow: 0 10px 30px rgba(10,27,61,0.14);
+    --radius: 16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.55;}
+  h1,h2,h3,.display{font-family:'Poppins',sans-serif;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--brand-500);color:#fff;box-shadow:0 8px 20px rgba(45,108,223,.35);}
+  .btn-primary:hover{background:var(--brand-600);}
+  .btn-outline{background:#fff;color:var(--brand-700);border-color:var(--brand-100);}
+  .btn-outline:hover{border-color:var(--brand-400);}
+  .btn-outline-dark{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.35);}
+  .btn-outline-dark:hover{border-color:#fff;}
+  .btn-ghost-light{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.35);}
+  .btn-on-brand{background:#fff;color:var(--brand-700);}
+  .btn-on-brand:hover{background:var(--brand-50);}
+
+  /* Utility bar */
+  .utility-bar{background:linear-gradient(90deg,var(--brand-900),var(--brand-800));color:#C9D9F5;font-size:12.5px;}
+  .utility-bar .container{display:flex;align-items:center;justify-content:space-between;padding:9px 24px;flex-wrap:wrap;gap:8px;}
+  .utility-links{display:flex;align-items:center;gap:22px;}
+  .utility-links a{opacity:.9;transition:opacity .15s;}
+  .utility-links a:hover{opacity:1;}
+  @media(max-width:760px){.utility-links span:not(:first-child){display:none;}}
+
+  /* Header / main nav */
+  header{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,var(--brand-700),var(--brand-500));transition:box-shadow .3s ease;}
+  header.scrolled{box-shadow:0 10px 26px rgba(10,27,61,.25);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;}
+  .logo{display:flex;flex-direction:column;align-items:flex-start;line-height:.85;font-family:'Poppins',sans-serif;font-weight:800;font-size:22px;color:#fff;letter-spacing:.3px;}
+  .logo .kicker{font-family:'Caveat',cursive;font-weight:600;font-size:12.5px;color:var(--brand-100);letter-spacing:.5px;margin-bottom:2px;}
+  .logo .word{display:flex;}
+  .logo span.light{font-weight:800;color:#fff;}
+  .logo span.pop{font-weight:900;color:var(--brand-100);}
+  .nav-links{display:flex;gap:30px;font-size:14.5px;font-weight:500;color:#fff;}
+  .nav-links a{opacity:.85;transition:opacity .15s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{display:flex;align-items:center;gap:16px;}
+  .nav-search{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;transition:background .2s;flex:none;}
+  .nav-search:hover{background:rgba(255,255,255,.28);}
+  @media(max-width:860px){.nav-links{display:none;}}
+
+  /* ===== HERO — ASYMMETRIC_EDITORIAL ===== */
+  .hero{position:relative;padding:0;background:var(--brand-900);overflow:hidden;min-height:94vh;display:flex;flex-direction:column;justify-content:center;}
+  .hero__inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr 0.85fr;align-items:start;min-height:78vh;gap:24px;padding-top:8vh;padding-bottom:56px;}
+  @media(max-width:1024px){.hero__inner{grid-template-columns:1fr;padding-top:5vh;}}
+  .hero__copy{max-width:560px;padding:24px 0;}
+  @media(max-width:1024px){.hero__copy{max-width:100%;padding:36px 0 0;}}
+  .hero__badge{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);font-weight:600;font-size:12.5px;padding:7px 14px;border-radius:999px;margin-bottom:22px;color:#fff;}
+  .hero__badge .blip{width:7px;height:7px;background:var(--brand-400);border-radius:50%;}
+  .hero__tag{font-family:'Poppins',sans-serif;font-weight:900;font-size:clamp(2.3rem,5.4vw,3.9rem);line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;color:#fff;max-width:11ch;}
+  .hero__script{font-family:'Caveat',cursive;font-weight:700;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1;margin-top:2px;background:linear-gradient(100deg,var(--brand-400),#fff 55%,var(--brand-400));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero__lead{margin-top:20px;font-size:16.5px;color:#D6E4FA;max-width:44ch;}
+  .hero__cta{margin-top:32px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+
+  .hero__art-wrap{position:relative;height:64vh;min-height:420px;}
+  @media(max-width:1024px){.hero__art-wrap{height:52vh;min-height:340px;margin-top:8px;}}
+  .hero__art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(14% 0, 100% 0, 100% 100%, 0% 100%);}
+  @media(max-width:1024px){.hero__art{clip-path:polygon(6% 0, 100% 0, 100% 100%, 0% 100%);}}
+  .hero__art-overlay{position:absolute;inset:0;clip-path:polygon(14% 0, 100% 0, 100% 100%, 0% 100%);background:linear-gradient(200deg, rgba(10,27,61,.05) 30%, rgba(10,27,61,.75) 100%);}
+  @media(max-width:1024px){.hero__art-overlay{clip-path:polygon(6% 0, 100% 0, 100% 100%, 0% 100%);}}
+  .hero__stat{position:absolute;z-index:3;top:-18px;left:calc(14% + 18px);background:rgba(255,255,255,.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.35);border-radius:16px;padding:13px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 14px 34px rgba(0,0,0,.3);color:#fff;transform:rotate(-3deg);transition:transform .4s ease;}
+  .hero__stat:hover{transform:rotate(0deg);}
+  .hero__stat .stars{color:var(--star);font-size:14px;letter-spacing:1px;}
+  .hero__stat b{font-family:'Poppins',sans-serif;font-size:19px;display:block;}
+  .hero__stat span{font-size:11px;color:#D6E4FA;}
+  @media(max-width:640px){.hero__stat{display:none;}}
+
+  .hero__schedule{position:relative;z-index:4;max-width:340px;background:#fff;border-radius:20px;box-shadow:0 26px 60px rgba(10,27,61,.3);padding:26px;margin:-48px 0 0 auto;margin-right:6%;transform:rotate(-1.6deg);transition:transform .4s ease;}
+  .hero__schedule:hover{transform:rotate(0deg);}
+  .hero__schedule h3{font-family:'Poppins',sans-serif;font-size:16.5px;color:var(--brand-900);margin-bottom:16px;}
+  .hero__schedule .field{margin-bottom:14px;}
+  .hero__schedule .field label{display:block;font-size:12px;font-weight:600;color:var(--gray-600);margin-bottom:6px;}
+  .hero__schedule .field select{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid #DCE6F5;font-size:13.5px;color:var(--ink);background:#fff;font-family:'Inter',sans-serif;}
+  .hero__schedule .field select:focus{outline:none;border-color:var(--brand-500);}
+  .hero__schedule button{width:100%;justify-content:center;}
+  @media(max-width:1024px){.hero__schedule{margin:28px auto 0;transform:none;max-width:420px;}}
+  @media(max-width:640px){.hero__schedule{margin-top:24px;}}
+
+  .container.hero__bottom-space{height:0;}
+  @media(max-width:1024px){.hero{padding-bottom:32px;}}
+
+  /* Quick actions — connected step flow */
+  .quick{margin-top:70px;position:relative;z-index:5;background:radial-gradient(65% 100% at 50% 0%, var(--brand-50), transparent 75%);padding-top:8px;padding-bottom:8px;}
+  .quick-eyebrow{text-align:center;color:var(--brand-600);font-weight:700;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .quick-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  @media(max-width:860px){.quick-grid{grid-template-columns:repeat(2,1fr);}}
+  .quick-connector{position:absolute;left:8%;right:8%;top:46px;height:0;border-top:2px dashed var(--brand-400);opacity:.45;z-index:0;}
+  .quick-connector .node{position:absolute;top:0;width:9px;height:9px;border-radius:50%;background:var(--brand-400);transform:translate(-50%,-50%);box-shadow:0 0 0 5px var(--brand-50);}
+  @media(max-width:860px){.quick-connector{display:none;}}
+  .quick-card{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));border-radius:18px;padding:24px;color:#fff;box-shadow:0 14px 30px rgba(10,27,61,.22);transition:transform .3s ease, box-shadow .3s ease;z-index:1;}
+  .quick-card::after{content:"";position:absolute;top:-45%;right:-25%;width:150px;height:150px;background:radial-gradient(circle, rgba(92,151,255,.4), transparent 70%);pointer-events:none;}
+  .quick-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(10,27,61,.34);}
+  .quick-card .step{position:absolute;top:16px;right:18px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,.32);letter-spacing:1px;z-index:1;}
+  .quick-card .ic{position:relative;z-index:1;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:19px;box-shadow:0 8px 18px rgba(45,108,223,.45);}
+  .quick-card h4{position:relative;z-index:1;font-family:'Poppins',sans-serif;font-size:15.5px;margin-bottom:4px;}
+  .quick-card p{position:relative;z-index:1;font-size:12.5px;color:#C3D6F5;}
+
+  section{padding:88px 0;}
+  .hero{padding:0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 52px;}
+  .eyebrow{color:var(--brand-600);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;display:block;}
+  .section-head h2{font-size:34px;color:var(--brand-900);font-weight:700;}
+  .section-head p{color:var(--gray-600);margin-top:12px;font-size:16px;}
+
+  /* Benefits */
+  .benefits{background:var(--brand-50);}
+  .benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  @media(max-width:760px){.benefits-grid{grid-template-columns:1fr;}}
+  .benefit{display:flex;gap:16px;background:#fff;border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(10,27,61,.08);transition:transform .3s ease, box-shadow .3s ease;}
+  .benefit:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(10,27,61,.16);}
+  .benefit .ic{position:relative;z-index:1;flex:none;width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;box-shadow:0 8px 18px rgba(45,108,223,.35);}
+  .benefit h4{font-family:'Poppins',sans-serif;font-size:16px;margin-bottom:6px;color:var(--brand-900);}
+  .benefit p{font-size:13.5px;color:var(--gray-600);}
+
+  /* Rating / social proof */
+  .proof{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));color:#fff;border-radius:28px;margin:0 24px;padding:56px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .proof::after{content:"";position:absolute;top:-35%;right:-8%;width:320px;height:320px;background:radial-gradient(circle, rgba(92,151,255,.32), transparent 70%);pointer-events:none;}
+  .proof-left, .proof-score{position:relative;z-index:1;}
+  .proof-left h3{font-family:'Poppins',sans-serif;font-size:26px;margin-bottom:10px;}
+  .proof-left p{color:#D6E4FA;max-width:420px;}
+  .proof-score{display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.1);padding:22px 30px;border-radius:18px;}
+  .proof-score .num{font-family:'Poppins',sans-serif;font-size:44px;font-weight:800;}
+  .proof-score .stars{color:var(--star);font-size:18px;letter-spacing:2px;}
+  .proof-score small{color:#D6E4FA;font-size:12.5px;}
+
+  /* Cronograma de aulas coletivas */
+  .schedule-table{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+  @media(max-width:860px){.schedule-table{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.schedule-table{grid-template-columns:1fr;}}
+  .schedule-day{background:#fff;border:1px solid var(--brand-100);border-radius:16px;padding:16px;transition:box-shadow .3s ease, transform .3s ease;}
+  .schedule-day:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(10,27,61,.12);}
+  .schedule-day h4{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;text-align:center;padding:9px;border-radius:10px;margin-bottom:14px;font-size:13.5px;letter-spacing:1.5px;}
+  .schedule-day .class-item{padding:10px 0;border-bottom:1px solid var(--brand-50);}
+  .schedule-day .class-item:last-child{border-bottom:none;}
+  .schedule-day .time{font-weight:700;color:var(--brand-600);font-size:12.5px;display:block;}
+  .schedule-day .class-name{font-family:'Poppins',sans-serif;font-weight:700;font-size:14.5px;color:var(--ink);display:block;margin-top:2px;}
+  .schedule-day .prof{font-size:11.5px;color:var(--gray-600);}
+  .schedule-day .empty{font-size:12px;color:var(--gray-400);padding:10px 0;text-align:center;}
+  .hours-strip{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:32px;}
+  .hours-pill{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--brand-100);border-radius:999px;padding:10px 20px;font-size:13.5px;}
+  .hours-pill b{color:var(--brand-700);font-family:'Poppins',sans-serif;}
+
+  /* Payment / convenios */
+  .pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:860px){.pay-grid{grid-template-columns:1fr;}}
+  .pay-card{border-radius:18px;padding:30px;background:#fff;border:1px solid #F5E7E1;text-align:center;transition:transform .3s ease, box-shadow .3s ease;}
+  .pay-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(10,27,61,.14);}
+  .pay-card .ic{position:relative;z-index:1;width:50px;height:50px;margin:0 auto 16px;border-radius:14px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 8px 18px rgba(45,108,223,.35);}
+  .pay-card h4{font-family:'Poppins',sans-serif;margin-bottom:8px;}
+  .pay-card p{font-size:13.5px;color:var(--gray-600);}
+
+  /* About */
+  .about{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;}
+  @media(max-width:900px){.about{grid-template-columns:1fr;}}
+  .about-media{position:relative;}
+  .about-media img{border-radius:22px;box-shadow:var(--shadow);height:440px;width:100%;object-fit:cover;}
+  .about-badge{position:absolute;bottom:20px;left:20px;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 14px 30px rgba(10,27,61,.22);display:flex;align-items:center;gap:12px;}
+  .about-badge .stars{color:var(--star);font-size:15px;letter-spacing:1px;}
+  .about-badge b{font-family:'Poppins',sans-serif;font-size:17px;color:var(--brand-900);display:block;}
+  .about-badge small{color:var(--gray-600);font-size:11.5px;}
+  .about-list{margin-top:22px;display:flex;flex-direction:column;gap:14px;}
+  .about-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--gray-600);}
+  .about-list b{color:var(--ink);}
+  .check{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:2px;box-shadow:0 6px 14px rgba(45,108,223,.35);}
+
+  /* Contact */
+  .contact{background:var(--brand-50);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch;}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:#fff;border-radius:20px;padding:36px;box-shadow:var(--shadow);}
+  .contact-item{display:flex;gap:14px;margin-bottom:22px;}
+  .contact-item .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--brand-100);color:var(--brand-700);display:flex;align-items:center;justify-content:center;}
+  .contact-item h5{font-size:14px;color:var(--gray-600);margin-bottom:2px;}
+  .contact-item p{font-weight:600;font-size:15px;}
+  .map-wrap{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);min-height:340px;}
+  .map-wrap iframe{width:100%;height:100%;min-height:340px;border:0;}
+
+  /* CTA banner */
+  .cta-banner{background:linear-gradient(120deg,var(--brand-600),var(--brand-800));color:#fff;text-align:center;border-radius:28px;margin:0 24px;padding:64px 24px;}
+  .cta-banner h2{font-family:'Poppins',sans-serif;font-size:32px;margin-bottom:14px;}
+  .cta-banner p{color:#DCEAFF;max-width:520px;margin:0 auto 28px;}
+
+  footer{background:var(--brand-900);color:#D6E4FA;padding:56px 0 24px;margin-top:88px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+  @media(max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+  footer h5{color:#fff;font-family:'Poppins',sans-serif;font-size:15px;margin-bottom:16px;}
+  footer li{margin-bottom:10px;font-size:14px;}
+  footer .foot-logo{display:flex;align-items:center;gap:8px;color:#fff;font-family:'Poppins',sans-serif;font-weight:800;font-size:19px;margin-bottom:12px;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#7C93BD;}
+
+  .whatsapp-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60;font-size:28px;transition:transform .4s ease;}
+  .whatsapp-float:hover{transform:scale(1.1) rotate(6deg);}
+  .whatsapp-float .ping{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#FF4D4D;border-radius:50%;border:2px solid #fff;animation:pulseDot 2s ease-in-out infinite;}
+  @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.55;transform:scale(1.2);}}
+
+  /* Scroll reveal (progressive enhancement) */
+  .reveal, .reveal-stagger > *{opacity:1;transform:none;}
+  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger > *{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal-stagger.is-visible > *{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger.is-visible > *:nth-child(1){transition-delay:.04s;}
+  .js .reveal-stagger.is-visible > *:nth-child(2){transition-delay:.09s;}
+  .js .reveal-stagger.is-visible > *:nth-child(3){transition-delay:.14s;}
+  .js .reveal-stagger.is-visible > *:nth-child(4){transition-delay:.19s;}
+  .js .reveal-stagger.is-visible > *:nth-child(5){transition-delay:.24s;}
+  .js .reveal-stagger.is-visible > *:nth-child(6){transition-delay:.29s;}
+  .js .reveal-stagger.is-visible > *:nth-child(7){transition-delay:.34s;}
+  .js .reveal-stagger.is-visible > *:nth-child(8){transition-delay:.39s;}
+  .js .reveal-stagger.is-visible > *:nth-child(9){transition-delay:.44s;}
+  .js .reveal-stagger.is-visible > *:nth-child(10){transition-delay:.49s;}
+  .js .reveal-stagger.is-visible > *:nth-child(11){transition-delay:.54s;}
+  .js .reveal-stagger.is-visible > *:nth-child(12){transition-delay:.59s;}
+
+  /* Border-run: rotating gradient border on hover */
+  @property --angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
+  .border-run{position:relative;isolation:isolate;}
+  .border-run::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;
+    background:conic-gradient(from var(--angle), transparent 0deg, var(--brand-500) 60deg, var(--brand-400) 140deg, transparent 200deg, transparent 360deg);
+    -webkit-mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    animation:borderRun 6s linear infinite;opacity:0;transition:opacity .3s;pointer-events:none;z-index:2;}
+  .border-run:hover::before{opacity:1;animation-duration:2.2s;}
+  @keyframes borderRun{100%{--angle:360deg;}}
+
+  /* Gallery scroller: two rows, opposite directions, pause on hover */
+  .gallery-rows{display:flex;flex-direction:column;gap:22px;padding:12px 0 8px;}
+  .gallery-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);}
+  .gallery-track{display:flex;width:max-content;gap:22px;animation:galleryLeft 55s linear infinite;}
+  .gallery-track.reverse{animation-name:galleryRight;}
+  .gallery-wrap:hover .gallery-track{animation-play-state:paused;}
+  @keyframes galleryLeft{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  @keyframes galleryRight{0%{transform:translateX(-50%);}100%{transform:translateX(0);}}
+  .gallery-card{position:relative;width:280px;height:320px;flex-shrink:0;border-radius:22px;overflow:hidden;display:block;box-shadow:0 8px 20px rgba(10,27,61,.14);transition:transform .5s ease, box-shadow .5s ease;}
+  .gallery-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(10,27,61,.26);}
+  .gallery-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+  .gallery-card:hover img{transform:scale(1.1);}
+  .gallery-card .overlay{position:absolute;inset:0;background:linear-gradient(0deg, var(--brand-900) 0%, rgba(10,27,61,.6) 42%, rgba(10,27,61,.05) 75%);}
+  .gallery-card .content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;}
+  .gallery-card .gic{width:42px;height:42px;border-radius:12px;background:var(--brand-500);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;}
+  .gallery-card h4{font-family:'Poppins',sans-serif;font-size:16.5px;margin-bottom:4px;}
+  .gallery-card p{font-size:12.5px;color:#D8E6FA;}
+  @media(max-width:600px){.gallery-card{width:230px;height:280px;}}
+
+  @media (prefers-reduced-motion: reduce){
+    .gallery-track{animation:none;}
+    .border-run::before{animation:none;}
+    .js .reveal, .js .reveal-stagger > *{transition:none;opacity:1;transform:none;}
+    .whatsapp-float .ping{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-links">
+      <span>Av. Dep. Dante Delmanto, 3053 · Vila Paulista, Botucatu</span>
+      <span>(14) 3354-7020</span>
+    </div>
+    <div class="utility-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Academia+Body+Express+Av.+Dep.+Dante+Delmanto+3053+Botucatu+SP" target="_blank">★ 4,8 · Ver avaliações no Google</a>
+    </div>
+  </div>
+</div>
+
+<header id="siteHeader">
+  <div class="nav">
+    <div class="logo"><span class="kicker">academia</span><span class="word"><span class="light">BODY</span><span class="pop">EXPRESS</span></span></div>
+    <nav class="nav-links">
+      <a href="#modalidades">Modalidades</a>
+      <a href="#cronograma">Cronograma</a>
+      <a href="#porque">Por que treinar aqui</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-search" href="#agendar" title="Agendar visita">🔍</a>
+      <a class="btn btn-on-brand" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20conhecer%20a%20Body%20Express." target="_blank">Agende sua Visita</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="topo">
+  <div class="container hero__inner">
+    <div class="hero__copy reveal">
+      <span class="hero__badge"><span class="blip"></span> Aberta 24h · Seg a Sex · Vila Paulista</span>
+      <h1 class="hero__tag">SUPERE SEUS LIMITES</h1>
+      <div class="hero__script">juntos</div>
+      <p class="hero__lead">Musculação com uma estrutura ampla e equipamentos de última geração, além de aulas coletivas como FitDance, Pilates e Boxe — aberta 24h de segunda a sexta. Nota 4,8 no Google com mais de 226 avaliações reais de alunos.</p>
+      <div class="hero__cta">
+        <a class="btn btn-primary" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20visita%20na%20Body%20Express." target="_blank">Agende sua Visita</a>
+        <a class="btn btn-outline-dark" href="#modalidades">Ver Modalidades</a>
+      </div>
+    </div>
+    <div class="hero__art-wrap">
+      <img class="hero__art" src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=1200&auto=format&fit=crop" alt="Treino de levantamento de peso em academia (foto ilustrativa)">
+      <div class="hero__art-overlay"></div>
+      <div class="hero__stat reveal">
+        <div class="stars">★★★★★</div>
+        <div>
+          <b>4,8</b>
+          <span>+226 avaliações no Google</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="hero__schedule reveal" id="agendar">
+      <h3>Agende sua visita</h3>
+      <div class="field">
+        <label for="fieldGoal">Qual seu objetivo?</label>
+        <select id="fieldGoal">
+          <option value="">Qualquer objetivo</option>
+          <option value="emagrecimento">Emagrecimento</option>
+          <option value="ganho de massa muscular">Ganho de massa muscular</option>
+          <option value="condicionamento físico">Condicionamento físico</option>
+          <option value="bem-estar geral">Bem-estar geral</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fieldPeriod">Prefere treinar</label>
+        <select id="fieldPeriod">
+          <option value="">Qualquer horário</option>
+          <option value="pela manhã">Manhã</option>
+          <option value="à tarde">Tarde</option>
+          <option value="à noite">Noite</option>
+        </select>
+      </div>
+      <button type="button" id="scheduleBtn" class="btn btn-primary">Quero Treinar →</button>
+    </div>
+  </div>
+</section>
+
+<div class="container quick">
+  <div class="quick-eyebrow reveal">Seu caminho até o primeiro treino</div>
+  <div class="quick-grid reveal-stagger">
+    <div class="quick-connector">
+      <span class="node" style="left:12.5%"></span>
+      <span class="node" style="left:37.5%"></span>
+      <span class="node" style="left:62.5%"></span>
+      <span class="node" style="left:87.5%"></span>
+    </div>
+    <a class="quick-card border-run" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20visita%20na%20Body%20Express." target="_blank">
+      <span class="step">01</span>
+      <div class="ic">📅</div>
+      <h4>Agende sua Visita</h4>
+      <p>Resposta rápida pelo WhatsApp</p>
+    </a>
+    <a class="quick-card border-run" href="#modalidades">
+      <span class="step">02</span>
+      <div class="ic">🏋️</div>
+      <h4>Conheça a Estrutura</h4>
+      <p>Musculação, equipamentos modernos e aulas em grupo</p>
+    </a>
+    <a class="quick-card border-run" href="#planos">
+      <span class="step">03</span>
+      <div class="ic">🔥</div>
+      <h4>Escolha seu Plano</h4>
+      <p>Fale com a gente sobre valores</p>
+    </a>
+    <a class="quick-card border-run" href="#contato">
+      <span class="step">04</span>
+      <div class="ic">📍</div>
+      <h4>Vila Paulista</h4>
+      <p>Av. Dep. Dante Delmanto, 3053</p>
+    </a>
+  </div>
+</div>
+
+<section id="modalidades" style="padding-bottom:56px;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Modalidades</span>
+      <h2>Treino para cada objetivo, num só lugar</h2>
+      <p>De musculação a aulas em grupo — estrutura completa pra você treinar do seu jeito.</p>
+    </div>
+  </div>
+  <div class="gallery-rows">
+    <div class="gallery-wrap">
+      <div class="gallery-track">
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Muscula%C3%A7%C3%A3o%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?q=75&w=700&auto=format&fit=crop" alt="Musculação"><div class="overlay"></div><div class="content"><div class="gic">💪</div><h4>Musculação</h4><p>Equipamentos completos para todos os níveis</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Pilates%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1747239069226-55382c570116?q=75&w=700&auto=format&fit=crop" alt="Pilates"><div class="overlay"></div><div class="content"><div class="gic">🧘</div><h4>Pilates</h4><p>Terças e quintas, 7h30, com a Prof. Ana Laura</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Treino%20com%20Halteres%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=75&w=700&auto=format&fit=crop" alt="Treino com Halteres"><div class="overlay"></div><div class="content"><div class="gic">🏋️‍♀️</div><h4>Treino com Halteres</h4><p>Área livre completa para seu treino de força</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Personal%20Training%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1648542036561-e1d66a5ae2b1?q=75&w=700&auto=format&fit=crop" alt="Personal Training"><div class="overlay"></div><div class="content"><div class="gic">🎯</div><h4>Personal Training</h4><p>Acompanhamento individual pro seu objetivo</p></div></a>
+        <!-- duplicado p/ loop contínuo -->
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Muscula%C3%A7%C3%A3o%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?q=75&w=700&auto=format&fit=crop" alt="Musculação"><div class="overlay"></div><div class="content"><div class="gic">💪</div><h4>Musculação</h4><p>Equipamentos completos para todos os níveis</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Pilates%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1747239069226-55382c570116?q=75&w=700&auto=format&fit=crop" alt="Pilates"><div class="overlay"></div><div class="content"><div class="gic">🧘</div><h4>Pilates</h4><p>Terças e quintas, 7h30, com a Prof. Ana Laura</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Treino%20com%20Halteres%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=75&w=700&auto=format&fit=crop" alt="Treino com Halteres"><div class="overlay"></div><div class="content"><div class="gic">🏋️‍♀️</div><h4>Treino com Halteres</h4><p>Área livre completa para seu treino de força</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Personal%20Training%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1648542036561-e1d66a5ae2b1?q=75&w=700&auto=format&fit=crop" alt="Personal Training"><div class="overlay"></div><div class="content"><div class="gic">🎯</div><h4>Personal Training</h4><p>Acompanhamento individual pro seu objetivo</p></div></a>
+      </div>
+    </div>
+    <div class="gallery-wrap">
+      <div class="gallery-track reverse">
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Avalia%C3%A7%C3%A3o%20F%C3%ADsica%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=75&w=700&auto=format&fit=crop" alt="Avaliação Física"><div class="overlay"></div><div class="content"><div class="gic">📋</div><h4>Avaliação Física</h4><p>Acompanhamento assistido de perto</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Spinning%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1625594755684-a73285a64f66?q=75&w=700&auto=format&fit=crop" alt="Spinning / Bike Indoor"><div class="overlay"></div><div class="content"><div class="gic">🚴</div><h4>Spinning / Bike Indoor</h4><p>Aulas de ciclismo indoor de alta energia</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20%C3%A1rea%20de%20Cardio%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1778828494354-9b717d36dc99?q=75&w=700&auto=format&fit=crop" alt="Área de Cardio"><div class="overlay"></div><div class="content"><div class="gic">🏃</div><h4>Área de Cardio</h4><p>Esteiras e equipamentos aeróbicos</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20FitDance%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=75&w=700&auto=format&fit=crop" alt="FitDance"><div class="overlay"></div><div class="content"><div class="gic">💃</div><h4>FitDance</h4><p>Seg, ter, qua e qui, com Prof. Júnior e Maria Fernanda</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Alongamento%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1683056255281-e52a141924f0?q=75&w=700&auto=format&fit=crop" alt="Alongamento"><div class="overlay"></div><div class="content"><div class="gic">🙆</div><h4>Alongamento</h4><p>Terças, 18h30, com a Prof. Maria Fernanda</p></div></a>
+        <!-- duplicado p/ loop contínuo -->
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Avalia%C3%A7%C3%A3o%20F%C3%ADsica%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=75&w=700&auto=format&fit=crop" alt="Avaliação Física"><div class="overlay"></div><div class="content"><div class="gic">📋</div><h4>Avaliação Física</h4><p>Acompanhamento assistido de perto</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Spinning%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1625594755684-a73285a64f66?q=75&w=700&auto=format&fit=crop" alt="Spinning / Bike Indoor"><div class="overlay"></div><div class="content"><div class="gic">🚴</div><h4>Spinning / Bike Indoor</h4><p>Aulas de ciclismo indoor de alta energia</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20%C3%A1rea%20de%20Cardio%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1778828494354-9b717d36dc99?q=75&w=700&auto=format&fit=crop" alt="Área de Cardio"><div class="overlay"></div><div class="content"><div class="gic">🏃</div><h4>Área de Cardio</h4><p>Esteiras e equipamentos aeróbicos</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20FitDance%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=75&w=700&auto=format&fit=crop" alt="FitDance"><div class="overlay"></div><div class="content"><div class="gic">💃</div><h4>FitDance</h4><p>Seg, ter, qua e qui, com Prof. Júnior e Maria Fernanda</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Alongamento%20na%20Body%20Express."><img src="https://images.unsplash.com/photo-1683056255281-e52a141924f0?q=75&w=700&auto=format&fit=crop" alt="Alongamento"><div class="overlay"></div><div class="content"><div class="gic">🙆</div><h4>Alongamento</h4><p>Terças, 18h30, com a Prof. Maria Fernanda</p></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cronograma" style="background:var(--brand-50);">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cronograma 2026</span>
+      <h2>Aulas coletivas, toda semana</h2>
+      <p>Programação real da Body Express — de segunda a sexta, com professores especializados.</p>
+    </div>
+    <div class="schedule-table reveal-stagger">
+      <div class="schedule-day">
+        <h4>SEG</h4>
+        <div class="class-item"><span class="time">18h15</span><span class="class-name">FitDance</span><span class="prof">Prof. Júnior</span></div>
+        <div class="class-item"><span class="time">19h</span><span class="class-name">Superior</span><span class="prof">Prof. Maria Fernanda</span></div>
+        <div class="class-item"><span class="time">19h30</span><span class="class-name">Jump</span><span class="prof">Prof. Maria Fernanda</span></div>
+        <div class="class-item"><span class="time">20h15</span><span class="class-name">Boxe</span><span class="prof">Prof. Flávio Kenji</span></div>
+      </div>
+      <div class="schedule-day">
+        <h4>TER</h4>
+        <div class="class-item"><span class="time">7h30</span><span class="class-name">Pilates</span><span class="prof">Prof. Ana Laura</span></div>
+        <div class="class-item"><span class="time">18h30</span><span class="class-name">Alongamento</span><span class="prof">Prof. Maria Fernanda</span></div>
+        <div class="class-item"><span class="time">19h</span><span class="class-name">FitDance</span><span class="prof">Prof. Maria Fernanda</span></div>
+        <div class="class-item"><span class="time">19h45</span><span class="class-name">Abdominal</span><span class="prof">Prof. Maria Fernanda</span></div>
+      </div>
+      <div class="schedule-day">
+        <h4>QUA</h4>
+        <div class="class-item"><span class="time">19h</span><span class="class-name">Glúteo</span><span class="prof">Prof. Maria Fernanda</span></div>
+        <div class="class-item"><span class="time">19h30</span><span class="class-name">Jump</span><span class="prof">Prof. Maria Fernanda</span></div>
+        <div class="class-item"><span class="time">20h15</span><span class="class-name">FitDance</span><span class="prof">Prof. Júnior</span></div>
+        <div class="empty">&nbsp;</div>
+      </div>
+      <div class="schedule-day">
+        <h4>QUI</h4>
+        <div class="class-item"><span class="time">7h30</span><span class="class-name">Pilates</span><span class="prof">Prof. Ana Laura</span></div>
+        <div class="class-item"><span class="time">19h</span><span class="class-name">FitDance</span><span class="prof">Prof. Maria Fernanda</span></div>
+        <div class="class-item"><span class="time">20h15</span><span class="class-name">Boxe</span><span class="prof">Prof. Flávio Kenji</span></div>
+        <div class="empty">&nbsp;</div>
+      </div>
+      <div class="schedule-day">
+        <h4>SEX</h4>
+        <div class="class-item"><span class="time">18h30</span><span class="class-name">FitDance</span><span class="prof">Prof. Júnior</span></div>
+        <div class="empty">&nbsp;</div>
+        <div class="empty">&nbsp;</div>
+        <div class="empty">&nbsp;</div>
+      </div>
+    </div>
+    <div class="hours-strip reveal-stagger">
+      <div class="hours-pill">🕐 <span><b>Seg a Sex:</b> 24 horas</span></div>
+      <div class="hours-pill">🕐 <span><b>Sábado:</b> 7h às 18h</span></div>
+      <div class="hours-pill">🕐 <span><b>Domingo:</b> 9h às 13h</span></div>
+      <div class="hours-pill">🕐 <span><b>Feriados:</b> 8h às 15h</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="porque">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por que treinar aqui</span>
+      <h2>Estrutura completa, resultado de verdade</h2>
+      <p>Uma academia pensada pra você não arrumar desculpa pra faltar o treino.</p>
+    </div>
+    <div class="benefits-grid reveal-stagger">
+      <div class="benefit border-run"><div class="ic">①</div><div><h4>Nota 4,8 no Google</h4><p>Mais de 226 avaliações reais de alunos satisfeitos.</p></div></div>
+      <div class="benefit border-run"><div class="ic">②</div><div><h4>Estrutura completa</h4><p>Musculação com equipamentos de última geração, cardio e espaço para aulas em grupo.</p></div></div>
+      <div class="benefit border-run"><div class="ic">③</div><div><h4>Modalidade pra cada objetivo</h4><p>De hipertrofia a condicionamento, tem treino pro seu perfil.</p></div></div>
+      <div class="benefit border-run"><div class="ic">④</div><div><h4>Localização central</h4><p>Vila Paulista, fácil acesso em Botucatu.</p></div></div>
+      <div class="benefit border-run"><div class="ic">⑤</div><div><h4>Aberta 24h, de seg a sex</h4><p>Treine no seu horário — antes do trabalho, na hora do almoço ou de madrugada.</p></div></div>
+      <div class="benefit border-run"><div class="ic">⑥</div><div><h4>Aceita TotalPass / Wellhub (Gympass)</h4><p>Treine usando seu convênio de academia.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="proof reveal">
+    <div class="proof-left">
+      <h3>Avaliação real, direto do Google</h3>
+      <p>A nota que os próprios alunos deram para a Body Express em Botucatu.</p>
+    </div>
+    <div class="proof-score">
+      <div>
+        <div class="num">4,8</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div>
+        <b style="font-family:'Poppins',sans-serif;font-size:18px;">226+ avaliações</b>
+        <small>Google Maps · Vila Paulista, Botucatu</small><br>
+        <a href="https://www.google.com/maps/search/?api=1&query=Academia+Body+Express+Av.+Dep.+Dante+Delmanto+3053+Botucatu+SP" target="_blank" style="color:#fff;text-decoration:underline;font-size:13px;">Ver avaliações no Google →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="planos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Planos</span>
+      <h2>Treinar sem complicação</h2>
+      <p>Fale com a gente e encontre a condição certa pro seu momento.</p>
+    </div>
+    <div class="pay-grid reveal-stagger">
+      <div class="pay-card border-run"><div class="ic">💳</div><h4>Cartão e Pix</h4><p>Aceitamos as principais formas de pagamento.</p></div>
+      <div class="pay-card border-run"><div class="ic">🤝</div><h4>TotalPass / Wellhub (Gympass)</h4><p>Treine usando seu convênio de academia.</p></div>
+      <div class="pay-card border-run"><div class="ic">📋</div><h4>Fale com a gente</h4><p>Planos e valores sob consulta, direto pelo WhatsApp.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container about reveal-stagger">
+    <div class="about-media">
+      <img src="https://images.unsplash.com/photo-1758448756350-3d0eec02ba37?q=80&w=1000&auto=format&fit=crop" alt="Interior de academia (foto ilustrativa)">
+      <div class="about-badge">
+        <div class="stars">★★★★★</div>
+        <div>
+          <b>4,8 no Google</b>
+          <small>226+ avaliações · Botucatu</small>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Sobre a Body Express</span>
+      <h2 style="font-size:30px;color:var(--brand-900);font-weight:700;">Estrutura pensada pra você treinar sem desculpa</h2>
+      <p style="color:var(--gray-600);margin-top:14px;">Na Body Express, em Botucatu, você encontra tudo num só lugar: musculação com equipamentos de última geração, cardio e aulas em grupo, com acompanhamento de perto pra cada objetivo. É esse cuidado que constrói a nota alta que os próprios alunos deram no Google.</p>
+      <ul class="about-list">
+        <li><span class="check">✓</span><span><b>Musculação com equipamentos de última geração</b> e cardio num só espaço, sem precisar treinar em vários lugares.</span></li>
+        <li><span class="check">✓</span><span><b>Aulas coletivas e modalidades variadas</b> pra todos os níveis de treino.</span></li>
+        <li><span class="check">✓</span><span><b>Nota 4,8 no Google</b>, com mais de 226 avaliações reais de alunos.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contato</span>
+      <h2>Bora treinar? Fala com a gente</h2>
+    </div>
+    <div class="contact-grid reveal-stagger">
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="ic">📍</div>
+          <div><h5>Endereço</h5><p>Av. Dep. Dante Delmanto, 3053 — Vila Paulista, Botucatu, SP</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">📞</div>
+          <div><h5>Telefone</h5><p>(14) 3354-7020</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">📱</div>
+          <div><h5>WhatsApp</h5><p>(14) 99752-1480</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">🕐</div>
+          <div><h5>Horário</h5><p>Seg a Sex: 24h · Sáb: 7h–18h · Dom: 9h–13h · Feriados: 8h–15h</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">⭐</div>
+          <div><h5>Avaliação Google</h5><p>4,8 de 5 (226+ avaliações)</p></div>
+        </div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20visita%20na%20Body%20Express." target="_blank">Falar no WhatsApp</a>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=Av.+Dep.+Dante+Delmanto,+3053,+Botucatu+-+SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-banner reveal">
+    <h2>Bora treinar?</h2>
+    <p>Agende sua visita na Body Express e conheça a estrutura de perto.</p>
+    <a class="btn btn-ghost-light" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20visita%20na%20Body%20Express." target="_blank">📅 Agendar Visita</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="foot-logo"><span class="dot" style="width:10px;height:10px;background:var(--brand-500);border-radius:3px;display:inline-block;"></span>Body Express Botucatu</div>
+      <p style="max-width:320px;font-size:13.5px;">Academia na Vila Paulista, Botucatu. Musculação com equipamentos de última geração, cardio e aulas em grupo num só lugar.</p>
+    </div>
+    <div>
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#modalidades">Modalidades</a></li>
+        <li><a href="#cronograma">Cronograma</a></li>
+        <li><a href="#porque">Por que treinar aqui</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contato</h5>
+      <ul>
+        <li>Av. Dep. Dante Delmanto, 3053 — Botucatu, SP</li>
+        <li>(14) 3354-7020</li>
+        <li>(14) 99752-1480 (WhatsApp)</li>
+        <li>Aberta 24h de seg a sex</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© 2026 Body Express Botucatu. Todos os direitos reservados.</span>
+    <span>Mockup de site — dados públicos verificados no Google Maps</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5514997521480?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20visita%20na%20Body%20Express." target="_blank">📱<span class="ping"></span></a>
+
+<script>
+(function(){
+  var scheduleBtn = document.getElementById('scheduleBtn');
+  if (scheduleBtn) {
+    scheduleBtn.addEventListener('click', function(){
+      var goal = document.getElementById('fieldGoal').value;
+      var period = document.getElementById('fieldPeriod').value;
+      var msg = 'Olá! Vim pelo site e quero agendar uma visita na Body Express';
+      if (goal) msg += ' com foco em ' + goal;
+      if (period) msg += ', de preferência treinando ' + period;
+      msg += '.';
+      window.open('https://wa.me/5514997521480?text=' + encodeURIComponent(msg), '_blank');
+    });
+  }
+
+  var header = document.getElementById('siteHeader');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
