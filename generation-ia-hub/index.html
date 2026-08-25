@@ -221,10 +221,11 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.62);padding:56px 0 28p
 /* Mobile */
 @media (max-width:900px){
   .nav-links{display:none;}
+  .nav-cta{display:none;}
   .nav-toggle{display:block;}
   .nav-drawer.open{display:flex;flex-direction:column;gap:4px;background:#fff;border-top:1px solid rgba(16,26,38,.08);padding:16px 24px 22px;}
   .nav-drawer a{padding:12px 0;font-size:15.5px;font-weight:500;color:var(--navy-800);border-bottom:1px solid rgba(16,26,38,.06);}
-  .nav-drawer .btn{margin-top:12px;}
+  .nav-drawer a.btn{padding:14px 26px;border-bottom:none;text-align:center;margin-top:12px;}
   .solutions-grid{grid-template-columns:1fr 1fr;}
   .benefit-list{grid-template-columns:1fr;}
   .flow-track{grid-template-columns:1fr;gap:28px;}
@@ -269,7 +270,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.62);padding:56px 0 28p
       <a href="#contato">Contato</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary" href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Conheci%20a%20Generation%20IA%20Hub%20e%20gostaria%20de%20entender%20como%20voc%C3%AAs%20podem%20ajudar%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn btn-primary nav-cta" href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Conheci%20a%20Generation%20IA%20Hub%20e%20gostaria%20de%20entender%20como%20voc%C3%AAs%20podem%20ajudar%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp</a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -281,6 +282,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.62);padding:56px 0 28p
     <a href="#proximo-nivel">Próximo nível</a>
     <a href="#como-funciona">Como funciona</a>
     <a href="#contato">Contato</a>
+    <a class="btn btn-primary" href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Conheci%20a%20Generation%20IA%20Hub%20e%20gostaria%20de%20entender%20como%20voc%C3%AAs%20podem%20ajudar%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp</a>
   </div>
 </header>
 
