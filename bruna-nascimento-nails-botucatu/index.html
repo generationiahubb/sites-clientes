@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bruna Nascimento Nails | Estúdio de Manicure em Botucatu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600;1,700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --brand-900:#4A1029;
+    --brand-800:#6B1B3D;
+    --brand-700:#8F2A52;
+    --brand-600:#B83D6C;
+    --brand-500:#D65685;
+    --brand-400:#F0A8C4;
+    --brand-100:#FCE8EF;
+    --brand-50:#FDF6F8;
+    --ink:#3B2530;
+    --gray-600:#7A6570;
+    --gray-400:#B49AA5;
+    --white:#FFFFFF;
+    --star:#FFB020;
+    --shadow: 0 10px 30px rgba(74,16,41,0.10);
+    --radius: 16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--brand-50);line-height:1.6;}
+  h1,h2,h3,.display{font-family:'Playfair Display',serif;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:14.5px;letter-spacing:.3px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--brand-500);color:#fff;box-shadow:0 8px 20px rgba(214,86,133,.4);}
+  .btn-primary:hover{background:var(--brand-600);}
+  .btn-outline{background:#fff;color:var(--brand-700);border-color:var(--brand-100);}
+  .btn-outline:hover{border-color:var(--brand-400);}
+  .btn-ghost-light{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4);}
+
+  /* Utility bar */
+  .utility-bar{background:linear-gradient(90deg,var(--brand-900),var(--brand-800));color:#F3D9E3;font-size:12.5px;}
+  .utility-bar .container{display:flex;align-items:center;justify-content:space-between;padding:9px 24px;flex-wrap:wrap;gap:8px;}
+  .utility-links{display:flex;align-items:center;gap:22px;}
+  .utility-links a{opacity:.9;transition:opacity .15s;}
+  .utility-links a:hover{opacity:1;}
+  @media(max-width:760px){.utility-links span:not(:first-child){display:none;}}
+
+  /* Header / main nav */
+  header{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,var(--brand-700),var(--brand-500));transition:box-shadow .3s ease;}
+  header.scrolled{box-shadow:0 10px 26px rgba(74,16,41,.25);}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 24px;max-width:1180px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:8px;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:22px;color:#fff;white-space:nowrap;flex-shrink:0;}
+  .logo .dot{width:11px;height:11px;background:#fff;border-radius:50%;display:inline-block;opacity:.9;flex-shrink:0;}
+  .logo span.light{font-weight:500;color:rgba(255,255,255,.75);font-style:normal;}
+  .nav-links{display:flex;gap:30px;font-size:14px;font-weight:500;color:#fff;flex-shrink:0;}
+  .nav-links a{opacity:.88;transition:opacity .15s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{display:flex;align-items:center;gap:16px;}
+  .nav-search{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;transition:background .2s;flex:none;}
+  .nav-search:hover{background:rgba(255,255,255,.3);}
+  .btn-on-brand{background:#fff;color:var(--brand-700);}
+  .btn-on-brand:hover{background:var(--brand-50);}
+  @media(max-width:1080px){.nav-links{display:none;}}
+  @media(max-width:600px){
+    .logo{font-size:16px;gap:6px;white-space:nowrap;}
+    .logo span.light{display:none;}
+    .nav-search{display:none;}
+    .nav-cta .btn{padding:11px 18px;font-size:13px;white-space:nowrap;}
+  }
+
+  /* Hero — IMMERSIVE */
+  .hero-immersive{position:relative;min-height:88vh;overflow:hidden;padding:0;}
+  .hero-immersive .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;}
+  .hero-immersive::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(74,16,41,.58) 0%, rgba(74,16,41,.22) 42%, rgba(74,16,41,.82) 100%);}
+  .hero-copy{position:relative;z-index:2;max-width:620px;padding:15vh 24px 220px clamp(24px,6vw,96px);color:#FDF6F8;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32);font-weight:500;font-size:12.5px;letter-spacing:.4px;padding:7px 16px;border-radius:999px;margin-bottom:22px;text-transform:uppercase;}
+  .hero-badge .blip{width:7px;height:7px;background:var(--brand-400);border-radius:50%;}
+  .hero-copy h1{font-style:italic;font-weight:600;font-size:clamp(2.3rem,5.2vw,4rem);line-height:1.12;letter-spacing:-.01em;max-width:13ch;}
+  .hero-copy h1 em{font-style:italic;color:var(--brand-400);}
+  .hero-copy p.lead{margin-top:20px;font-weight:300;font-size:17.5px;color:rgba(253,246,248,.92);max-width:44ch;}
+  .hero-cta-row{margin-top:32px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  .hero-cta-row .link-secondary{color:#fff;text-decoration:underline;text-underline-offset:4px;font-size:14px;font-weight:500;opacity:.92;}
+  .hero-cta-row .link-secondary:hover{opacity:1;}
+  @media(max-width:760px){.hero-copy{padding:13vh 20px 380px 20px;}}
+
+  /* Booking strip — bottom of hero (IMMERSIVE variant) */
+  .hero-booking{position:absolute;left:0;right:0;bottom:0;z-index:3;background:rgba(253,246,248,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 -10px 30px rgba(74,16,41,.12);}
+  .hero-booking-inner{max-width:1180px;margin:0 auto;padding:24px 24px;display:grid;grid-template-columns:1fr 1fr auto;gap:16px;align-items:end;}
+  .hero-booking h3{grid-column:1 / -1;font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--brand-900);margin-bottom:2px;}
+  @media(max-width:760px){.hero-booking-inner{grid-template-columns:1fr;}}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--gray-600);margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px;}
+  .field select{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid var(--brand-100);font-size:13.5px;color:var(--ink);background:#fff;font-family:'Jost',sans-serif;}
+  .field select:focus{outline:none;border-color:var(--brand-500);}
+  #scheduleBtn{white-space:nowrap;}
+
+  /* Quick actions — connected step flow */
+  .quick{margin-top:0;position:relative;z-index:5;background:radial-gradient(65% 100% at 50% 0%, var(--brand-100), transparent 75%);padding-top:72px;padding-bottom:8px;}
+  .quick-eyebrow{text-align:center;color:var(--brand-600);font-weight:600;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .quick-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  @media(max-width:860px){.quick-grid{grid-template-columns:repeat(2,1fr);}}
+  .quick-connector{position:absolute;left:8%;right:8%;top:46px;height:0;border-top:2px dashed var(--brand-400);opacity:.5;z-index:0;}
+  .quick-connector .node{position:absolute;top:0;width:9px;height:9px;border-radius:50%;background:var(--brand-400);transform:translate(-50%,-50%);box-shadow:0 0 0 5px var(--brand-100);}
+  @media(max-width:860px){.quick-connector{display:none;}}
+  .quick-card{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));border-radius:18px;padding:24px;color:#fff;box-shadow:0 14px 30px rgba(74,16,41,.22);transition:transform .3s ease, box-shadow .3s ease;z-index:1;}
+  .quick-card::after{content:"";position:absolute;top:-45%;right:-25%;width:150px;height:150px;background:radial-gradient(circle, rgba(240,168,196,.4), transparent 70%);pointer-events:none;}
+  .quick-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(74,16,41,.34);}
+  .quick-card .step{position:absolute;top:16px;right:18px;font-family:'Playfair Display',serif;font-size:11px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:1px;z-index:1;}
+  .quick-card .ic{position:relative;z-index:1;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:19px;box-shadow:0 8px 18px rgba(214,86,133,.5);}
+  .quick-card h4{position:relative;z-index:1;font-family:'Playfair Display',serif;font-style:italic;font-size:16px;margin-bottom:4px;}
+  .quick-card p{position:relative;z-index:1;font-size:12.5px;color:#EAC7D6;}
+
+  section{padding:88px 0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 52px;}
+  .eyebrow{color:var(--brand-600);font-weight:600;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;display:block;}
+  .section-head h2{font-style:italic;font-size:34px;color:var(--brand-900);font-weight:600;}
+  .section-head p{color:var(--gray-600);margin-top:12px;font-size:16px;}
+
+  /* Benefits */
+  .benefits{background:var(--brand-100);}
+  .benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  @media(max-width:760px){.benefits-grid{grid-template-columns:1fr;}}
+  .benefit{display:flex;gap:16px;background:#fff;border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(74,16,41,.08);transition:transform .3s ease, box-shadow .3s ease;}
+  .benefit:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(74,16,41,.16);}
+  .benefit .ic{position:relative;z-index:1;flex:none;width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;box-shadow:0 8px 18px rgba(214,86,133,.4);}
+  .benefit h4{font-family:'Playfair Display',serif;font-style:italic;font-size:16.5px;margin-bottom:6px;color:var(--brand-900);}
+  .benefit p{font-size:13.5px;color:var(--gray-600);}
+
+  /* Rating / social proof */
+  .proof{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));color:#fff;border-radius:28px;margin:0 24px;padding:56px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .proof::after{content:"";position:absolute;top:-35%;right:-8%;width:320px;height:320px;background:radial-gradient(circle, rgba(240,168,196,.35), transparent 70%);pointer-events:none;}
+  .proof-left, .proof-score{position:relative;z-index:1;}
+  .proof-left h3{font-family:'Playfair Display',serif;font-style:italic;font-size:26px;margin-bottom:10px;}
+  .proof-left p{color:#EAC7D6;max-width:420px;}
+  .proof-score{display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.12);padding:22px 30px;border-radius:18px;}
+  .proof-score .num{font-family:'Playfair Display',serif;font-size:44px;font-weight:700;}
+  .proof-score .stars{color:var(--star);font-size:18px;letter-spacing:2px;}
+  .proof-score small{color:#EAC7D6;font-size:12.5px;}
+
+  /* About */
+  .about{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;}
+  @media(max-width:900px){.about{grid-template-columns:1fr;}}
+  .about-media{position:relative;}
+  .about-media img{border-radius:22px;box-shadow:var(--shadow);height:440px;width:100%;object-fit:cover;}
+  .about-badge{position:absolute;bottom:20px;left:20px;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 14px 30px rgba(74,16,41,.25);display:flex;align-items:center;gap:12px;}
+  .about-badge .stars{color:var(--star);font-size:15px;letter-spacing:1px;}
+  .about-badge b{font-family:'Playfair Display',serif;font-size:17px;color:var(--brand-900);display:block;}
+  .about-badge small{color:var(--gray-600);font-size:11.5px;}
+  .about-list{margin-top:22px;display:flex;flex-direction:column;gap:14px;}
+  .about-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--gray-600);}
+  .about-list b{color:var(--ink);}
+  .check{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:2px;box-shadow:0 6px 14px rgba(214,86,133,.4);}
+
+  /* Contact */
+  .contact{background:var(--brand-100);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch;}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:#fff;border-radius:20px;padding:36px;box-shadow:var(--shadow);}
+  .contact-item{display:flex;gap:14px;margin-bottom:22px;}
+  .contact-item .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--brand-100);color:var(--brand-700);display:flex;align-items:center;justify-content:center;}
+  .contact-item h5{font-size:14px;color:var(--gray-600);margin-bottom:2px;}
+  .contact-item p{font-weight:600;font-size:15px;}
+  .map-wrap{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);min-height:340px;}
+  .map-wrap iframe{width:100%;height:100%;min-height:340px;border:0;}
+
+  /* CTA banner */
+  .cta-banner{background:linear-gradient(120deg,var(--brand-600),var(--brand-800));color:#fff;text-align:center;border-radius:28px;margin:0 24px;padding:64px 24px;}
+  .cta-banner h2{font-family:'Playfair Display',serif;font-style:italic;font-size:32px;margin-bottom:14px;}
+  .cta-banner p{color:#F6DDE7;max-width:520px;margin:0 auto 28px;}
+
+  footer{background:var(--brand-900);color:#EAC7D6;padding:56px 0 24px;margin-top:88px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+  @media(max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+  footer h5{color:#fff;font-family:'Playfair Display',serif;font-style:italic;font-size:15px;margin-bottom:16px;}
+  footer li{margin-bottom:10px;font-size:14px;}
+  footer .foot-logo{display:flex;align-items:center;gap:8px;color:#fff;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:19px;margin-bottom:12px;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:40px;padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#D79CB4;}
+
+  .whatsapp-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60;font-size:28px;transition:transform .4s ease;}
+  .whatsapp-float:hover{transform:scale(1.1) rotate(6deg);}
+  .whatsapp-float .ping{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#FF4D4D;border-radius:50%;border:2px solid #fff;animation:pulseDot 2s ease-in-out infinite;}
+  @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.55;transform:scale(1.2);}}
+
+  /* Scroll reveal (progressive enhancement: visible by default, only hides once .js is present) */
+  .reveal, .reveal-stagger > *{opacity:1;transform:none;}
+  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger > *{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal-stagger.is-visible > *{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger.is-visible > *:nth-child(1){transition-delay:.04s;}
+  .js .reveal-stagger.is-visible > *:nth-child(2){transition-delay:.09s;}
+  .js .reveal-stagger.is-visible > *:nth-child(3){transition-delay:.14s;}
+  .js .reveal-stagger.is-visible > *:nth-child(4){transition-delay:.19s;}
+  .js .reveal-stagger.is-visible > *:nth-child(5){transition-delay:.24s;}
+  .js .reveal-stagger.is-visible > *:nth-child(6){transition-delay:.29s;}
+  .js .reveal-stagger.is-visible > *:nth-child(7){transition-delay:.34s;}
+  .js .reveal-stagger.is-visible > *:nth-child(8){transition-delay:.39s;}
+  .js .reveal-stagger.is-visible > *:nth-child(9){transition-delay:.44s;}
+  .js .reveal-stagger.is-visible > *:nth-child(10){transition-delay:.49s;}
+  .js .reveal-stagger.is-visible > *:nth-child(11){transition-delay:.54s;}
+  .js .reveal-stagger.is-visible > *:nth-child(12){transition-delay:.59s;}
+
+  /* Border-run: rotating gradient border on hover */
+  @property --angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
+  .border-run{position:relative;isolation:isolate;}
+  .border-run::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;
+    background:conic-gradient(from var(--angle), transparent 0deg, var(--brand-500) 60deg, var(--brand-400) 140deg, transparent 200deg, transparent 360deg);
+    -webkit-mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    animation:borderRun 6s linear infinite;opacity:0;transition:opacity .3s;pointer-events:none;z-index:2;}
+  .border-run:hover::before{opacity:1;animation-duration:2.2s;}
+  @keyframes borderRun{100%{--angle:360deg;}}
+
+  /* Gallery scroller: two rows of image cards, opposite directions, pause on hover */
+  .gallery-rows{display:flex;flex-direction:column;gap:22px;padding:12px 0 8px;}
+  .gallery-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);}
+  .gallery-track{display:flex;width:max-content;gap:22px;animation:galleryLeft 55s linear infinite;}
+  .gallery-track.reverse{animation-name:galleryRight;}
+  .gallery-wrap:hover .gallery-track{animation-play-state:paused;}
+  @keyframes galleryLeft{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  @keyframes galleryRight{0%{transform:translateX(-50%);}100%{transform:translateX(0);}}
+  .gallery-card{position:relative;width:280px;height:320px;flex-shrink:0;border-radius:22px;overflow:hidden;display:block;box-shadow:0 8px 20px rgba(74,16,41,.14);transition:transform .5s ease, box-shadow .5s ease;}
+  .gallery-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(74,16,41,.28);}
+  .gallery-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+  .gallery-card:hover img{transform:scale(1.1);}
+  .gallery-card .overlay{position:absolute;inset:0;background:linear-gradient(0deg, var(--brand-900) 0%, rgba(74,16,41,.6) 42%, rgba(74,16,41,.05) 75%);}
+  .gallery-card .content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;}
+  .gallery-card .gic{width:42px;height:42px;border-radius:12px;background:var(--brand-500);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;}
+  .gallery-card h4{font-family:'Playfair Display',serif;font-style:italic;font-size:16.5px;margin-bottom:4px;}
+  .gallery-card p{font-size:12.5px;color:#F6DDE7;}
+  @media(max-width:600px){.gallery-card{width:230px;height:280px;}}
+
+  @media (prefers-reduced-motion: reduce){
+    .gallery-track{animation:none;}
+    .border-run::before{animation:none;}
+    .js .reveal, .js .reveal-stagger > *{transition:none;opacity:1;transform:none;}
+    .whatsapp-float .ping{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-links">
+      <span>Av. Dr. Vital Brasil, 422 — Vila São Lúcio, Botucatu/SP</span>
+      <span>+55 14 99845-8336</span>
+    </div>
+    <div class="utility-links">
+      <a href="https://www.google.com/maps/place/Bruna+Nascimento+Nails/@-22.8791245,-48.4495326,17z/data=!3m1!4b1!4m6!3m5!1s0x94c7216823d997fb:0x814572bfaf6630e4!8m2!3d-22.8791245!4d-48.4495326!16s%2Fg%2F11w339n6dt" target="_blank" rel="noopener">★ 5.0 · Ver avaliações no Google</a>
+    </div>
+  </div>
+</div>
+
+<header id="siteHeader">
+  <div class="nav">
+    <div class="logo"><span class="dot"></span>Bruna Nascimento <span class="light">Nails</span></div>
+    <nav class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="https://www.instagram.com/nails.brunascimento/" target="_blank" rel="noopener">Trabalhos</a>
+      <a href="#localizacao">Localização</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-search" href="#agendar" title="Agendar horário">🔍</a>
+      <a class="btn btn-on-brand" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar no WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero-immersive">
+  <img class="hero-bg" src="https://images.unsplash.com/photo-1727199433231-346fd8101839?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1920" alt="Mãos com manicure delicada em tons nude, estúdio Bruna Nascimento Nails">
+  <div class="hero-copy reveal">
+    <span class="hero-badge"><span class="blip"></span> Estúdio em Botucatu · Especialista em Fibra de Vidro</span>
+    <h1>Elegância que nasce da <em>naturalidade</em></h1>
+    <p class="lead">Estúdio especializado em fibra de vidro para unhas em Botucatu — leveza, resistência e acabamento que respeita o formato natural das suas mãos.</p>
+    <div class="hero-cta-row">
+      <a class="btn btn-primary" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar meu horário</a>
+      <a class="link-secondary" href="https://www.instagram.com/nails.brunascimento/" target="_blank" rel="noopener">Ver trabalhos no Instagram →</a>
+    </div>
+  </div>
+  <div class="hero-booking reveal" id="agendar">
+    <div class="hero-booking-inner">
+      <h3>Escolha o serviço e agende em segundos</h3>
+      <div class="field">
+        <label for="fieldService">Serviço desejado</label>
+        <select id="fieldService">
+          <option value="">Qualquer serviço</option>
+          <option>Alongamento em Fibra de Vidro</option>
+          <option>Manutenção de Fibra de Vidro</option>
+          <option>Manicure Tradicional</option>
+          <option>Pedicure Spa</option>
+          <option>Nail Art Personalizada</option>
+          <option>Esmaltação em Gel</option>
+          <option>Banho de Gel</option>
+          <option>Blindagem de Unhas Naturais</option>
+          <option>Cutilagem Especializada</option>
+          <option>Nail Design Delicado</option>
+          <option>Spa das Mãos</option>
+          <option>Reparo de Unha Quebrada</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fieldPeriod">Prefere ser atendida</label>
+        <select id="fieldPeriod">
+          <option value="">Qualquer horário</option>
+          <option value="pela manhã">Pela manhã</option>
+          <option value="à tarde">À tarde</option>
+          <option value="à noite">À noite</option>
+        </select>
+      </div>
+      <button type="button" id="scheduleBtn" class="btn btn-primary">Agendar no WhatsApp →</button>
+    </div>
+  </div>
+</section>
+
+<div class="container quick">
+  <div class="quick-eyebrow reveal">Do agendamento ao acabamento impecável</div>
+  <div class="quick-grid reveal-stagger">
+    <div class="quick-connector">
+      <span class="node" style="left:12.5%"></span>
+      <span class="node" style="left:37.5%"></span>
+      <span class="node" style="left:62.5%"></span>
+      <span class="node" style="left:87.5%"></span>
+    </div>
+    <a class="quick-card border-run" href="#servicos">
+      <span class="step">01</span>
+      <div class="ic">💅</div>
+      <h4>Escolha o serviço</h4>
+      <p>Veja as técnicas e encontre a ideal pra você</p>
+    </a>
+    <a class="quick-card border-run" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">
+      <span class="step">02</span>
+      <div class="ic">📅</div>
+      <h4>Agende pelo WhatsApp</h4>
+      <p>Resposta rápida, sem enrolação</p>
+    </a>
+    <a class="quick-card border-run" href="#localizacao">
+      <span class="step">03</span>
+      <div class="ic">📍</div>
+      <h4>Compareça ao estúdio</h4>
+      <p>Av. Dr. Vital Brasil, 422 — Botucatu</p>
+    </a>
+    <a class="quick-card border-run" href="https://www.instagram.com/nails.brunascimento/" target="_blank" rel="noopener">
+      <span class="step">04</span>
+      <div class="ic">✨</div>
+      <h4>Saia com unhas impecáveis</h4>
+      <p>Delicadeza e cuidado em cada detalhe</p>
+    </a>
+  </div>
+</div>
+
+<section id="servicos" style="padding-bottom:56px;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Serviços</span>
+      <h2>Técnicas pensadas pra durar e valorizar suas mãos</h2>
+      <p>Especialista em fibra de vidro, com atendimento individual e materiais higienizados em cada etapa.</p>
+    </div>
+  </div>
+  <div class="gallery-rows">
+    <div class="gallery-wrap">
+      <div class="gallery-track">
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Alongamento%20em%20Fibra%20de%20Vidro."><img src="https://images.unsplash.com/photo-1737214475292-949c0bf920b0?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Alongamento em Fibra de Vidro"><div class="overlay"></div><div class="content"><div class="gic">🧵</div><h4>Alongamento em Fibra de Vidro</h4><p>Leve, resistente, acabamento natural</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Manuten%C3%A7%C3%A3o%20de%20Fibra%20de%20Vidro."><img src="https://images.unsplash.com/photo-1645566372784-7d017ad7643b?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Manutenção de Fibra de Vidro"><div class="overlay"></div><div class="content"><div class="gic">🧵</div><h4>Manutenção de Fibra de Vidro</h4><p>Pra manter o alongamento sempre perfeito</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Manicure%20Tradicional."><img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Manicure Tradicional"><div class="overlay"></div><div class="content"><div class="gic">💅</div><h4>Manicure Tradicional</h4><p>Cuidado essencial com acabamento impecável</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Pedicure%20Spa."><img src="https://images.unsplash.com/photo-1664643411326-6c589531be3c?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Pedicure Spa"><div class="overlay"></div><div class="content"><div class="gic">🦶</div><h4>Pedicure Spa</h4><p>Um momento de relaxamento pros seus pés</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Art%20Personalizada."><img src="https://images.unsplash.com/photo-1572814601679-4ef8f7b5ebd1?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Nail Art Personalizada"><div class="overlay"></div><div class="content"><div class="gic">🎨</div><h4>Nail Art Personalizada</h4><p>Desenhos únicos pro seu estilo</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Esmalta%C3%A7%C3%A3o%20em%20Gel."><img src="https://images.unsplash.com/photo-1602585578130-c9076e09330d?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Esmaltação em Gel"><div class="overlay"></div><div class="content"><div class="gic">✨</div><h4>Esmaltação em Gel</h4><p>Cor com brilho e durabilidade</p></div></a>
+        <!-- duplicado p/ loop contínuo -->
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Alongamento%20em%20Fibra%20de%20Vidro."><img src="https://images.unsplash.com/photo-1737214475292-949c0bf920b0?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Alongamento em Fibra de Vidro"><div class="overlay"></div><div class="content"><div class="gic">🧵</div><h4>Alongamento em Fibra de Vidro</h4><p>Leve, resistente, acabamento natural</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Manuten%C3%A7%C3%A3o%20de%20Fibra%20de%20Vidro."><img src="https://images.unsplash.com/photo-1645566372784-7d017ad7643b?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Manutenção de Fibra de Vidro"><div class="overlay"></div><div class="content"><div class="gic">🧵</div><h4>Manutenção de Fibra de Vidro</h4><p>Pra manter o alongamento sempre perfeito</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Manicure%20Tradicional."><img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Manicure Tradicional"><div class="overlay"></div><div class="content"><div class="gic">💅</div><h4>Manicure Tradicional</h4><p>Cuidado essencial com acabamento impecável</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Pedicure%20Spa."><img src="https://images.unsplash.com/photo-1664643411326-6c589531be3c?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Pedicure Spa"><div class="overlay"></div><div class="content"><div class="gic">🦶</div><h4>Pedicure Spa</h4><p>Um momento de relaxamento pros seus pés</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Art%20Personalizada."><img src="https://images.unsplash.com/photo-1572814601679-4ef8f7b5ebd1?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Nail Art Personalizada"><div class="overlay"></div><div class="content"><div class="gic">🎨</div><h4>Nail Art Personalizada</h4><p>Desenhos únicos pro seu estilo</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Esmalta%C3%A7%C3%A3o%20em%20Gel."><img src="https://images.unsplash.com/photo-1602585578130-c9076e09330d?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Esmaltação em Gel"><div class="overlay"></div><div class="content"><div class="gic">✨</div><h4>Esmaltação em Gel</h4><p>Cor com brilho e durabilidade</p></div></a>
+      </div>
+    </div>
+    <div class="gallery-wrap">
+      <div class="gallery-track reverse">
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Banho%20de%20Gel."><img src="https://images.unsplash.com/photo-1519253888976-62a7e1ea3e0e?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Banho de Gel"><div class="overlay"></div><div class="content"><div class="gic">🛁</div><h4>Banho de Gel</h4><p>Reforço e brilho sobre a unha natural</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Blindagem%20de%20Unhas%20Naturais."><img src="https://images.unsplash.com/photo-1648844421753-351afd50486a?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Blindagem de Unhas Naturais"><div class="overlay"></div><div class="content"><div class="gic">🛡️</div><h4>Blindagem de Unhas Naturais</h4><p>Proteção pra quem quer fortalecer a unha própria</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Cutilagem%20Especializada."><img src="https://images.unsplash.com/photo-1597999709389-e29dc41e218a?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Cutilagem Especializada"><div class="overlay"></div><div class="content"><div class="gic">✂️</div><h4>Cutilagem Especializada</h4><p>Acabamento limpo e sem agredir a pele</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Design%20Delicado."><img src="https://images.unsplash.com/photo-1494919138911-02d403edd88d?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Nail Design Delicado"><div class="overlay"></div><div class="content"><div class="gic">🌸</div><h4>Nail Design Delicado</h4><p>Francesinha, florais e traços minimalistas</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Spa%20das%20M%C3%A3os."><img src="https://images.unsplash.com/photo-1633955726992-2b7c0d2d2a69?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Spa das Mãos"><div class="overlay"></div><div class="content"><div class="gic">🤲</div><h4>Spa das Mãos</h4><p>Hidratação e cuidado pra pele das mãos</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Reparo%20de%20Unha%20Quebrada."><img src="https://images.unsplash.com/photo-1526336686748-bd7bb2f1df84?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Reparo de Unha Quebrada"><div class="overlay"></div><div class="content"><div class="gic">🩹</div><h4>Reparo de Unha Quebrada</h4><p>Conserto rápido sem perder o design</p></div></a>
+        <!-- duplicado p/ loop contínuo -->
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Banho%20de%20Gel."><img src="https://images.unsplash.com/photo-1519253888976-62a7e1ea3e0e?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Banho de Gel"><div class="overlay"></div><div class="content"><div class="gic">🛁</div><h4>Banho de Gel</h4><p>Reforço e brilho sobre a unha natural</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Blindagem%20de%20Unhas%20Naturais."><img src="https://images.unsplash.com/photo-1648844421753-351afd50486a?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Blindagem de Unhas Naturais"><div class="overlay"></div><div class="content"><div class="gic">🛡️</div><h4>Blindagem de Unhas Naturais</h4><p>Proteção pra quem quer fortalecer a unha própria</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Cutilagem%20Especializada."><img src="https://images.unsplash.com/photo-1597999709389-e29dc41e218a?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Cutilagem Especializada"><div class="overlay"></div><div class="content"><div class="gic">✂️</div><h4>Cutilagem Especializada</h4><p>Acabamento limpo e sem agredir a pele</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Design%20Delicado."><img src="https://images.unsplash.com/photo-1494919138911-02d403edd88d?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Nail Design Delicado"><div class="overlay"></div><div class="content"><div class="gic">🌸</div><h4>Nail Design Delicado</h4><p>Francesinha, florais e traços minimalistas</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Spa%20das%20M%C3%A3os."><img src="https://images.unsplash.com/photo-1633955726992-2b7c0d2d2a69?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Spa das Mãos"><div class="overlay"></div><div class="content"><div class="gic">🤲</div><h4>Spa das Mãos</h4><p>Hidratação e cuidado pra pele das mãos</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Reparo%20de%20Unha%20Quebrada."><img src="https://images.unsplash.com/photo-1526336686748-bd7bb2f1df84?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Reparo de Unha Quebrada"><div class="overlay"></div><div class="content"><div class="gic">🩹</div><h4>Reparo de Unha Quebrada</h4><p>Conserto rápido sem perder o design</p></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="diferenciais">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por que escolher a Bruna Nascimento Nails</span>
+      <h2>Técnica, cuidado e naturalidade em cada atendimento</h2>
+      <p>Um estúdio pensado pra você ter um momento só seu, do início ao fim do atendimento.</p>
+    </div>
+    <div class="benefits-grid reveal-stagger">
+      <div class="benefit border-run"><div class="ic">①</div><div><h4>Especialista em Fibra de Vidro</h4><p>Técnica de alongamento leve, resistente e com acabamento que imita o crescimento natural da unha.</p></div></div>
+      <div class="benefit border-run"><div class="ic">②</div><div><h4>Atendimento Individual</h4><p>Um horário, uma cliente — sem pressa, sem fila de espera.</p></div></div>
+      <div class="benefit border-run"><div class="ic">③</div><div><h4>Ambiente Reservado e Higienizado</h4><p>Materiais esterilizados e cuidado redobrado em cada etapa do serviço.</p></div></div>
+      <div class="benefit border-run"><div class="ic">④</div><div><h4>Delicadeza em Cada Detalhe</h4><p>Do desenho ao acabamento, tudo pensado pra valorizar suas mãos.</p></div></div>
+      <div class="benefit border-run"><div class="ic">⑤</div><div><h4>Fácil de Agendar</h4><p>Marque direto pelo WhatsApp, sem burocracia.</p></div></div>
+      <div class="benefit border-run"><div class="ic">⑥</div><div><h4>Trabalho à Vista no Instagram</h4><p>Confira o resultado real antes de agendar: @nails.brunascimento.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="proof reveal">
+    <div class="proof-left">
+      <h3>Avaliação real, direto do Google</h3>
+      <p>A nota que as próprias clientes deram pro atendimento do estúdio.</p>
+    </div>
+    <div class="proof-score">
+      <div>
+        <div class="num">5.0</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div>
+        <b style="font-family:'Playfair Display',serif;font-size:18px;">2 avaliações</b>
+        <small>Google Maps · Bruna Nascimento Nails</small><br>
+        <a href="https://www.google.com/maps/place/Bruna+Nascimento+Nails/@-22.8791245,-48.4495326,17z/data=!3m1!4b1!4m6!3m5!1s0x94c7216823d997fb:0x814572bfaf6630e4!8m2!3d-22.8791245!4d-48.4495326!16s%2Fg%2F11w339n6dt" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;font-size:13px;">Ver avaliações no Google →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container about reveal-stagger">
+    <div class="about-media">
+      <img src="https://images.unsplash.com/photo-1690749072212-373daf1d58ca?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1000" alt="Trabalho de manicure delicado do estúdio Bruna Nascimento Nails">
+      <div class="about-badge">
+        <div class="stars">★★★★★</div>
+        <div>
+          <b>5.0 no Google</b>
+          <small>2 avaliações</small>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Sobre o estúdio</span>
+      <h2 style="font-size:30px;font-style:italic;color:var(--brand-900);font-weight:600;">Naturalidade e técnica em cada atendimento</h2>
+      <p style="color:var(--gray-600);margin-top:14px;">O estúdio da Bruna Nascimento fica em Botucatu e é especializado na técnica de fibra de vidro para alongamento de unhas — leve, resistente e com acabamento que respeita o crescimento natural da unha. Cada atendimento é individual, sem pressa, pensado pra durar e valorizar suas mãos com delicadeza.</p>
+      <ul class="about-list">
+        <li><span class="check">✓</span><span><b>Especialista em fibra de vidro</b>, com foco em naturalidade e durabilidade.</span></li>
+        <li><span class="check">✓</span><span><b>Atendimento individual</b>, sem pressa e sem fila de espera.</span></li>
+        <li><span class="check">✓</span><span><b>Materiais higienizados</b> e cuidado redobrado em cada etapa.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="localizacao">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Localização e Contato</span>
+      <h2 id="contato">Venha conhecer o estúdio em Botucatu</h2>
+    </div>
+    <div class="contact-grid reveal-stagger">
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="ic">📍</div>
+          <div><h5>Endereço</h5><p>Av. Dr. Vital Brasil, 422 — Vila São Lúcio, Botucatu/SP, 18603-193</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">📞</div>
+          <div><h5>Telefone / WhatsApp</h5><p>+55 14 99845-8336</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">🕐</div>
+          <div><h5>Horário de atendimento</h5><p>Seg a Sex, 8h às 21h · Sáb, 9h às 15h</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">⭐</div>
+          <div><h5>Avaliação Google</h5><p>5.0 de 5 (2 avaliações)</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">📷</div>
+          <div><h5>Instagram</h5><p><a href="https://www.instagram.com/nails.brunascimento/" target="_blank" rel="noopener" style="color:var(--brand-600);text-decoration:underline;">@nails.brunascimento</a></p></div>
+        </div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=Av.+Dr.+Vital+Brasil,+422+-+Vila+Sao+Lucio,+Botucatu+-+SP,+18603-193&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-banner reveal">
+    <h2>Vamos deixar suas unhas impecáveis?</h2>
+    <p>Agende seu horário no estúdio da Bruna Nascimento em Botucatu e sinta a diferença da fibra de vidro feita com cuidado.</p>
+    <a class="btn btn-ghost-light" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">📅 Agendar meu horário</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="foot-logo"><span class="dot" style="width:10px;height:10px;background:var(--brand-500);border-radius:50%;display:inline-block;"></span>Bruna Nascimento Nails</div>
+      <p style="max-width:320px;font-size:13.5px;">Estúdio de manicure em Botucatu especializado em fibra de vidro. Naturalidade, técnica e cuidado em cada atendimento.</p>
+    </div>
+    <div>
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a href="https://www.instagram.com/nails.brunascimento/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contato</h5>
+      <ul>
+        <li>Av. Dr. Vital Brasil, 422 — Botucatu/SP</li>
+        <li>+55 14 99845-8336</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© 2026 Bruna Nascimento Nails. Todos os direitos reservados.</span>
+    <span>Estúdio independente · Botucatu/SP</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">📱<span class="ping"></span></a>
+
+<script>
+(function(){
+  var scheduleBtn = document.getElementById('scheduleBtn');
+  if (scheduleBtn) {
+    scheduleBtn.addEventListener('click', function(){
+      var service = document.getElementById('fieldService').value;
+      var period = document.getElementById('fieldPeriod').value;
+      var msg = 'Olá, Bruna! Gostaria de agendar um horário';
+      if (service) msg += ' para ' + service;
+      if (period) msg += ', de preferência ' + period;
+      msg += '.';
+      window.open('https://wa.me/5514998458336?text=' + encodeURIComponent(msg), '_blank');
+    });
+  }
+
+  var header = document.getElementById('siteHeader');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
