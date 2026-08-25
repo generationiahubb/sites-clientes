@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generation IA Hub — Tecnologia que transforma negócios</title>
+<meta name="description" content="A Generation IA Hub cria sites e landing pages profissionais para empresas locais e está construindo a próxima geração de automação e agentes de IA para WhatsApp. Presença digital hoje, inteligência artificial amanhã.">
+<meta property="og:title" content="Generation IA Hub — Tecnologia que transforma negócios">
+<meta property="og:description" content="Sites profissionais, automação e agentes de IA para empresas locais. Fale com a Generation no WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23FAFAF9'/%3E%3Cpolygon points='60,10 104,35 104,85 60,110 16,85 16,35' fill='none' stroke='%231B3F63' stroke-width='9'/%3E%3Cpolygon points='60,42 82,84 38,84' fill='%23ED7D22'/%3E%3Crect x='51' y='48' width='7' height='22' rx='2' fill='%231B3F63'/%3E%3Ccircle cx='54.5' cy='41' r='4.2' fill='%231B3F63'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --navy-950:#050F1C;
+  --navy-900:#0A1D30;
+  --navy-800:#123350;
+  --navy-700:#1B3F63;
+  --navy-600:#28527D;
+  --navy-500:#3C6C9C;
+  --navy-100:#E7EEF5;
+  --navy-50:#F6F9FC;
+  --orange-700:#B85710;
+  --orange-600:#D9670F;
+  --orange-500:#ED7D22;
+  --orange-400:#F3984E;
+  --orange-100:#FCE7D3;
+  --ink:#101A26;
+  --gray-600:#54626F;
+  --gray-400:#8A97A3;
+  --bg:#FAFAF9;
+  --white:#FFFFFF;
+  --shadow: 0 10px 30px rgba(10,29,48,.10);
+  --shadow-lg: 0 24px 60px rgba(10,29,48,.16);
+  --radius: 14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased;}
+img,svg{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;letter-spacing:-.02em;color:var(--navy-900);}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+section{padding:104px 0;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-600);margin-bottom:16px;}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--orange-500);display:inline-block;}
+.section-head{max-width:640px;margin:0 auto 56px;text-align:center;}
+.section-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.15;}
+.section-head p{margin-top:16px;color:var(--gray-600);font-size:17px;}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Space Grotesk';font-weight:600;font-size:15px;padding:14px 26px;border-radius:10px;border:1px solid transparent;transition:transform .25s cubic-bezier(.25,.46,.45,.94),box-shadow .25s,background .25s,color .25s;cursor:pointer;white-space:nowrap;}
+.btn-primary{background:var(--orange-500);color:#fff;box-shadow:0 10px 24px rgba(237,125,34,.32);}
+.btn-primary:hover{background:var(--orange-600);transform:translateY(-2px);box-shadow:0 14px 30px rgba(237,125,34,.4);}
+.btn-outline{border-color:rgba(16,26,38,.16);color:var(--navy-900);}
+.btn-outline:hover{border-color:var(--navy-700);transform:translateY(-2px);}
+.btn-on-dark{background:#fff;color:var(--navy-900);}
+.btn-on-dark:hover{background:var(--orange-500);color:#fff;transform:translateY(-2px);}
+.btn-ghost-dark{border-color:rgba(255,255,255,.28);color:#fff;}
+.btn-ghost-dark:hover{border-color:#fff;transform:translateY(-2px);}
+.btn svg{width:18px;height:18px;flex-shrink:0;}
+
+/* Header */
+.utility-note{background:var(--navy-950);color:rgba(255,255,255,.72);font-size:12.5px;text-align:center;padding:7px 20px;letter-spacing:.02em;}
+header{position:sticky;top:0;z-index:50;background:rgba(250,250,249,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(16,26,38,.06);transition:box-shadow .3s;}
+header.scrolled{box-shadow:0 6px 24px rgba(10,29,48,.08);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1180px;margin:0 auto;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand img{width:34px;height:34px;object-fit:contain;}
+.brand-text{font-family:'Space Grotesk';font-weight:700;font-size:18px;color:var(--navy-900);letter-spacing:-.01em;line-height:1.1;}
+.brand-text span{display:block;font-family:'Inter';font-weight:600;font-size:10.5px;letter-spacing:.16em;color:var(--orange-600);}
+.nav-links{display:flex;align-items:center;gap:34px;}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--navy-800);transition:color .2s;}
+.nav-links a:hover{color:var(--orange-600);}
+.nav-actions{display:flex;align-items:center;gap:14px;}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+.nav-toggle svg{width:26px;height:26px;color:var(--navy-900);}
+.nav-drawer{display:none;}
+
+/* Hero — TYPOGRAPHIC_FIRST */
+.hero{padding:0;position:relative;overflow:hidden;background:var(--bg);}
+.hero-inner{max-width:1180px;margin:0 auto;padding:88px 24px 64px;position:relative;z-index:2;}
+.hero-copy{max-width:760px;margin:0 auto;text-align:center;}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;letter-spacing:-.03em;}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--orange-600),var(--orange-400) 55%,var(--orange-600));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero .subhead{margin:24px auto 0;max-width:52ch;font-size:19px;color:var(--gray-600);}
+.hero-cta{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:36px;}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;}
+.hero-bg svg{position:absolute;opacity:.55;}
+.hero-bg .hx1{width:420px;top:-90px;right:-120px;opacity:.5;}
+.hero-bg .hx2{width:220px;bottom:20px;left:-80px;opacity:.35;}
+.hero-bg .grid-lines{position:absolute;inset:0;width:100%;height:100%;opacity:.5;}
+
+/* Flow — Negócio -> Tecnologia -> Resultado */
+.flow{position:relative;z-index:2;max-width:920px;margin:72px auto 0;}
+.flow-track{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;}
+.flow-line{position:absolute;top:34px;left:60px;right:60px;height:2px;background:repeating-linear-gradient(90deg,rgba(27,63,99,.28) 0 10px,transparent 10px 20px);z-index:0;}
+.flow-node{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:0 12px;}
+.flow-dot{width:68px;height:68px;border-radius:16px;background:linear-gradient(150deg,var(--navy-800),var(--navy-700));display:flex;align-items:center;justify-content:center;box-shadow:0 14px 28px rgba(10,29,48,.24);}
+.flow-node:nth-child(3) .flow-dot{background:linear-gradient(150deg,var(--orange-600),var(--orange-500));box-shadow:0 14px 28px rgba(237,125,34,.32);}
+.flow-dot svg{width:30px;height:30px;color:#fff;}
+.flow-node strong{font-family:'Space Grotesk';font-size:14.5px;font-weight:600;color:var(--navy-900);}
+.flow-node span{font-size:12.5px;color:var(--gray-600);max-width:16ch;}
+
+/* Reveal / motion */
+.reveal,.reveal-stagger>*{opacity:1;transform:none;}
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94),transform .7s cubic-bezier(.25,.46,.45,.94);}
+.js .reveal.is-visible{opacity:1;transform:translateY(0);}
+.js .reveal-stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94),transform .7s cubic-bezier(.25,.46,.45,.94);}
+.js .reveal-stagger.is-visible>*{opacity:1;transform:translateY(0);}
+.js .reveal-stagger.is-visible>*:nth-child(1){transition-delay:0ms;}
+.js .reveal-stagger.is-visible>*:nth-child(2){transition-delay:90ms;}
+.js .reveal-stagger.is-visible>*:nth-child(3){transition-delay:180ms;}
+.js .reveal-stagger.is-visible>*:nth-child(4){transition-delay:270ms;}
+.js .reveal-stagger.is-visible>*:nth-child(5){transition-delay:360ms;}
+.js .reveal-stagger.is-visible>*:nth-child(6){transition-delay:450ms;}
+
+/* border-run */
+@property --angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
+.border-run{position:relative;isolation:isolate;}
+.border-run::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;
+  background:conic-gradient(from var(--angle), transparent 0deg, var(--orange-500) 60deg, var(--navy-600) 140deg, transparent 200deg, transparent 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation:borderRun 6s linear infinite;opacity:0;transition:opacity .3s;pointer-events:none;z-index:2;}
+.border-run:hover::before{opacity:1;animation-duration:2.2s;}
+@keyframes borderRun{100%{--angle:360deg;}}
+
+/* O que fazemos */
+.solutions-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.solution-card{background:#fff;border:1px solid rgba(16,26,38,.08);border-radius:var(--radius);padding:30px 24px;box-shadow:var(--shadow);}
+.solution-card .ic{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--navy-700),var(--navy-600));display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 8px 18px rgba(27,63,99,.3);}
+.solution-card:nth-child(3) .ic{background:linear-gradient(135deg,var(--orange-600),var(--orange-500));box-shadow:0 8px 18px rgba(237,125,34,.32);}
+.solution-card .ic svg{width:22px;height:22px;color:#fff;}
+.solution-card h3{font-size:17px;margin-bottom:10px;}
+.solution-card p{font-size:14.5px;color:var(--gray-600);}
+
+/* Sites section */
+.sites-section{background:var(--navy-950);color:#fff;position:relative;overflow:hidden;}
+.sites-section::after{content:"";position:absolute;top:-160px;right:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(237,125,34,.18),transparent 70%);}
+.sites-grid{max-width:640px;margin:0 auto;text-align:center;position:relative;z-index:1;}
+.sites-grid h2{color:#fff;font-size:clamp(1.7rem,3.4vw,2.4rem);}
+.sites-grid p.lead{margin:18px auto 0;color:rgba(255,255,255,.72);font-size:17px;max-width:48ch;}
+.benefit-list{margin:32px auto 0;display:inline-grid;grid-template-columns:1fr 1fr;gap:14px 28px;text-align:left;}
+.benefit-list li{display:flex;align-items:center;gap:10px;font-size:14.5px;color:rgba(255,255,255,.88);}
+.benefit-list svg{width:18px;height:18px;color:var(--orange-400);flex-shrink:0;}
+.sites-cta{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+.mock-btn{margin-top:18px;height:38px;width:150px;border-radius:9px;background:linear-gradient(135deg,var(--orange-600),var(--orange-500));}
+
+/* Próximo nível */
+.next-level{background:var(--navy-50);}
+.next-wrap{max-width:960px;margin:0 auto;}
+.next-head{text-align:center;max-width:640px;margin:0 auto 20px;}
+.badge-soon{display:inline-flex;align-items:center;gap:8px;background:var(--orange-100);color:var(--orange-700);font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:18px;}
+.badge-soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange-500);}
+.chat-flow{margin-top:52px;position:relative;padding-left:34px;}
+.chat-flow::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:2px;background:repeating-linear-gradient(180deg,rgba(27,63,99,.25) 0 8px,transparent 8px 16px);}
+.chat-step{position:relative;padding-bottom:30px;}
+.chat-step:last-child{padding-bottom:0;}
+.chat-step::before{content:"";position:absolute;left:-34px;top:4px;width:22px;height:22px;border-radius:50%;background:#fff;border:2px solid var(--orange-500);}
+.chat-step.final::before{background:var(--orange-500);}
+.chat-bubble{background:#fff;border:1px solid rgba(16,26,38,.08);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow);display:inline-block;font-size:15px;font-weight:500;color:var(--navy-900);}
+.chat-step.final .chat-bubble{background:var(--navy-900);color:#fff;font-family:'Space Grotesk';font-weight:600;}
+
+/* Para quem */
+.audience-grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.audience-pill{border:1px solid rgba(16,26,38,.12);border-radius:999px;padding:11px 22px;font-size:14.5px;font-weight:500;color:var(--navy-800);background:#fff;transition:border-color .2s,transform .2s;}
+.audience-pill:hover{border-color:var(--orange-500);transform:translateY(-2px);}
+
+/* Como funciona */
+.how-section{background:var(--navy-950);color:#fff;}
+.how-section .section-head h2{color:#fff;}
+.how-section .section-head p{color:rgba(255,255,255,.68);}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;}
+.quick-connector{position:absolute;top:44px;left:60px;right:60px;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.22) 0 10px,transparent 10px 20px);z-index:0;}
+.quick-card{position:relative;z-index:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px 22px;}
+.quick-card::after{content:"";position:absolute;top:-30%;right:-30%;width:60%;height:60%;background:radial-gradient(circle,rgba(237,125,34,.22),transparent 70%);pointer-events:none;}
+.quick-card .step{position:absolute;top:16px;right:18px;font-family:'Space Grotesk';font-size:12px;font-weight:600;color:rgba(255,255,255,.35);}
+.quick-card .ic{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,var(--orange-600),var(--orange-500));display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 8px 18px rgba(237,125,34,.3);}
+.quick-card .ic svg{width:20px;height:20px;color:#fff;}
+.quick-card h3{color:#fff;font-size:16px;margin-bottom:8px;}
+.quick-card p{font-size:13.5px;color:rgba(255,255,255,.62);}
+
+/* Diferencial */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.pillar{border:1px solid rgba(16,26,38,.08);border-radius:var(--radius);padding:30px 26px;background:#fff;box-shadow:var(--shadow);}
+.pillar .num{font-family:'Space Grotesk';font-size:13px;font-weight:700;color:var(--orange-600);letter-spacing:.08em;margin-bottom:14px;}
+.pillar h3{font-size:18px;margin-bottom:10px;}
+.pillar p{font-size:14.5px;color:var(--gray-600);}
+
+/* CTA final */
+.cta-final{background:linear-gradient(150deg,var(--navy-900),var(--navy-950));color:#fff;text-align:center;position:relative;overflow:hidden;}
+.cta-final::before{content:"";position:absolute;bottom:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(237,125,34,.16),transparent 70%);}
+.cta-final .inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
+.cta-final h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.6rem);}
+.cta-final p{margin-top:18px;color:rgba(255,255,255,.72);font-size:17px;}
+.cta-final .btn-row{margin-top:34px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+/* Footer */
+footer{background:var(--navy-950);color:rgba(255,255,255,.62);padding:56px 0 28px;}
+.footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1);}
+.footer-brand{display:flex;align-items:center;gap:10px;}
+.footer-brand svg{width:30px;height:30px;}
+.footer-brand span{font-family:'Space Grotesk';font-weight:700;color:#fff;font-size:16px;}
+.footer-links{display:flex;gap:40px;flex-wrap:wrap;}
+.footer-col h4{font-family:'Space Grotesk';font-size:13px;color:#fff;margin-bottom:12px;letter-spacing:.04em;}
+.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,.6);margin-bottom:8px;transition:color .2s;}
+.footer-col a:hover{color:var(--orange-400);}
+.footer-bottom{padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;}
+
+/* WhatsApp floating button */
+.whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(0,0,0,.25);}
+.whatsapp-float svg{width:30px;height:30px;color:#fff;}
+.whatsapp-float .ping{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#FF4D4D;border-radius:50%;border:2px solid #fff;animation:pulseDot 2s ease-in-out infinite;}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.55;transform:scale(1.2);}}
+
+/* Mobile */
+@media (max-width:900px){
+  .nav-links{display:none;}
+  .nav-toggle{display:block;}
+  .nav-drawer.open{display:flex;flex-direction:column;gap:4px;background:#fff;border-top:1px solid rgba(16,26,38,.08);padding:16px 24px 22px;}
+  .nav-drawer a{padding:12px 0;font-size:15.5px;font-weight:500;color:var(--navy-800);border-bottom:1px solid rgba(16,26,38,.06);}
+  .nav-drawer .btn{margin-top:12px;}
+  .solutions-grid{grid-template-columns:1fr 1fr;}
+  .benefit-list{grid-template-columns:1fr;}
+  .flow-track{grid-template-columns:1fr;gap:28px;}
+  .flow-line{display:none;}
+  .quick-grid{grid-template-columns:1fr 1fr;gap:16px;}
+  .quick-connector{display:none;}
+  .pillars{grid-template-columns:1fr;}
+  .hero-bg .hx1{width:260px;top:-60px;right:-100px;}
+}
+@media (max-width:600px){
+  section{padding:72px 0;}
+  .solutions-grid{grid-template-columns:1fr;}
+  .quick-grid{grid-template-columns:1fr;}
+  .hero-inner{padding:56px 20px 48px;}
+  .footer-links{gap:28px;}
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .border-run::before{animation:none;}
+  .js .reveal,.js .reveal-stagger>*{transition:none;opacity:1;transform:none;}
+  .whatsapp-float .ping{animation:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="utility-note">Generation IA Hub · Botucatu-SP · Sites, automação e agentes de IA para empresas locais</div>
+
+<header id="siteHeader">
+  <div class="nav">
+    <a href="#top" class="brand">
+      <img src="logo-simbolo.png" alt="Generation IA Hub" width="34" height="34">
+      <span class="brand-text">GENERATION<span>IA HUB</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#solucoes">O que fazemos</a>
+      <a href="#sites">Sites</a>
+      <a href="#proximo-nivel">Próximo nível</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Conheci%20a%20Generation%20IA%20Hub%20e%20gostaria%20de%20entender%20como%20voc%C3%AAs%20podem%20ajudar%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <a href="#solucoes">O que fazemos</a>
+    <a href="#sites">Sites</a>
+    <a href="#proximo-nivel">Próximo nível</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#contato">Contato</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO — TYPOGRAPHIC_FIRST -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hx1" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="60,10 104,35 104,85 60,110 16,85 16,35" fill="none" stroke="#1B3F63" stroke-width="2.4"/>
+        <polygon points="60,42 82,84 38,84" fill="#ED7D22" opacity=".18"/>
+      </svg>
+      <svg class="hx2" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="60,10 104,35 104,85 60,110 16,85 16,35" fill="none" stroke="#ED7D22" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        <div class="eyebrow" style="justify-content:center;">Generation IA Hub</div>
+        <h1>Tecnologia que <em>transforma</em> negócios.</h1>
+        <p class="subhead">Criamos soluções digitais que ajudam empresas a atrair clientes, vender mais e automatizar processos — começando pela sua presença digital.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Quero%20transformar%20meu%20neg%C3%B3cio%20com%20a%20Generation%20IA%20Hub." target="_blank" rel="noopener">Quero transformar meu negócio</a>
+          <a class="btn btn-outline" href="#solucoes">Conheça nossas soluções</a>
+        </div>
+      </div>
+
+      <div class="flow reveal-stagger">
+        <div class="flow-track">
+          <div class="flow-line" aria-hidden="true"></div>
+          <div class="flow-node">
+            <div class="flow-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+            </div>
+            <strong>Negócio</strong>
+            <span>Sua empresa, seus clientes, seus desafios reais</span>
+          </div>
+          <div class="flow-node">
+            <div class="flow-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2 2M16.4 16.4l2 2M5.6 18.4l2-2M16.4 7.6l2-2"/></svg>
+            </div>
+            <strong>Tecnologia</strong>
+            <span>Sites, automação e agentes de IA aplicados ao problema</span>
+          </div>
+          <div class="flow-node">
+            <div class="flow-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8M21 7v6"/></svg>
+            </div>
+            <strong>Resultado</strong>
+            <span>Mais clientes, mais vendas, menos trabalho manual</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE FAZEMOS -->
+  <section id="solucoes">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" style="justify-content:center;">O que fazemos</div>
+        <h2>Tecnologia para cada etapa do seu negócio.</h2>
+        <p>A Generation está construindo uma plataforma de soluções tecnológicas para empresas — não apenas sites.</p>
+      </div>
+      <div class="solutions-grid reveal-stagger">
+        <div class="solution-card border-run">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 20h8"/></svg></div>
+          <h3>Presença Digital</h3>
+          <p>Sites e landing pages profissionais que transformam visitantes em oportunidades.</p>
+        </div>
+        <div class="solution-card border-run">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg></div>
+          <h3>Automação</h3>
+          <p>Automatização de tarefas e processos repetitivos para economizar tempo e reduzir erros.</p>
+        </div>
+        <div class="solution-card border-run">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a5 5 0 015 5c0 2-1 3-2 4v2H9v-2c-1-1-2-2-2-4a5 5 0 015-5zM9 19h6M10 22h4"/></svg></div>
+          <h3>Inteligência Artificial</h3>
+          <p>Agentes de IA capazes de atender, qualificar e vender para sua empresa 24 horas por dia.</p>
+        </div>
+        <div class="solution-card border-run">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.77z"/></svg></div>
+          <h3>Soluções Sob Medida</h3>
+          <p>Sistemas, integrações e ferramentas desenvolvidas para resolver problemas específicos da empresa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SITES (produto atual) -->
+  <section id="sites" class="sites-section">
+    <div class="container">
+      <div class="sites-grid">
+        <div class="reveal">
+          <div class="eyebrow" style="justify-content:center;">Comece por aqui</div>
+          <h2>Seu negócio merece uma presença digital à altura.</h2>
+          <p class="lead">Se sua empresa ainda não possui um site profissional, criamos uma presença digital moderna, rápida e preparada para gerar oportunidades pelo WhatsApp.</p>
+          <ul class="benefit-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Design profissional</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Responsivo para celular</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Otimizado para Google</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Botão direto para WhatsApp</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Carregamento rápido</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Estrutura preparada para conversão</li>
+          </ul>
+          <div class="sites-cta">
+            <a class="btn btn-primary" href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Generation%20IA%20Hub%20e%20quero%20criar%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" rel="noopener">Quero criar meu site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMO NÍVEL -->
+  <section id="proximo-nivel" class="next-level">
+    <div class="container next-wrap">
+      <div class="next-head reveal">
+        <span class="badge-soon">Nossa próxima geração de soluções</span>
+        <h2>E quando a tecnologia começa a trabalhar por você?</h2>
+        <p>O próximo passo é transformar o atendimento da sua empresa em uma operação inteligente. Estamos desenvolvendo agentes de IA para WhatsApp com este fluxo:</p>
+      </div>
+      <div class="chat-flow reveal">
+        <div class="chat-step"><div class="chat-bubble">Seu cliente envia uma mensagem no WhatsApp.</div></div>
+        <div class="chat-step"><div class="chat-bubble">Um agente de IA entende o que ele precisa.</div></div>
+        <div class="chat-step"><div class="chat-bubble">Responde instantaneamente.</div></div>
+        <div class="chat-step"><div class="chat-bubble">Qualifica o cliente.</div></div>
+        <div class="chat-step"><div class="chat-bubble">Apresenta produtos ou serviços.</div></div>
+        <div class="chat-step"><div class="chat-bubble">Agenda ou direciona para um vendedor.</div></div>
+        <div class="chat-step final"><div class="chat-bubble">Tudo isso, 24 horas por dia. Em breve na Generation.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM -->
+  <section id="para-quem">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" style="justify-content:center;">Para quem</div>
+        <h2>Se existe um processo repetitivo, existe uma oportunidade de automatizar.</h2>
+      </div>
+      <div class="audience-grid reveal-stagger">
+        <span class="audience-pill">Clínicas</span>
+        <span class="audience-pill">Consultórios</span>
+        <span class="audience-pill">Restaurantes</span>
+        <span class="audience-pill">Salões e barbearias</span>
+        <span class="audience-pill">Academias</span>
+        <span class="audience-pill">Imobiliárias</span>
+        <span class="audience-pill">Escritórios</span>
+        <span class="audience-pill">Prestadores de serviços</span>
+        <span class="audience-pill">Lojas</span>
+        <span class="audience-pill">Empresas locais em geral</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="how-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" style="justify-content:center;">Como funciona</div>
+        <h2>Do primeiro contato à solução, em quatro passos.</h2>
+      </div>
+      <div class="quick-grid reveal-stagger">
+        <div class="quick-connector" aria-hidden="true"></div>
+        <div class="quick-card">
+          <span class="step">01</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <h3>Entendemos</h3>
+          <p>Analisamos seu negócio, seus clientes e seus principais desafios.</p>
+        </div>
+        <div class="quick-card">
+          <span class="step">02</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+          <h3>Identificamos</h3>
+          <p>Encontramos oportunidades de melhorar presença digital, atendimento, vendas ou processos.</p>
+        </div>
+        <div class="quick-card">
+          <span class="step">03</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.77z"/></svg></div>
+          <h3>Construímos</h3>
+          <p>Desenvolvemos a solução tecnológica adequada para o problema.</p>
+        </div>
+        <div class="quick-card">
+          <span class="step">04</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8M21 7v6"/></svg></div>
+          <h3>Evoluímos</h3>
+          <p>Acompanhamos os resultados e identificamos novas oportunidades de automação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAL -->
+  <section id="diferencial">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" style="justify-content:center;">Diferencial</div>
+        <h2>Não vendemos tecnologia. Resolvemos problemas.</h2>
+        <p>Cada empresa possui desafios diferentes. Por isso, nossa abordagem começa entendendo o problema antes de escolher a tecnologia.</p>
+      </div>
+      <div class="pillars reveal-stagger">
+        <div class="pillar">
+          <div class="num">01 — Problema</div>
+          <h3>Onde sua empresa perde tempo, dinheiro ou oportunidades</h3>
+          <p>Entender o problema real do negócio, não só sintomas, antes de propor qualquer solução.</p>
+        </div>
+        <div class="pillar">
+          <div class="num">02 — Solução</div>
+          <h3>A tecnologia certa, escolhida e desenvolvida sob medida</h3>
+          <p>Site, automação ou agente de IA — o que resolver o problema, não o que é tendência.</p>
+        </div>
+        <div class="pillar">
+          <div class="num">03 — Resultado</div>
+          <h3>Impacto medido através de indicadores reais</h3>
+          <p>Acompanhamento contínuo para garantir que a solução continua gerando resultado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contato" class="cta-final">
+    <div class="container inner">
+      <h2>Qual problema podemos resolver no seu negócio?</h2>
+      <p>Conte para a Generation o que está travando o crescimento da sua empresa. Vamos encontrar uma solução usando tecnologia.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20a%20Generation%20sobre%20um%20problema%20no%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.85 9.85 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2z"/></svg>
+          Falar com a Generation
+        </a>
+        <a class="btn btn-ghost-dark" href="mailto:generation.iahub@gmail.com">generation.iahub@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="60,10 104,35 104,85 60,110 16,85 16,35" fill="none" stroke="#fff" stroke-width="9"/>
+            <polygon points="60,42 82,84 38,84" fill="#ED7D22"/>
+            <rect x="51" y="48" width="7" height="22" rx="2" fill="#fff"/>
+            <circle cx="54.5" cy="41" r="4.2" fill="#fff"/>
+          </svg>
+          <span>GENERATION IA HUB</span>
+        </div>
+        <p style="margin-top:14px;font-size:13.5px;max-width:30ch;">Tecnologia que transforma negócios. Botucatu-SP.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Soluções</h4>
+          <a href="#sites">Sites e landing pages</a>
+          <a href="#solucoes">Automação</a>
+          <a href="#proximo-nivel">Agentes de IA</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5514999050398" target="_blank" rel="noopener">WhatsApp (14) 99905-0398</a>
+          <a href="mailto:generation.iahub@gmail.com">generation.iahub@gmail.com</a>
+          <a href="https://instagram.com/generation.iahub" target="_blank" rel="noopener">@generation.iahub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Generation IA Hub. Todos os direitos reservados.</span>
+      <span>Botucatu — SP</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Conheci%20a%20Generation%20IA%20Hub%20e%20gostaria%20de%20entender%20como%20voc%C3%AAs%20podem%20ajudar%20minha%20empresa." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.85 9.85 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2z"/></svg>
+  <span class="ping"></span>
+</a>
+
+<script>
+(function(){
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  }, {passive:true});
+
+  var toggle = document.getElementById('navToggle');
+  var drawer = document.getElementById('navDrawer');
+  toggle.addEventListener('click', function(){
+    drawer.classList.toggle('open');
+  });
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ drawer.classList.remove('open'); });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.1, rootMargin:'0px 0px -5% 0px'});
+    var revealTargets = document.querySelectorAll('.reveal, .reveal-stagger');
+    revealTargets.forEach(function(el){ obs.observe(el); });
+    setTimeout(function(){
+      revealTargets.forEach(function(el){ el.classList.add('is-visible'); });
+    }, 4000);
+  }
+
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
