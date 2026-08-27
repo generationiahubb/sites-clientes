@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Jéssica Segantin | Cirurgiã-Dentista em Botucatu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --terra-900:#3D1F14;
+    --terra-800:#5C2E1E;
+    --terra-700:#7A3D28;
+    --terra-600:#A85332;
+    --terra-500:#CC6A3F;
+    --terra-400:#E08A5F;
+    --terra-100:#FBEAE0;
+    --terra-50:#FDF5F0;
+    --ink:#241610;
+    --gray-600:#7A6A62;
+    --gray-400:#AB9A90;
+    --white:#FFFFFF;
+    --star:#FFB020;
+    --shadow: 0 10px 30px rgba(61,31,20,0.10);
+    --radius: 16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.55;}
+  h1,h2,h3,.display{font-family:'Poppins',sans-serif;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--terra-500);color:#fff;box-shadow:0 8px 20px rgba(204,106,63,.35);}
+  .btn-primary:hover{background:var(--terra-600);}
+  .btn-outline{background:#fff;color:var(--terra-700);border-color:var(--terra-100);}
+  .btn-outline:hover{border-color:var(--terra-400);}
+  .btn-ghost-light{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.35);}
+  .btn-outline-light{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.3);}
+  .btn-outline-light:hover{border-color:rgba(255,255,255,.6);}
+
+  .utility-bar{background:linear-gradient(90deg,var(--terra-900),var(--terra-800));color:#F0DCCF;font-size:12.5px;}
+  .utility-bar .container{display:flex;align-items:center;justify-content:space-between;padding:9px 24px;flex-wrap:wrap;gap:8px;}
+  .utility-links{display:flex;align-items:center;gap:22px;}
+  .utility-links a{opacity:.9;transition:opacity .15s;}
+  .utility-links a:hover{opacity:1;}
+  @media(max-width:760px){.utility-links span:not(:first-child){display:none;}}
+
+  header{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,var(--terra-700),var(--terra-500));transition:box-shadow .3s ease;}
+  header.scrolled{box-shadow:0 10px 26px rgba(61,31,20,.2);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:8px;font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:#fff;}
+  .logo .dot{width:12px;height:12px;background:#fff;border-radius:4px;display:inline-block;opacity:.9;}
+  .logo span.light{font-weight:500;color:rgba(255,255,255,.75);}
+  .nav-links{display:flex;gap:30px;font-size:14.5px;font-weight:500;color:#fff;}
+  .nav-links a{opacity:.85;transition:opacity .15s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{display:flex;align-items:center;gap:16px;}
+  .btn-on-green{background:#fff;color:var(--terra-700);}
+  .btn-on-green:hover{background:var(--terra-50);}
+  @media(max-width:860px){.nav-links{display:none;}}
+
+  /* HERO — SPLIT_EDITORIAL invertido: foto 55% à esquerda, painel escuro 45% à direita com CTA embutido (sem card flutuante) */
+  .hero{display:grid;grid-template-columns:1.25fr 1fr;min-height:560px;padding:0;}
+  @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto;}}
+  .hero-photo{position:relative;overflow:hidden;min-height:360px;}
+  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(15deg, rgba(61,31,20,.35) 0%, rgba(61,31,20,0) 45%);}
+  .hero-info{background:linear-gradient(165deg,var(--terra-900),var(--terra-800));display:flex;flex-direction:column;justify-content:center;padding:56px 48px;color:#fff;gap:22px;}
+  @media(max-width:900px){.hero-info{padding:44px 28px;}}
+  .hero-info .badge{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);font-weight:600;font-size:12.5px;padding:7px 14px;border-radius:999px;}
+  .hero-info .badge .blip{width:7px;height:7px;background:var(--terra-400);border-radius:50%;}
+  .hero-info h1{font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,36px);line-height:1.18;letter-spacing:.2px;}
+  .hero-info .script{display:block;font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(30px,4.2vw,44px);color:var(--terra-400);line-height:1;margin-top:8px;}
+  .hero-info p.lead{font-size:15.5px;color:#F0DCCF;max-width:420px;}
+  .hero-field{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px;}
+  .hero-field label{font-size:12px;font-weight:600;color:#F0DCCF;}
+  .hero-field select{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid rgba(255,255,255,.25);font-size:13.5px;color:var(--ink);background:#fff;font-family:'Inter',sans-serif;}
+  .hero-field select:focus{outline:none;border-color:var(--terra-400);}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+
+  section{padding:88px 0;}
+  .hero{padding:0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 52px;}
+  .eyebrow{color:var(--terra-600);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;display:block;}
+  .section-head h2{font-size:34px;color:var(--terra-900);font-weight:700;}
+  .section-head p{color:var(--gray-600);margin-top:12px;font-size:16px;}
+
+  .quick{margin-top:0;position:relative;z-index:5;background:radial-gradient(65% 100% at 50% 0%, var(--terra-50), transparent 75%);padding-top:56px;padding-bottom:8px;}
+  .quick-eyebrow{text-align:center;color:var(--terra-600);font-weight:700;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .quick-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  @media(max-width:860px){.quick-grid{grid-template-columns:repeat(2,1fr);}}
+  .quick-connector{position:absolute;left:8%;right:8%;top:46px;height:0;border-top:2px dashed var(--terra-400);opacity:.45;z-index:0;}
+  .quick-connector .node{position:absolute;top:0;width:9px;height:9px;border-radius:50%;background:var(--terra-400);transform:translate(-50%,-50%);box-shadow:0 0 0 5px var(--terra-50);}
+  @media(max-width:860px){.quick-connector{display:none;}}
+  .quick-card{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--terra-900),var(--terra-800));border-radius:18px;padding:24px;color:#fff;box-shadow:0 14px 30px rgba(61,31,20,.18);transition:transform .3s ease, box-shadow .3s ease;z-index:1;}
+  .quick-card::after{content:"";position:absolute;top:-45%;right:-25%;width:150px;height:150px;background:radial-gradient(circle, rgba(224,138,95,.4), transparent 70%);pointer-events:none;}
+  .quick-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(61,31,20,.3);}
+  .quick-card .step{position:absolute;top:16px;right:18px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,.32);letter-spacing:1px;z-index:1;}
+  .quick-card .ic{position:relative;z-index:1;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--terra-500),var(--terra-400));display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:19px;box-shadow:0 8px 18px rgba(204,106,63,.45);}
+  .quick-card h4{position:relative;z-index:1;font-family:'Poppins',sans-serif;font-size:15.5px;margin-bottom:4px;}
+  .quick-card p{position:relative;z-index:1;font-size:12.5px;color:#EFD9CB;}
+
+  .treat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  @media(max-width:960px){.treat-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.treat-grid{grid-template-columns:1fr;}}
+
+  .benefits{background:var(--terra-50);}
+  .benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  @media(max-width:760px){.benefits-grid{grid-template-columns:1fr;}}
+  .benefit{display:flex;gap:16px;background:#fff;border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(61,31,20,.06);transition:transform .3s ease, box-shadow .3s ease;}
+  .benefit:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(61,31,20,.14);}
+  .benefit .ic{position:relative;z-index:1;flex:none;width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--terra-500),var(--terra-400));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;box-shadow:0 8px 18px rgba(204,106,63,.35);}
+  .benefit h4{font-family:'Poppins',sans-serif;font-size:16px;margin-bottom:6px;color:var(--terra-900);}
+  .benefit p{font-size:13.5px;color:var(--gray-600);}
+
+  .proof{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--terra-900),var(--terra-800));color:#fff;border-radius:28px;margin:0 24px;padding:56px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .proof::after{content:"";position:absolute;top:-35%;right:-8%;width:320px;height:320px;background:radial-gradient(circle, rgba(224,138,95,.3), transparent 70%);pointer-events:none;}
+  .proof-left, .proof-score{position:relative;z-index:1;}
+  .proof-left h3{font-family:'Poppins',sans-serif;font-size:26px;margin-bottom:10px;}
+  .proof-left p{color:#EFD9CB;max-width:420px;}
+  .proof-score{display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.1);padding:22px 30px;border-radius:18px;}
+  .proof-score .num{font-family:'Poppins',sans-serif;font-size:44px;font-weight:800;}
+  .proof-score .stars{color:var(--star);font-size:18px;letter-spacing:2px;}
+  .proof-score small{color:#EFD9CB;font-size:12.5px;}
+
+  .pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:860px){.pay-grid{grid-template-columns:1fr;}}
+  .pay-card{border-radius:18px;padding:30px;background:#fff;border:1px solid #F1E4DC;text-align:center;transition:transform .3s ease, box-shadow .3s ease;}
+  .pay-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(61,31,20,.12);}
+  .pay-card .ic{position:relative;z-index:1;width:50px;height:50px;margin:0 auto 16px;border-radius:14px;background:linear-gradient(135deg,var(--terra-500),var(--terra-400));color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 8px 18px rgba(204,106,63,.35);}
+  .pay-card h4{font-family:'Poppins',sans-serif;margin-bottom:8px;}
+  .pay-card p{font-size:13.5px;color:var(--gray-600);}
+
+  .about{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;}
+  @media(max-width:900px){.about{grid-template-columns:1fr;}}
+  .about-media{position:relative;}
+  .about-media img{border-radius:22px;box-shadow:var(--shadow);height:440px;width:100%;object-fit:cover;}
+  .about-badge{position:absolute;bottom:20px;left:20px;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 14px 30px rgba(61,31,20,.2);display:flex;align-items:center;gap:12px;}
+  .about-badge .stars{color:var(--star);font-size:15px;letter-spacing:1px;}
+  .about-badge b{font-family:'Poppins',sans-serif;font-size:17px;color:var(--terra-900);display:block;}
+  .about-badge small{color:var(--gray-600);font-size:11.5px;}
+  .about-list{margin-top:22px;display:flex;flex-direction:column;gap:14px;}
+  .about-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--gray-600);}
+  .about-list b{color:var(--ink);}
+  .check{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--terra-500),var(--terra-400));color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:2px;box-shadow:0 6px 14px rgba(204,106,63,.35);}
+
+  .contact{background:var(--terra-50);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch;}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:#fff;border-radius:20px;padding:36px;box-shadow:var(--shadow);}
+  .contact-item{display:flex;gap:14px;margin-bottom:22px;}
+  .contact-item .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--terra-100);color:var(--terra-700);display:flex;align-items:center;justify-content:center;}
+  .contact-item h5{font-size:14px;color:var(--gray-600);margin-bottom:2px;}
+  .contact-item p{font-weight:600;font-size:15px;}
+  .map-wrap{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);min-height:340px;}
+  .map-wrap iframe{width:100%;height:100%;min-height:340px;border:0;}
+
+  .cta-banner{background:linear-gradient(120deg,var(--terra-600),var(--terra-800));color:#fff;text-align:center;border-radius:28px;margin:0 24px;padding:64px 24px;}
+  .cta-banner h2{font-family:'Poppins',sans-serif;font-size:32px;margin-bottom:14px;}
+  .cta-banner p{color:#F5E3D8;max-width:520px;margin:0 auto 28px;}
+
+  footer{background:var(--terra-900);color:#EFD9CB;padding:56px 0 24px;margin-top:88px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+  @media(max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+  footer h5{color:#fff;font-family:'Poppins',sans-serif;font-size:15px;margin-bottom:16px;}
+  footer li{margin-bottom:10px;font-size:14px;}
+  footer .foot-logo{display:flex;align-items:center;gap:8px;color:#fff;font-family:'Poppins',sans-serif;font-weight:700;font-size:19px;margin-bottom:12px;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#D8B9A5;}
+
+  .whatsapp-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60;font-size:28px;transition:transform .4s ease;}
+  .whatsapp-float:hover{transform:scale(1.1) rotate(6deg);}
+  .whatsapp-float .ping{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#FF4D4D;border-radius:50%;border:2px solid #fff;animation:pulseDot 2s ease-in-out infinite;}
+  @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.55;transform:scale(1.2);}}
+
+  .reveal, .reveal-stagger > *{opacity:1;transform:none;}
+  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger > *{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal-stagger.is-visible > *{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger.is-visible > *:nth-child(1){transition-delay:.04s;}
+  .js .reveal-stagger.is-visible > *:nth-child(2){transition-delay:.09s;}
+  .js .reveal-stagger.is-visible > *:nth-child(3){transition-delay:.14s;}
+  .js .reveal-stagger.is-visible > *:nth-child(4){transition-delay:.19s;}
+  .js .reveal-stagger.is-visible > *:nth-child(5){transition-delay:.24s;}
+  .js .reveal-stagger.is-visible > *:nth-child(6){transition-delay:.29s;}
+  .js .reveal-stagger.is-visible > *:nth-child(7){transition-delay:.34s;}
+  .js .reveal-stagger.is-visible > *:nth-child(8){transition-delay:.39s;}
+  .js .reveal-stagger.is-visible > *:nth-child(9){transition-delay:.44s;}
+  .js .reveal-stagger.is-visible > *:nth-child(10){transition-delay:.49s;}
+  .js .reveal-stagger.is-visible > *:nth-child(11){transition-delay:.54s;}
+  .js .reveal-stagger.is-visible > *:nth-child(12){transition-delay:.59s;}
+
+  @property --angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
+  .border-run{position:relative;isolation:isolate;}
+  .border-run::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;
+    background:conic-gradient(from var(--angle), transparent 0deg, var(--terra-500) 60deg, var(--terra-400) 140deg, transparent 200deg, transparent 360deg);
+    -webkit-mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    animation:borderRun 6s linear infinite;opacity:0;transition:opacity .3s;pointer-events:none;z-index:2;}
+  .border-run:hover::before{opacity:1;animation-duration:2.2s;}
+  @keyframes borderRun{100%{--angle:360deg;}}
+
+  .treat-card .ic{transition:transform .35s ease;}
+  .treat-card:hover .ic{transform:scale(1.12) rotate(-4deg);}
+
+  .gallery-rows{display:flex;flex-direction:column;gap:22px;padding:12px 0 8px;}
+  .gallery-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);}
+  .gallery-track{display:flex;width:max-content;gap:22px;animation:galleryLeft 55s linear infinite;}
+  .gallery-track.reverse{animation-name:galleryRight;}
+  .gallery-wrap:hover .gallery-track{animation-play-state:paused;}
+  @keyframes galleryLeft{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  @keyframes galleryRight{0%{transform:translateX(-50%);}100%{transform:translateX(0);}}
+  .gallery-card{position:relative;width:280px;height:320px;flex-shrink:0;border-radius:22px;overflow:hidden;display:block;box-shadow:0 8px 20px rgba(61,31,20,.10);transition:transform .5s ease, box-shadow .5s ease;}
+  .gallery-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(61,31,20,.22);}
+  .gallery-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+  .gallery-card:hover img{transform:scale(1.1);}
+  .gallery-card .overlay{position:absolute;inset:0;background:linear-gradient(0deg, var(--terra-900) 0%, rgba(61,31,20,.6) 42%, rgba(61,31,20,.05) 75%);}
+  .gallery-card .content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;}
+  .gallery-card .gic{width:42px;height:42px;border-radius:12px;background:var(--terra-500);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;}
+  .gallery-card h4{font-family:'Poppins',sans-serif;font-size:16.5px;margin-bottom:4px;}
+  .gallery-card p{font-size:12.5px;color:#F0DCCF;}
+  @media(max-width:600px){.gallery-card{width:230px;height:280px;}}
+
+  @media (prefers-reduced-motion: reduce){
+    .gallery-track{animation:none;}
+    .border-run::before{animation:none;}
+    .js .reveal, .js .reveal-stagger > *{transition:none;opacity:1;transform:none;}
+    .whatsapp-float .ping{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-links">
+      <span>R. Benedito Rodrigues da Silva, 130 — Botucatu, SP</span>
+      <span>+55 14 99902-2222</span>
+    </div>
+    <div class="utility-links">
+      <a href="https://www.google.com/maps/search/?api=1&query=Dra.%20J%C3%A9ssica%20Segantin&query_place_id=ChIJfSdSDmvfxpQRQVvrQe5c8NM" target="_blank">★ 5,0 · Ver avaliações no Google</a>
+    </div>
+  </div>
+</div>
+
+<header id="siteHeader">
+  <div class="nav">
+    <div class="logo"><span class="dot"></span>Jéssica<span class="light">Segantin</span></div>
+    <nav class="nav-links">
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#porque">Por que eu</a>
+      <a href="#convenios">Pagamento</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-on-green" href="https://wa.me/5514999022222?text=Ol%C3%A1%2C%20Dra.%20J%C3%A9ssica!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">Agendar Consulta</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-photo">
+    <img src="fotos/portrait-jessica-cropped.jpg" alt="Dra. Jéssica Segantin, cirurgiã-dentista em Botucatu">
+  </div>
+  <div class="hero-info">
+    <span class="badge"><span class="blip"></span> CRO/SP 116984 · Botucatu</span>
+    <h1>Eu não trato o dente.<span class="script">Eu ajusto o padrão.</span></h1>
+    <p class="lead">Cirurgiã-dentista especialista em bruxismo, reabilitação oral e estética do sorriso. Antes de tratar o sintoma, eu entendo o hábito que criou o problema.</p>
+    <div class="hero-field reveal" id="agendar">
+      <label for="fieldReason">Qual o motivo da sua consulta?</label>
+      <select id="fieldReason">
+        <option value="">Ainda não sei, quero uma avaliação</option>
+        <option>Bruxismo / Placa Miorrelaxante</option>
+        <option>Lentes de Resina Composta</option>
+        <option>Implantodontia</option>
+        <option>Reabilitação Oral</option>
+        <option>Clareamento Dental</option>
+        <option>Urgência / Dor</option>
+      </select>
+      <button type="button" id="scheduleBtn" class="btn btn-primary">Agendar no WhatsApp →</button>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-outline-light" href="https://www.google.com/maps/search/?api=1&query=Dra.%20J%C3%A9ssica%20Segantin&query_place_id=ChIJfSdSDmvfxpQRQVvrQe5c8NM" target="_blank">★ 5,0 no Google · 52 avaliações</a>
+    </div>
+  </div>
+</section>
+
+<div class="container quick">
+  <div class="quick-eyebrow reveal">Seu caminho até o consultório</div>
+  <div class="quick-grid reveal-stagger">
+    <div class="quick-connector">
+      <span class="node" style="left:12.5%"></span>
+      <span class="node" style="left:37.5%"></span>
+      <span class="node" style="left:62.5%"></span>
+      <span class="node" style="left:87.5%"></span>
+    </div>
+    <a class="quick-card border-run" href="https://wa.me/5514999022222?text=Ol%C3%A1%2C%20Dra.%20J%C3%A9ssica!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+      <span class="step">01</span>
+      <div class="ic">📅</div>
+      <h4>Agendar Consulta</h4>
+      <p>Resposta rápida pelo WhatsApp</p>
+    </a>
+    <a class="quick-card border-run" href="#tratamentos">
+      <span class="step">02</span>
+      <div class="ic">🦷</div>
+      <h4>Conhecer Tratamentos</h4>
+      <p>Do funcional ao estético</p>
+    </a>
+    <a class="quick-card border-run" href="#convenios">
+      <span class="step">03</span>
+      <div class="ic">💳</div>
+      <h4>Formas de Pagamento</h4>
+      <p>Parcelamento facilitado</p>
+    </a>
+    <a class="quick-card border-run" href="#contato">
+      <span class="step">04</span>
+      <div class="ic">📍</div>
+      <h4>Consultório em Botucatu</h4>
+      <p>Conj. Hab. Humberto Popolo</p>
+    </a>
+  </div>
+</div>
+
+<section id="tratamentos" style="padding-bottom:56px;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Tratamentos</span>
+      <h2>Cuidado que entende a causa, não só o sintoma</h2>
+      <p>Diagnóstico funcional antes do tratamento estético — cada plano é pensado para os seus hábitos, não pra um padrão pronto.</p>
+    </div>
+  </div>
+  <div class="gallery-rows">
+    <div class="gallery-wrap">
+      <div class="gallery-track">
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Bruxismo%20e%20Placa%20Miorrelaxante."><img src="https://images.unsplash.com/photo-1664529845836-433c172142ca?q=75&w=700&auto=format&fit=crop" alt="Bruxismo e placa miorrelaxante"><div class="overlay"></div><div class="content"><div class="gic">😬</div><h4>Bruxismo & Placas</h4><p>Proteção pra quem aperta ou range os dentes</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Implantodontia."><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=75&w=700&auto=format&fit=crop" alt="Implantodontia"><div class="overlay"></div><div class="content"><div class="gic">🦷</div><h4>Implantodontia</h4><p>Recupere dentes perdidos com durabilidade</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Lentes%20de%20Resina%20Composta."><img src="https://images.unsplash.com/photo-1667133295315-820bb6481730?q=75&w=700&auto=format&fit=crop" alt="Lentes de resina composta"><div class="overlay"></div><div class="content"><div class="gic">✨</div><h4>Lentes de Resina</h4><p>Estética do sorriso sem desgastar o dente</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Ortodontia."><img src="https://images.unsplash.com/photo-1609840113929-b130355987e1?q=75&w=700&auto=format&fit=crop" alt="Ortodontia"><div class="overlay"></div><div class="content"><div class="gic">😁</div><h4>Ortodontia</h4><p>Alinhadores e aparelhos para todas as idades</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Reabilita%C3%A7%C3%A3o%20Oral."><img src="https://images.unsplash.com/photo-1777444969135-caf869407707?q=75&w=700&auto=format&fit=crop" alt="Reabilitação oral"><div class="overlay"></div><div class="content"><div class="gic">✅</div><h4>Reabilitação Oral</h4><p>Recuperar função e saúde, com critério</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Bruxismo%20e%20Placa%20Miorrelaxante."><img src="https://images.unsplash.com/photo-1664529845836-433c172142ca?q=75&w=700&auto=format&fit=crop" alt="Bruxismo e placa miorrelaxante"><div class="overlay"></div><div class="content"><div class="gic">😬</div><h4>Bruxismo & Placas</h4><p>Proteção pra quem aperta ou range os dentes</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Implantodontia."><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=75&w=700&auto=format&fit=crop" alt="Implantodontia"><div class="overlay"></div><div class="content"><div class="gic">🦷</div><h4>Implantodontia</h4><p>Recupere dentes perdidos com durabilidade</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Lentes%20de%20Resina%20Composta."><img src="https://images.unsplash.com/photo-1667133295315-820bb6481730?q=75&w=700&auto=format&fit=crop" alt="Lentes de resina composta"><div class="overlay"></div><div class="content"><div class="gic">✨</div><h4>Lentes de Resina</h4><p>Estética do sorriso sem desgastar o dente</p></div></a>
+      </div>
+    </div>
+    <div class="gallery-wrap">
+      <div class="gallery-track reverse">
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Endodontia."><img src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=75&w=700&auto=format&fit=crop" alt="Endodontia"><div class="overlay"></div><div class="content"><div class="gic">🩺</div><h4>Endodontia</h4><p>Tratamento de canal com menos desconforto</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Periodontia."><img src="https://images.unsplash.com/photo-1663755489920-5e09f66d011a?q=75&w=700&auto=format&fit=crop" alt="Periodontia"><div class="overlay"></div><div class="content"><div class="gic">🧬</div><h4>Periodontia</h4><p>Saúde da gengiva em dia</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Odontopediatria."><img src="https://images.unsplash.com/photo-1631051103633-24959376b92d?q=75&w=700&auto=format&fit=crop" alt="Odontopediatria"><div class="overlay"></div><div class="content"><div class="gic">👶</div><h4>Odontopediatria</h4><p>Atendimento humanizado pros pequenos</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Preciso%20de%20uma%20Urg%C3%AAncia%20Odontol%C3%B3gica."><img src="https://images.unsplash.com/photo-1626736985932-c0df2ae07a2e?q=75&w=700&auto=format&fit=crop" alt="Urgência odontológica"><div class="overlay"></div><div class="content"><div class="gic">🚨</div><h4>Urgência Odontológica</h4><p>Atendimento prioritário pra dores</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Endodontia."><img src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=75&w=700&auto=format&fit=crop" alt="Endodontia"><div class="overlay"></div><div class="content"><div class="gic">🩺</div><h4>Endodontia</h4><p>Tratamento de canal com menos desconforto</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Periodontia."><img src="https://images.unsplash.com/photo-1663755489920-5e09f66d011a?q=75&w=700&auto=format&fit=crop" alt="Periodontia"><div class="overlay"></div><div class="content"><div class="gic">🧬</div><h4>Periodontia</h4><p>Saúde da gengiva em dia</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Odontopediatria."><img src="https://images.unsplash.com/photo-1631051103633-24959376b92d?q=75&w=700&auto=format&fit=crop" alt="Odontopediatria"><div class="overlay"></div><div class="content"><div class="gic">👶</div><h4>Odontopediatria</h4><p>Atendimento humanizado pros pequenos</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514999022222?text=Ol%C3%A1!%20Preciso%20de%20uma%20Urg%C3%AAncia%20Odontol%C3%B3gica."><img src="https://images.unsplash.com/photo-1626736985932-c0df2ae07a2e?q=75&w=700&auto=format&fit=crop" alt="Urgência odontológica"><div class="overlay"></div><div class="content"><div class="gic">🚨</div><h4>Urgência Odontológica</h4><p>Atendimento prioritário pra dores</p></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="porque">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por que escolher a Dra. Jéssica</span>
+      <h2>Um olhar funcional pra cada sorriso</h2>
+      <p>CRO/SP 116984 — atendimento individual, sem protocolo pronto, sem pressa.</p>
+    </div>
+    <div class="benefits-grid reveal-stagger">
+      <div class="benefit border-run"><div class="ic">①</div><div><h4>Diagnóstico funcional</h4><p>Antes de tratar a dor ou o desgaste, eu investigo o hábito que o causou.</p></div></div>
+      <div class="benefit border-run"><div class="ic">②</div><div><h4>Plano individual</h4><p>Nada de protocolo padrão — cada tratamento respeita a sua rotina e seus hábitos.</p></div></div>
+      <div class="benefit border-run"><div class="ic">③</div><div><h4>Especialista em bruxismo</h4><p>Foco real em proteção, não só em estética — força sem proteção vira desgaste.</p></div></div>
+      <div class="benefit border-run"><div class="ic">④</div><div><h4>Reabilitação com critério</h4><p>Resultado sólido e definitivo, sem abrir mão da identidade do seu sorriso.</p></div></div>
+      <div class="benefit border-run"><div class="ic">⑤</div><div><h4>Parcelamento facilitado</h4><p>Condições de pagamento pensadas para caber no seu orçamento.</p></div></div>
+      <div class="benefit border-run"><div class="ic">⑥</div><div><h4>Atendimento em Botucatu</h4><p>Consultório de fácil acesso, no Conj. Hab. Humberto Popolo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="proof reveal">
+    <div class="proof-left">
+      <h3>Avaliação real, direto do Google</h3>
+      <p>A nota que os próprios pacientes deram para o atendimento da Dra. Jéssica.</p>
+    </div>
+    <div class="proof-score">
+      <div>
+        <div class="num">5,0</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div>
+        <b style="font-family:'Poppins',sans-serif;font-size:18px;">52 avaliações</b>
+        <small>Google Maps · Botucatu</small><br>
+        <a href="https://www.google.com/maps/search/?api=1&query=Dra.%20J%C3%A9ssica%20Segantin&query_place_id=ChIJfSdSDmvfxpQRQVvrQe5c8NM" target="_blank" style="color:#fff;text-decoration:underline;font-size:13px;">Ver avaliações no Google →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="convenios">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pagamento</span>
+      <h2>Cuidar do seu sorriso sem pesar no bolso</h2>
+      <p>Facilidade de pagamento pra você começar o tratamento sem enrolação.</p>
+    </div>
+    <div class="pay-grid reveal-stagger">
+      <div class="pay-card border-run"><div class="ic">💳</div><h4>Parcelamento facilitado</h4><p>Condições especiais direto no consultório, sem burocracia.</p></div>
+      <div class="pay-card border-run"><div class="ic">🏦</div><h4>Cartão e Pix</h4><p>Aceito as principais formas de pagamento.</p></div>
+      <div class="pay-card border-run"><div class="ic">🤝</div><h4>Avaliação sem compromisso</h4><p>Primeira consulta pra entender seu caso e montar o melhor plano.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container about reveal-stagger">
+    <div class="about-media">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000&auto=format&fit=crop" alt="Consultório odontológico">
+      <div class="about-badge">
+        <div class="stars">★★★★★</div>
+        <div>
+          <b>5,0 no Google</b>
+          <small>52 avaliações · Botucatu</small>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Sobre a Dra. Jéssica</span>
+      <h2 style="font-size:30px;color:var(--terra-900);font-weight:700;">Seu sorriso revela seus hábitos e escolhas</h2>
+      <p style="color:var(--gray-600);margin-top:14px;">Cirurgiã-dentista (CRO/SP 116984) em Botucatu, a Dra. Jéssica Segantin trabalha com diagnóstico funcional antes do tratamento estético: proteger ou desgastar é uma escolha que começa muito antes da dor aparecer. Atendimento próximo, sem protocolo engessado, pensado pra rotina de cada paciente.</p>
+      <ul class="about-list">
+        <li><span class="check">✓</span><span><b>Diagnóstico funcional</b> antes de qualquer procedimento estético.</span></li>
+        <li><span class="check">✓</span><span><b>Especialista em bruxismo</b> e reabilitação oral.</span></li>
+        <li><span class="check">✓</span><span><b>Atendimento individual</b>, sem pressa e sem padrão pronto.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contato</span>
+      <h2>Vamos conversar sobre o seu sorriso</h2>
+    </div>
+    <div class="contact-grid reveal-stagger">
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="ic">📍</div>
+          <div><h5>Endereço</h5><p>R. Benedito Rodrigues da Silva, 130 — Conj. Hab. Humberto Popolo, Botucatu, SP</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">📞</div>
+          <div><h5>Telefone / WhatsApp</h5><p>+55 14 99902-2222</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">⭐</div>
+          <div><h5>Avaliação Google</h5><p>5,0 de 5 (52 avaliações)</p></div>
+        </div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;" href="https://wa.me/5514999022222?text=Ol%C3%A1%2C%20Dra.%20J%C3%A9ssica!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">Falar no WhatsApp</a>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=R.+Benedito+Rodrigues+da+Silva,+130,+Botucatu+-+SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-banner reveal">
+    <h2>Vamos cuidar do seu sorriso?</h2>
+    <p>Agende sua avaliação com a Dra. Jéssica Segantin e descubra o tratamento certo pra você — não pra um padrão.</p>
+    <a class="btn btn-ghost-light" href="https://wa.me/5514999022222?text=Ol%C3%A1%2C%20Dra.%20J%C3%A9ssica!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">📅 Agendar Consulta</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="foot-logo"><span class="dot" style="width:10px;height:10px;background:var(--terra-500);border-radius:3px;display:inline-block;"></span>Dra. Jéssica Segantin</div>
+      <p style="max-width:320px;font-size:13.5px;">Cirurgiã-dentista em Botucatu, CRO/SP 116984. Diagnóstico funcional, bruxismo e reabilitação oral com atendimento individual.</p>
+    </div>
+    <div>
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#porque">Por que eu</a></li>
+        <li><a href="#convenios">Pagamento</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contato</h5>
+      <ul>
+        <li>R. Benedito Rodrigues da Silva, 130 — Botucatu, SP</li>
+        <li>+55 14 99902-2222</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© 2026 Dra. Jéssica Segantin. Todos os direitos reservados.</span>
+    <span>CRO/SP 116984</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5514999022222?text=Ol%C3%A1%2C%20Dra.%20J%C3%A9ssica!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">📱<span class="ping"></span></a>
+
+<script>
+(function(){
+  var scheduleBtn = document.getElementById('scheduleBtn');
+  if (scheduleBtn) {
+    scheduleBtn.addEventListener('click', function(){
+      var reason = document.getElementById('fieldReason').value;
+      var msg = 'Olá, Dra. Jéssica! Vim pelo site e gostaria de agendar uma consulta';
+      if (reason) msg += ' sobre ' + reason;
+      msg += '.';
+      window.open('https://wa.me/5514999022222?text=' + encodeURIComponent(msg), '_blank');
+    });
+  }
+
+  var header = document.getElementById('siteHeader');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
