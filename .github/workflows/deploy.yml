@@ -23,5 +23,6 @@ jobs:
             [ "$slug" = ".github" ] && continue
             [ -f "$dir/index.html" ] || continue
             echo "== Deploying $slug =="
+            npx --yes wrangler pages project create "$slug" --production-branch=main || true
             npx --yes wrangler pages deploy "$dir" --project-name="$slug" --branch=main
           done
