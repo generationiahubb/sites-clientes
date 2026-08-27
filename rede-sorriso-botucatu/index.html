@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<script>
+(function(){
+  var EXPIRES_AT = new Date('2026-09-03T23:59:59-03:00').getTime();
+  if (Date.now() > EXPIRES_AT) { document.documentElement.classList.add('site-expired'); }
+})();
+</script>
+<style>
+html.site-expired #expiry-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#111417;color:#fff;font-family:Arial,Helvetica,sans-serif;text-align:center;padding:32px;box-sizing:border-box;}
+html:not(.site-expired) #expiry-overlay{display:none;}
+html.site-expired body>*:not(#expiry-overlay){display:none!important;}
+</style>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rede Sorriso Botucatu | Clínica Odontológica</title>
@@ -234,6 +246,8 @@
 </style>
 </head>
 <body>
+<div id="expiry-overlay"><div><h1 style="font-size:26px;margin:0 0 14px;">Esta prévia expirou</h1><p style="max-width:420px;margin:0 auto 26px;color:#c7ccd1;line-height:1.5;">Esse site foi uma demonstração da Generation IA Tech. Fale com a gente pra ativar a versão definitiva, com domínio próprio.</p><a href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Vi%20a%20pr%C3%A9via%20do%20meu%20site%20e%20quero%20ativar." style="display:inline-block;background:#25D366;color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;text-decoration:none;">Falar no WhatsApp</a></div></div>
+
 
 <div class="utility-bar">
   <div class="container">
