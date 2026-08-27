@@ -92,13 +92,22 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
   @media(max-width:1024px){.hero-art{inset:0;clip-path:polygon(6% 0, 100% 0, 100% 100%, 0% 100%);}}
   .hero-art img{width:100%;height:100%;object-fit:cover;object-position:center 25%;}
   .hero-stat-card{position:absolute;top:6%;right:5%;z-index:3;background:var(--forest-900);color:#fff;border-radius:16px;padding:16px 22px;box-shadow:0 20px 40px rgba(15,42,28,.3);transform:rotate(-3deg);min-width:150px;}
-  @media(max-width:1024px){.hero-stat-card{right:20px;top:-18px;}}
   .hero-stat-card b{display:block;font-family:'Poppins',sans-serif;font-size:22px;}
   .hero-stat-card span{font-size:11.5px;color:#BFDECB;}
   .hero-stat-card-2{position:absolute;bottom:10%;left:calc(58% - 76px);z-index:3;background:#fff;color:var(--forest-900);border-radius:16px;padding:14px 20px;box-shadow:0 20px 40px rgba(15,42,28,.2);transform:rotate(2deg);min-width:170px;border:1.5px solid var(--forest-100);}
-  @media(max-width:1024px){.hero-stat-card-2{left:20px;bottom:-18px;}}
   .hero-stat-card-2 b{display:block;font-family:'Poppins',sans-serif;font-size:16px;color:var(--forest-700);}
   .hero-stat-card-2 span{font-size:11px;color:var(--gray-600);}
+  @media(max-width:1024px){
+    /* No mobile os cards saem de cima da foto (ficavam com texto sobreposto ao rosto dela) e viram uma faixa limpa abaixo */
+    .hero-stat-card,.hero-stat-card-2{display:none;}
+  }
+  .hero-stats-mobile{display:none;}
+  @media(max-width:1024px){
+    .hero-stats-mobile{display:flex;gap:12px;margin-top:16px;}
+    .hero-stats-mobile > div{flex:1;background:var(--forest-50);border:1px solid var(--forest-100);border-radius:14px;padding:12px 14px;}
+    .hero-stats-mobile b{display:block;font-family:'Poppins',sans-serif;font-size:16px;color:var(--forest-900);}
+    .hero-stats-mobile span{font-size:11px;color:var(--gray-600);}
+  }
 
   section{padding:88px 0;}
   .hero{padding-top:0;padding-bottom:0;}
@@ -298,6 +307,10 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
       <b>SP + Botucatu</b>
       <span>Duas unidades de atendimento</span>
     </div>
+  </div>
+  <div class="hero-stats-mobile">
+    <div><b>+40 anos</b><span>Transformando sorrisos</span></div>
+    <div><b>SP + Botucatu</b><span>Duas unidades</span></div>
   </div>
 </section>
 
