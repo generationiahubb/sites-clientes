@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  var EXPIRES_AT = new Date('2026-09-04T23:59:59-03:00').getTime();
+  if (Date.now() > EXPIRES_AT) { document.documentElement.classList.add('site-expired'); }
+})();
+</script>
+<style>
+html.site-expired #expiry-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#111417;color:#fff;font-family:Arial,Helvetica,sans-serif;text-align:center;padding:32px;box-sizing:border-box;}
+html:not(.site-expired) #expiry-overlay{display:none;}
+html.site-expired body>*:not(#expiry-overlay){display:none!important;}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camila Vencato | Especialista em LPF em Botucatu - SP</title>
+<meta name="description" content="Camila Vencato, especialista em LPF (Low Pressure Fitness) em Botucatu-SP. Recuperação pós-parto, diástase abdominal e fortalecimento do core. Nota 5,0 no Google.">
+<meta property="og:title" content="Camila Vencato | Especialista em LPF em Botucatu">
+<meta property="og:description" content="Método LPF: respiração, postura e recuperação pós-parto com atendimento individualizado em Botucatu-SP. Nota 5,0 no Google (4 avaliações).">
+<meta property="og:image" content="https://generationiahubb.github.io/sites-clientes/camila-vencato-lpf-botucatu/hero-preview.png">
+<meta property="og:url" content="https://generationiahubb.github.io/sites-clientes/camila-vencato-lpf-botucatu/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Camila Vencato | Especialista em LPF em Botucatu">
+<meta name="twitter:description" content="Método LPF: respiração, postura e recuperação pós-parto com atendimento individualizado em Botucatu-SP.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Camila Vencato | Especialista LPF",
+  "image": "https://generationiahubb.github.io/sites-clientes/camila-vencato-lpf-botucatu/hero-preview.png",
+  "telephone": "+55 14 99622-1865",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Santin Antônio Furlan",
+    "addressLocality": "Botucatu",
+    "addressRegion": "SP",
+    "postalCode": "18608-251",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -22.8598751,
+    "longitude": -48.4585551
+  },
+  "url": "https://generationiahubb.github.io/sites-clientes/camila-vencato-lpf-botucatu/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "reviewCount": "4"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --brand-900:#2E3324;
+    --brand-800:#3C4530;
+    --brand-700:#57623F;
+    --brand-600:#707D50;
+    --brand-500:#8B9A6C;
+    --brand-400:#ABBB8B;
+    --brand-100:#EEF0E3;
+    --brand-50:#F8F8F1;
+    --ink:#2A2A20;
+    --gray-600:#5F6152;
+    --gray-400:#93927F;
+    --white:#FFFFFF;
+    --gold:#B08D45;
+    --gold-dark:#8C6F34;
+    --star:#FFB020;
+    --shadow: 0 10px 30px rgba(46,51,36,0.10);
+    --radius: 16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.6;}
+  h1,h2,h3,.display{font-family:'Cormorant Garamond',serif;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:15px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--brand-500);color:#fff;box-shadow:0 8px 20px rgba(139,154,108,.4);}
+  .btn-primary:hover{background:var(--brand-600);}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.4);}
+  .btn-outline:hover{border-color:#fff;}
+  .btn-ghost-light{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.35);}
+
+  /* Utility bar */
+  .utility-bar{background:linear-gradient(90deg,var(--brand-900),var(--brand-800));color:#D9DECB;font-size:12.5px;}
+  .utility-bar .container{display:flex;align-items:center;justify-content:space-between;padding:9px 24px;flex-wrap:wrap;gap:8px;}
+  .utility-links{display:flex;align-items:center;gap:22px;}
+  .utility-links a{opacity:.9;transition:opacity .15s;}
+  .utility-links a:hover{opacity:1;}
+  @media(max-width:760px){.utility-links span:not(:first-child){display:none;}}
+
+  /* Header + Hero share the same dark gradient (CENTERED_AUTHORITY) */
+  .authority-wrap{background:linear-gradient(165deg,var(--brand-900),var(--brand-800));}
+  header{position:sticky;top:0;z-index:50;transition:box-shadow .3s ease;}
+  header.scrolled{box-shadow:0 10px 26px rgba(46,51,36,.3);background:linear-gradient(165deg,var(--brand-900),var(--brand-800));}
+  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding:20px 24px;max-width:1180px;margin:0 auto;}
+  .nav-links{display:flex;gap:26px;font-size:14px;font-weight:500;color:#fff;}
+  .nav-links a{opacity:.82;transition:opacity .15s;white-space:nowrap;}
+  .nav-links a:hover{opacity:1;}
+  .nav-links.left{justify-self:start;}
+  .nav-links.right{justify-self:end;align-items:center;}
+  .logo{justify-self:center;display:flex;flex-direction:column;align-items:center;line-height:1.1;white-space:nowrap;}
+  .logo b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:23px;color:#fff;}
+  .logo span{font-size:10px;letter-spacing:2.5px;color:var(--brand-400);text-transform:uppercase;margin-top:2px;}
+  @media(max-width:1080px){.nav-links{display:none;}.nav{grid-template-columns:1fr;justify-items:center;}}
+
+  /* Hero centered authority */
+  .hero{padding:0;}
+  .hero-inner{max-width:760px;margin:0 auto;padding:28px 24px 72px;text-align:center;color:#fff;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);font-weight:600;font-size:12.5px;padding:7px 16px;border-radius:999px;margin-bottom:26px;letter-spacing:.4px;}
+  .hero-badge .blip{width:7px;height:7px;background:var(--brand-400);border-radius:50%;}
+  .hero h1{font-weight:600;font-size:clamp(32px,5.4vw,52px);line-height:1.16;letter-spacing:-.01em;}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--brand-400);display:block;}
+  .hero p.lead{margin:24px auto 0;max-width:520px;font-size:16.5px;color:#DCE0CC;}
+  .hero-ctas{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:34px;flex-wrap:wrap;}
+  .hero-photo-wrap{margin:52px auto 0;max-width:300px;}
+  .hero-photo-wrap img{width:100%;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.35);transform:rotate(-1.1deg);border:4px solid rgba(255,255,255,.08);}
+  .hero-stats{display:flex;align-items:center;justify-content:center;gap:0;margin-top:48px;flex-wrap:wrap;}
+  .hero-stats .stat{padding:0 28px;text-align:center;}
+  .hero-stats .stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:19px;color:#fff;font-weight:600;}
+  .hero-stats .stat span{display:block;font-size:11.5px;color:#B7BCA4;margin-top:4px;letter-spacing:.3px;}
+  .hero-stats .divider{width:1px;height:34px;background:rgba(255,255,255,.18);}
+  @media(max-width:600px){.hero-stats{flex-direction:column;gap:18px;}.hero-stats .divider{display:none;}}
+
+  /* Modal booking */
+  .modal-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .3s ease;}
+  .modal-overlay.is-open{opacity:1;visibility:visible;}
+  .modal-overlay .backdrop{position:absolute;inset:0;background:rgba(42,42,32,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+  .modal-box{position:relative;z-index:1;width:min(480px,100%);background:#fff;border-radius:22px;padding:40px 34px 34px;transform:scale(.94);transition:transform .3s ease;box-shadow:0 30px 70px rgba(46,51,36,.4);}
+  .modal-overlay.is-open .modal-box{transform:scale(1);}
+  .modal-close{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;background:var(--brand-50);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:var(--ink);border:none;}
+  .modal-box h3{font-style:italic;font-weight:600;font-size:26px;color:var(--brand-900);margin-bottom:6px;}
+  .modal-box p.modal-sub{color:var(--gray-600);font-size:13.5px;margin-bottom:24px;}
+  .modal-box .field{margin-bottom:16px;}
+  .modal-box .field label{display:block;font-size:12px;font-weight:600;color:var(--gray-600);margin-bottom:6px;}
+  .modal-box .field select{width:100%;padding:13px 14px;border-radius:10px;border:1.5px solid #E7E9DC;font-size:13.5px;color:var(--ink);background:#fff;font-family:'Inter',sans-serif;}
+  .modal-box .field select:focus{outline:none;border-color:var(--brand-500);}
+  #modalBtn{width:100%;justify-content:center;margin-top:6px;}
+
+  /* Quick actions — connected step flow */
+  .quick{margin-top:0;position:relative;z-index:5;background:radial-gradient(65% 100% at 50% 0%, var(--brand-50), transparent 75%);padding-top:64px;padding-bottom:8px;}
+  .quick-eyebrow{text-align:center;color:var(--brand-600);font-weight:700;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .quick-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  @media(max-width:860px){.quick-grid{grid-template-columns:repeat(2,1fr);}}
+  .quick-connector{position:absolute;left:8%;right:8%;top:46px;height:0;border-top:2px dashed var(--brand-400);opacity:.5;z-index:0;}
+  .quick-connector .node{position:absolute;top:0;width:9px;height:9px;border-radius:50%;background:var(--brand-400);transform:translate(-50%,-50%);box-shadow:0 0 0 5px var(--brand-50);}
+  @media(max-width:860px){.quick-connector{display:none;}}
+  .quick-card{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));border-radius:18px;padding:24px;color:#fff;box-shadow:0 14px 30px rgba(46,51,36,.2);transition:transform .3s ease, box-shadow .3s ease;z-index:1;}
+  .quick-card::after{content:"";position:absolute;top:-45%;right:-25%;width:150px;height:150px;background:radial-gradient(circle, rgba(171,187,139,.4), transparent 70%);pointer-events:none;}
+  .quick-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(46,51,36,.32);}
+  .quick-card .step{position:absolute;top:16px;right:18px;font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:1px;z-index:1;}
+  .quick-card .ic{position:relative;z-index:1;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:19px;box-shadow:0 8px 18px rgba(139,154,108,.45);}
+  .quick-card h4{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:16.5px;margin-bottom:4px;}
+  .quick-card p{position:relative;z-index:1;font-size:12.5px;color:#C7CCB4;}
+
+  section{padding:88px 0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 52px;}
+  .eyebrow{color:var(--brand-600);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;display:block;}
+  .section-head h2{font-size:36px;font-weight:600;color:var(--brand-900);}
+  .section-head h2 em{font-style:italic;color:var(--brand-600);}
+  .section-head p{color:var(--gray-600);margin-top:12px;font-size:16px;}
+
+  /* Benefits */
+  .benefits{background:var(--brand-50);}
+  .benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  @media(max-width:760px){.benefits-grid{grid-template-columns:1fr;}}
+  .benefit{display:flex;gap:16px;background:#fff;border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(46,51,36,.07);transition:transform .3s ease, box-shadow .3s ease;}
+  .benefit:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(46,51,36,.16);}
+  .benefit .ic{position:relative;z-index:1;flex:none;width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;box-shadow:0 8px 18px rgba(139,154,108,.4);}
+  .benefit h4{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px;margin-bottom:6px;color:var(--brand-900);}
+  .benefit p{font-size:13.5px;color:var(--gray-600);}
+
+  /* Gallery two rows */
+  .gallery-rows{display:flex;flex-direction:column;gap:22px;padding:12px 0 8px;}
+  .gallery-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);}
+  .gallery-track{display:flex;width:max-content;gap:22px;animation:galleryLeft 46s linear infinite;}
+  .gallery-track.reverse{animation-name:galleryRight;}
+  .gallery-wrap:hover .gallery-track{animation-play-state:paused;}
+  @keyframes galleryLeft{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  @keyframes galleryRight{0%{transform:translateX(-50%);}100%{transform:translateX(0);}}
+  .gallery-card{position:relative;width:280px;height:340px;flex-shrink:0;border-radius:22px;overflow:hidden;display:block;box-shadow:0 8px 20px rgba(46,51,36,.12);transition:transform .5s ease, box-shadow .5s ease;}
+  .gallery-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(46,51,36,.24);}
+  .gallery-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+  .gallery-card:hover img{transform:scale(1.08);}
+  .gallery-card .overlay{position:absolute;inset:0;background:linear-gradient(0deg, var(--brand-900) 0%, rgba(46,51,36,.55) 42%, rgba(46,51,36,.05) 75%);}
+  .gallery-card .content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;}
+  .gallery-card .gic{width:42px;height:42px;border-radius:12px;background:var(--brand-500);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;}
+  .gallery-card h4{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;margin-bottom:4px;}
+  .gallery-card p{font-size:12.5px;color:#E2E4D3;}
+  @media(max-width:600px){.gallery-card{width:230px;height:290px;}}
+
+  /* Rating / social proof */
+  .proof{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));color:#fff;border-radius:28px;margin:0 24px;padding:56px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .proof::after{content:"";position:absolute;top:-35%;right:-8%;width:320px;height:320px;background:radial-gradient(circle, rgba(171,187,139,.3), transparent 70%);pointer-events:none;}
+  .proof-left, .proof-score{position:relative;z-index:1;}
+  .proof-left h3{font-style:italic;font-weight:600;font-size:27px;margin-bottom:12px;}
+  .proof-left p{color:#C7CCB4;max-width:420px;}
+  .proof-left blockquote{margin-top:18px;font-size:13.5px;color:#E2E4D3;border-left:2px solid var(--brand-400);padding-left:14px;font-style:italic;max-width:420px;}
+  .proof-left blockquote cite{display:block;margin-top:8px;font-style:normal;font-size:12px;color:#9CA286;}
+  .proof-score{display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.1);padding:22px 30px;border-radius:18px;}
+  .proof-score .num{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;}
+  .proof-score .stars{color:var(--star);font-size:18px;letter-spacing:2px;}
+  .proof-score small{color:#C7CCB4;font-size:12.5px;}
+
+  /* About */
+  .about{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
+  @media(max-width:900px){.about{grid-template-columns:1fr;}}
+  .about-media{position:relative;}
+  .about-media img{border-radius:22px;box-shadow:var(--shadow);height:460px;width:100%;object-fit:cover;object-position:top;}
+  .about-badge{position:absolute;bottom:20px;left:20px;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 14px 30px rgba(46,51,36,.25);display:flex;align-items:center;gap:12px;}
+  .about-badge .stars{color:var(--star);font-size:15px;letter-spacing:1px;}
+  .about-badge b{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--brand-900);display:block;}
+  .about-badge small{color:var(--gray-600);font-size:11.5px;}
+  .about h2{font-size:32px;color:var(--brand-900);font-weight:600;}
+  .about h2 em{font-style:italic;color:var(--brand-600);}
+  .about-list{margin-top:22px;display:flex;flex-direction:column;gap:14px;}
+  .about-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--gray-600);}
+  .about-list b{color:var(--ink);}
+  .check{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:2px;box-shadow:0 6px 14px rgba(139,154,108,.4);}
+
+  /* Contact */
+  .contact{background:var(--brand-50);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch;}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:#fff;border-radius:20px;padding:36px;box-shadow:var(--shadow);}
+  .contact-item{display:flex;gap:14px;margin-bottom:22px;}
+  .contact-item .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--brand-100);color:var(--brand-700);display:flex;align-items:center;justify-content:center;}
+  .contact-item h5{font-size:14px;color:var(--gray-600);margin-bottom:2px;}
+  .contact-item p{font-weight:600;font-size:15px;}
+  .map-wrap{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);min-height:340px;}
+  .map-wrap iframe{width:100%;height:100%;min-height:340px;border:0;}
+
+  /* CTA banner */
+  .cta-banner{background:linear-gradient(120deg,var(--brand-700),var(--brand-900));color:#fff;text-align:center;border-radius:28px;margin:0 24px;padding:64px 24px;}
+  .cta-banner h2{font-weight:600;font-size:33px;margin-bottom:14px;}
+  .cta-banner h2 em{font-style:italic;color:var(--brand-400);}
+  .cta-banner p{color:#D9DECB;max-width:520px;margin:0 auto 28px;}
+
+  footer{background:var(--brand-900);color:#C7CCB4;padding:56px 0 24px;margin-top:88px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+  @media(max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+  footer h5{color:#fff;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:16px;margin-bottom:16px;}
+  footer li{margin-bottom:10px;font-size:14px;}
+  footer .foot-logo{color:#fff;font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;font-size:20px;margin-bottom:12px;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#8D927B;}
+
+  .whatsapp-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60;font-size:28px;transition:transform .4s ease;}
+  .whatsapp-float:hover{transform:scale(1.1) rotate(6deg);}
+  .whatsapp-float .ping{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#FF4D4D;border-radius:50%;border:2px solid #fff;animation:pulseDot 2s ease-in-out infinite;}
+  @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.55;transform:scale(1.2);}}
+
+  /* Scroll reveal */
+  .reveal, .reveal-stagger > *{opacity:1;transform:none;}
+  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger > *{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal-stagger.is-visible > *{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger.is-visible > *:nth-child(1){transition-delay:.04s;}
+  .js .reveal-stagger.is-visible > *:nth-child(2){transition-delay:.09s;}
+  .js .reveal-stagger.is-visible > *:nth-child(3){transition-delay:.14s;}
+  .js .reveal-stagger.is-visible > *:nth-child(4){transition-delay:.19s;}
+  .js .reveal-stagger.is-visible > *:nth-child(5){transition-delay:.24s;}
+  .js .reveal-stagger.is-visible > *:nth-child(6){transition-delay:.29s;}
+
+  /* Border-run */
+  @property --angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
+  .border-run{position:relative;isolation:isolate;}
+  .border-run::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;
+    background:conic-gradient(from var(--angle), transparent 0deg, var(--brand-500) 60deg, var(--brand-400) 140deg, transparent 200deg, transparent 360deg);
+    -webkit-mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    animation:borderRun 6s linear infinite;opacity:0;transition:opacity .3s;pointer-events:none;z-index:2;}
+  .border-run:hover::before{opacity:1;animation-duration:2.2s;}
+  @keyframes borderRun{100%{--angle:360deg;}}
+
+  @media (prefers-reduced-motion: reduce){
+    .gallery-track{animation:none;}
+    .border-run::before{animation:none;}
+    .js .reveal, .js .reveal-stagger > *{transition:none;opacity:1;transform:none;}
+    .whatsapp-float .ping{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div id="expiry-overlay"><div><h1 style="font-size:26px;margin:0 0 14px;">Esta prévia expirou</h1><p style="max-width:420px;margin:0 auto 26px;color:#c7ccd1;line-height:1.5;">Esse site foi uma demonstração da Generation IA Tech. Fale com a gente pra ativar a versão definitiva, com domínio próprio.</p><a href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Vi%20a%20pr%C3%A9via%20do%20meu%20site%20e%20quero%20ativar." style="display:inline-block;background:#25D366;color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;text-decoration:none;">Falar no WhatsApp</a></div></div>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-links">
+      <span>R. Santin Antônio Furlan — Jardim Planalto, Botucatu-SP</span>
+      <span>(14) 99622-1865</span>
+    </div>
+    <div class="utility-links">
+      <a href="https://www.google.com/maps/place/Camila+Vencato+%7C+Especialista+LPF+em+Botucatu/@-22.8598751,-48.4585551,17z/data=!3m1!4b1!4m6!3m5!1s0x94c721d3fc2e230f:0x6d1086e2f05177ba!8m2!3d-22.8598751!4d-48.4585551!16s%2Fg%2F11jlp8qsgx" target="_blank">★ 5,0 · Ver avaliações no Google</a>
+    </div>
+  </div>
+</div>
+
+<div class="authority-wrap">
+<header id="siteHeader">
+  <div class="nav">
+    <nav class="nav-links left">
+      <a href="#metodo">Método LPF</a>
+      <a href="#porque">Diferenciais</a>
+    </nav>
+    <a class="logo" href="#topo"><b>Camila Vencato</b><span>Especialista LPF</span></a>
+    <nav class="nav-links right">
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#sobre">Sobre</a>
+      <button type="button" class="btn open-modal" style="background:var(--brand-500);color:#fff;padding:9px 20px;font-size:13px;">Agendar</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="topo">
+  <div class="hero-inner">
+    <span class="hero-badge"><span class="blip"></span> Especialista LPF · Botucatu-SP</span>
+    <h1>Recupere o seu corpo<em>no seu tempo, com ciência.</em></h1>
+    <p class="lead">Método LPF (Low Pressure Fitness): respiração, postura e fortalecimento do assoalho pélvico para a recuperação pós-parto, o tratamento da diástase abdominal e o bem-estar do dia a dia.</p>
+    <div class="hero-ctas">
+      <button type="button" class="btn btn-primary open-modal">Agendar Avaliação</button>
+      <a class="btn btn-outline" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20LPF." target="_blank">Falar no WhatsApp</a>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="images/camila-hero.webp" alt="Camila Vencato, especialista em LPF em Botucatu">
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>5,0 ★</b><span>Google · 4 avaliações</span></div>
+      <div class="divider"></div>
+      <div class="stat"><b>Mestre em Ciências</b><span>USP · Ribeirão Preto</span></div>
+      <div class="divider"></div>
+      <div class="stat"><b>Pioneira do LPF</b><span>em Botucatu</span></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="container quick">
+  <div class="quick-eyebrow reveal">Como funciona</div>
+  <div class="quick-grid reveal-stagger">
+    <div class="quick-connector">
+      <span class="node" style="left:12.5%"></span>
+      <span class="node" style="left:37.5%"></span>
+      <span class="node" style="left:62.5%"></span>
+      <span class="node" style="left:87.5%"></span>
+    </div>
+    <button type="button" class="quick-card border-run open-modal" style="text-align:left;width:100%;border:none;font-family:inherit;cursor:pointer;">
+      <span class="step">01</span>
+      <div class="ic">📅</div>
+      <h4>Agendar Avaliação</h4>
+      <p>Resposta rápida pelo WhatsApp</p>
+    </button>
+    <a class="quick-card border-run" href="#metodo">
+      <span class="step">02</span>
+      <div class="ic">🌬️</div>
+      <h4>Conheça o Método LPF</h4>
+      <p>Respiração, postura e core</p>
+    </a>
+    <a class="quick-card border-run" href="#metodo">
+      <span class="step">03</span>
+      <div class="ic">🧘‍♀️</div>
+      <h4>Individual ou em Grupo</h4>
+      <p>Turmas reduzidas, no seu ritmo</p>
+    </a>
+    <a class="quick-card border-run" href="#contato">
+      <span class="step">04</span>
+      <div class="ic">📍</div>
+      <h4>Studio em Botucatu</h4>
+      <p>Jardim Planalto</p>
+    </a>
+  </div>
+</div>
+
+<section id="metodo" style="padding-bottom:56px;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Método LPF</span>
+      <h2>Cada sessão é <em>pensada pra você</em></h2>
+      <p>Sessões individuais e em pequenos grupos, sempre com acompanhamento próximo — do primeiro diagnóstico postural aos resultados no dia a dia.</p>
+    </div>
+  </div>
+  <div class="gallery-rows">
+    <div class="gallery-wrap">
+      <div class="gallery-track">
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Postural%20e%20Funcional."><img src="images/servico-avaliacao-postural.png" alt="Avaliação postural e funcional com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">🧍‍♀️</div><h4>Avaliação Postural</h4><p>Diagnóstico funcional individual, ponto de partida do tratamento</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20a%20Aula%20Individual%20de%20LPF."><img src="images/servico-aula-individual.png" alt="Aula individual de LPF com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">🌬️</div><h4>Aula Individual de LPF</h4><p>Atendimento 1:1, no seu ritmo e na sua respiração</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20as%20Aulas%20em%20Grupo."><img src="images/servico-aula-grupo.png" alt="Aula em grupo de LPF com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">👥</div><h4>Aula em Grupo</h4><p>Turmas reduzidas, comunidade LPFlovers</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Postural%20e%20Funcional."><img src="images/servico-avaliacao-postural.png" alt="Avaliação postural e funcional com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">🧍‍♀️</div><h4>Avaliação Postural</h4><p>Diagnóstico funcional individual, ponto de partida do tratamento</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20a%20Aula%20Individual%20de%20LPF."><img src="images/servico-aula-individual.png" alt="Aula individual de LPF com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">🌬️</div><h4>Aula Individual de LPF</h4><p>Atendimento 1:1, no seu ritmo e na sua respiração</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20as%20Aulas%20em%20Grupo."><img src="images/servico-aula-grupo.png" alt="Aula em grupo de LPF com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">👥</div><h4>Aula em Grupo</h4><p>Turmas reduzidas, comunidade LPFlovers</p></div></a>
+      </div>
+    </div>
+    <div class="gallery-wrap">
+      <div class="gallery-track reverse">
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20Recupera%C3%A7%C3%A3o%20P%C3%B3s-Parto%20e%20Di%C3%A1stase."><img src="images/servico-pos-parto.png" alt="Recuperação pós-parto e diástase abdominal com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">🤍</div><h4>Pós-Parto e Diástase</h4><p>Recuperação abdominal com atenção e sensibilidade</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20o%20Fortalecimento%20do%20Core."><img src="images/servico-core.png" alt="Fortalecimento do core e assoalho pélvico com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">💪</div><h4>Fortalecimento do Core</h4><p>Assoalho pélvico e estabilidade para o dia a dia</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20Recupera%C3%A7%C3%A3o%20P%C3%B3s-Parto%20e%20Di%C3%A1stase."><img src="images/servico-pos-parto.png" alt="Recuperação pós-parto e diástase abdominal com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">🤍</div><h4>Pós-Parto e Diástase</h4><p>Recuperação abdominal com atenção e sensibilidade</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Quero%20saber%20mais%20sobre%20o%20Fortalecimento%20do%20Core."><img src="images/servico-core.png" alt="Fortalecimento do core e assoalho pélvico com Camila Vencato"><div class="overlay"></div><div class="content"><div class="gic">💪</div><h4>Fortalecimento do Core</h4><p>Assoalho pélvico e estabilidade para o dia a dia</p></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="porque">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Diferenciais</span>
+      <h2>Por que treinar <em>com a Camila</em></h2>
+      <p>Formação, ciência e atenção individual — a mesma combinação que fez dela a pioneira do LPF em Botucatu.</p>
+    </div>
+    <div class="benefits-grid reveal-stagger">
+      <div class="benefit border-run"><div class="ic">🎓</div><div><h4>Mestre em Ciências</h4><p>Formação acadêmica pela USP – Ribeirão Preto, aplicada à prática clínica.</p></div></div>
+      <div class="benefit border-run"><div class="ic">🌍</div><div><h4>Reconhecimento internacional</h4><p>Especialista certificada em LPF, com reconhecimento no Brasil, Espanha e EUA.</p></div></div>
+      <div class="benefit border-run"><div class="ic">✨</div><div><h4>Pioneira em Botucatu</h4><p>A primeira a trazer o método LPF para a cidade.</p></div></div>
+      <div class="benefit border-run"><div class="ic">🤝</div><div><h4>Atendimento individualizado</h4><p>Cada plano é ajustado ao seu corpo, sua história e seu objetivo.</p></div></div>
+      <div class="benefit border-run"><div class="ic">🌬️</div><div><h4>Foco em respiração e core</h4><p>Trabalho hipopressivo com técnica, sem impacto e sem pressa.</p></div></div>
+      <div class="benefit border-run"><div class="ic">💬</div><div><h4>Comunidade LPFlovers</h4><p>Acompanhamento que vai além da aula, com suporte contínuo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="avaliacoes" style="padding-top:0;">
+  <div class="proof reveal">
+    <div class="proof-left">
+      <h3>Avaliação real, <em>direto do Google</em></h3>
+      <p>A nota que as próprias alunas deram para o atendimento da Camila.</p>
+      <blockquote>"Experiência excelente, procedimento totalmente personalizado. Com uma sensibilidade incrível e muita atenção aos detalhes. Com a Cá e o LPF me sinto conectada com o meu corpo e a cada dia fico mais feliz com os resultados."
+        <cite>Ana Claudia Dias · avaliação no Google</cite>
+      </blockquote>
+    </div>
+    <div class="proof-score">
+      <div>
+        <div class="num">5,0</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div>
+        <b style="font-family:'Cormorant Garamond',serif;font-size:19px;">4 avaliações</b>
+        <small>Google Maps · Botucatu</small><br>
+        <a href="https://www.google.com/maps/place/Camila+Vencato+%7C+Especialista+LPF+em+Botucatu/@-22.8598751,-48.4585551,17z/data=!3m1!4b1!4m6!3m5!1s0x94c721d3fc2e230f:0x6d1086e2f05177ba!8m2!3d-22.8598751!4d-48.4585551!16s%2Fg%2F11jlp8qsgx" target="_blank" style="color:#fff;text-decoration:underline;font-size:13px;">Ver avaliações no Google →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container about reveal-stagger">
+    <div class="about-media">
+      <img src="images/camila-sobre.png" alt="Camila Vencato, especialista LPF">
+      <div class="about-badge">
+        <div class="stars">★★★★★</div>
+        <div>
+          <b>5,0 no Google</b>
+          <small>4 avaliações · Botucatu</small>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Sobre a Camila</span>
+      <h2>Ciência e cuidado <em>em cada sessão</em></h2>
+      <p style="color:var(--gray-600);margin-top:14px;">Mestre em Ciências pela USP – Ribeirão Preto, Camila Vencato foi a primeira a trazer o método LPF (Low Pressure Fitness) para Botucatu. Especialista certificada com reconhecimento internacional (🇧🇷🇪🇸🇺🇸), ela une formação acadêmica e sensibilidade no atendimento — sempre pensando no corpo e no tempo de cada aluna.</p>
+      <ul class="about-list">
+        <li><span class="check">✓</span><span><b>Mestre em Ciências</b> pela USP – Ribeirão Preto.</span></li>
+        <li><span class="check">✓</span><span><b>Pioneira do método LPF</b> em Botucatu.</span></li>
+        <li><span class="check">✓</span><span><b>Reconhecimento internacional</b> em LPF (Brasil, Espanha, EUA).</span></li>
+        <li><span class="check">✓</span><span><b>Atendimento individual</b>, respeitando o seu tempo.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contato</span>
+      <h2>Vamos começar a <em>sua recuperação?</em></h2>
+    </div>
+    <div class="contact-grid reveal-stagger">
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="ic">📍</div>
+          <div><h5>Endereço</h5><p>R. Santin Antônio Furlan — Jardim Planalto, Botucatu-SP, 18608-251</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">📞</div>
+          <div><h5>Telefone / WhatsApp</h5><p>(14) 99622-1865</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">🕐</div>
+          <div><h5>Atendimento</h5><p>Segunda a sábado, mediante agendamento · Domingo: fechado</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">⭐</div>
+          <div><h5>Avaliação Google</h5><p>5,0 de 5 (4 avaliações)</p></div>
+        </div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;background:var(--brand-500);color:#fff;" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank">Falar no WhatsApp</a>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=-22.8598751,-48.4585551&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-banner reveal">
+    <h2>Pronta pra <em>reconectar com seu corpo?</em></h2>
+    <p>Agende sua avaliação inicial com a Camila e descubra o método LPF de perto.</p>
+    <button type="button" class="btn btn-ghost-light open-modal">📅 Agendar Avaliação</button>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="foot-logo">Camila Vencato</div>
+      <p style="max-width:320px;font-size:13.5px;">Especialista em LPF (Low Pressure Fitness) em Botucatu-SP. Respiração, postura e recuperação abdominal com atendimento individualizado.</p>
+    </div>
+    <div>
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#metodo">Método LPF</a></li>
+        <li><a href="#porque">Diferenciais</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contato</h5>
+      <ul>
+        <li>R. Santin Antônio Furlan — Jardim Planalto, Botucatu-SP</li>
+        <li>(14) 99622-1865</li>
+        <li><a href="https://www.instagram.com/camilavencato_lpf/" target="_blank">@camilavencato_lpf</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© 2026 Camila Vencato. Todos os direitos reservados.</span>
+    <span>Especialista LPF · Botucatu-SP</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5514996221865?text=Ol%C3%A1%2C%20Camila!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank">📱<span class="ping"></span></a>
+
+<div class="modal-overlay" id="bookingModal">
+  <div class="backdrop" data-close="1"></div>
+  <div class="modal-box">
+    <button type="button" class="modal-close" data-close="1">✕</button>
+    <h3>Agendar Avaliação</h3>
+    <p class="modal-sub">Preencha e a mensagem já sai pronta no WhatsApp.</p>
+    <div class="field">
+      <label for="fieldObjetivo">O que você busca?</label>
+      <select id="fieldObjetivo">
+        <option value="">Ainda não sei / quero orientação</option>
+        <option>Avaliação Postural Inicial</option>
+        <option>Aula Individual de LPF</option>
+        <option>Aula em Grupo</option>
+        <option>Recuperação Pós-Parto / Diástase</option>
+        <option>Fortalecimento do Assoalho Pélvico</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="fieldPeriodo">Prefere ser atendida</label>
+      <select id="fieldPeriodo">
+        <option value="">Qualquer horário</option>
+        <option value="pela manhã">Pela manhã</option>
+        <option value="à tarde">À tarde</option>
+        <option value="à noite">À noite</option>
+      </select>
+    </div>
+    <button type="button" id="modalBtn" class="btn btn-primary">Agendar pelo WhatsApp →</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var modal = document.getElementById('bookingModal');
+  document.querySelectorAll('.open-modal').forEach(function(btn){
+    btn.addEventListener('click', function(){ modal.classList.add('is-open'); });
+  });
+  modal.querySelectorAll('[data-close]').forEach(function(el){
+    el.addEventListener('click', function(){ modal.classList.remove('is-open'); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') modal.classList.remove('is-open');
+  });
+
+  var modalBtn = document.getElementById('modalBtn');
+  modalBtn.addEventListener('click', function(){
+    var objetivo = document.getElementById('fieldObjetivo').value;
+    var periodo = document.getElementById('fieldPeriodo').value;
+    var msg = 'Olá, Camila! Vim pelo site e gostaria de agendar';
+    if (objetivo) { msg += ' — ' + objetivo; } else { msg += ' uma avaliação'; }
+    if (periodo) { msg += ', de preferência ' + periodo; }
+    msg += '.';
+    window.open('https://wa.me/5514996221865?text=' + encodeURIComponent(msg), '_blank');
+    modal.classList.remove('is-open');
+  });
+
+  var header = document.getElementById('siteHeader');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
