@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  var EXPIRES_AT = new Date('2026-09-05T23:59:59-03:00').getTime();
+  if (Date.now() > EXPIRES_AT) { document.documentElement.classList.add('site-expired'); }
+})();
+</script>
+<style>
+html.site-expired #expiry-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#111417;color:#fff;font-family:Arial,Helvetica,sans-serif;text-align:center;padding:32px;box-sizing:border-box;}
+html:not(.site-expired) #expiry-overlay{display:none;}
+html.site-expired body>*:not(#expiry-overlay){display:none!important;}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guilherme Marques | Planejador Financeiro Pessoal</title>
+<meta name="description" content="Guilherme Marques, planejador financeiro pessoal parceiro do Grupo Primo. Atendimento 100% online para todo o Brasil. Nota 5,0 no Google (8 avaliações).">
+<meta property="og:title" content="Guilherme Marques | Planejador Financeiro Pessoal">
+<meta property="og:description" content="Organize as suas finanças com um plano real, feito sob medida pros seus objetivos. Atendimento 100% online, em qualquer lugar do Brasil.">
+<meta property="og:image" content="https://generationiahubb.github.io/sites-clientes/guilherme-marques-planejador-financeiro/hero-preview.png">
+<meta property="og:url" content="https://generationiahubb.github.io/sites-clientes/guilherme-marques-planejador-financeiro/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guilherme Marques | Planejador Financeiro Pessoal">
+<meta name="twitter:description" content="Planejamento financeiro pessoal 100% online, parceiro do Grupo Primo. Nota 5,0 no Google.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "Guilherme Marques | Planejador Financeiro Pessoal",
+  "image": "https://generationiahubb.github.io/sites-clientes/guilherme-marques-planejador-financeiro/hero-preview.png",
+  "telephone": "+55 11 96322-1509",
+  "email": "guilherme.marques@graoplanejamento.com.br",
+  "areaServed": "BR",
+  "url": "https://generationiahubb.github.io/sites-clientes/guilherme-marques-planejador-financeiro/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "reviewCount": "8"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --brand-900:#0A1230;
+    --brand-800:#121B47;
+    --brand-700:#1C2A66;
+    --brand-600:#293B86;
+    --brand-500:#3A4FAE;
+    --brand-400:#7C8AD6;
+    --brand-100:#E1E4F7;
+    --brand-50:#F4F5FC;
+    --ink:#14172B;
+    --gray-600:#5A5F72;
+    --gray-400:#8D92A3;
+    --white:#FFFFFF;
+    --money-700:#0F7A36;
+    --money-600:#128F42;
+    --money-500:#16A249;
+    --money-400:#3FC46D;
+    --star:#FFB020;
+    --shadow: 0 10px 30px rgba(10,18,48,0.10);
+    --radius: 16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--white);line-height:1.6;}
+  h1,h2,h3,.display{font-family:'Playfair Display',serif;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:15px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--money-500);color:#fff;box-shadow:0 8px 20px rgba(22,162,73,.4);}
+  .btn-primary:hover{background:var(--money-600);}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.4);}
+  .btn-outline:hover{border-color:#fff;}
+  .btn-ghost-light{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.35);}
+
+  /* Utility bar */
+  .utility-bar{background:linear-gradient(90deg,var(--brand-900),var(--brand-800));color:#C9D0E8;font-size:12.5px;}
+  .utility-bar .container{display:flex;align-items:center;justify-content:space-between;padding:9px 24px;flex-wrap:wrap;gap:8px;}
+  .utility-links{display:flex;align-items:center;gap:22px;}
+  .utility-links a{opacity:.9;transition:opacity .15s;}
+  .utility-links a:hover{opacity:1;}
+  @media(max-width:760px){.utility-links span:not(:first-child){display:none;}}
+
+  /* Header + Hero share the same dark gradient (CENTERED_AUTHORITY) */
+  .authority-wrap{background:linear-gradient(165deg,var(--brand-900),var(--brand-800));}
+  header{position:sticky;top:0;z-index:50;transition:box-shadow .3s ease;}
+  header.scrolled{box-shadow:0 10px 26px rgba(10,18,48,.3);background:linear-gradient(165deg,var(--brand-900),var(--brand-800));}
+  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding:20px 24px;max-width:1180px;margin:0 auto;}
+  .nav-links{display:flex;gap:26px;font-size:14px;font-weight:500;color:#fff;}
+  .nav-links a{opacity:.82;transition:opacity .15s;white-space:nowrap;}
+  .nav-links a:hover{opacity:1;}
+  .nav-links.left{justify-self:start;}
+  .nav-links.right{justify-self:end;align-items:center;}
+  .logo{justify-self:center;display:flex;align-items:center;font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:21px;color:#fff;white-space:nowrap;}
+  .logo span.light{font-weight:500;color:rgba(255,255,255,.75);font-style:normal;}
+  .nav-icon{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;transition:background .2s;flex:none;}
+  .nav-icon:hover{background:rgba(255,255,255,.24);}
+  @media(max-width:1080px){.nav-links{display:none;}.nav{grid-template-columns:1fr;justify-items:center;}}
+
+  /* Hero centered authority */
+  .hero{padding:0;}
+  .hero-inner{max-width:760px;margin:0 auto;padding:28px 24px 72px;text-align:center;color:#fff;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);font-weight:600;font-size:12.5px;padding:7px 16px;border-radius:999px;margin-bottom:26px;letter-spacing:.4px;}
+  .hero-badge .blip{width:7px;height:7px;background:var(--money-400);border-radius:50%;}
+  .hero h1{font-weight:600;font-size:clamp(32px,5.4vw,52px);line-height:1.16;letter-spacing:-.01em;}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--brand-400);display:block;}
+  .hero p.lead{margin:24px auto 0;max-width:540px;font-size:16.5px;color:#D6DAEF;}
+  .hero-ctas{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:34px;flex-wrap:wrap;}
+  .hero-photo-wrap{margin:52px auto 0;max-width:280px;}
+  .hero-photo-wrap img{width:100%;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.4);border:4px solid rgba(255,255,255,.08);}
+  .hero-stats{display:flex;align-items:center;justify-content:center;gap:0;margin-top:48px;flex-wrap:wrap;}
+  .hero-stats .stat{padding:0 28px;text-align:center;}
+  .hero-stats .stat b{display:block;font-family:'Playfair Display',serif;font-size:18px;color:#fff;font-weight:600;}
+  .hero-stats .stat span{display:block;font-size:11.5px;color:#AEB6D6;margin-top:4px;letter-spacing:.3px;}
+  .hero-stats .divider{width:1px;height:34px;background:rgba(255,255,255,.18);}
+  @media(max-width:600px){.hero-stats{flex-direction:column;gap:18px;}.hero-stats .divider{display:none;}}
+
+  /* Modal booking */
+  .modal-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .3s ease;}
+  .modal-overlay.is-open{opacity:1;visibility:visible;}
+  .modal-overlay .backdrop{position:absolute;inset:0;background:rgba(10,18,48,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+  .modal-box{position:relative;z-index:1;width:min(480px,100%);background:#fff;border-radius:22px;padding:40px 34px 34px;transform:scale(.94);transition:transform .3s ease;box-shadow:0 30px 70px rgba(10,18,48,.4);}
+  .modal-overlay.is-open .modal-box{transform:scale(1);}
+  .modal-close{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;background:var(--brand-50);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:var(--ink);border:none;}
+  .modal-box h3{font-style:italic;font-weight:600;font-size:26px;color:var(--brand-900);margin-bottom:6px;}
+  .modal-box p.modal-sub{color:var(--gray-600);font-size:13.5px;margin-bottom:24px;}
+  .modal-box .field{margin-bottom:16px;}
+  .modal-box .field label{display:block;font-size:12px;font-weight:600;color:var(--gray-600);margin-bottom:6px;}
+  .modal-box .field select{width:100%;padding:13px 14px;border-radius:10px;border:1.5px solid #E3E7EB;font-size:13.5px;color:var(--ink);background:#fff;font-family:'DM Sans',sans-serif;}
+  .modal-box .field select:focus{outline:none;border-color:var(--money-500);}
+  #modalBtn{width:100%;justify-content:center;margin-top:6px;}
+
+  /* Quick actions — connected step flow */
+  .quick{margin-top:0;position:relative;z-index:5;background:radial-gradient(65% 100% at 50% 0%, var(--brand-50), transparent 75%);padding-top:64px;padding-bottom:8px;}
+  .quick-eyebrow{text-align:center;color:var(--brand-600);font-weight:700;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .quick-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  @media(max-width:860px){.quick-grid{grid-template-columns:repeat(2,1fr);}}
+  .quick-connector{position:absolute;left:8%;right:8%;top:46px;height:0;border-top:2px dashed var(--brand-400);opacity:.5;z-index:0;}
+  .quick-connector .node{position:absolute;top:0;width:9px;height:9px;border-radius:50%;background:var(--brand-400);transform:translate(-50%,-50%);box-shadow:0 0 0 5px var(--brand-50);}
+  @media(max-width:860px){.quick-connector{display:none;}}
+  .quick-card{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));border-radius:18px;padding:24px;color:#fff;box-shadow:0 14px 30px rgba(10,18,48,.25);transition:transform .3s ease, box-shadow .3s ease;z-index:1;}
+  .quick-card::after{content:"";position:absolute;top:-45%;right:-25%;width:150px;height:150px;background:radial-gradient(circle, rgba(58,79,174,.45), transparent 70%);pointer-events:none;}
+  .quick-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(10,18,48,.35);}
+  .quick-card .step{position:absolute;top:16px;right:18px;font-family:'Playfair Display',serif;font-size:12px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:1px;z-index:1;}
+  .quick-card .ic{position:relative;z-index:1;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--money-500),var(--money-400));display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:19px;box-shadow:0 8px 18px rgba(22,162,73,.45);}
+  .quick-card h4{font-family:'Playfair Display',serif;font-weight:600;font-size:16.5px;margin-bottom:4px;}
+  .quick-card p{position:relative;z-index:1;font-size:12.5px;color:#C3C9E4;}
+
+  section{padding:88px 0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 52px;}
+  .eyebrow{color:var(--brand-600);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;display:block;}
+  .section-head h2{font-size:36px;font-weight:600;color:var(--brand-900);}
+  .section-head h2 em{font-style:italic;color:var(--brand-600);}
+  .section-head p{color:var(--gray-600);margin-top:12px;font-size:16px;}
+
+  /* Benefits */
+  .benefits{background:var(--brand-50);}
+  .benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  @media(max-width:760px){.benefits-grid{grid-template-columns:1fr;}}
+  .benefit{display:flex;gap:16px;background:#fff;border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(10,18,48,.07);transition:transform .3s ease, box-shadow .3s ease;}
+  .benefit:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(10,18,48,.16);}
+  .benefit .ic{position:relative;z-index:1;flex:none;width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--money-500),var(--money-400));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;box-shadow:0 8px 18px rgba(22,162,73,.4);}
+  .benefit h4{font-family:'Playfair Display',serif;font-weight:600;font-size:17px;margin-bottom:6px;color:var(--brand-900);}
+  .benefit p{font-size:13.5px;color:var(--gray-600);}
+
+  /* Gallery two rows */
+  .gallery-rows{display:flex;flex-direction:column;gap:22px;padding:12px 0 8px;}
+  .gallery-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);}
+  .gallery-track{display:flex;width:max-content;gap:22px;animation:galleryLeft 50s linear infinite;}
+  .gallery-track.reverse{animation-name:galleryRight;}
+  .gallery-wrap:hover .gallery-track{animation-play-state:paused;}
+  @keyframes galleryLeft{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  @keyframes galleryRight{0%{transform:translateX(-50%);}100%{transform:translateX(0);}}
+  .gallery-card{position:relative;width:280px;height:320px;flex-shrink:0;border-radius:22px;overflow:hidden;display:block;box-shadow:0 8px 20px rgba(10,18,48,.12);transition:transform .5s ease, box-shadow .5s ease;}
+  .gallery-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(10,18,48,.24);}
+  .gallery-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+  .gallery-card:hover img{transform:scale(1.08);}
+  .gallery-card .overlay{position:absolute;inset:0;background:linear-gradient(0deg, var(--brand-900) 0%, rgba(10,18,48,.55) 42%, rgba(10,18,48,.05) 75%);}
+  .gallery-card .content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;}
+  .gallery-card .gic{width:42px;height:42px;border-radius:12px;background:var(--money-500);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;}
+  .gallery-card h4{font-family:'Playfair Display',serif;font-weight:600;font-size:17px;margin-bottom:4px;}
+  .gallery-card p{font-size:12.5px;color:#D6DAEF;}
+  @media(max-width:600px){.gallery-card{width:230px;height:290px;}}
+
+  /* Rating / social proof */
+  .proof{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));color:#fff;border-radius:28px;margin:0 24px;padding:56px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .proof::after{content:"";position:absolute;top:-35%;right:-8%;width:320px;height:320px;background:radial-gradient(circle, rgba(58,79,174,.35), transparent 70%);pointer-events:none;}
+  .proof-left, .proof-score{position:relative;z-index:1;}
+  .proof-left h3{font-style:italic;font-weight:600;font-size:27px;margin-bottom:12px;}
+  .proof-left p{color:#C3C9E4;max-width:420px;}
+  .proof-left blockquote{margin-top:18px;font-size:13.5px;color:#D6DAEF;border-left:2px solid var(--brand-400);padding-left:14px;font-style:italic;max-width:420px;}
+  .proof-left blockquote cite{display:block;margin-top:8px;font-style:normal;font-size:12px;color:#9AA1C2;}
+  .proof-score{display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.1);padding:22px 30px;border-radius:18px;}
+  .proof-score .num{font-family:'Playfair Display',serif;font-size:46px;font-weight:700;}
+  .proof-score .stars{color:var(--star);font-size:18px;letter-spacing:2px;}
+  .proof-score small{color:#C3C9E4;font-size:12.5px;}
+
+  /* About */
+  .about{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
+  @media(max-width:900px){.about{grid-template-columns:1fr;}}
+  .about-media{position:relative;}
+  .about-media img{border-radius:22px;box-shadow:var(--shadow);height:460px;width:100%;object-fit:cover;object-position:top;}
+  .about-badge{position:absolute;bottom:20px;left:20px;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 14px 30px rgba(10,18,48,.25);display:flex;align-items:center;gap:12px;}
+  .about-badge .stars{color:var(--star);font-size:15px;letter-spacing:1px;}
+  .about-badge b{font-family:'Playfair Display',serif;font-size:18px;color:var(--brand-900);display:block;}
+  .about-badge small{color:var(--gray-600);font-size:11.5px;}
+  .about h2{font-size:32px;color:var(--brand-900);font-weight:600;}
+  .about h2 em{font-style:italic;color:var(--brand-600);}
+  .about-list{margin-top:22px;display:flex;flex-direction:column;gap:14px;}
+  .about-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--gray-600);}
+  .about-list b{color:var(--ink);}
+  .check{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--money-500),var(--money-400));color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:2px;box-shadow:0 6px 14px rgba(22,162,73,.4);}
+
+  /* Contact */
+  .contact{background:var(--brand-50);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch;}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:#fff;border-radius:20px;padding:36px;box-shadow:var(--shadow);}
+  .contact-item{display:flex;gap:14px;margin-bottom:22px;}
+  .contact-item .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--brand-100);color:var(--brand-700);display:flex;align-items:center;justify-content:center;}
+  .contact-item h5{font-size:14px;color:var(--gray-600);margin-bottom:2px;}
+  .contact-item p{font-weight:600;font-size:15px;}
+  .online-panel{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);min-height:340px;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;position:relative;}
+  .online-panel::after{content:"";position:absolute;top:-30%;left:-10%;width:280px;height:280px;background:radial-gradient(circle, rgba(22,162,73,.3), transparent 70%);pointer-events:none;}
+  .online-panel .ic-big{position:relative;z-index:1;width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,var(--money-500),var(--money-400));display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:22px;box-shadow:0 10px 24px rgba(22,162,73,.4);}
+  .online-panel h3{position:relative;z-index:1;font-style:italic;font-weight:600;font-size:23px;margin-bottom:12px;}
+  .online-panel p{position:relative;z-index:1;color:#C3C9E4;max-width:340px;font-size:14px;}
+  .online-panel ul{position:relative;z-index:1;margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+  .online-panel li{font-size:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;color:#fff;}
+
+  /* CTA banner */
+  .cta-banner{background:linear-gradient(120deg,var(--brand-700),var(--brand-900));color:#fff;text-align:center;border-radius:28px;margin:0 24px;padding:64px 24px;}
+  .cta-banner h2{font-weight:600;font-size:33px;margin-bottom:14px;}
+  .cta-banner h2 em{font-style:italic;color:var(--money-400);}
+  .cta-banner p{color:#D6DAEF;max-width:520px;margin:0 auto 28px;}
+
+  footer{background:var(--brand-900);color:#C3C9E4;padding:56px 0 24px;margin-top:88px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+  @media(max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+  footer h5{color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:16px;margin-bottom:16px;}
+  footer li{margin-bottom:10px;font-size:14px;}
+  footer .foot-logo{color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-style:italic;font-size:20px;margin-bottom:12px;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#8B90AE;}
+
+  .whatsapp-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:60;font-size:28px;transition:transform .4s ease;}
+  .whatsapp-float:hover{transform:scale(1.1) rotate(6deg);}
+  .whatsapp-float .ping{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#FF4D4D;border-radius:50%;border:2px solid #fff;animation:pulseDot 2s ease-in-out infinite;}
+  @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.55;transform:scale(1.2);}}
+
+  /* Scroll reveal */
+  .reveal, .reveal-stagger > *{opacity:1;transform:none;}
+  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger > *{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal-stagger.is-visible > *{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger.is-visible > *:nth-child(1){transition-delay:.04s;}
+  .js .reveal-stagger.is-visible > *:nth-child(2){transition-delay:.09s;}
+  .js .reveal-stagger.is-visible > *:nth-child(3){transition-delay:.14s;}
+  .js .reveal-stagger.is-visible > *:nth-child(4){transition-delay:.19s;}
+  .js .reveal-stagger.is-visible > *:nth-child(5){transition-delay:.24s;}
+  .js .reveal-stagger.is-visible > *:nth-child(6){transition-delay:.29s;}
+  .js .reveal-stagger.is-visible > *:nth-child(7){transition-delay:.34s;}
+
+  /* Border-run */
+  @property --angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
+  .border-run{position:relative;isolation:isolate;}
+  .border-run::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;
+    background:conic-gradient(from var(--angle), transparent 0deg, var(--brand-500) 60deg, var(--brand-400) 140deg, transparent 200deg, transparent 360deg);
+    -webkit-mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    animation:borderRun 6s linear infinite;opacity:0;transition:opacity .3s;pointer-events:none;z-index:2;}
+  .border-run:hover::before{opacity:1;animation-duration:2.2s;}
+  @keyframes borderRun{100%{--angle:360deg;}}
+
+  @media (prefers-reduced-motion: reduce){
+    .gallery-track{animation:none;}
+    .border-run::before{animation:none;}
+    .js .reveal, .js .reveal-stagger > *{transition:none;opacity:1;transform:none;}
+    .whatsapp-float .ping{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div id="expiry-overlay"><div><h1 style="font-size:26px;margin:0 0 14px;">Esta prévia expirou</h1><p style="max-width:420px;margin:0 auto 26px;color:#c7ccd1;line-height:1.5;">Esse site foi uma demonstração da Generation IA Tech. Fale com a gente pra ativar a versão definitiva, com domínio próprio.</p><a href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Vi%20a%20pr%C3%A9via%20do%20meu%20site%20e%20quero%20ativar." style="display:inline-block;background:#25D366;color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;text-decoration:none;">Falar no WhatsApp</a></div></div>
+
+<div class="utility-bar">
+  <div class="container">
+    <div class="utility-links">
+      <span>Atendimento 100% online · Todo o Brasil</span>
+      <span>(11) 96322-1509</span>
+    </div>
+    <div class="utility-links">
+      <a href="https://www.google.com/maps/place/Guilherme+Marques+Planejador+Financeiro+Pessoal/@-14.4095261,-51.3168626,4z/data=!3m1!4b1!4m6!3m5!1s0xde6a71e7823058b:0x425b55be9f624ec4!8m2!3d-14.4095262!4d-51.3168626!16s%2Fg%2F11rnb1fy97" target="_blank">★ 5,0 · Ver avaliações no Google</a>
+    </div>
+  </div>
+</div>
+
+<div class="authority-wrap">
+<header id="siteHeader">
+  <div class="nav">
+    <nav class="nav-links left">
+      <a href="#servicos">Serviços</a>
+      <a href="#porque">Diferenciais</a>
+    </nav>
+    <a class="logo" href="#topo">Guilherme<span class="light"> Marques</span></a>
+    <nav class="nav-links right">
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#sobre">Sobre</a>
+      <a class="nav-icon" href="https://www.instagram.com/souguilhermemarques/" target="_blank" title="Instagram @souguilhermemarques" aria-label="Instagram">📷</a>
+      <button type="button" class="btn open-modal" style="background:var(--money-500);color:#fff;padding:9px 20px;font-size:13px;">Agendar</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="topo">
+  <div class="hero-inner">
+    <span class="hero-badge"><span class="blip"></span> Planejador Financeiro Pessoal · Grupo Primo · 100% Online</span>
+    <h1>Organizo o seu caos financeiro<em>e te guio para investir nos seus projetos.</em></h1>
+    <p class="lead">Planejador financeiro pessoal, parceiro do Grupo Primo e da Grão Investimentos. Ajudo pessoas a organizarem a vida financeira e criarem um plano real pros seus objetivos — sem fórmula genérica, sem promessa de enriquecimento rápido.</p>
+    <div class="hero-ctas">
+      <button type="button" class="btn btn-primary open-modal">Agendar Diagnóstico Gratuito</button>
+      <a class="btn btn-outline" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20planejamento%20financeiro." target="_blank">Falar no WhatsApp</a>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="images/guilherme-hero.png" alt="Guilherme Marques, planejador financeiro pessoal">
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>5,0 ★</b><span>Google · 8 avaliações</span></div>
+      <div class="divider"></div>
+      <div class="stat"><b>Grupo Primo</b><span>& Grão Investimentos</span></div>
+      <div class="divider"></div>
+      <div class="stat"><b>100% Online</b><span>Atende todo o Brasil</span></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="container quick">
+  <div class="quick-eyebrow reveal">Como funciona</div>
+  <div class="quick-grid reveal-stagger">
+    <div class="quick-connector">
+      <span class="node" style="left:12.5%"></span>
+      <span class="node" style="left:37.5%"></span>
+      <span class="node" style="left:62.5%"></span>
+      <span class="node" style="left:87.5%"></span>
+    </div>
+    <button type="button" class="quick-card border-run open-modal" style="text-align:left;width:100%;border:none;font-family:inherit;cursor:pointer;">
+      <span class="step">01</span>
+      <div class="ic">📅</div>
+      <h4>Agendar Diagnóstico</h4>
+      <p>Resposta rápida pelo WhatsApp</p>
+    </button>
+    <a class="quick-card border-run" href="#servicos">
+      <span class="step">02</span>
+      <div class="ic">📊</div>
+      <h4>Conheça os Serviços</h4>
+      <p>Do orçamento aos investimentos</p>
+    </a>
+    <a class="quick-card border-run" href="#sobre">
+      <span class="step">03</span>
+      <div class="ic">💻</div>
+      <h4>Atendimento 100% Online</h4>
+      <p>Por videochamada, no seu horário</p>
+    </a>
+    <a class="quick-card border-run" href="https://www.instagram.com/souguilhermemarques/" target="_blank">
+      <span class="step">04</span>
+      <div class="ic">📷</div>
+      <h4>Conteúdo no Instagram</h4>
+      <p>Educação financeira todo dia</p>
+    </a>
+  </div>
+</div>
+
+<section id="para-quem" style="padding-bottom:0;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pra quem é</span>
+      <h2>Não importa <em>onde você está agora</em></h2>
+      <p>Ganha pouco, ganha bem e não tem plano, está endividado ou só sem organização — o trabalho de planejamento financeiro começa exatamente daí.</p>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" style="padding-bottom:56px;padding-top:0;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Serviços</span>
+      <h2>Um plano <em>pensado pra você</em></h2>
+      <p>Cada etapa do planejamento é ajustada à sua realidade — do primeiro diagnóstico ao acompanhamento contínuo.</p>
+    </div>
+  </div>
+  <div class="gallery-rows">
+    <div class="gallery-wrap">
+      <div class="gallery-track">
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20o%20Diagn%C3%B3stico%20e%20Organiza%C3%A7%C3%A3o%20Financeira."><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=75&w=700&auto=format&fit=crop" alt="Diagnóstico e Organização Financeira"><div class="overlay"></div><div class="content"><div class="gic">📋</div><h4>Diagnóstico e Organização</h4><p>Controle de gastos e orçamento realista</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20a%20Sa%C3%ADda%20Estrat%C3%A9gica%20de%20D%C3%ADvidas."><img src="https://images.unsplash.com/photo-1642043175009-5997b3a078d8?q=75&w=700&auto=format&fit=crop" alt="Saída Estratégica de Dívidas"><div class="overlay"></div><div class="content"><div class="gic">📉</div><h4>Saída Estratégica de Dívidas</h4><p>Um plano real pra sair do vermelho</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Reserva%20de%20Emerg%C3%AAncia."><img src="https://images.unsplash.com/photo-1602570550278-1b4cce4f4748?q=75&w=700&auto=format&fit=crop" alt="Reserva de Emergência"><div class="overlay"></div><div class="content"><div class="gic">🛟</div><h4>Reserva de Emergência</h4><p>Fôlego pra imprevistos, sem desespero</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Estrat%C3%A9gia%20de%20Investimentos."><img src="https://images.unsplash.com/photo-1745509267699-1b1db256601e?q=75&w=700&auto=format&fit=crop" alt="Estratégia de Investimentos"><div class="overlay"></div><div class="content"><div class="gic">📈</div><h4>Estratégia de Investimentos</h4><p>Personalizada ao seu perfil de risco</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20o%20Diagn%C3%B3stico%20e%20Organiza%C3%A7%C3%A3o%20Financeira."><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=75&w=700&auto=format&fit=crop" alt="Diagnóstico e Organização Financeira"><div class="overlay"></div><div class="content"><div class="gic">📋</div><h4>Diagnóstico e Organização</h4><p>Controle de gastos e orçamento realista</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20a%20Sa%C3%ADda%20Estrat%C3%A9gica%20de%20D%C3%ADvidas."><img src="https://images.unsplash.com/photo-1642043175009-5997b3a078d8?q=75&w=700&auto=format&fit=crop" alt="Saída Estratégica de Dívidas"><div class="overlay"></div><div class="content"><div class="gic">📉</div><h4>Saída Estratégica de Dívidas</h4><p>Um plano real pra sair do vermelho</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Reserva%20de%20Emerg%C3%AAncia."><img src="https://images.unsplash.com/photo-1602570550278-1b4cce4f4748?q=75&w=700&auto=format&fit=crop" alt="Reserva de Emergência"><div class="overlay"></div><div class="content"><div class="gic">🛟</div><h4>Reserva de Emergência</h4><p>Fôlego pra imprevistos, sem desespero</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Estrat%C3%A9gia%20de%20Investimentos."><img src="https://images.unsplash.com/photo-1745509267699-1b1db256601e?q=75&w=700&auto=format&fit=crop" alt="Estratégia de Investimentos"><div class="overlay"></div><div class="content"><div class="gic">📈</div><h4>Estratégia de Investimentos</h4><p>Personalizada ao seu perfil de risco</p></div></a>
+      </div>
+    </div>
+    <div class="gallery-wrap">
+      <div class="gallery-track reverse">
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Planejamento%20de%20Metas."><img src="https://images.unsplash.com/photo-1731673092066-cff4ea887d57?q=75&w=700&auto=format&fit=crop" alt="Planejamento de Metas e Grandes Objetivos"><div class="overlay"></div><div class="content"><div class="gic">🎯</div><h4>Planejamento de Metas</h4><p>Casa própria, aposentadoria, grandes sonhos</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Prote%C3%A7%C3%A3o%20e%20Seguran%C3%A7a%20Financeira."><img src="https://images.unsplash.com/photo-1576089073624-b5751a8f4de9?q=75&w=700&auto=format&fit=crop" alt="Proteção e Segurança Financeira"><div class="overlay"></div><div class="content"><div class="gic">🛡️</div><h4>Proteção Financeira</h4><p>Patrimônio protegido, família tranquila</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Acompanhamento%20Cont%C3%ADnuo."><img src="https://images.unsplash.com/photo-1758598306845-8630d064a244?q=75&w=700&auto=format&fit=crop" alt="Acompanhamento Contínuo e Mentoria Financeira"><div class="overlay"></div><div class="content"><div class="gic">🤝</div><h4>Acompanhamento Contínuo</h4><p>Suporte de verdade, não só um plano no papel</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Planejamento%20de%20Metas."><img src="https://images.unsplash.com/photo-1731673092066-cff4ea887d57?q=75&w=700&auto=format&fit=crop" alt="Planejamento de Metas e Grandes Objetivos"><div class="overlay"></div><div class="content"><div class="gic">🎯</div><h4>Planejamento de Metas</h4><p>Casa própria, aposentadoria, grandes sonhos</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Prote%C3%A7%C3%A3o%20e%20Seguran%C3%A7a%20Financeira."><img src="https://images.unsplash.com/photo-1576089073624-b5751a8f4de9?q=75&w=700&auto=format&fit=crop" alt="Proteção e Segurança Financeira"><div class="overlay"></div><div class="content"><div class="gic">🛡️</div><h4>Proteção Financeira</h4><p>Patrimônio protegido, família tranquila</p></div></a>
+        <a class="gallery-card" target="_blank" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Quero%20saber%20mais%20sobre%20Acompanhamento%20Cont%C3%ADnuo."><img src="https://images.unsplash.com/photo-1758598306845-8630d064a244?q=75&w=700&auto=format&fit=crop" alt="Acompanhamento Contínuo e Mentoria Financeira"><div class="overlay"></div><div class="content"><div class="gic">🤝</div><h4>Acompanhamento Contínuo</h4><p>Suporte de verdade, não só um plano no papel</p></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="porque">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Diferenciais</span>
+      <h2>Por que planejar <em>com o Guilherme</em></h2>
+      <p>Metodologia consultiva, apoio institucional e transparência do início ao fim.</p>
+    </div>
+    <div class="benefits-grid reveal-stagger">
+      <div class="benefit border-run"><div class="ic">🧭</div><div><h4>Metodologia consultiva e personalizada</h4><p>Um plano pensado pro seu momento, não uma fórmula genérica de curso.</p></div></div>
+      <div class="benefit border-run"><div class="ic">🏛️</div><div><h4>Parceria com Grupo Primo e Grão Investimentos</h4><p>Apoio institucional por trás de cada estratégia recomendada.</p></div></div>
+      <div class="benefit border-run"><div class="ic">💻</div><div><h4>Atendimento 100% online</h4><p>De qualquer cidade do Brasil, por videochamada, sem deslocamento.</p></div></div>
+      <div class="benefit border-run"><div class="ic">🤝</div><div><h4>Acompanhamento contínuo</h4><p>O trabalho não termina no primeiro plano — tem suporte ao longo do caminho.</p></div></div>
+      <div class="benefit border-run"><div class="ic">🔎</div><div><h4>Transparência acima de tudo</h4><p>Sem fórmula mágica e sem promessa de enriquecimento rápido.</p></div></div>
+      <div class="benefit border-run"><div class="ic">🎯</div><div><h4>Foco nos seus objetivos reais</h4><p>Organizar a casa financeira antes de qualquer meta maior.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="avaliacoes" style="padding-top:0;">
+  <div class="proof reveal">
+    <div class="proof-left">
+      <h3>Avaliação real, <em>direto do Google</em></h3>
+      <p>A nota que os próprios clientes deram para o atendimento do Guilherme.</p>
+      <blockquote>"Guilherme é um excelente profissional, que atuando na área de consultoria financeira, nos orienta, através de estratégias inteligentes, a organizar e planejar nossa vida financeira."
+        <cite>Eny Valente · avaliação no Google</cite>
+      </blockquote>
+    </div>
+    <div class="proof-score">
+      <div>
+        <div class="num">5,0</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div>
+        <b style="font-family:'Playfair Display',serif;font-size:19px;">8 avaliações</b>
+        <small>Google Maps · Planejador financeiro</small><br>
+        <a href="https://www.google.com/maps/place/Guilherme+Marques+Planejador+Financeiro+Pessoal/@-14.4095261,-51.3168626,4z/data=!3m1!4b1!4m6!3m5!1s0xde6a71e7823058b:0x425b55be9f624ec4!8m2!3d-14.4095262!4d-51.3168626!16s%2Fg%2F11rnb1fy97" target="_blank" style="color:#fff;text-decoration:underline;font-size:13px;">Ver avaliações no Google →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container about reveal-stagger">
+    <div class="about-media">
+      <img src="images/guilherme-sobre.png" alt="Guilherme Marques, planejador financeiro pessoal">
+      <div class="about-badge">
+        <div class="stars">★★★★★</div>
+        <div>
+          <b>5,0 no Google</b>
+          <small>8 avaliações</small>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Sobre o Guilherme</span>
+      <h2>Bem-estar financeiro <em>não é só sobre números</em></h2>
+      <p style="color:var(--gray-600);margin-top:14px;">Sou Guilherme, planejador financeiro pessoal parceiro do Grupo Primo e da Grão Investimentos. Depois de anos no mercado financeiro, desenvolvi uma abordagem consultiva que coloca as suas necessidades e os seus objetivos no centro de cada estratégia — porque bem-estar financeiro é, acima de tudo, sobre construir uma relação saudável com o dinheiro.</p>
+      <p style="color:var(--gray-600);margin-top:14px;">Trabalho com transparência, paciência e dedicação, buscando entender a fundo a sua realidade antes de propor qualquer solução. Cada plano é único, pensado pra refletir as suas metas e os seus valores.</p>
+      <ul class="about-list">
+        <li><span class="check">✓</span><span><b>Parceiro do Grupo Primo</b> e da Grão Investimentos.</span></li>
+        <li><span class="check">✓</span><span><b>Atendimento 100% online</b>, para todo o Brasil.</span></li>
+        <li><span class="check">✓</span><span><b>Nota 5,0 no Google</b> (8 avaliações).</span></li>
+        <li><span class="check">✓</span><span><b>Abordagem consultiva</b>, focada nos seus objetivos.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contato</span>
+      <h2>Vamos organizar <em>a sua vida financeira?</em></h2>
+    </div>
+    <div class="contact-grid reveal-stagger">
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="ic">📞</div>
+          <div><h5>Telefone / WhatsApp</h5><p>(11) 96322-1509</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">✉️</div>
+          <div><h5>E-mail</h5><p>guilherme.marques@graoplanejamento.com.br</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">🌎</div>
+          <div><h5>Atendimento</h5><p>100% online, mediante agendamento · Todo o Brasil</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">⭐</div>
+          <div><h5>Avaliação Google</h5><p>5,0 de 5 (8 avaliações)</p></div>
+        </div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20conversa." target="_blank">Falar no WhatsApp</a>
+        <a class="btn" style="width:100%;justify-content:center;margin-top:10px;background:var(--brand-50);color:var(--brand-700);border-color:var(--brand-100);" href="https://www.instagram.com/souguilhermemarques/" target="_blank">📷 Seguir no Instagram</a>
+      </div>
+      <div class="online-panel">
+        <div class="ic-big">💻</div>
+        <h3>Atendimento 100% Online</h3>
+        <p>Toda a consultoria acontece por videochamada, no dia e horário combinados com você — não importa em qual cidade ou estado você está.</p>
+        <ul>
+          <li>Todo o Brasil</li>
+          <li>Agendamento flexível</li>
+          <li>Sem deslocamento</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-banner reveal">
+    <h2>Pronto pra <em>organizar as suas finanças?</em></h2>
+    <p>Agende seu diagnóstico gratuito com o Guilherme e descubra o plano certo pros seus objetivos.</p>
+    <button type="button" class="btn btn-ghost-light open-modal">📅 Agendar Diagnóstico Gratuito</button>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="foot-logo">Guilherme Marques</div>
+      <p style="max-width:320px;font-size:13.5px;">Planejador financeiro pessoal, parceiro do Grupo Primo e da Grão Investimentos. Atendimento 100% online para todo o Brasil.</p>
+    </div>
+    <div>
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#porque">Diferenciais</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contato</h5>
+      <ul>
+        <li>(11) 96322-1509</li>
+        <li>guilherme.marques@graoplanejamento.com.br</li>
+        <li><a href="https://www.instagram.com/souguilhermemarques/" target="_blank">@souguilhermemarques</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© 2026 Guilherme Marques. Todos os direitos reservados.</span>
+    <span>Planejador Financeiro Pessoal · Grupo Primo</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5511963221509?text=Ol%C3%A1%2C%20Guilherme!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20conversa." target="_blank">📱<span class="ping"></span></a>
+
+<div class="modal-overlay" id="bookingModal">
+  <div class="backdrop" data-close="1"></div>
+  <div class="modal-box">
+    <button type="button" class="modal-close" data-close="1">✕</button>
+    <h3>Agendar Diagnóstico</h3>
+    <p class="modal-sub">Preencha e a mensagem já sai pronta no WhatsApp.</p>
+    <div class="field">
+      <label for="fieldDesafio">Qual é o seu maior desafio agora?</label>
+      <select id="fieldDesafio">
+        <option value="">Ainda não sei / quero orientação</option>
+        <option>Organizar as contas e sair do vermelho</option>
+        <option>Criar uma reserva de emergência</option>
+        <option>Começar a investir com estratégia</option>
+        <option>Planejar um objetivo grande (casa, aposentadoria, etc.)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="fieldPeriodo">Prefere a conversa</label>
+      <select id="fieldPeriodo">
+        <option value="">Qualquer horário</option>
+        <option value="pela manhã">Pela manhã</option>
+        <option value="à tarde">À tarde</option>
+        <option value="à noite">À noite</option>
+      </select>
+    </div>
+    <button type="button" id="modalBtn" class="btn btn-primary">Agendar pelo WhatsApp →</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var modal = document.getElementById('bookingModal');
+  document.querySelectorAll('.open-modal').forEach(function(btn){
+    btn.addEventListener('click', function(){ modal.classList.add('is-open'); });
+  });
+  modal.querySelectorAll('[data-close]').forEach(function(el){
+    el.addEventListener('click', function(){ modal.classList.remove('is-open'); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') modal.classList.remove('is-open');
+  });
+
+  var modalBtn = document.getElementById('modalBtn');
+  modalBtn.addEventListener('click', function(){
+    var desafio = document.getElementById('fieldDesafio').value;
+    var periodo = document.getElementById('fieldPeriodo').value;
+    var msg = 'Olá, Guilherme! Vim pelo site e gostaria de agendar uma conversa';
+    if (desafio) { msg += ' sobre: ' + desafio; } else { msg += ' pra um diagnóstico'; }
+    if (periodo) { msg += ', de preferência ' + periodo; }
+    msg += '.';
+    window.open('https://wa.me/5511963221509?text=' + encodeURIComponent(msg), '_blank');
+    modal.classList.remove('is-open');
+  });
+
+  var header = document.getElementById('siteHeader');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
