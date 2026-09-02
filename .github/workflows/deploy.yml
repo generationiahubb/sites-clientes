@@ -1,8 +1,12 @@
+# Gatilho automático (`on: push`) DESATIVADO em 02/09/2026: a conta Cloudflare foi suspensa
+# por excesso de deploys automáticos (um deploy por push, multiplicado por pasta de cliente).
+# Publicação padrão de mockup agora é só GitHub Pages. Este workflow só roda manualmente
+# (aba Actions > Run workflow), e só deve ser usado quando um cliente pagar e for gerar
+# domínio próprio / hospedagem definitiva no Cloudflare Pages para aquele site específico.
+# Não reative o "on: push" sem pedido explícito do usuário.
 name: Deploy to Cloudflare Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch: {}
 
 jobs:
