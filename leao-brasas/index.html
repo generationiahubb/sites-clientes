@@ -143,13 +143,6 @@
     cursor:pointer;transition:.15s;
   }
   .btn-add:active{transform:scale(.95);}
-  .btn-solo{
-    background:transparent;color:var(--text-dim);
-    border:1px solid var(--card-border);
-    padding:8px 10px;border-radius:10px;font-size:12px;font-weight:600;
-    cursor:pointer;white-space:nowrap;
-  }
-  .btn-solo:hover{border-color:var(--accent);color:var(--accent-2);}
 
   .badge{
     position:absolute;top:-8px;left:10px;
@@ -448,7 +441,6 @@
           '<div class="item-bottom">' +
             '<span class="item-price">' + money(item.price) + '</span>' +
             '<div class="item-actions">' +
-              '<button class="btn-solo" data-solo="' + item.id + '">Pedir só esse</button>' +
               '<button class="btn-add" data-add="' + item.id + '">Adicionar</button>' +
             '</div>' +
           '</div>' +
@@ -694,16 +686,11 @@
   function setupEvents(){
     document.body.addEventListener("click", function(e){
       var addId = e.target.dataset && e.target.dataset.add;
-      var soloId = e.target.dataset && e.target.dataset.solo;
       var incId = e.target.dataset && e.target.dataset.inc;
       var decId = e.target.dataset && e.target.dataset.dec;
       var removeId = e.target.dataset && e.target.dataset.remove;
 
       if (addId) addToCart(addId, 1);
-      if (soloId){
-        var item = findItem(soloId);
-        openWhatsapp(buildOrderMessage([{id:soloId, qty:1, obs:""}]));
-      }
       if (incId){
         var line = cartLine(incId);
         setQty(incId, (line ? line.qty : 0) + 1);
