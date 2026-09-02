@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Leão Brasas — Espetos e Lanches na Brasa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #17110f;
+    --bg-alt: #1f1714;
+    --card: #241a16;
+    --card-border: #35261f;
+    --text: #f5ece5;
+    --text-dim: #b9a99e;
+    --text-faint: #7d6c62;
+    --accent: #ff5a1f;
+    --accent-2: #ffb020;
+    --accent-dark: #c7431a;
+    --green: #37c871;
+    --red: #e5484d;
+    --radius: 16px;
+    --shadow: 0 12px 30px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 800px 500px at 50% -10%, rgba(255,90,31,.14), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:110px;
+  }
+  h1,h2,h3,.display{
+    font-family:'Bebas Neue', 'Inter', sans-serif;
+    letter-spacing:.5px;
+    font-weight:400;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  button{font-family:inherit;}
+
+  /* ---------- Header ---------- */
+  header.top{
+    padding:22px 18px 16px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .logo{
+    width:56px;height:56px;border-radius:50%;
+    background:linear-gradient(145deg,var(--accent),var(--accent-dark));
+    display:flex;align-items:center;justify-content:center;
+    font-size:26px;flex:none;
+    box-shadow:0 6px 16px rgba(255,90,31,.35), inset 0 0 0 2px rgba(255,255,255,.15);
+  }
+  .brand{flex:1;min-width:0;}
+  .brand h1{font-size:30px;line-height:1;margin:0 0 4px;color:var(--text);}
+  .brand p{margin:0;font-size:13px;color:var(--text-dim);}
+  .status{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:6px 12px;border-radius:999px;
+    font-size:12px;font-weight:700;white-space:nowrap;
+    border:1px solid transparent;
+  }
+  .status.open{background:rgba(55,200,113,.12);color:var(--green);border-color:rgba(55,200,113,.3);}
+  .status.closed{background:rgba(229,72,77,.12);color:var(--red);border-color:rgba(229,72,77,.3);}
+  .status .dot{width:7px;height:7px;border-radius:50%;background:currentColor;}
+  .status.open .dot{animation:pulse 1.6s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  .hours-note{font-size:11px;color:var(--text-faint);margin-top:2px;}
+
+  /* ---------- Nav ---------- */
+  nav.sections{
+    position:sticky;top:0;z-index:40;
+    display:flex;gap:8px;overflow-x:auto;
+    padding:10px 18px;
+    background:rgba(23,17,15,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--card-border);
+    scrollbar-width:none;
+  }
+  nav.sections::-webkit-scrollbar{display:none;}
+  nav.sections button{
+    flex:none;
+    padding:9px 16px;border-radius:999px;
+    border:1px solid var(--card-border);
+    background:var(--card);color:var(--text-dim);
+    font-size:13px;font-weight:600;
+    cursor:pointer;transition:.2s;
+  }
+  nav.sections button.active{
+    background:var(--accent);color:#fff;border-color:var(--accent);
+    box-shadow:0 4px 14px rgba(255,90,31,.35);
+  }
+
+  /* ---------- Sections ---------- */
+  main{padding:6px 18px 0;}
+  section.menu-section{padding-top:26px;scroll-margin-top:64px;}
+  section.menu-section h2{
+    font-size:26px;color:var(--text);margin:0 0 4px;
+  }
+  section.menu-section .section-sub{
+    font-size:13px;color:var(--text-faint);margin:0 0 16px;
+  }
+
+  .grid{display:flex;flex-direction:column;gap:14px;}
+
+  .item{
+    display:flex;gap:14px;
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-radius:var(--radius);
+    padding:12px;
+    position:relative;
+    box-shadow:var(--shadow);
+  }
+  .item-photo{
+    width:92px;height:92px;border-radius:12px;flex:none;
+    background:linear-gradient(155deg,#3a2a20,#241a16);
+    display:flex;align-items:center;justify-content:center;
+    font-size:34px;
+    border:1px solid var(--card-border);
+  }
+  .item-body{flex:1;min-width:0;display:flex;flex-direction:column;}
+  .item-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;}
+  .item-name{font-size:16px;font-weight:700;margin:0;}
+  .item-desc{
+    font-size:12.5px;color:var(--text-dim);margin:4px 0 8px;
+    line-height:1.4;
+  }
+  .item-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;}
+  .item-price{font-size:15px;font-weight:800;color:var(--accent-2);}
+  .item-actions{display:flex;gap:6px;}
+  .btn-add{
+    background:var(--accent);color:#fff;border:none;
+    padding:8px 14px;border-radius:10px;font-size:13px;font-weight:700;
+    cursor:pointer;transition:.15s;
+  }
+  .btn-add:active{transform:scale(.95);}
+  .btn-solo{
+    background:transparent;color:var(--text-dim);
+    border:1px solid var(--card-border);
+    padding:8px 10px;border-radius:10px;font-size:12px;font-weight:600;
+    cursor:pointer;white-space:nowrap;
+  }
+  .btn-solo:hover{border-color:var(--accent);color:var(--accent-2);}
+
+  .badge{
+    position:absolute;top:-8px;left:10px;
+    font-size:10px;font-weight:800;letter-spacing:.4px;
+    padding:4px 9px;border-radius:999px;
+    text-transform:uppercase;
+    box-shadow:0 4px 10px rgba(0,0,0,.4);
+  }
+  .badge.mais-pedido{background:linear-gradient(135deg,var(--accent-2),var(--accent));color:#1a1210;}
+  .badge.novo{background:#2f8fe0;color:#fff;}
+  .badge.promo{background:var(--green);color:#0d2418;}
+
+  /* ---------- Floating cart ---------- */
+  .cart-fab{
+    position:fixed;left:18px;right:18px;bottom:18px;z-index:50;
+    max-width:460px;margin:0 auto;
+    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    color:#fff;border:none;border-radius:16px;
+    padding:14px 18px;
+    display:flex;align-items:center;justify-content:space-between;
+    box-shadow:0 14px 34px rgba(255,90,31,.4);
+    cursor:pointer;
+    transform:translateY(120%);
+    transition:transform .25s ease;
+  }
+  .cart-fab.visible{transform:translateY(0);}
+  .cart-fab .left{display:flex;align-items:center;gap:10px;}
+  .cart-fab .count{
+    background:rgba(255,255,255,.25);
+    min-width:24px;height:24px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:800;
+  }
+  .cart-fab .label{font-size:14px;font-weight:700;}
+  .cart-fab .total{font-size:16px;font-weight:800;}
+
+  /* ---------- Cart drawer ---------- */
+  .overlay{
+    position:fixed;inset:0;background:rgba(0,0,0,.55);
+    z-index:60;opacity:0;pointer-events:none;transition:opacity .2s;
+  }
+  .overlay.visible{opacity:1;pointer-events:auto;}
+  .drawer{
+    position:fixed;left:0;right:0;bottom:0;z-index:61;
+    max-width:520px;margin:0 auto;
+    background:var(--bg-alt);
+    border-top-left-radius:22px;border-top-right-radius:22px;
+    border:1px solid var(--card-border);border-bottom:none;
+    max-height:85vh;display:flex;flex-direction:column;
+    transform:translateY(100%);transition:transform .28s ease;
+    box-shadow:0 -20px 50px rgba(0,0,0,.5);
+  }
+  .drawer.visible{transform:translateY(0);}
+  .drawer-handle{width:40px;height:4px;background:var(--card-border);border-radius:99px;margin:10px auto 4px;}
+  .drawer-header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 20px 14px;border-bottom:1px solid var(--card-border);
+  }
+  .drawer-header h3{margin:0;font-size:22px;}
+  .drawer-close{
+    background:var(--card);border:1px solid var(--card-border);color:var(--text-dim);
+    width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;
+  }
+  .drawer-body{overflow-y:auto;padding:14px 20px;flex:1;}
+  .empty-cart{text-align:center;color:var(--text-faint);padding:40px 10px;font-size:14px;}
+
+  .cart-item{
+    padding:14px 0;border-bottom:1px solid var(--card-border);
+  }
+  .cart-item:last-child{border-bottom:none;}
+  .cart-item-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;}
+  .cart-item-name{font-weight:700;font-size:14.5px;}
+  .cart-item-unit{font-size:12px;color:var(--text-faint);}
+  .cart-item-remove{
+    background:none;border:none;color:var(--text-faint);cursor:pointer;
+    font-size:16px;padding:2px 4px;
+  }
+  .cart-item-remove:hover{color:var(--red);}
+  .cart-item-mid{display:flex;align-items:center;justify-content:space-between;margin-top:10px;gap:10px;}
+  .qty-stepper{
+    display:flex;align-items:center;gap:0;
+    border:1px solid var(--card-border);border-radius:10px;overflow:hidden;
+  }
+  .qty-stepper button{
+    width:32px;height:32px;background:var(--card);border:none;color:var(--text);
+    font-size:16px;cursor:pointer;
+  }
+  .qty-stepper span{
+    min-width:30px;text-align:center;font-weight:700;font-size:14px;
+  }
+  .cart-item-subtotal{font-weight:800;color:var(--accent-2);font-size:14.5px;}
+  .cart-item-obs{
+    width:100%;margin-top:10px;
+    background:var(--card);border:1px solid var(--card-border);
+    border-radius:10px;color:var(--text);font-size:12.5px;
+    padding:8px 10px;resize:none;font-family:inherit;
+  }
+  .cart-item-obs::placeholder{color:var(--text-faint);}
+
+  .drawer-footer{
+    padding:16px 20px calc(20px + env(safe-area-inset-bottom));
+    border-top:1px solid var(--card-border);
+    background:var(--bg-alt);
+  }
+  .total-row{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:14px;
+  }
+  .total-row span:first-child{font-size:14px;color:var(--text-dim);font-weight:600;}
+  .total-row span:last-child{font-size:24px;font-weight:800;color:var(--text);}
+  .btn-checkout{
+    width:100%;padding:15px;border:none;border-radius:14px;
+    background:linear-gradient(135deg,#25D366,#1ba851);
+    color:#fff;font-size:15px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    cursor:pointer;box-shadow:0 10px 24px rgba(37,211,102,.35);
+  }
+  .btn-checkout:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;}
+
+  footer{
+    text-align:center;padding:36px 18px 10px;
+    color:var(--text-faint);font-size:11.5px;
+  }
+
+  @media (min-width:600px){
+    .item-photo{width:110px;height:110px;font-size:40px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="logo">🔥</div>
+  <div class="brand">
+    <h1>Leão Brasas</h1>
+    <p>Espetos e Lanches na Brasa</p>
+  </div>
+  <div style="text-align:right;">
+    <span id="statusBadge" class="status closed"><span class="dot"></span><span id="statusText">Fechado</span></span>
+    <div class="hours-note">Seg–Sáb · 18h–22h</div>
+  </div>
+</header>
+
+<nav class="sections" id="sectionNav">
+  <button data-target="destaques" class="active">Destaques</button>
+  <button data-target="espetos">Espetos</button>
+  <button data-target="lanches">Lanches</button>
+  <button data-target="bebidas">Bebidas</button>
+</nav>
+
+<main>
+  <section class="menu-section" id="destaques">
+    <h2>Destaques da casa</h2>
+    <p class="section-sub">Os queridinhos de quem já provou</p>
+    <div class="grid" id="destaquesGrid"></div>
+  </section>
+
+  <section class="menu-section" id="espetos">
+    <h2>Espetos</h2>
+    <p class="section-sub">Na brasa, no ponto certo</p>
+    <div class="grid" id="espetosGrid"></div>
+  </section>
+
+  <section class="menu-section" id="lanches">
+    <h2>Lanches</h2>
+    <p class="section-sub">Pão tostado, recheio generoso</p>
+    <div class="grid" id="lanchesGrid"></div>
+  </section>
+
+  <section class="menu-section" id="bebidas">
+    <h2>Bebidas</h2>
+    <p class="section-sub">Pra acompanhar</p>
+    <div class="grid" id="bebidasGrid"></div>
+  </section>
+</main>
+
+<button class="cart-fab" id="cartFab">
+  <div class="left">
+    <span class="count" id="cartCount">0</span>
+    <span class="label">Ver carrinho</span>
+  </div>
+  <span class="total" id="cartFabTotal">R$ 0,00</span>
+</button>
+
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-handle"></div>
+  <div class="drawer-header">
+    <h3>Seu pedido</h3>
+    <button class="drawer-close" id="drawerClose">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody">
+    <div class="empty-cart">Seu carrinho está vazio.<br>Adicione algo saboroso 🔥</div>
+  </div>
+  <div class="drawer-footer">
+    <div class="total-row"><span>Total</span><span id="drawerTotal">R$ 0,00</span></div>
+    <button class="btn-checkout" id="checkoutBtn" disabled>📲 Fechar pedido no WhatsApp</button>
+  </div>
+</div>
+
+<footer>Leão Brasas © <span id="year"></span> — cardápio digital</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var WHATSAPP_NUMBER = "5511958074050";
+  var STORAGE_KEY = "leaoBrasasCart";
+
+  var MENU = {
+    espetos: [
+      {id:"esp-picanha", name:"Espetinho de Picanha", desc:"Picanha selecionada, temperada e grelhada na brasa até o ponto perfeito.", price:14.00, badge:"mais-pedido"},
+      {id:"esp-frango-bacon", name:"Espetinho de Frango com Bacon", desc:"Cubos de frango envoltos em bacon crocante, no espeto.", price:12.00},
+      {id:"esp-linguica", name:"Espetinho de Linguiça Toscana", desc:"Linguiça artesanal grelhada, suculenta por dentro e tostada por fora.", price:10.00},
+      {id:"esp-coracao", name:"Espetinho de Coração", desc:"Coraçãozinho de frango temperado no tempero da casa.", price:11.00},
+      {id:"esp-queijo", name:"Espetinho de Queijo Coalho", desc:"Queijo coalho derretendo por fora, macio por dentro, com toque de mel.", price:11.00, badge:"novo"},
+      {id:"esp-kafta", name:"Espetinho de Kafta", desc:"Kafta temperada com especiarias árabes, grelhada na hora.", price:13.00, badge:"promo"}
+    ],
+    lanches: [
+      {id:"lan-burger", name:"Burger Leão", desc:"Pão brioche, blend 180g na brasa, queijo, bacon e molho da casa.", price:24.00, badge:"mais-pedido"},
+      {id:"lan-choripan", name:"Choripan na Brasa", desc:"Linguiça argentina no pão francês, chimichurri e vinagrete.", price:19.00},
+      {id:"lan-xsalada", name:"X-Salada na Brasa", desc:"Hambúrguer grelhado na brasa, queijo, alface, tomate e maionese da casa.", price:17.00},
+      {id:"lan-costela", name:"Costela no Pão", desc:"Costela desfiada, horas na brasa, no pão amanteigado.", price:26.00, badge:"novo"}
+    ],
+    bebidas: [
+      {id:"beb-coca", name:"Coca-Cola Lata 350ml", desc:"Bem gelada.", price:6.00},
+      {id:"beb-guarana", name:"Guaraná Antarctica Lata 350ml", desc:"Bem gelado.", price:6.00},
+      {id:"beb-agua", name:"Água Mineral 500ml", desc:"Com ou sem gás.", price:4.00},
+      {id:"beb-suco", name:"Suco Natural de Laranja 300ml", desc:"Feito na hora.", price:9.00},
+      {id:"beb-cerveja", name:"Cerveja Long Neck", desc:"Gelada na medida certa.", price:10.00, badge:"promo"}
+    ]
+  };
+  var DESTAQUE_IDS = ["esp-picanha","lan-burger","esp-kafta"];
+
+  var ICONS = { espetos:"🍢", lanches:"🍔", bebidas:"🥤" };
+
+  var fmt = new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'});
+  function money(v){ return fmt.format(v); }
+
+  function findItem(id){
+    for (var cat in MENU){
+      var found = MENU[cat].find(function(i){ return i.id === id; });
+      if (found) return found;
+    }
+    return null;
+  }
+
+  function badgeLabel(b){
+    if (b === "mais-pedido") return "Mais pedido";
+    if (b === "novo") return "Novidade";
+    if (b === "promo") return "Promoção";
+    return "";
+  }
+
+  function itemCard(item, catKey, forceBadge){
+    var badge = forceBadge || item.badge;
+    var badgeHtml = badge ? '<span class="badge ' + badge + '">' + badgeLabel(badge) + '</span>' : "";
+    return (
+      '<div class="item">' +
+        badgeHtml +
+        '<div class="item-photo">' + ICONS[catKey] + '</div>' +
+        '<div class="item-body">' +
+          '<div class="item-top"><p class="item-name">' + item.name + '</p></div>' +
+          '<p class="item-desc">' + item.desc + '</p>' +
+          '<div class="item-bottom">' +
+            '<span class="item-price">' + money(item.price) + '</span>' +
+            '<div class="item-actions">' +
+              '<button class="btn-solo" data-solo="' + item.id + '">Pedir só esse</button>' +
+              '<button class="btn-add" data-add="' + item.id + '">Adicionar</button>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+
+  function render(){
+    var destaquesGrid = document.getElementById("destaquesGrid");
+    destaquesGrid.innerHTML = DESTAQUE_IDS.map(function(id){
+      var cat = Object.keys(MENU).find(function(c){ return MENU[c].some(function(i){ return i.id === id; }); });
+      return itemCard(findItem(id), cat, "mais-pedido");
+    }).join("");
+
+    ["espetos","lanches","bebidas"].forEach(function(cat){
+      document.getElementById(cat + "Grid").innerHTML = MENU[cat].map(function(item){
+        return itemCard(item, cat);
+      }).join("");
+    });
+  }
+
+  // ---------- Status aberto/fechado ----------
+  function updateStatus(){
+    var now = new Date();
+    var day = now.getDay(); // 0=Dom ... 6=Sáb
+    var hour = now.getHours() + now.getMinutes()/60;
+    var isOpenDay = day >= 1 && day <= 6; // Segunda a Sábado
+    var isOpen = isOpenDay && hour >= 18 && hour < 22;
+
+    var badgeEl = document.getElementById("statusBadge");
+    var textEl = document.getElementById("statusText");
+    if (isOpen){
+      badgeEl.className = "status open";
+      textEl.textContent = "Aberto agora";
+    } else {
+      badgeEl.className = "status closed";
+      textEl.textContent = "Fechado";
+    }
+  }
+
+  // ---------- Navegação por seção ----------
+  function setupNav(){
+    var buttons = Array.prototype.slice.call(document.querySelectorAll("#sectionNav button"));
+    buttons.forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var target = document.getElementById(btn.dataset.target);
+        target.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    });
+
+    var sections = buttons.map(function(btn){ return document.getElementById(btn.dataset.target); });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          var id = entry.target.id;
+          buttons.forEach(function(b){
+            b.classList.toggle("active", b.dataset.target === id);
+          });
+        }
+      });
+    }, {rootMargin:"-96px 0px -70% 0px", threshold:0});
+    sections.forEach(function(s){ observer.observe(s); });
+  }
+
+  // ---------- Carrinho ----------
+  var cart = []; // {id, qty, obs}
+
+  function loadCart(){
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) cart = JSON.parse(raw);
+    } catch(e){ cart = []; }
+  }
+  function saveCart(){
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(cart)); } catch(e){}
+  }
+
+  function cartLine(id){ return cart.find(function(l){ return l.id === id; }); }
+
+  function addToCart(id, qty){
+    qty = qty || 1;
+    var line = cartLine(id);
+    if (line) line.qty += qty;
+    else cart.push({id:id, qty:qty, obs:""});
+    saveCart();
+    renderCart();
+    flashFab();
+  }
+
+  function removeFromCart(id){
+    cart = cart.filter(function(l){ return l.id !== id; });
+    saveCart();
+    renderCart();
+  }
+
+  function setQty(id, qty){
+    var line = cartLine(id);
+    if (!line) return;
+    if (qty <= 0){ removeFromCart(id); return; }
+    line.qty = qty;
+    saveCart();
+    renderCart();
+  }
+
+  function setObs(id, obs){
+    var line = cartLine(id);
+    if (!line) return;
+    line.obs = obs;
+    saveCart();
+  }
+
+  function cartTotal(){
+    return cart.reduce(function(sum, line){
+      var item = findItem(line.id);
+      return sum + (item ? item.price * line.qty : 0);
+    }, 0);
+  }
+
+  function cartCount(){
+    return cart.reduce(function(sum, l){ return sum + l.qty; }, 0);
+  }
+
+  function flashFab(){
+    var fab = document.getElementById("cartFab");
+    fab.classList.add("visible");
+  }
+
+  function renderCart(){
+    var count = cartCount();
+    var total = cartTotal();
+
+    document.getElementById("cartCount").textContent = count;
+    document.getElementById("cartFabTotal").textContent = money(total);
+    document.getElementById("cartFab").classList.toggle("visible", count > 0);
+
+    document.getElementById("drawerTotal").textContent = money(total);
+    document.getElementById("checkoutBtn").disabled = count === 0;
+
+    var body = document.getElementById("drawerBody");
+    if (cart.length === 0){
+      body.innerHTML = '<div class="empty-cart">Seu carrinho está vazio.<br>Adicione algo saboroso 🔥</div>';
+      return;
+    }
+
+    body.innerHTML = cart.map(function(line){
+      var item = findItem(line.id);
+      if (!item) return "";
+      var subtotal = item.price * line.qty;
+      return (
+        '<div class="cart-item" data-line="' + item.id + '">' +
+          '<div class="cart-item-top">' +
+            '<div>' +
+              '<div class="cart-item-name">' + item.name + '</div>' +
+              '<div class="cart-item-unit">' + money(item.price) + ' cada</div>' +
+            '</div>' +
+            '<button class="cart-item-remove" data-remove="' + item.id + '">🗑</button>' +
+          '</div>' +
+          '<div class="cart-item-mid">' +
+            '<div class="qty-stepper">' +
+              '<button data-dec="' + item.id + '">−</button>' +
+              '<span>' + line.qty + '</span>' +
+              '<button data-inc="' + item.id + '">+</button>' +
+            '</div>' +
+            '<span class="cart-item-subtotal">' + money(subtotal) + '</span>' +
+          '</div>' +
+          '<textarea class="cart-item-obs" rows="1" placeholder="Observação (ex.: sem cebola)" data-obs="' + item.id + '">' + (line.obs || "") + '</textarea>' +
+        '</div>'
+      );
+    }).join("");
+  }
+
+  // ---------- WhatsApp ----------
+  function buildOrderMessage(lines){
+    var msg = ["Olá! Meu pedido:"];
+    var total = 0;
+    lines.forEach(function(line){
+      var item = findItem(line.id);
+      if (!item) return;
+      var subtotal = item.price * line.qty;
+      total += subtotal;
+      msg.push(line.qty + "x " + item.name + " (" + money(subtotal) + ")");
+      if (line.obs && line.obs.trim()){
+        msg.push("Obs: " + line.obs.trim());
+      }
+    });
+    msg.push("Total: " + money(total));
+    return msg.join("\n");
+  }
+
+  function whatsappLink(message){
+    return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  }
+
+  function openWhatsapp(message){
+    window.open(whatsappLink(message), "_blank");
+  }
+
+  // ---------- Drawer open/close ----------
+  function openDrawer(){
+    document.getElementById("overlay").classList.add("visible");
+    document.getElementById("drawer").classList.add("visible");
+  }
+  function closeDrawer(){
+    document.getElementById("overlay").classList.remove("visible");
+    document.getElementById("drawer").classList.remove("visible");
+  }
+
+  // ---------- Eventos ----------
+  function setupEvents(){
+    document.body.addEventListener("click", function(e){
+      var addId = e.target.dataset && e.target.dataset.add;
+      var soloId = e.target.dataset && e.target.dataset.solo;
+      var incId = e.target.dataset && e.target.dataset.inc;
+      var decId = e.target.dataset && e.target.dataset.dec;
+      var removeId = e.target.dataset && e.target.dataset.remove;
+
+      if (addId) addToCart(addId, 1);
+      if (soloId){
+        var item = findItem(soloId);
+        openWhatsapp(buildOrderMessage([{id:soloId, qty:1, obs:""}]));
+      }
+      if (incId){
+        var line = cartLine(incId);
+        setQty(incId, (line ? line.qty : 0) + 1);
+      }
+      if (decId){
+        var line2 = cartLine(decId);
+        setQty(decId, (line2 ? line2.qty : 0) - 1);
+      }
+      if (removeId) removeFromCart(removeId);
+    });
+
+    document.body.addEventListener("input", function(e){
+      var obsId = e.target.dataset && e.target.dataset.obs;
+      if (obsId) setObs(obsId, e.target.value);
+    });
+
+    document.getElementById("cartFab").addEventListener("click", openDrawer);
+    document.getElementById("drawerClose").addEventListener("click", closeDrawer);
+    document.getElementById("overlay").addEventListener("click", closeDrawer);
+    document.getElementById("checkoutBtn").addEventListener("click", function(){
+      if (cart.length === 0) return;
+      openWhatsapp(buildOrderMessage(cart));
+    });
+  }
+
+  // ---------- Init ----------
+  document.getElementById("year").textContent = new Date().getFullYear();
+  render();
+  loadCart();
+  setupNav();
+  setupEvents();
+  updateStatus();
+  renderCart();
+  setInterval(updateStatus, 60000);
+})();
+</script>
+
+</body>
+</html>
