@@ -515,15 +515,9 @@
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
       if (raw) cart = JSON.parse(raw);
-      console.log("DEBUG raw cart before prune", JSON.stringify(cart));
-      cart = cart.filter(function(line){
-        var f = findItem(line.id);
-        console.log("DEBUG line", line.id, "found?", !!f);
-        return !!f;
-      });
-      console.log("DEBUG cart after prune", JSON.stringify(cart));
+      cart = cart.filter(function(line){ return !!findItem(line.id); });
       saveCart();
-    } catch(e){ console.log("DEBUG loadCart error", e.message); cart = []; }
+    } catch(e){ cart = []; }
   }
   function saveCart(){
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(cart)); } catch(e){}
