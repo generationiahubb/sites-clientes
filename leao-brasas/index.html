@@ -137,12 +137,10 @@
   .item-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;}
   .item-price{font-size:15px;font-weight:800;color:var(--accent-2);}
   .item-actions{display:flex;gap:6px;}
-  .btn-add{
-    background:var(--accent);color:#fff;border:none;
-    padding:8px 14px;border-radius:10px;font-size:13px;font-weight:700;
-    cursor:pointer;transition:.15s;
+  .item-actions .qty-stepper button:last-child{
+    background:var(--accent);color:#fff;border-color:var(--accent);
   }
-  .btn-add:active{transform:scale(.95);}
+  .item-actions .qty-stepper button:active{transform:scale(.92);}
 
   .badge{
     position:absolute;top:-8px;left:10px;
@@ -443,7 +441,11 @@
           '<div class="item-bottom">' +
             '<span class="item-price">' + money(item.price) + '</span>' +
             '<div class="item-actions">' +
-              '<button class="btn-add" data-add="' + item.id + '">Adicionar</button>' +
+              '<div class="qty-stepper">' +
+                '<button data-dec="' + item.id + '">−</button>' +
+                '<span data-qty="' + item.id + '">0</span>' +
+                '<button data-inc="' + item.id + '">+</button>' +
+              '</div>' +
             '</div>' +
           '</div>' +
         '</div>' +
@@ -553,27 +555,20 @@
     return c.name.length > 0 && c.phone.length > 0;
   }
 
-  function addToCart(id, qty){
-    qty = qty || 1;
-    var line = cartLine(id);
-    if (line) line.qty += qty;
-    else cart.push({id:id, qty:qty, obs:""});
-    saveCart();
-    renderCart();
-    flashFab();
-  }
-
   function removeFromCart(id){
     cart = cart.filter(function(l){ return l.id !== id; });
     saveCart();
     renderCart();
   }
 
-  function setQty(id, qty){
+  function changeQty(id, delta){
     var line = cartLine(id);
-    if (!line) return;
-    if (qty <= 0){ removeFromCart(id); return; }
-    line.qty = qty;
+    if (!line){
+      if (delta > 0) cart.push({id:id, qty:delta, obs:""});
+    } else {
+      line.qty += delta;
+      if (line.qty <= 0){ removeFromCart(id); return; }
+    }
     saveCart();
     renderCart();
   }
@@ -596,9 +591,16 @@
     return cart.reduce(function(sum, l){ return sum + l.qty; }, 0);
   }
 
-  function flashFab(){
-    var fab = document.getElementById("cartFab");
-    fab.classList.add("visible");
+  function updateQtyDisplays(){
+    ["espetos","lanches","bebidas"].forEach(function(cat){
+      MENU[cat].forEach(function(item){
+        var line = cartLine(item.id);
+        var qty = line ? line.qty : 0;
+        document.querySelectorAll('[data-qty="' + item.id + '"]').forEach(function(el){
+          el.textContent = qty;
+        });
+      });
+    });
   }
 
   function renderCart(){
@@ -611,6 +613,7 @@
 
     document.getElementById("drawerTotal").textContent = money(total);
     document.getElementById("checkoutBtn").disabled = count === 0 || !isCustomerValid();
+    updateQtyDisplays();
 
     var body = document.getElementById("cartItemsList");
     if (cart.length === 0){
@@ -689,20 +692,12 @@
   // ---------- Eventos ----------
   function setupEvents(){
     document.body.addEventListener("click", function(e){
-      var addId = e.target.dataset && e.target.dataset.add;
       var incId = e.target.dataset && e.target.dataset.inc;
       var decId = e.target.dataset && e.target.dataset.dec;
       var removeId = e.target.dataset && e.target.dataset.remove;
 
-      if (addId) addToCart(addId, 1);
-      if (incId){
-        var line = cartLine(incId);
-        setQty(incId, (line ? line.qty : 0) + 1);
-      }
-      if (decId){
-        var line2 = cartLine(decId);
-        setQty(decId, (line2 ? line2.qty : 0) - 1);
-      }
+      if (incId) changeQty(incId, 1);
+      if (decId) changeQty(decId, -1);
       if (removeId) removeFromCart(removeId);
     });
 
