@@ -216,6 +216,24 @@
   .drawer-body{overflow-y:auto;padding:14px 20px;flex:1;}
   .empty-cart{text-align:center;color:var(--text-faint);padding:40px 10px;font-size:14px;}
 
+  .customer-fields{
+    display:flex;flex-direction:column;gap:10px;
+    padding-bottom:16px;margin-bottom:14px;
+    border-bottom:1px solid var(--card-border);
+  }
+  .field-group{display:flex;flex-direction:column;gap:5px;}
+  .field-group label{
+    font-size:11px;font-weight:700;color:var(--text-dim);
+    text-transform:uppercase;letter-spacing:.4px;
+  }
+  .field-group input{
+    background:var(--card);border:1px solid var(--card-border);
+    border-radius:10px;color:var(--text);font-size:14px;
+    padding:10px 12px;font-family:inherit;
+  }
+  .field-group input::placeholder{color:var(--text-faint);}
+  .field-group input:focus{outline:none;border-color:var(--accent);}
+
   .cart-item{
     padding:14px 0;border-bottom:1px solid var(--card-border);
   }
@@ -342,7 +360,19 @@
     <button class="drawer-close" id="drawerClose">✕</button>
   </div>
   <div class="drawer-body" id="drawerBody">
-    <div class="empty-cart">Seu carrinho está vazio.<br>Adicione algo saboroso 🔥</div>
+    <div class="customer-fields">
+      <div class="field-group">
+        <label for="customerName">Nome *</label>
+        <input type="text" id="customerName" placeholder="Seu nome" autocomplete="name">
+      </div>
+      <div class="field-group">
+        <label for="customerPhone">Telefone *</label>
+        <input type="tel" id="customerPhone" placeholder="(11) 99999-9999" autocomplete="tel">
+      </div>
+    </div>
+    <div id="cartItemsList">
+      <div class="empty-cart">Seu carrinho está vazio.<br>Adicione algo saboroso 🔥</div>
+    </div>
   </div>
   <div class="drawer-footer">
     <div class="total-row"><span>Total</span><span id="drawerTotal">R$ 0,00</span></div>
@@ -358,6 +388,7 @@
 
   var WHATSAPP_NUMBER = "5511958074050";
   var STORAGE_KEY = "leaoBrasasCart";
+  var CUSTOMER_STORAGE_KEY = "leaoBrasasCustomer";
 
   var MENU = {
     espetos: [
@@ -498,6 +529,34 @@
 
   function cartLine(id){ return cart.find(function(l){ return l.id === id; }); }
 
+  // ---------- Dados do cliente ----------
+  function loadCustomer(){
+    try {
+      var raw = localStorage.getItem(CUSTOMER_STORAGE_KEY);
+      if (!raw) return;
+      var data = JSON.parse(raw);
+      document.getElementById("customerName").value = data.name || "";
+      document.getElementById("customerPhone").value = data.phone || "";
+    } catch(e){}
+  }
+
+  function saveCustomer(){
+    var data = getCustomer();
+    try { localStorage.setItem(CUSTOMER_STORAGE_KEY, JSON.stringify(data)); } catch(e){}
+  }
+
+  function getCustomer(){
+    return {
+      name: document.getElementById("customerName").value.trim(),
+      phone: document.getElementById("customerPhone").value.trim()
+    };
+  }
+
+  function isCustomerValid(){
+    var c = getCustomer();
+    return c.name.length > 0 && c.phone.length > 0;
+  }
+
   function addToCart(id, qty){
     qty = qty || 1;
     var line = cartLine(id);
@@ -555,9 +614,9 @@
     document.getElementById("cartFab").classList.toggle("visible", count > 0);
 
     document.getElementById("drawerTotal").textContent = money(total);
-    document.getElementById("checkoutBtn").disabled = count === 0;
+    document.getElementById("checkoutBtn").disabled = count === 0 || !isCustomerValid();
 
-    var body = document.getElementById("drawerBody");
+    var body = document.getElementById("cartItemsList");
     if (cart.length === 0){
       body.innerHTML = '<div class="empty-cart">Seu carrinho está vazio.<br>Adicione algo saboroso 🔥</div>';
       return;
@@ -591,8 +650,13 @@
   }
 
   // ---------- WhatsApp ----------
-  function buildOrderMessage(lines){
+  function buildOrderMessage(lines, customer){
     var msg = ["Olá! Meu pedido:"];
+    if (customer && (customer.name || customer.phone)){
+      if (customer.name) msg.push("Nome: " + customer.name);
+      if (customer.phone) msg.push("Telefone: " + customer.phone);
+      msg.push("");
+    }
     var total = 0;
     lines.forEach(function(line){
       var item = findItem(line.id);
@@ -654,14 +718,18 @@
     document.body.addEventListener("input", function(e){
       var obsId = e.target.dataset && e.target.dataset.obs;
       if (obsId) setObs(obsId, e.target.value);
+      if (e.target.id === "customerName" || e.target.id === "customerPhone"){
+        saveCustomer();
+        document.getElementById("checkoutBtn").disabled = cart.length === 0 || !isCustomerValid();
+      }
     });
 
     document.getElementById("cartFab").addEventListener("click", openDrawer);
     document.getElementById("drawerClose").addEventListener("click", closeDrawer);
     document.getElementById("overlay").addEventListener("click", closeDrawer);
     document.getElementById("checkoutBtn").addEventListener("click", function(){
-      if (cart.length === 0) return;
-      openWhatsapp(buildOrderMessage(cart));
+      if (cart.length === 0 || !isCustomerValid()) return;
+      openWhatsapp(buildOrderMessage(cart, getCustomer()));
     });
   }
 
@@ -669,6 +737,7 @@
   document.getElementById("year").textContent = new Date().getFullYear();
   render();
   loadCart();
+  loadCustomer();
   setupNav();
   setupEvents();
   updateStatus();
