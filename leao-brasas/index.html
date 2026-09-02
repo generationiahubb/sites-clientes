@@ -53,12 +53,11 @@
     gap:14px;
   }
   .logo{
-    width:56px;height:56px;border-radius:50%;
-    background:linear-gradient(145deg,var(--accent),var(--accent-dark));
-    display:flex;align-items:center;justify-content:center;
-    font-size:26px;flex:none;
-    box-shadow:0 6px 16px rgba(255,90,31,.35), inset 0 0 0 2px rgba(255,255,255,.15);
+    width:60px;height:60px;border-radius:14px;
+    flex:none;overflow:hidden;
+    box-shadow:0 6px 16px rgba(255,90,31,.35), inset 0 0 0 1px rgba(255,255,255,.1);
   }
+  .logo img{width:100%;height:100%;object-fit:cover;display:block;}
   .brand{flex:1;min-width:0;}
   .brand h1{font-size:30px;line-height:1;margin:0 0 4px;color:var(--text);}
   .brand p{margin:0;font-size:13px;color:var(--text-dim);}
@@ -124,9 +123,10 @@
     width:92px;height:92px;border-radius:12px;flex:none;
     background:linear-gradient(155deg,#3a2a20,#241a16);
     display:flex;align-items:center;justify-content:center;
-    font-size:34px;
+    font-size:34px;overflow:hidden;
     border:1px solid var(--card-border);
   }
+  .item-photo img{width:100%;height:100%;object-fit:cover;display:block;}
   .item-body{flex:1;min-width:0;display:flex;flex-direction:column;}
   .item-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;}
   .item-name{font-size:16px;font-weight:700;margin:0;}
@@ -293,7 +293,7 @@
 <body>
 
 <header class="top">
-  <div class="logo">🔥</div>
+  <div class="logo"><img src="fotos/logo.png" alt="Leão Brasas"></div>
   <div class="brand">
     <h1>Leão Brasas</h1>
     <p>Espetos e Lanches na Brasa</p>
@@ -385,18 +385,17 @@
 
   var MENU = {
     espetos: [
-      {id:"esp-picanha", name:"Espetinho de Picanha", desc:"Picanha selecionada, temperada e grelhada na brasa até o ponto perfeito.", price:14.00, badge:"mais-pedido"},
-      {id:"esp-frango-bacon", name:"Espetinho de Frango com Bacon", desc:"Cubos de frango envoltos em bacon crocante, no espeto.", price:12.00},
-      {id:"esp-linguica", name:"Espetinho de Linguiça Toscana", desc:"Linguiça artesanal grelhada, suculenta por dentro e tostada por fora.", price:10.00},
-      {id:"esp-coracao", name:"Espetinho de Coração", desc:"Coraçãozinho de frango temperado no tempero da casa.", price:11.00},
-      {id:"esp-queijo", name:"Espetinho de Queijo Coalho", desc:"Queijo coalho derretendo por fora, macio por dentro, com toque de mel.", price:11.00, badge:"novo"},
-      {id:"esp-kafta", name:"Espetinho de Kafta", desc:"Kafta temperada com especiarias árabes, grelhada na hora.", price:13.00, badge:"promo"}
+      {id:"esp-alcatra", name:"Espetinho de Alcatra", desc:"Alcatra suculenta, temperada e grelhada na brasa até o ponto perfeito.", price:14.00, badge:"mais-pedido", photo:"fotos/alcatra.jpeg"},
+      {id:"esp-frango", name:"Espetinho de Frango", desc:"Frango temperado no tempero da casa, grelhado na brasa.", price:10.00, photo:"fotos/frango.jpeg"},
+      {id:"esp-medalhao", name:"Espetinho Medalhão Romeu e Julieta", desc:"Medalhão envolto em bacon, com queijo e goiabada derretidos na brasa.", price:16.00, badge:"novo", photo:"fotos/medalhao.jpeg"},
+      {id:"esp-mucarela", name:"Espetinho de Muçarela Defumada", desc:"Muçarela defumada grelhada até dourar por fora, macia por dentro.", price:11.00, photo:"fotos/mucarela-defumada.jpeg"}
     ],
     lanches: [
-      {id:"lan-burger", name:"Burger Leão", desc:"Pão brioche, blend 180g na brasa, queijo, bacon e molho da casa.", price:24.00, badge:"mais-pedido"},
-      {id:"lan-choripan", name:"Choripan na Brasa", desc:"Linguiça argentina no pão francês, chimichurri e vinagrete.", price:19.00},
-      {id:"lan-xsalada", name:"X-Salada na Brasa", desc:"Hambúrguer grelhado na brasa, queijo, alface, tomate e maionese da casa.", price:17.00},
-      {id:"lan-costela", name:"Costela no Pão", desc:"Costela desfiada, horas na brasa, no pão amanteigado.", price:26.00, badge:"novo"}
+      {id:"lan-baguete-alcatra", name:"Baguete de Alcatra", desc:"Baguete recheada com fatias suculentas de alcatra grelhada na brasa.", price:26.00, badge:"mais-pedido", photo:"fotos/baguete-de-alcatra.jpeg"},
+      {id:"lan-baguete", name:"Baguete", desc:"Baguete tostada coberta de queijo derretido na brasa.", price:20.00, photo:"fotos/baguete.jpeg"},
+      {id:"lan-pastel", name:"Pastel de Carne com Queijo", desc:"Massa crocante recheada com carne temperada e queijo derretido.", price:15.00, badge:"novo", photo:"fotos/pastel-carne-queijo.jpg"},
+      {id:"lan-xburguer", name:"X-Burguer", desc:"Hambúrguer grelhado na brasa com queijo derretido no pão macio.", price:22.00, photo:"fotos/x-burger.jpeg"},
+      {id:"lan-xsalada", name:"X-Salada", desc:"Hambúrguer na brasa com queijo, alface, tomate e maionese da casa.", price:17.00, photo:"fotos/x-salada.jpeg"}
     ],
     bebidas: [
       {id:"beb-coca", name:"Coca-Cola Lata 350ml", desc:"Bem gelada.", price:6.00},
@@ -406,7 +405,7 @@
       {id:"beb-cerveja", name:"Cerveja Long Neck", desc:"Gelada na medida certa.", price:10.00, badge:"promo"}
     ]
   };
-  var DESTAQUE_IDS = ["esp-picanha","lan-burger","esp-kafta"];
+  var DESTAQUE_IDS = ["esp-alcatra","lan-xburguer","lan-baguete-alcatra"];
 
   var ICONS = { espetos:"🍢", lanches:"🍔", bebidas:"🥤" };
 
@@ -431,10 +430,13 @@
   function itemCard(item, catKey, forceBadge){
     var badge = forceBadge || item.badge;
     var badgeHtml = badge ? '<span class="badge ' + badge + '">' + badgeLabel(badge) + '</span>' : "";
+    var photoHtml = item.photo
+      ? '<img src="' + item.photo + '" alt="' + item.name + '" loading="lazy">'
+      : ICONS[catKey];
     return (
       '<div class="item">' +
         badgeHtml +
-        '<div class="item-photo">' + ICONS[catKey] + '</div>' +
+        '<div class="item-photo">' + photoHtml + '</div>' +
         '<div class="item-body">' +
           '<div class="item-top"><p class="item-name">' + item.name + '</p></div>' +
           '<p class="item-desc">' + item.desc + '</p>' +
