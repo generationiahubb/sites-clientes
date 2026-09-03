@@ -207,6 +207,15 @@
   .proof-score .stars{color:var(--star);font-size:18px;letter-spacing:2px;}
   .proof-score small{color:#C7CDD4;font-size:12.5px;}
 
+  /* Results (antes e depois) */
+  .results-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:720px;margin:0 auto;}
+  .result-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s ease, box-shadow .3s ease;}
+  .result-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(33,41,49,.16);}
+  .result-card img{width:100%;display:block;}
+  .result-card figcaption{padding:12px 16px;font-size:13px;font-weight:600;color:var(--gray-600);text-align:center;}
+  .results-note{text-align:center;color:var(--gray-400);font-size:12.5px;margin-top:28px;}
+  @media(max-width:700px){.results-grid{grid-template-columns:1fr;max-width:380px;}}
+
   /* About */
   .about{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
   @media(max-width:900px){.about{grid-template-columns:1fr;}}
@@ -310,6 +319,7 @@
     <a class="logo" href="#topo"><img src="images/logo-camila-vencato-branca.png" alt="Camila Vencato — Especialista em LPF"></a>
     <nav class="nav-links right">
       <a href="#avaliacoes">Avaliações</a>
+      <a href="#resultados">Resultados</a>
       <a href="#sobre">Sobre</a>
       <a class="nav-icon" href="https://www.instagram.com/camilavencato_lpf/" target="_blank" title="Instagram @camilavencato_lpf" aria-label="Instagram">📷</a>
       <button type="button" class="btn open-modal" style="background:var(--gold);color:#fff;padding:9px 20px;font-size:13px;">Agendar</button>
@@ -457,6 +467,23 @@
   </div>
 </section>
 
+<section id="resultados">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Resultados Reais</span>
+      <h2>Resultados que <em>falam por si</em></h2>
+      <p>Fotos enviadas por uma aluna, em diferentes ângulos, ao longo do trabalho com o Método LPF.</p>
+    </div>
+    <div class="results-grid reveal-stagger">
+      <figure class="result-card"><img src="images/resultado-aluna1-torso-frente.jpg" alt="Antes e depois no torso, vista de frente, de uma aluna do Método LPF com Camila Vencato" width="800" height="910" loading="lazy"><figcaption>Torso — vista de frente</figcaption></figure>
+      <figure class="result-card"><img src="images/resultado-aluna1-torso-lado.jpg" alt="Antes e depois no torso, vista de lado, de uma aluna do Método LPF com Camila Vencato" width="800" height="902" loading="lazy"><figcaption>Torso — vista de lado</figcaption></figure>
+      <figure class="result-card"><img src="images/resultado-aluna1-corpo-frente.jpg" alt="Antes e depois do corpo inteiro, vista de frente, de uma aluna do Método LPF com Camila Vencato" width="800" height="898" loading="lazy"><figcaption>Corpo inteiro — vista de frente</figcaption></figure>
+      <figure class="result-card"><img src="images/resultado-aluna1-corpo-lado.jpg" alt="Antes e depois do corpo inteiro, vista de lado, de uma aluna do Método LPF com Camila Vencato" width="800" height="905" loading="lazy"><figcaption>Corpo inteiro — vista de lado</figcaption></figure>
+    </div>
+    <p class="results-note reveal">Resultados individuais podem variar conforme histórico, objetivo e frequência de cada aluna.</p>
+  </div>
+</section>
+
 <section id="sobre">
   <div class="container about reveal-stagger">
     <div class="about-media">
@@ -573,6 +600,7 @@
         <li><a href="#porque">Diferenciais</a></li>
         <li><a href="#formacao">Formação</a></li>
         <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#resultados">Resultados</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
