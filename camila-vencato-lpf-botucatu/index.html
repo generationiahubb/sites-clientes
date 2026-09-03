@@ -202,19 +202,20 @@
   .quick-connector{position:absolute;left:8%;right:8%;top:46px;height:0;border-top:2px dashed var(--brand-400);opacity:.5;z-index:0;}
   .quick-connector .node{position:absolute;top:0;width:9px;height:9px;border-radius:50%;background:var(--brand-400);transform:translate(-50%,-50%);box-shadow:0 0 0 5px var(--brand-50);}
   @media(max-width:860px){.quick-connector{display:none;}}
-  .quick-card{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));border-radius:18px;padding:24px;color:#fff;box-shadow:0 14px 30px rgba(33,41,49,.2);transition:transform .3s ease, box-shadow .3s ease;z-index:1;}
-  .quick-card::after{content:"";position:absolute;top:-45%;right:-25%;width:150px;height:150px;background:radial-gradient(circle, rgba(138,154,171,.4), transparent 70%);pointer-events:none;}
-  .quick-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(33,41,49,.32);}
+  .quick-card{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--gold-dark),var(--gold));border-radius:18px;padding:24px;color:#fff;box-shadow:0 14px 30px rgba(115,85,52,.3);transition:transform .3s ease, box-shadow .3s ease;z-index:1;}
+  .quick-card::after{content:"";position:absolute;top:-45%;right:-25%;width:150px;height:150px;background:radial-gradient(circle, rgba(255,255,255,.3), transparent 70%);pointer-events:none;}
+  .quick-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(115,85,52,.45);}
   .quick-card .step{position:absolute;top:16px;right:18px;font-family:'EB Garamond',serif;font-size:12px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:1px;z-index:1;}
   .quick-card .ic{position:relative;z-index:1;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:19px;box-shadow:0 8px 18px rgba(93,115,138,.45);}
   .quick-card h4{font-family:'EB Garamond',serif;font-weight:600;font-size:16.5px;margin-bottom:4px;}
-  .quick-card p{position:relative;z-index:1;font-size:12.5px;color:#C7CDD4;}
+  .quick-card p{position:relative;z-index:1;font-size:12.5px;color:#F3E6D6;}
 
   section{padding:88px 0;}
   .section-head{text-align:center;max-width:640px;margin:0 auto 52px;}
   .eyebrow{color:var(--brand-600);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;display:block;}
   .section-head h2{font-size:36px;font-weight:600;color:var(--brand-900);}
   .section-head h2 em{font-style:italic;color:var(--brand-600);}
+  #perguntas-frequentes .section-head h2 em{color:var(--gold);}
   .section-head p{color:var(--gray-600);margin-top:12px;font-size:16px;}
 
   /* Benefits */
