@@ -193,6 +193,21 @@
   .about-list b{color:var(--ink);}
   .check{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:2px;box-shadow:0 6px 14px rgba(209,155,110,.4);}
 
+  /* Missão, Visão e Valores */
+  .values-section{background:var(--brand-50);}
+  .mv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:44px;}
+  @media(max-width:760px){.mv-grid{grid-template-columns:1fr;}}
+  .mv-card{background:#fff;border-radius:20px;padding:32px;box-shadow:var(--shadow);}
+  .mv-card .ic{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px;box-shadow:0 8px 18px rgba(209,155,110,.4);}
+  .mv-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--brand-900);margin-bottom:10px;}
+  .mv-card p{color:var(--gray-600);font-size:14.5px;}
+  .values-head{text-align:center;margin-bottom:24px;}
+  .values-head h3{font-family:'Fraunces',serif;font-weight:600;font-size:22px;color:var(--brand-900);}
+  .values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  @media(max-width:760px){.values-grid{grid-template-columns:1fr;}}
+  .values-grid li{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:14px;padding:16px 18px;font-size:14.5px;color:var(--gray-600);box-shadow:0 6px 16px rgba(40,36,35,.06);}
+  .mv-tagline{text-align:center;font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:19px;color:var(--brand-700);margin-top:44px;}
+
   /* Contact */
   .contact{background:var(--brand-50);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch;}
@@ -507,6 +522,41 @@
   </div>
 </section>
 
+<section class="values-section" id="valores">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Missão, Visão e Valores</span>
+      <h2>O que guia o trabalho da Seven Horse</h2>
+    </div>
+    <div class="mv-grid reveal-stagger">
+      <div class="mv-card border-run">
+        <div class="ic">🎯</div>
+        <h3>Missão</h3>
+        <p>Promover a saúde e o bem-estar dos animais de grande porte por meio de um atendimento veterinário ético, ágil e de excelência, unindo responsabilidade e inovação, contribuindo para o sucesso e a sustentabilidade dos produtores.</p>
+      </div>
+      <div class="mv-card border-run">
+        <div class="ic">🔭</div>
+        <h3>Visão</h3>
+        <p>Ser referência em medicina veterinária de grandes animais na região, reconhecida pela excelência técnica, confiança e compromisso com o desenvolvimento da pecuária e da equinocultura.</p>
+      </div>
+    </div>
+    <div class="values-head reveal">
+      <h3>Valores</h3>
+    </div>
+    <ul class="values-grid reveal-stagger">
+      <li><span class="check">✓</span><span>Ética e responsabilidade profissional</span></li>
+      <li><span class="check">✓</span><span>Respeito à vida e ao bem-estar animal</span></li>
+      <li><span class="check">✓</span><span>Compromisso com a excelência no atendimento</span></li>
+      <li><span class="check">✓</span><span>Honestidade, comunicação e transparência com os clientes</span></li>
+      <li><span class="check">✓</span><span>Agilidade, dedicação e responsabilidade</span></li>
+      <li><span class="check">✓</span><span>Atualização técnica e inovação constante</span></li>
+      <li><span class="check">✓</span><span>Dedicação, confiança e parceria com o produtor rural</span></li>
+      <li><span class="check">✓</span><span>Paixão pela medicina veterinária</span></li>
+    </ul>
+    <p class="mv-tagline reveal">"Compromisso com a vida, excelência em cada atendimento!"</p>
+  </div>
+</section>
+
 <section class="contact" id="contato">
   <div class="container">
     <div class="section-head reveal">
@@ -560,6 +610,7 @@
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#porque">Por que a Seven Horse</a></li>
         <li><a href="#sobre">Sobre o Dr. Carlos</a></li>
+        <li><a href="#valores">Missão, Visão e Valores</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
