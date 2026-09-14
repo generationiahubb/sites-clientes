@@ -117,23 +117,33 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
     .nav-cta .btn{padding:11px 18px;font-size:13px;white-space:nowrap;}
   }
 
-  /* Hero — IMMERSIVE */
-  .hero-immersive{position:relative;min-height:88vh;overflow:hidden;padding:0;}
-  .hero-immersive .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;}
-  .hero-immersive::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(74,16,41,.58) 0%, rgba(74,16,41,.22) 42%, rgba(74,16,41,.82) 100%);}
-  .hero-copy{position:relative;z-index:2;max-width:620px;padding:15vh 24px 220px clamp(24px,6vw,96px);color:#FDF6F8;}
-  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32);font-weight:500;font-size:12.5px;letter-spacing:.4px;padding:7px 16px;border-radius:999px;margin-bottom:22px;text-transform:uppercase;}
+  /* Hero — SPLIT (painel escuro + foto emoldurada) */
+  .hero-split{position:relative;display:grid;grid-template-columns:1fr 0.92fr;min-height:0;padding:0;overflow:hidden;background:linear-gradient(165deg,var(--brand-900),var(--brand-800));}
+  .hero-split::before{content:"";position:absolute;top:-22%;left:-12%;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle, rgba(240,168,196,.30), transparent 70%);pointer-events:none;}
+  .hero-photo-col{position:relative;display:flex;align-items:center;justify-content:center;padding:56px clamp(24px,5vw,56px);}
+  .hero-photo-frame{position:relative;z-index:1;width:100%;max-width:420px;aspect-ratio:4/5;border-radius:26px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.16);}
+  .hero-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center 34%;display:block;}
+  .hero-photo-badge{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(255,255,255,.96);padding:11px 16px;border-radius:14px;display:flex;align-items:center;gap:10px;box-shadow:0 10px 22px rgba(0,0,0,.24);}
+  .hero-photo-badge .stars{color:var(--star);font-size:13px;letter-spacing:1px;}
+  .hero-photo-badge b{font-family:'Playfair Display',serif;font-size:14px;color:var(--brand-900);display:block;line-height:1.3;}
+  .hero-photo-badge small{color:var(--gray-600);font-size:10.5px;}
+  .hero-copy{position:relative;z-index:2;padding:15vh clamp(24px,5vw,40px) 64px clamp(24px,6vw,80px);color:#FDF6F8;display:flex;flex-direction:column;justify-content:center;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32);font-weight:500;font-size:12.5px;letter-spacing:.4px;padding:7px 16px;border-radius:999px;margin-bottom:22px;text-transform:uppercase;width:fit-content;}
   .hero-badge .blip{width:7px;height:7px;background:var(--brand-400);border-radius:50%;}
-  .hero-copy h1{font-style:italic;font-weight:600;font-size:clamp(2.3rem,5.2vw,4rem);line-height:1.12;letter-spacing:-.01em;max-width:13ch;}
+  .hero-copy h1{font-style:italic;font-weight:600;font-size:clamp(2.1rem,3.6vw,3.2rem);line-height:1.14;letter-spacing:-.01em;max-width:13ch;}
   .hero-copy h1 em{font-style:italic;color:var(--brand-400);}
-  .hero-copy p.lead{margin-top:20px;font-weight:300;font-size:17.5px;color:rgba(253,246,248,.92);max-width:44ch;}
+  .hero-copy p.lead{margin-top:20px;font-weight:300;font-size:17px;color:rgba(253,246,248,.92);max-width:44ch;}
   .hero-cta-row{margin-top:32px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
   .hero-cta-row .link-secondary{color:#fff;text-decoration:underline;text-underline-offset:4px;font-size:14px;font-weight:500;opacity:.92;}
   .hero-cta-row .link-secondary:hover{opacity:1;}
-  @media(max-width:760px){.hero-copy{padding:13vh 20px 380px 20px;}}
+  @media(max-width:900px){
+    .hero-split{grid-template-columns:1fr;}
+    .hero-photo-col{order:1;padding:36px 24px 8px;}
+    .hero-copy{order:2;padding:32px 24px 48px;}
+  }
 
-  /* Booking strip — bottom of hero (IMMERSIVE variant) */
-  .hero-booking{position:absolute;left:0;right:0;bottom:0;z-index:3;background:rgba(253,246,248,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 -10px 30px rgba(74,16,41,.12);}
+  /* Booking strip — below hero */
+  .hero-booking{position:relative;background:var(--brand-50);box-shadow:0 -10px 30px rgba(74,16,41,.08);}
   .hero-booking-inner{max-width:1180px;margin:0 auto;padding:24px 24px;display:grid;grid-template-columns:1fr 1fr auto;gap:16px;align-items:end;}
   .hero-booking h3{grid-column:1 / -1;font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--brand-900);margin-bottom:2px;}
   @media(max-width:760px){.hero-booking-inner{grid-template-columns:1fr;}}
@@ -319,8 +329,16 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
   </div>
 </header>
 
-<section class="hero-immersive">
-  <img class="hero-bg" src="https://images.unsplash.com/photo-1727199433231-346fd8101839?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1920" alt="Mãos com manicure delicada em tons nude, estúdio Bruna Nascimento Nails">
+<section class="hero-split">
+  <div class="hero-photo-col">
+    <div class="hero-photo-frame">
+      <img src="hero-foto.png" alt="Manicure em fibra com francesinha delicada, trabalho real do estúdio Bruna Nascimento Nails">
+      <div class="hero-photo-badge">
+        <div class="stars">★★★★★</div>
+        <div><b>5.0 no Google</b><small>Bruna Nascimento Nails</small></div>
+      </div>
+    </div>
+  </div>
   <div class="hero-copy reveal">
     <span class="hero-badge"><span class="blip"></span> Estúdio em Botucatu · Especialista em Fibra de Vidro</span>
     <h1>Elegância que nasce da <em>naturalidade</em></h1>
@@ -330,40 +348,41 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
       <a class="link-secondary" href="https://www.instagram.com/nails.brunascimento/" target="_blank" rel="noopener">Ver trabalhos no Instagram →</a>
     </div>
   </div>
-  <div class="hero-booking reveal" id="agendar">
-    <div class="hero-booking-inner">
-      <h3>Escolha o serviço e agende em segundos</h3>
-      <div class="field">
-        <label for="fieldService">Serviço desejado</label>
-        <select id="fieldService">
-          <option value="">Qualquer serviço</option>
-          <option>Alongamento em Fibra de Vidro</option>
-          <option>Manutenção de Fibra de Vidro</option>
-          <option>Manicure Tradicional</option>
-          <option>Pedicure Spa</option>
-          <option>Nail Art Personalizada</option>
-          <option>Esmaltação em Gel</option>
-          <option>Banho de Gel</option>
-          <option>Blindagem de Unhas Naturais</option>
-          <option>Cutilagem Especializada</option>
-          <option>Nail Design Delicado</option>
-          <option>Spa das Mãos</option>
-          <option>Reparo de Unha Quebrada</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fieldPeriod">Prefere ser atendida</label>
-        <select id="fieldPeriod">
-          <option value="">Qualquer horário</option>
-          <option value="pela manhã">Pela manhã</option>
-          <option value="à tarde">À tarde</option>
-          <option value="à noite">À noite</option>
-        </select>
-      </div>
-      <button type="button" id="scheduleBtn" class="btn btn-primary">Agendar no WhatsApp →</button>
-    </div>
-  </div>
 </section>
+
+<div class="hero-booking reveal" id="agendar">
+  <div class="hero-booking-inner">
+    <h3>Escolha o serviço e agende em segundos</h3>
+    <div class="field">
+      <label for="fieldService">Serviço desejado</label>
+      <select id="fieldService">
+        <option value="">Qualquer serviço</option>
+        <option>Alongamento em Fibra de Vidro</option>
+        <option>Manutenção de Fibra de Vidro</option>
+        <option>Manicure Tradicional</option>
+        <option>Pedicure Spa</option>
+        <option>Nail Art Personalizada</option>
+        <option>Esmaltação em Gel</option>
+        <option>Banho de Gel</option>
+        <option>Blindagem de Unhas Naturais</option>
+        <option>Cutilagem Especializada</option>
+        <option>Nail Design Delicado</option>
+        <option>Spa das Mãos</option>
+        <option>Reparo de Unha Quebrada</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="fieldPeriod">Prefere ser atendida</label>
+      <select id="fieldPeriod">
+        <option value="">Qualquer horário</option>
+        <option value="pela manhã">Pela manhã</option>
+        <option value="à tarde">À tarde</option>
+        <option value="à noite">À noite</option>
+      </select>
+    </div>
+    <button type="button" id="scheduleBtn" class="btn btn-primary">Agendar no WhatsApp →</button>
+  </div>
+</div>
 
 <div class="container quick">
   <div class="quick-eyebrow reveal">Do agendamento ao acabamento impecável</div>
@@ -416,15 +435,15 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Manuten%C3%A7%C3%A3o%20de%20Fibra%20de%20Vidro."><img src="https://images.unsplash.com/photo-1645566372784-7d017ad7643b?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Manutenção de Fibra de Vidro"><div class="overlay"></div><div class="content"><div class="gic">🧵</div><h4>Manutenção de Fibra de Vidro</h4><p>Pra manter o alongamento sempre perfeito</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Manicure%20Tradicional."><img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Manicure Tradicional"><div class="overlay"></div><div class="content"><div class="gic">💅</div><h4>Manicure Tradicional</h4><p>Cuidado essencial com acabamento impecável</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Pedicure%20Spa."><img src="https://images.unsplash.com/photo-1664643411326-6c589531be3c?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Pedicure Spa"><div class="overlay"></div><div class="content"><div class="gic">🦶</div><h4>Pedicure Spa</h4><p>Um momento de relaxamento pros seus pés</p></div></a>
-        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Art%20Personalizada."><img src="https://images.unsplash.com/photo-1572814601679-4ef8f7b5ebd1?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Nail Art Personalizada"><div class="overlay"></div><div class="content"><div class="gic">🎨</div><h4>Nail Art Personalizada</h4><p>Desenhos únicos pro seu estilo</p></div></a>
-        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Esmalta%C3%A7%C3%A3o%20em%20Gel."><img src="https://images.unsplash.com/photo-1602585578130-c9076e09330d?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Esmaltação em Gel"><div class="overlay"></div><div class="content"><div class="gic">✨</div><h4>Esmaltação em Gel</h4><p>Cor com brilho e durabilidade</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Art%20Personalizada."><img src="nailart-foto.png" alt="Nail Art Personalizada — trabalho real, francesinha zebrada" style="object-position:center 30%;"><div class="overlay"></div><div class="content"><div class="gic">🎨</div><h4>Nail Art Personalizada</h4><p>Desenhos únicos pro seu estilo</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Esmalta%C3%A7%C3%A3o%20em%20Gel."><img src="esmalte-gel-foto.png" alt="Esmaltação em Gel — trabalho real em tom nude-marrom" style="object-position:center 25%;"><div class="overlay"></div><div class="content"><div class="gic">✨</div><h4>Esmaltação em Gel</h4><p>Cor com brilho e durabilidade</p></div></a>
         <!-- duplicado p/ loop contínuo -->
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Alongamento%20em%20Fibra%20de%20Vidro."><img src="https://images.unsplash.com/photo-1737214475292-949c0bf920b0?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Alongamento em Fibra de Vidro"><div class="overlay"></div><div class="content"><div class="gic">🧵</div><h4>Alongamento em Fibra de Vidro</h4><p>Leve, resistente, acabamento natural</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Manuten%C3%A7%C3%A3o%20de%20Fibra%20de%20Vidro."><img src="https://images.unsplash.com/photo-1645566372784-7d017ad7643b?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Manutenção de Fibra de Vidro"><div class="overlay"></div><div class="content"><div class="gic">🧵</div><h4>Manutenção de Fibra de Vidro</h4><p>Pra manter o alongamento sempre perfeito</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Manicure%20Tradicional."><img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Manicure Tradicional"><div class="overlay"></div><div class="content"><div class="gic">💅</div><h4>Manicure Tradicional</h4><p>Cuidado essencial com acabamento impecável</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Pedicure%20Spa."><img src="https://images.unsplash.com/photo-1664643411326-6c589531be3c?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Pedicure Spa"><div class="overlay"></div><div class="content"><div class="gic">🦶</div><h4>Pedicure Spa</h4><p>Um momento de relaxamento pros seus pés</p></div></a>
-        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Art%20Personalizada."><img src="https://images.unsplash.com/photo-1572814601679-4ef8f7b5ebd1?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Nail Art Personalizada"><div class="overlay"></div><div class="content"><div class="gic">🎨</div><h4>Nail Art Personalizada</h4><p>Desenhos únicos pro seu estilo</p></div></a>
-        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Esmalta%C3%A7%C3%A3o%20em%20Gel."><img src="https://images.unsplash.com/photo-1602585578130-c9076e09330d?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Esmaltação em Gel"><div class="overlay"></div><div class="content"><div class="gic">✨</div><h4>Esmaltação em Gel</h4><p>Cor com brilho e durabilidade</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Art%20Personalizada."><img src="nailart-foto.png" alt="Nail Art Personalizada — trabalho real, francesinha zebrada" style="object-position:center 30%;"><div class="overlay"></div><div class="content"><div class="gic">🎨</div><h4>Nail Art Personalizada</h4><p>Desenhos únicos pro seu estilo</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Esmalta%C3%A7%C3%A3o%20em%20Gel."><img src="esmalte-gel-foto.png" alt="Esmaltação em Gel — trabalho real em tom nude-marrom" style="object-position:center 25%;"><div class="overlay"></div><div class="content"><div class="gic">✨</div><h4>Esmaltação em Gel</h4><p>Cor com brilho e durabilidade</p></div></a>
       </div>
     </div>
     <div class="gallery-wrap">
@@ -432,14 +451,14 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Banho%20de%20Gel."><img src="https://images.unsplash.com/photo-1519253888976-62a7e1ea3e0e?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Banho de Gel"><div class="overlay"></div><div class="content"><div class="gic">🛁</div><h4>Banho de Gel</h4><p>Reforço e brilho sobre a unha natural</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Blindagem%20de%20Unhas%20Naturais."><img src="https://images.unsplash.com/photo-1648844421753-351afd50486a?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Blindagem de Unhas Naturais"><div class="overlay"></div><div class="content"><div class="gic">🛡️</div><h4>Blindagem de Unhas Naturais</h4><p>Proteção pra quem quer fortalecer a unha própria</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Cutilagem%20Especializada."><img src="https://images.unsplash.com/photo-1597999709389-e29dc41e218a?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Cutilagem Especializada"><div class="overlay"></div><div class="content"><div class="gic">✂️</div><h4>Cutilagem Especializada</h4><p>Acabamento limpo e sem agredir a pele</p></div></a>
-        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Design%20Delicado."><img src="https://images.unsplash.com/photo-1494919138911-02d403edd88d?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Nail Design Delicado"><div class="overlay"></div><div class="content"><div class="gic">🌸</div><h4>Nail Design Delicado</h4><p>Francesinha, florais e traços minimalistas</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Design%20Delicado."><img src="design-delicado-foto.png" alt="Nail Design Delicado — trabalho real em efeito perolado" style="object-position:center 35%;"><div class="overlay"></div><div class="content"><div class="gic">🌸</div><h4>Nail Design Delicado</h4><p>Francesinha, florais e traços minimalistas</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Spa%20das%20M%C3%A3os."><img src="https://images.unsplash.com/photo-1633955726992-2b7c0d2d2a69?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Spa das Mãos"><div class="overlay"></div><div class="content"><div class="gic">🤲</div><h4>Spa das Mãos</h4><p>Hidratação e cuidado pra pele das mãos</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Reparo%20de%20Unha%20Quebrada."><img src="https://images.unsplash.com/photo-1526336686748-bd7bb2f1df84?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Reparo de Unha Quebrada"><div class="overlay"></div><div class="content"><div class="gic">🩹</div><h4>Reparo de Unha Quebrada</h4><p>Conserto rápido sem perder o design</p></div></a>
         <!-- duplicado p/ loop contínuo -->
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Banho%20de%20Gel."><img src="https://images.unsplash.com/photo-1519253888976-62a7e1ea3e0e?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Banho de Gel"><div class="overlay"></div><div class="content"><div class="gic">🛁</div><h4>Banho de Gel</h4><p>Reforço e brilho sobre a unha natural</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Blindagem%20de%20Unhas%20Naturais."><img src="https://images.unsplash.com/photo-1648844421753-351afd50486a?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Blindagem de Unhas Naturais"><div class="overlay"></div><div class="content"><div class="gic">🛡️</div><h4>Blindagem de Unhas Naturais</h4><p>Proteção pra quem quer fortalecer a unha própria</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Cutilagem%20Especializada."><img src="https://images.unsplash.com/photo-1597999709389-e29dc41e218a?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Cutilagem Especializada"><div class="overlay"></div><div class="content"><div class="gic">✂️</div><h4>Cutilagem Especializada</h4><p>Acabamento limpo e sem agredir a pele</p></div></a>
-        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Design%20Delicado."><img src="https://images.unsplash.com/photo-1494919138911-02d403edd88d?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Nail Design Delicado"><div class="overlay"></div><div class="content"><div class="gic">🌸</div><h4>Nail Design Delicado</h4><p>Francesinha, florais e traços minimalistas</p></div></a>
+        <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Nail%20Design%20Delicado."><img src="design-delicado-foto.png" alt="Nail Design Delicado — trabalho real em efeito perolado" style="object-position:center 35%;"><div class="overlay"></div><div class="content"><div class="gic">🌸</div><h4>Nail Design Delicado</h4><p>Francesinha, florais e traços minimalistas</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Spa%20das%20M%C3%A3os."><img src="https://images.unsplash.com/photo-1633955726992-2b7c0d2d2a69?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Spa das Mãos"><div class="overlay"></div><div class="content"><div class="gic">🤲</div><h4>Spa das Mãos</h4><p>Hidratação e cuidado pra pele das mãos</p></div></a>
         <a class="gallery-card" target="_blank" rel="noopener" href="https://wa.me/5514998458336?text=Ol%C3%A1%2C%20Bruna!%20Quero%20saber%20mais%20sobre%20Reparo%20de%20Unha%20Quebrada."><img src="https://images.unsplash.com/photo-1526336686748-bd7bb2f1df84?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Reparo de Unha Quebrada"><div class="overlay"></div><div class="content"><div class="gic">🩹</div><h4>Reparo de Unha Quebrada</h4><p>Conserto rápido sem perder o design</p></div></a>
       </div>
@@ -488,7 +507,7 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
 <section id="sobre">
   <div class="container about reveal-stagger">
     <div class="about-media">
-      <img src="https://images.unsplash.com/photo-1690749072212-373daf1d58ca?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1000" alt="Trabalho de manicure delicado do estúdio Bruna Nascimento Nails">
+      <img src="sobre-foto.png" alt="Trabalho real de nail art em branco e dourado do estúdio Bruna Nascimento Nails" style="object-position:center 30%;">
       <div class="about-badge">
         <div class="stars">★★★★★</div>
         <div>
