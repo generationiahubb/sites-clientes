@@ -144,10 +144,10 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
   .hero-copy p.lead{margin-top:18px;font-size:15.5px;color:#DCE7E0;max-width:440px;}
   @media(max-width:860px){.hero-copy{padding:36px 28px;}}
 
-  /* Floating schedule card */
-  .schedule-wrap{position:relative;z-index:6;padding:0 24px;}
-  .schedule-card{max-width:1040px;margin:-52px auto 0;background:#fff;border-radius:22px;box-shadow:0 26px 60px rgba(27,38,32,.2);display:grid;grid-template-columns:210px 1fr;overflow:hidden;}
-  @media(max-width:760px){.schedule-card{grid-template-columns:1fr;margin:-40px auto 0;}}
+  /* Schedule card — own strip below the hero, never overlapping the photo/face */
+  .schedule-wrap{position:relative;z-index:6;padding:48px 24px;background:var(--brand-50);}
+  .schedule-card{max-width:1040px;margin:0 auto;background:#fff;border-radius:22px;box-shadow:0 20px 50px rgba(27,38,32,.14);display:grid;grid-template-columns:210px 1fr;overflow:hidden;}
+  @media(max-width:760px){.schedule-card{grid-template-columns:1fr;}}
   .schedule-loc{background:linear-gradient(160deg,var(--gold-light),var(--gold));padding:26px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;color:#3E2C1A;transition:filter .2s;}
   .schedule-loc:hover{filter:brightness(1.04);}
   .schedule-loc .pin{font-size:26px;}
@@ -163,7 +163,7 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
   #scheduleBtn{white-space:nowrap;}
 
   /* Quick actions */
-  .quick{margin-top:64px;position:relative;z-index:5;background:radial-gradient(65% 100% at 50% 0%, var(--brand-50), transparent 75%);padding-top:8px;padding-bottom:8px;}
+  .quick{margin-top:0;position:relative;z-index:5;background:radial-gradient(65% 100% at 50% 0%, var(--brand-50), transparent 75%);padding-top:8px;padding-bottom:8px;}
   .quick-eyebrow{text-align:center;color:var(--brand-600);font-weight:700;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
   .quick-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
   @media(max-width:860px){.quick-grid{grid-template-columns:repeat(2,1fr);}}
