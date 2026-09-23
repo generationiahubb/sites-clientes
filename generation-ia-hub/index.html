@@ -35,6 +35,94 @@
   "url": "https://www.generationiahub.com.br/"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é um agente de atendimento com IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É um assistente virtual que responde seus clientes no WhatsApp automaticamente. Ele tira dúvidas, informa preços e horários, agenda atendimentos e encaminha para sua equipe quando precisa de uma pessoa. Tudo com base nas informações do seu negócio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ele substitui minha recepcionista ou secretária?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ele cuida das tarefas repetitivas, como responder as mesmas perguntas várias vezes por dia, confirmar horários e atender fora do expediente. Assim, sua equipe fica livre para o que exige atenção humana. Você decide até onde a IA vai e quando uma pessoa assume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Funciona no WhatsApp que meus clientes já usam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Usamos a API oficial do WhatsApp (da Meta), que é o caminho autorizado para atendimento automatizado. Isso reduz o risco de bloqueio do número, comum em ferramentas não oficiais."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O atendimento funciona 24 horas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O agente responde a qualquer hora, inclusive à noite, nos fins de semana e nos feriados. O cliente que chama às 23h não fica sem resposta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A IA consegue agendar horários?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Ela pode ser conectada à sua agenda (como o Google Agenda), consultar os horários livres e marcar o atendimento direto na conversa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "E se o cliente perguntar algo que a IA não sabe responder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ela avisa o cliente e transfere a conversa para alguém da sua equipe. Você define quais assuntos sempre vão para um humano, como reclamações, negociações ou casos específicos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso entender de tecnologia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Nós fazemos toda a configuração. Você só nos passa as informações do negócio e aprova como quer que o atendimento funcione."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dá para reativar clientes antigos que pararam de responder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. É possível enviar campanhas pelo WhatsApp para contatos antigos, seguindo as regras da Meta, que usa mensagens aprovadas e respeita um limite diário de envios."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Meus dados e os dos meus clientes ficam seguros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seguimos boas práticas de segurança e as regras da LGPD. As informações são usadas somente para o atendimento do seu negócio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como faço para começar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chame a gente no WhatsApp. Entendemos como funciona o seu atendimento hoje e mostramos como a IA pode ajudar no seu caso."
+      }
+    }
+  ]
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23FAFAF9'/%3E%3Cpolygon points='60,10 104,35 104,85 60,110 16,85 16,35' fill='none' stroke='%231B3F63' stroke-width='9'/%3E%3Cpolygon points='60,42 82,84 38,84' fill='%23ED7D22'/%3E%3Crect x='51' y='48' width='7' height='22' rx='2' fill='%231B3F63'/%3E%3Ccircle cx='54.5' cy='41' r='4.2' fill='%231B3F63'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -243,6 +331,18 @@ header.scrolled{box-shadow:0 6px 24px rgba(10,29,48,.08);}
 .pillar h3{font-size:18px;margin-bottom:10px;}
 .pillar p{font-size:14.5px;color:var(--gray-600);}
 
+/* FAQ */
+.faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+.faq-item{background:#fff;border:1px solid rgba(16,26,38,.08);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+.faq-item summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Space Grotesk';font-weight:600;font-size:15.5px;color:var(--navy-900);}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"";width:10px;height:10px;border-right:2px solid var(--orange-500);border-bottom:2px solid var(--orange-500);transform:rotate(45deg);transition:transform .25s;flex-shrink:0;}
+.faq-item[open] summary::after{transform:rotate(-135deg);}
+.faq-item[open] summary{border-bottom:1px solid rgba(16,26,38,.06);}
+.faq-answer{padding:2px 24px 22px;color:var(--gray-600);font-size:14.5px;line-height:1.65;}
+.faq-answer p{margin:0;}
+.faq-answer .btn{margin-top:16px;}
+
 /* CTA final */
 .cta-final{background:linear-gradient(150deg,var(--navy-900),var(--navy-950));color:#fff;text-align:center;position:relative;overflow:hidden;}
 .cta-final::before{content:"";position:absolute;bottom:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(237,125,34,.16),transparent 70%);}
@@ -318,6 +418,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.62);padding:56px 0 28p
       <a href="#sites">Resultados</a>
       <a href="#proximo-nivel">Atendimento em ação</a>
       <a href="#como-funciona">Como implementamos</a>
+      <a href="#faq">FAQ</a>
       <a href="#contato">Contato</a>
     </nav>
     <div class="nav-actions">
@@ -332,6 +433,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.62);padding:56px 0 28p
     <a href="#sites">Resultados</a>
     <a href="#proximo-nivel">Atendimento em ação</a>
     <a href="#como-funciona">Como implementamos</a>
+    <a href="#faq">FAQ</a>
     <a href="#contato">Contato</a>
     <a class="btn btn-primary" href="https://wa.me/5514998016115?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Generation%20e%20quero%20parar%20de%20perder%20leads%20por%20falta%20de%20atendimento%20e%20follow-up." target="_blank" rel="noopener">Falar no WhatsApp</a>
   </div>
@@ -554,6 +656,61 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.62);padding:56px 0 28p
           <h3>Só chega até você quem está pronto pra fechar</h3>
           <p>Você para de caçar resposta e passa a atender só quem já está no momento de comprar.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" style="justify-content:center;">Perguntas frequentes</div>
+        <h2>Tudo que você precisa saber antes de começar.</h2>
+      </div>
+      <div class="faq-list reveal-stagger">
+        <details class="faq-item">
+          <summary>O que é um agente de atendimento com IA?</summary>
+          <div class="faq-answer"><p>É um assistente virtual que responde seus clientes no WhatsApp automaticamente. Ele tira dúvidas, informa preços e horários, agenda atendimentos e encaminha para sua equipe quando precisa de uma pessoa. Tudo com base nas informações do seu negócio.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Ele substitui minha recepcionista ou secretária?</summary>
+          <div class="faq-answer"><p>Ele cuida das tarefas repetitivas, como responder as mesmas perguntas várias vezes por dia, confirmar horários e atender fora do expediente. Assim, sua equipe fica livre para o que exige atenção humana. Você decide até onde a IA vai e quando uma pessoa assume.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Funciona no WhatsApp que meus clientes já usam?</summary>
+          <div class="faq-answer"><p>Sim. Usamos a API oficial do WhatsApp (da Meta), que é o caminho autorizado para atendimento automatizado. Isso reduz o risco de bloqueio do número, comum em ferramentas não oficiais.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>O atendimento funciona 24 horas?</summary>
+          <div class="faq-answer"><p>Sim. O agente responde a qualquer hora, inclusive à noite, nos fins de semana e nos feriados. O cliente que chama às 23h não fica sem resposta.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>A IA consegue agendar horários?</summary>
+          <div class="faq-answer"><p>Sim. Ela pode ser conectada à sua agenda (como o Google Agenda), consultar os horários livres e marcar o atendimento direto na conversa.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>E se o cliente perguntar algo que a IA não sabe responder?</summary>
+          <div class="faq-answer"><p>Ela avisa o cliente e transfere a conversa para alguém da sua equipe. Você define quais assuntos sempre vão para um humano, como reclamações, negociações ou casos específicos.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Preciso entender de tecnologia?</summary>
+          <div class="faq-answer"><p>Não. Nós fazemos toda a configuração. Você só nos passa as informações do negócio e aprova como quer que o atendimento funcione.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Dá para reativar clientes antigos que pararam de responder?</summary>
+          <div class="faq-answer"><p>Sim. É possível enviar campanhas pelo WhatsApp para contatos antigos, seguindo as regras da Meta, que usa mensagens aprovadas e respeita um limite diário de envios.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Meus dados e os dos meus clientes ficam seguros?</summary>
+          <div class="faq-answer"><p>Seguimos boas práticas de segurança e as regras da LGPD. As informações são usadas somente para o atendimento do seu negócio.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Como faço para começar?</summary>
+          <div class="faq-answer">
+            <p>Chame a gente no WhatsApp. Entendemos como funciona o seu atendimento hoje e mostramos como a IA pode ajudar no seu caso.</p>
+            <a class="btn btn-primary" href="https://wa.me/5514998016115?text=Ol%C3%A1!%20Vi%20as%20perguntas%20frequentes%20do%20site%20e%20quero%20come%C3%A7ar%20a%20usar%20o%20sistema%20de%20atendimento%20com%20IA%20da%20Generation." target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </div>
+        </details>
       </div>
     </div>
   </section>
