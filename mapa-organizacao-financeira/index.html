@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa da Organização Financeira | Planejamento financeiro numa planilha só</title>
+<meta name="description" content="Orçamento, patrimônio, projetos de vida e projeção de aposentadoria numa planilha só. Estruturada no padrão internacional de planejamento financeiro pessoal. R$39,90, acesso imediato, garantia de 7 dias.">
+<meta property="og:title" content="Mapa da Organização Financeira">
+<meta property="og:description" content="A planilha profissional de planejamento financeiro, no padrão internacional. R$39,90 · acesso imediato · garantia de 7 dias.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/aposentadoria.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Cpath d='M7 22l6-6 4 4 8-9' fill='none' stroke='%23d2f900' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141414; --ink2:#232323; --ink3:#2e2e2e;
+  --text:#161616; --sub:#4d4d4d; --lite:#8a8a8a;
+  --bg:#f4f4f4; --s1:#ffffff; --s2:#ececec;
+  --hl:#d2f900; --hl-soft:rgba(210,249,0,.16);
+  --bdr:rgba(20,20,20,.09); --bdr2:rgba(20,20,20,.16);
+  --r:16px; --w:560px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Geist,"Helvetica Neue",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 16px}
+section{padding:72px 0;border-top:1px solid var(--bdr)}
+section.alt{background:var(--s2)}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sub);margin-bottom:10px}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.12;font-weight:700}
+h2{font-size:clamp(25px,6vw,30px);margin-bottom:14px}
+h2 em,h1 em{font-style:normal;background:var(--hl);padding:0 .18em;border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+p+p{margin-top:12px}
+.sub{color:var(--sub)}
+.center{text-align:center}
+b,strong{font-weight:650}
+
+/* topbar */
+.topbar{background:var(--ink);color:#e9e9e9;font-size:12.5px;text-align:center;padding:9px 16px}
+.topbar b{color:var(--hl)}
+.byline{text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lite);padding:14px 16px;border-bottom:1px solid var(--bdr)}
+
+/* hero */
+.hero{padding:44px 0 56px;border-top:0}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;margin-bottom:22px}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--ink);display:block}
+.hero h1{font-size:clamp(31px,8.2vw,42px);margin-bottom:18px}
+.hero .lead{color:var(--sub);font-size:16.5px}
+.checks{display:flex;flex-wrap:wrap;gap:8px 16px;margin:22px 0 26px;font-size:13.5px;font-weight:500}
+.checks span{display:inline-flex;align-items:center;gap:6px}
+.checks span::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--hl) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' fill='none' stroke='%23141414' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat;flex:none}
+.price-line{text-align:center;font-size:15px;color:var(--sub);margin-bottom:12px}
+.price-line strong{font-size:26px;color:var(--text);letter-spacing:-.02em}
+.cta{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:14.5px;letter-spacing:.01em;text-transform:uppercase;border-radius:999px;padding:8px 8px 8px 24px;min-height:58px;transition:background .2s,transform .2s;text-align:center}
+.cta:hover{background:#000;transform:translateY(-1px)}
+.cta .arr{width:40px;height:40px;border-radius:50%;background:var(--hl);display:grid;place-items:center;flex:none;margin-left:auto}
+.cta .lbl{flex:1}
+.micro{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--lite);margin-top:12px}
+.micro span::before{content:"✓ ";color:var(--ink)}
+.textlink{display:block;text-align:center;margin-top:22px;font-size:13.5px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+/* shot cards */
+.shot{background:var(--s1);border:1px solid var(--bdr);border-radius:var(--r);padding:10px;box-shadow:0 18px 40px -24px rgba(0,0,0,.25);cursor:zoom-in;position:relative}
+.shot img{border-radius:9px;width:100%}
+.shot figcaption{font-size:12.5px;color:var(--sub);padding:10px 4px 2px;display:flex;justify-content:space-between;gap:10px}
+.shot figcaption span:last-child{color:var(--lite);white-space:nowrap}
+.pan{border-radius:9px;overflow:hidden}
+.rail .shot img{height:170px;object-fit:cover;object-position:left top}
+@media (max-width:759px){
+  .pan{overflow-x:auto;scrollbar-width:thin}
+  .pan img{height:240px;width:auto;max-width:none}
+}
+
+/* carousel */
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 14px;margin:0 -16px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail .shot{flex:0 0 86%;scroll-snap-align:center;box-shadow:none}
+.rail .shot h3{font-size:15px;margin:10px 4px 4px}
+.rail .shot p{font-size:13px;color:var(--sub);padding:0 4px 4px}
+.hint{text-align:center;font-size:12px;color:var(--lite);margin-top:4px}
+
+/* tried */
+.tried{display:grid;gap:10px;margin:22px 0}
+.tried div{background:var(--s1);border:1px solid var(--bdr);border-radius:12px;padding:14px 16px;font-size:14.5px;display:flex;gap:12px;align-items:flex-start}
+.tried div::before{content:"✕";flex:none;width:22px;height:22px;border-radius:50%;background:var(--s2);display:grid;place-items:center;font-size:11px;font-weight:700;color:var(--sub)}
+.box{background:var(--s1);border:1px solid var(--bdr2);border-radius:var(--r);padding:20px;margin-top:22px;font-size:15px}
+
+/* steps */
+.steps{display:grid;gap:12px;margin-top:24px}
+.step{background:var(--s1);border:1px solid var(--bdr);border-radius:var(--r);padding:20px;display:grid;grid-template-columns:34px 1fr;gap:14px}
+.step .n{width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700}
+.step h3{font-size:16px;margin-bottom:6px}
+.step p{font-size:14px;color:var(--sub)}
+.chip{display:inline-block;margin-top:10px;background:var(--s2);border-radius:6px;font-size:11.5px;font-weight:600;padding:3px 8px}
+
+/* modules */
+.mods{display:grid;gap:14px;margin-top:24px}
+.mod{background:var(--s1);border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden}
+.mod-h{background:var(--ink);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
+.mod-h .ic{width:36px;height:36px;border-radius:10px;background:var(--ink3);display:grid;place-items:center;flex:none}
+.mod-h .ic svg{width:18px;height:18px;stroke:var(--hl);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mod-h h3{font-size:16px}
+.mod-h small{display:block;color:#a9a9a9;font-size:12px;font-weight:400;letter-spacing:0;margin-top:2px}
+.mod-h .cnt{margin-left:auto;background:#fff;color:var(--ink);font-size:11px;font-weight:700;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.mod ul{list-style:none;padding:6px 18px 12px}
+.mod li{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:11px 0;border-bottom:1px solid var(--bdr);font-size:13.5px;color:var(--sub)}
+.mod li:last-child{border-bottom:0}
+.mod li em{font-style:normal;font-size:11px;font-weight:700;color:var(--lite);padding-top:2px}
+.mod li b{display:block;color:var(--text);font-size:14px;margin-bottom:2px}
+.quote{border-left:3px solid var(--ink);padding:4px 0 4px 16px;margin-top:26px;font-size:15px}
+
+/* offer */
+.offer{background:var(--s1);border:1.5px solid var(--ink);border-radius:20px;overflow:hidden;margin-top:24px}
+.offer-h{background:var(--ink);color:#fff;text-align:center;padding:18px}
+.offer-h small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#a9a9a9;margin-bottom:4px}
+.offer-h b{font-size:17px}
+.offer ul{list-style:none;padding:8px 20px}
+.offer li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--bdr);font-size:14px}
+.offer li:last-child{border-bottom:0}
+.offer li::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' fill='none' stroke='%23d2f900' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat;flex:none;margin-top:1px}
+.offer li small{display:block;color:var(--sub);font-size:12.5px;margin-top:2px}
+.offer-p{background:linear-gradient(180deg,#fff,#f3fbd6);text-align:center;padding:24px 20px 26px;border-top:1px solid var(--bdr)}
+.anchor{font-size:13.5px;color:var(--sub);max-width:380px;margin:0 auto 16px}
+.anchor s{color:var(--lite)}
+.bigprice{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--hl);border-radius:14px;padding:10px 20px}
+.bigprice small{color:#fff;font-size:12px;line-height:1.2;text-align:left}
+.bigprice strong{font-size:44px;letter-spacing:-.03em;line-height:1}
+.pay{font-size:12.5px;color:var(--sub);margin-top:12px}
+.bump{margin-top:16px;background:var(--s1);border:1px dashed var(--bdr2);border-radius:12px;padding:14px 16px;font-size:13.5px;color:var(--sub)}
+.bump b{color:var(--text)}
+
+/* guarantee */
+.seal{width:92px;height:92px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;margin:0 auto 16px;position:relative;text-align:center;line-height:1}
+.seal::after{content:"";position:absolute;inset:5px;border:1.5px dashed rgba(210,249,0,.7);border-radius:50%}
+.seal b{font-size:32px;color:var(--hl);display:block}
+.seal small{font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+.trust div{background:var(--s1);border:1px solid var(--bdr);border-radius:12px;padding:14px;font-size:12.5px;color:var(--sub)}
+.trust b{display:block;color:var(--text);font-size:13.5px;margin-bottom:3px}
+
+/* dark */
+.dark{background:var(--ink);color:#d8d8d8;border-radius:20px;padding:30px 22px;text-align:center}
+.dark h2{color:#fff;font-size:22px}
+.dark p{font-size:15px}
+.dark .hlt{color:var(--hl);font-weight:650}
+
+/* stat */
+.stat{background:var(--ink);color:#d8d8d8;border-radius:var(--r);padding:22px;margin:22px 0;display:grid;gap:4px}
+.stat strong{font-size:44px;letter-spacing:-.03em;line-height:1;color:var(--hl)}
+.stat span{font-size:14px}
+
+/* faq */
+.faq{margin-top:24px;display:grid;gap:8px}
+.faq details{background:var(--s1);border:1px solid var(--bdr);border-radius:12px}
+.faq summary{list-style:none;cursor:pointer;padding:16px 46px 16px 16px;font-weight:600;font-size:14.5px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:20px;font-weight:400;transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 16px 16px;font-size:14px;color:var(--sub)}
+
+footer{padding:36px 0 110px;text-align:center;font-size:11.5px;color:var(--lite);border-top:1px solid var(--bdr)}
+footer p+p{margin-top:8px}
+
+/* sticky */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(244,244,244,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--bdr);transform:translateY(110%);transition:transform .3s}
+.sticky.on{transform:none}
+.sticky .cta{max-width:var(--w);margin:0 auto;min-height:50px;font-size:13px}
+.sticky .cta .arr{width:34px;height:34px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(10,10,10,.92);display:none;overflow:auto;padding:56px 12px 24px}
+.lb.on{display:block}
+.lb img{max-width:none;width:1400px;border-radius:8px;margin:0 auto}
+.lb button{position:fixed;top:12px;right:12px;background:#fff;border:0;border-radius:999px;padding:8px 14px;font:600 13px Geist,sans-serif;cursor:pointer}
+.lb small{position:fixed;top:18px;left:16px;color:#bbb;font-size:12px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:760px){
+  :root{--w:620px}
+  .rail .shot{flex-basis:78%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">O padrão internacional de planejamento financeiro, seguido por <b>mais de 236 mil planejadores</b> no mundo</div>
+<div class="byline">Mapa da Organização Financeira</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="pill"><i></i>Mapa da Organização Financeira · R$39,90</span>
+    <h1>Descubra <em>quanto precisa guardar</em> por mês pra se aposentar e realizar seus projetos, numa planilha só</h1>
+    <p class="lead">Anotar gasto não muda sua vida financeira. Saber pra onde o dinheiro vai, quanto você já tem e aonde ele te leva, sim. O Mapa junta <b>orçamento, patrimônio, projetos de vida e projeção de aposentadoria</b> numa planilha profissional, estruturada na metodologia internacional de planejamento financeiro pessoal. Você preenche os campos em destaque e os gráficos se montam sozinhos.</p>
+    <div class="checks">
+      <span>Sem montar fórmula</span><span>Gráficos automáticos</span><span>Manual passo a passo</span><span>Pra solteiro ou casal</span>
+    </div>
+    <p class="price-line">Pagamento único de <strong>R$39,90</strong></p>
+    <a class="cta" href="https://pay.hotmart.com/T104713083B?checkoutMode=10&amp;hotfeature=51" data-cta><span class="lbl">Quero meu Mapa por R$39,90</span><span class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <div class="micro"><span>Acesso imediato</span><span>Pagamento único</span><span>Garantia de 7 dias</span></div>
+    <a class="textlink" href="#por-dentro">Ver a planilha por dentro ↓</a>
+  </div>
+</header>
+
+<!-- POR DENTRO -->
+<section id="por-dentro">
+  <div class="wrap">
+    <p class="eyebrow center">Antes de gastar um real, veja por dentro</p>
+    <h2 class="center">Uma planilha que responde <em>até quando seu dinheiro dura</em>.</h2>
+    <p class="sub center" style="margin-bottom:24px">Você informa idade, renda desejada e quanto guarda por mês. A aba de Projeções desenha a curva do seu patrimônio até a expectativa de vida e mostra o aporte mensal necessário pra viver de renda.</p>
+    <figure class="shot rv" data-zoom="img/aposentadoria.webp">
+      <div class="pan"><img src="img/aposentadoria.webp" alt="Gráfico de projeção patrimonial até a aposentadoria gerado pela planilha" width="1954" height="566" loading="lazy"></div>
+      <figcaption><span><b>Aba Projeções.</b> Verde: o que você acumula. Preto: o necessário pra viver de renda.</span><span>toque pra ampliar</span></figcaption>
+    </figure>
+    <p class="hint" style="margin-top:10px">Imagens da planilha real, preenchida com um exemplo ilustrativo.</p>
+  </div>
+</section>
+
+<!-- O QUE VOCÊ ENXERGA -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">O que o Mapa te mostra</p>
+    <h2>Chega de adivinhar. <em>Tudo em números</em>, na sua frente.</h2>
+    <p class="sub" style="margin-bottom:22px">Cada aba responde uma pergunta que tira o sono de quem ainda não se organizou.</p>
+    <div class="rail">
+      <figure class="shot" data-zoom="img/orcamento.webp">
+        <img src="img/orcamento.webp" alt="Aba Orçamento: meta mensal e fluxo de caixa" width="2852" height="1041" loading="lazy">
+        <h3>“Pra onde foi meu salário?”</h3>
+        <p>Meta do mês e realizado lado a lado, de janeiro a dezembro, com a renda do casal e todas as categorias de gasto.</p>
+      </figure>
+      <figure class="shot" data-zoom="img/colchao.webp">
+        <img src="img/colchao.webp" alt="Saldo mensal, colchão de segurança e distribuição de despesas" width="1545" height="568" loading="lazy">
+        <h3>“Quanto sobra e quanto preciso de reserva?”</h3>
+        <p>Saldo do mês, reserva de emergência calculada pelos meses que você escolher e o peso de cada categoria em %.</p>
+      </figure>
+      <figure class="shot" data-zoom="img/premissas.webp">
+        <img src="img/premissas.webp" alt="Premissas de aposentadoria e gráfico projetos versus acumulação" width="1968" height="563" loading="lazy">
+        <h3>“Quanto preciso ter pra me aposentar?”</h3>
+        <p>Inflação, CDI, IR e taxa real já considerados. A planilha calcula o patrimônio necessário e a parcela mensal.</p>
+      </figure>
+      <figure class="shot" data-zoom="img/projetos.webp">
+        <img src="img/projetos.webp" alt="Projeção patrimonial com projetos de curto, médio e longo prazo" width="1873" height="556" loading="lazy">
+        <h3>“Dá pra trocar de carro e viajar?”</h3>
+        <p>Coloque cada projeto no mês em que ele acontece e veja o impacto no seu patrimônio antes de gastar.</p>
+      </figure>
+      <figure class="shot" data-zoom="img/ips.webp">
+        <img src="img/ips.webp" alt="Política de investimentos com alocação por objetivo" width="1755" height="965" loading="lazy">
+        <h3>“Onde deixo cada dinheiro?”</h3>
+        <p>Sua política de investimentos: quanto vai pra reserva, pra cada prazo de projeto e pra aposentadoria.</p>
+      </figure>
+    </div>
+    <p class="hint">arrasta pra ver mais → · toque na imagem pra ampliar</p>
+  </div>
+</section>
+
+<!-- JÁ TENTOU -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Antes de chegar até aqui</p>
+    <h2>Você provavelmente já tentou outras coisas.</h2>
+    <div class="tried">
+      <div><span><b>App de controle de gastos:</b> categoriza tudo bonitinho, mas não diz se você vai conseguir se aposentar.</span></div>
+      <div><span><b>Planilha gratuita da internet:</b> uma lista de despesas. Sem patrimônio, sem projeção, sem plano.</span></div>
+      <div><span><b>“Mês que vem eu começo”:</b> o salário cai, os boletos saem, e no dia 20 o dinheiro já acabou de novo.</span></div>
+    </div>
+    <p><b>Não é falta de disciplina.</b> Ninguém te entregou um mapa. Sem saber aonde quer chegar, qualquer gasto parece justificável.</p>
+    <div class="box">
+      <p><b>Anotar o gasto não é o suficiente.</b> Você precisa analisar e acompanhar os gastos enquanto eles acontecem, e ligar cada real a um objetivo: a reserva, o carro, a casa, a aposentadoria.</p>
+      <p class="sub">É assim que o planejamento financeiro profissional funciona no mundo inteiro. E é isso que o Mapa faz com você.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Como funciona</p>
+    <h2>3 passos. <em>É tudo que existe.</em></h2>
+    <div class="steps">
+      <div class="step rv"><div class="n">1</div><div><h3>Hoje: você recebe o Mapa e o manual</h3><p>O acesso chega no seu e-mail assim que o pagamento é aprovado. Você abre a aba Orçamento e define sua meta do mês: quanto entra, quanto sai e quanto precisa sobrar.</p><span class="chip">Acesso imediato</span></div></div>
+      <div class="step rv"><div class="n">2</div><div><h3>Essa semana: o raio-x e os seus projetos</h3><p>Liste investimentos, dívidas, carros e imóveis na aba Patrimônio. Depois coloque seus projetos no cronograma: viagem, troca de carro, entrada da casa. A planilha calcula o resto.</p><span class="chip">Gráficos automáticos</span></div></div>
+      <div class="step rv"><div class="n">3</div><div><h3>Todo mês: você compara e ajusta a rota</h3><p>Preencha o realizado, compare com a meta e acompanhe se a sua curva de patrimônio está no caminho da aposentadoria. O planejamento é vivo e o Mapa acompanha você.</p><span class="chip">Previsto × realizado</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AS ABAS -->
+<section id="abas">
+  <div class="wrap">
+    <p class="eyebrow">O que você recebe</p>
+    <h2>As 5 abas do Mapa, uma por uma. <em>Cada uma resolve uma parte</em> da sua vida financeira.</h2>
+    <p class="sub">Os nomes são os mesmos que você vai ver no arquivo. Os campos que você preenche ficam em destaque; o resto é fórmula pronta.</p>
+    <div class="mods">
+      <div class="mod rv">
+        <div class="mod-h"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg></span><h3>Organização financeira<small>Aba ORÇAMENTO</small></h3><span class="cnt">o coração</span></div>
+        <ul>
+          <li><em>01</em><span><b>Meta orçamentária mensal</b>Você define antes do mês começar quanto vai ganhar e gastar. É a meta pra fazer o dinheiro sobrar.</span></li>
+          <li><em>02</em><span><b>Previsto × realizado, mês a mês</b>Colunas de janeiro a dezembro pra lançar o que aconteceu de fato e ver se está no curso.</span></li>
+          <li><em>03</em><span><b>Renda do titular, do cônjuge e extras</b>Salário, bônus, PLR, 13º, aluguel, com IR e INSS descontados pra chegar na renda líquida.</span></li>
+          <li><em>04</em><span><b>Despesas por categoria</b>Moradia, alimentação, transporte, saúde, educação, lazer, dependentes, seguros, previdência, financiamentos e dívidas.</span></li>
+          <li><em>05</em><span><b>Colchão de segurança</b>Escolha quantos meses de reserva quer ter e a planilha mostra o valor exato.</span></li>
+        </ul>
+      </div>
+      <div class="mod rv">
+        <div class="mod-h"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M10 21v-6h4v6"/></svg></span><h3>Gestão de patrimônio<small>Aba PATRIMÔNIO</small></h3><span class="cnt">raio-x</span></div>
+        <ul>
+          <li><em>06</em><span><b>Aplicações financeiras e previdência</b>Saldo bruto e líquido de cada investimento, de quem é e se é previdência.</span></li>
+          <li><em>07</em><span><b>Empréstimos e dívidas</b>Tudo que você deve, num lugar só, pra parar de fingir que não existe.</span></li>
+          <li><em>08</em><span><b>Bens móveis e imóveis</b>Carros, casa, imóvel de aluguel ou de praia, marcando o que é vendável.</span></li>
+        </ul>
+      </div>
+      <div class="mod rv">
+        <div class="mod-h"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><h3>Projeção de aposentadoria e projetos<small>Aba PROJEÇÕES</small></h3><span class="cnt">o futuro</span></div>
+        <ul>
+          <li><em>09</em><span><b>Premissas econômicas</b>Inflação, CDI, alíquota de IR e taxa real de juros já configuradas, e ajustáveis.</span></li>
+          <li><em>10</em><span><b>Dois cenários de aposentadoria</b>Viver de renda preservando o patrimônio, ou consumir o patrimônio ao longo da vida. Com o valor necessário e a parcela mensal de cada um.</span></li>
+          <li><em>11</em><span><b>Cronograma mês a mês</b>Projetos, financiamentos, educação e entradas extras (13º, bônus, herança) no mês em que acontecem.</span></li>
+          <li><em>12</em><span><b>Projetos de 1-2, 3-4 e 5-6 anos</b>Quanto cada horizonte custa e quanto você terá acumulado até lá.</span></li>
+          <li><em>13</em><span><b>Gráficos de projeção patrimonial</b>A curva do seu dinheiro até a expectativa de vida, atualizada a cada lançamento.</span></li>
+        </ul>
+      </div>
+      <div class="mod rv">
+        <div class="mod-h"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 4"/></svg></span><h3>Política de investimentos<small>Aba INVESTIMENTOS</small></h3><span class="cnt">a estratégia</span></div>
+        <ul>
+          <li><em>14</em><span><b>Diagrama de alocação por objetivo</b>O total necessário separado entre colchão de segurança, projetos por prazo e aposentadoria.</span></li>
+          <li><em>15</em><span><b>Premissas de liquidez e risco</b>Quanto de liquidez, risco e rentabilidade cada objetivo pede, e espaço pra definir onde investir.</span></li>
+        </ul>
+      </div>
+      <div class="mod rv">
+        <div class="mod-h"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></span><h3>Plano de ação<small>Aba PLANO DE AÇÃO</small></h3><span class="cnt">o próximo passo</span></div>
+        <ul>
+          <li><em>16</em><span><b>Próximos passos com prazo e status</b>O que precisa ser feito, até quando, e o que já saiu do papel.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="quote">Um acompanhamento com planejador financeiro costuma ser cobrado <b>todo mês</b>. A estrutura que ele usa, você leva por <b>R$39,90</b>, uma vez só.</p>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="alt" id="oferta">
+  <div class="wrap">
+    <p class="eyebrow">O que está incluído</p>
+    <h2>Tudo que você precisa pra <em>começar ainda hoje</em>.</h2>
+    <div class="offer rv">
+      <div class="offer-h"><small>O que você leva hoje</small><b>Mapa da Organização Financeira</b></div>
+      <ul>
+        <li><span>Planilha completa com as 5 abas<small>Orçamento, Patrimônio, Projeções, Investimentos e Plano de Ação</small></span></li>
+        <li><span>Todas as fórmulas e gráficos prontos<small>Você só preenche os campos em destaque</small></span></li>
+        <li><span>Manual do Mapa em PDF<small>O passo a passo de cada aba, na ordem certa de preencher</small></span></li>
+        <li><span>Metodologia internacional de planejamento financeiro<small>O mesmo padrão seguido por mais de 236 mil planejadores certificados em 29 países</small></span></li>
+        <li><span>Suporte por e-mail<small>Para dúvidas técnicas sobre o arquivo</small></span></li>
+      </ul>
+      <div class="offer-p">
+        <p class="anchor">A estrutura de um planejamento financeiro profissional, pra você aplicar por conta própria:</p>
+        <div class="bigprice"><small>Por<br>apenas</small><strong>R$39,90</strong></div>
+        <p class="pay">Pagamento único, no Pix ou no cartão. Acesso imediato.</p>
+      </div>
+    </div>
+    <div style="margin-top:18px">
+      <a class="cta" href="https://pay.hotmart.com/T104713083B?checkoutMode=10&amp;hotfeature=51" data-cta><span class="lbl">Quero meu Mapa por R$39,90</span><span class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <div class="micro"><span>Acesso imediato</span><span>Pagamento único</span><span>Garantia de 7 dias</span></div>
+    </div>
+    <div class="bump"><b>Quer ajuda pra montar o seu plano?</b> No checkout aparece a opção da <b>Sessão Estratégica Individual</b>: 1 hora por Google Meet com um especialista pra abrir o seu Mapa e traçar o seu planejamento.</div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section>
+  <div class="wrap center">
+    <div class="seal"><span><b>7</b><small>dias</small></span></div>
+    <p class="eyebrow">Garantia de 7 dias</p>
+    <h2>Sua compra é <em>100% segura</em></h2>
+    <p class="sub">Comprou, abriu a planilha e por qualquer motivo não gostou? Peça o reembolso em até <b>7 dias</b> e você recebe <b>100% do valor de volta</b>. Sem perguntas. O risco é todo nosso.</p>
+    <div class="trust" style="text-align:left">
+      <div><b>Pagamento seguro</b>Processado pela Hotmart, do início ao fim.</div>
+      <div><b>Compra protegida</b>7 dias pra pedir o dinheiro de volta.</div>
+      <div><b>Acesso imediato</b>O acesso chega no seu e-mail na hora.</div>
+      <div><b>Suporte de verdade</b>Dúvidas no e-mail do Mapa.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DECISÃO -->
+<section class="alt">
+  <div class="wrap">
+    <div class="dark rv">
+      <h2>Nos próximos 12 meses, você vai receber 12 salários.</h2>
+      <p>A pergunta é quantos deles vão virar patrimônio, e quantos vão sumir sem você saber pra onde.</p>
+      <p>Quem se organiza agora começa a aproveitar os juros compostos <span class="hlt">um ano antes</span> de quem deixa pra depois. E, no longo prazo, um ano de juros compostos pesa muito.</p>
+      <p class="hlt" style="margin-top:16px">A pergunta não é se você deveria se organizar. É se vai começar hoje ou continuar adiando.</p>
+    </div>
+  </div>
+</section>
+
+<!-- METODOLOGIA -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">A metodologia por trás do Mapa</p>
+    <h2>Não é uma planilha inventada. É o <em>padrão internacional</em> de planejamento financeiro.</h2>
+    <div class="stat rv"><strong>236 mil+</strong><span>planejadores financeiros certificados seguem esse padrão, em 29 países e territórios</span></div>
+    <p>O planejamento financeiro pessoal tem um método reconhecido no mundo inteiro: entender a situação atual, definir objetivos, analisar os números, montar o plano, colocar em prática e acompanhar. É assim que planejadores certificados trabalham, dos Estados Unidos ao Japão.</p>
+    <p>O Mapa organiza esse método numa planilha só. Cada aba é uma etapa: o <b>orçamento</b> mostra a situação de hoje, o <b>patrimônio</b> faz o raio-x, as <b>projeções</b> transformam objetivos em números, os <b>investimentos</b> definem a estratégia e o <b>plano de ação</b> coloca tudo em prática.</p>
+    <p class="sub">A diferença é que aqui você aplica por conta própria, no seu ritmo, com o manual ao lado.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Suas dúvidas</p>
+    <h2>Respondendo o que está na sua cabeça agora.</h2>
+    <div class="faq">
+      <details><summary>Preciso entender de Excel ou de finanças?</summary><p>Não. Toda a parte de cálculos e fórmulas já está pronta. Você preenche os campos em destaque e os gráficos e projeções são gerados automaticamente. O manual mostra o passo a passo de cada aba, na ordem certa. <b>Se você sabe digitar um número numa célula, você consegue usar.</b></p></details>
+      <details><summary>É só mais uma planilha de gastos?</summary><p>Não. A aba de orçamento é só o começo. O Mapa também faz o raio-x do seu patrimônio, planeja seus projetos no tempo, projeta a sua aposentadoria e organiza onde investir cada dinheiro. <b>É a estrutura de um planejamento financeiro, não uma lista de despesas.</b></p></details>
+      <details><summary>Estou endividado. Serve pra mim?</summary><p>Serve. A planilha tem campos próprios pra financiamentos, empréstimos, parcelamento de cartão, cheque especial e renegociações. Ver tudo num lugar só, com o peso de cada dívida no seu orçamento, é o primeiro passo pra sair delas.</p></details>
+      <details><summary>Dá pra usar com meu marido ou minha esposa?</summary><p>Dá. O orçamento tem a renda do titular e a do cônjuge separadas, e o patrimônio registra de quem é cada investimento. O Mapa foi feito pra organizar as finanças da casa inteira.</p></details>
+      <details><summary>Funciona no celular?</summary><p>O Mapa é um arquivo de planilha. Pra preencher e acompanhar os gráficos, o ideal é usar no computador, onde as abas ficam confortáveis de ver.</p></details>
+      <details><summary>Tem mensalidade?</summary><p>Não. É pagamento único de R$39,90, no Pix ou no cartão. O arquivo é seu.</p></details>
+      <details><summary>Como eu recebo?</summary><p>Assim que o pagamento é aprovado, o acesso chega no seu e-mail pela Hotmart. Você também encontra o produto em Hotmart → Minha conta → Minhas compras.</p></details>
+      <details><summary>E se eu travar em alguma parte?</summary><p>Você tem o manual passo a passo e o suporte por e-mail (<a href="mailto:mapadaorganizacaofinanceira@gmail.com">mapadaorganizacaofinanceira@gmail.com</a>) pra dúvidas técnicas. E se quiser ajuda pra montar o plano, no checkout aparece a opção da Sessão Estratégica Individual de 1 hora.</p></details>
+      <details><summary>A planilha me diz em que investir?</summary><p>Não. O Mapa organiza os seus números e mostra quanto você precisa acumular para cada objetivo e com qual prazo. Ele não recomenda produtos financeiros específicos.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, devolvemos 100% do valor. <b>Sem perguntas. Sem burocracia.</b></p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section>
+  <div class="wrap center">
+    <h2>Daqui a 6 meses, você vai lembrar desse momento.</h2>
+    <p class="sub">Ou como o dia em que decidiu olhar pro próprio dinheiro de frente e traçou um plano. Ou como mais uma vez em que pensou “mês que vem eu começo”.</p>
+    <p style="margin:18px 0 22px"><b>São R$39,90. É o planejamento financeiro profissional numa planilha só. É hoje.</b></p>
+    <a class="cta" href="https://pay.hotmart.com/T104713083B?checkoutMode=10&amp;hotfeature=51" data-cta><span class="lbl">Quero meu Mapa por R$39,90</span><span class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <div class="micro"><span>Acesso imediato</span><span>Pagamento único</span><span>Garantia de 7 dias</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Mapa da Organização Financeira</p>
+    <p>Suporte: <a href="mailto:mapadaorganizacaofinanceira@gmail.com">mapadaorganizacaofinanceira@gmail.com</a></p>
+    <p>As imagens mostram a planilha real preenchida com dados ilustrativos. Este produto é uma ferramenta de organização e planejamento e não garante resultados financeiros; os resultados dependem da aplicação de cada pessoa. Não constitui recomendação de investimento. Número de planejadores certificados: relatório anual 2025 da Financial Planning Standards Board (FPSB).</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <a class="cta" href="https://pay.hotmart.com/T104713083B?checkoutMode=10&amp;hotfeature=51" tabindex="-1"><span class="lbl">Quero meu Mapa · R$39,90</span><span class="arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada da planilha">
+  <small>arraste pra navegar</small>
+  <button type="button" id="lbClose">Fechar ✕</button>
+  <img id="lbImg" alt="">
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+
+  // sticky CTA: aparece depois do hero, some quando algum CTA está visível
+  var sticky=document.getElementById('sticky'), hero=document.querySelector('.hero');
+  var visibleCtas=new Set(), pastHero=false;
+  function upd(){var on=pastHero&&visibleCtas.size===0;sticky.classList.toggle('on',on);sticky.setAttribute('aria-hidden',on?'false':'true');}
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){pastHero=!es[0].isIntersecting;upd();}).observe(hero);
+    var co=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?visibleCtas.add(e.target):visibleCtas.delete(e.target);});upd();});
+    document.querySelectorAll('[data-cta]').forEach(function(c){co.observe(c);});
+  }
+
+  // no celular, abre a captura principal já mostrando o pico da curva
+  document.querySelectorAll('.pan').forEach(function(p){
+    var img=p.querySelector('img');
+    function center(){p.scrollLeft=(p.scrollWidth-p.clientWidth)*0.42;}
+    if(img.complete)center();else img.addEventListener('load',center);
+  });
+
+  // lightbox
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg');
+  function close(){lb.classList.remove('on');document.body.style.overflow='';}
+  document.querySelectorAll('[data-zoom]').forEach(function(f){
+    f.addEventListener('click',function(){lbImg.src=f.getAttribute('data-zoom');lbImg.alt=(f.querySelector('img')||{}).alt||'';lb.classList.add('on');document.body.style.overflow='hidden';});
+  });
+  document.getElementById('lbClose').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+
+  // repassa UTMs/parâmetros da URL da página para o checkout (rastreio de anúncios)
+  var qs=location.search.replace(/^\?/,'');
+  if(qs){document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(a){a.href+= '&'+qs;});}
+})();
+</script>
+</body>
+</html>
