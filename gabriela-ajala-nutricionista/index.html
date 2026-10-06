@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script>
+(function(){
+  var EXPIRES_AT = new Date('2026-10-13T23:59:59-03:00').getTime();
+  if (Date.now() > EXPIRES_AT) { document.documentElement.classList.add('site-expired'); }
+})();
+</script>
+<style>
+html.site-expired #expiry-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#111417;color:#fff;font-family:Arial,Helvetica,sans-serif;text-align:center;padding:32px;box-sizing:border-box;}
+html:not(.site-expired) #expiry-overlay{display:none;}
+html.site-expired body>*:not(#expiry-overlay){display:none!important;}
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriela Ajala Nutricionista | Emagrecimento sem dieta restritiva · Consultas Online</title>
+<meta name="description" content="Gabriela Ajala, nutricionista clínica (CRN-3 82527), pós-graduada pela PUCRS. Emagrecimento e ganho de massa muscular com atendimento 100% online, sem dietas restritivas.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gabriela Ajala Nutricionista | Emagrecer sem abrir mão da sua vida">
+<meta property="og:description" content="Acompanhamento nutricional 100% online, sem dietas restritivas e sem terrorismo alimentar. Emagrecimento e ganho de massa muscular.">
+<meta property="og:image" content="https://generationiahubb.github.io/sites-clientes/gabriela-ajala-nutricionista/hero-preview.png">
+<meta property="og:url" content="https://generationiahubb.github.io/sites-clientes/gabriela-ajala-nutricionista/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Gabriela Ajala, Nutricionista",
+  "description": "Nutricionista clínica, CRN-3 82527. Emagrecimento e ganho de massa muscular com atendimento 100% online.",
+  "medicalSpecialty": "DietNutrition",
+  "image": "https://generationiahubb.github.io/sites-clientes/gabriela-ajala-nutricionista/hero-preview.png",
+  "telephone": "+55 67 98181-9269",
+  "url": "https://generationiahubb.github.io/sites-clientes/gabriela-ajala-nutricionista/",
+  "sameAs": ["https://www.instagram.com/nutrigabrielaajala_/"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --navy-950:#021041;   /* destaque "Nutrição" do Instagram */
+    --navy-900:#0A1B4A;
+    --navy-800:#1D2C4D;   /* cor de texto do site oficial (Canva) */
+    --navy-photo:#03244F; /* fundo real dos retratos */
+    --navy-600:#2B4A8B;
+    --mint-300:#C5E0B3;   /* destaque "Resultados" do Instagram */
+    --mint-200:#DDEED2;
+    --mint-700:#3D6B33;   /* menta escurecida, só para texto/ícone em fundo claro */
+    --mustard:#DDC273;    /* parede das fotos reais do feed */
+    --mustard-200:#F1E5BD;
+    --tint:#F2F5FB;
+    --paper:#FBF9F3;
+    --ink:#101E33;
+    --gray-600:#4F5B70;
+    --gray-400:#8A94A6;
+    --line:#DCE2EE;
+    --shadow:0 14px 36px rgba(2,16,65,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Gothic A1',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3,h4{font-family:'Gothic A1',sans-serif;font-weight:800;letter-spacing:-.035em;line-height:1.08;}
+  .serif{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;letter-spacing:-.01em;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  section[id], #agendar{scroll-margin-top:96px;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:12px;font-weight:700;font-size:15px;border:2px solid transparent;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease, background .2s ease;font-family:'Gothic A1',sans-serif;letter-spacing:-.01em;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-navy{background:var(--navy-950);color:#fff;box-shadow:0 10px 24px rgba(2,16,65,.28);}
+  .btn-navy:hover{background:var(--navy-600);}
+  .btn-mint{background:var(--mint-300);color:var(--navy-950);}
+  .btn-mint:hover{background:#d6ebc8;}
+  .btn-outline{background:transparent;border-color:var(--line);color:var(--navy-950);}
+  .btn-outline:hover{border-color:var(--navy-950);}
+
+  .pill{display:inline-block;background:var(--navy-950);color:#fff;border-radius:999px;padding:0 .32em .06em;line-height:1.05;}
+  .pill-mint{background:var(--mint-300);color:var(--navy-950);}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy-600);margin-bottom:16px;}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--mustard);}
+  .section-head{max-width:700px;margin:0 0 52px;}
+  .section-head.center{text-align:center;margin:0 auto 52px;}
+  .section-head.center .eyebrow{justify-content:center;}
+  .section-head h2{font-size:clamp(32px,4vw,48px);color:var(--navy-950);}
+  .section-head p{color:var(--gray-600);margin-top:16px;font-size:17px;}
+
+  /* barra utilitária */
+  .utility-bar{background:var(--navy-950);color:#C9D3EA;font-size:12.5px;}
+  .utility-bar .container{display:flex;align-items:center;justify-content:space-between;padding:9px 24px;gap:12px;flex-wrap:wrap;}
+  .utility-bar a{color:var(--mint-300);font-weight:600;}
+  .utility-bar .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--mint-300);margin-right:8px;vertical-align:middle;}
+  @media(max-width:700px){.utility-bar .u-hide{display:none;}}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,249,243,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:box-shadow .3s ease, border-color .3s ease;}
+  header.scrolled{box-shadow:0 10px 28px rgba(2,16,65,.08);border-color:var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1200px;margin:0 auto;gap:16px;}
+  .logo{display:flex;flex-direction:column;line-height:1;}
+  .logo .name{font-weight:800;font-size:21px;letter-spacing:-.04em;color:var(--navy-950);}
+  .logo .name i{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:0;}
+  .logo .sub{font-size:10px;letter-spacing:.32em;color:var(--gray-600);margin-top:5px;font-weight:600;}
+  .nav-links{display:flex;gap:30px;font-size:14.5px;font-weight:600;color:var(--navy-800);}
+  .nav-links a{position:relative;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--mustard);transition:width .25s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:12px;}
+  .nav-ig{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--navy-950);transition:border-color .2s;}
+  .nav-ig:hover{border-color:var(--navy-950);}
+  .nav-cta .btn{padding:11px 18px;font-size:14px;}
+  @media(max-width:940px){.nav-links{display:none;}}
+  @media(max-width:420px){.nav-cta .btn{display:none;}}
+
+  /* HERO — ASYMMETRIC_EDITORIAL */
+  .hero{padding:0;background:var(--tint);position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;left:-180px;bottom:-220px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(197,224,179,.55), transparent 68%);pointer-events:none;}
+  .hero-grid{position:relative;max-width:1200px;margin:0 auto;min-height:calc(100vh - 110px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:56px 24px 72px;}
+  .hero-copy{position:relative;z-index:2;}
+  .hero-tag{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 16px 7px 8px;font-size:12.5px;font-weight:600;color:var(--navy-800);margin-bottom:26px;}
+  .hero-tag b{background:var(--mint-300);color:var(--navy-950);border-radius:999px;padding:3px 10px;font-size:11.5px;}
+  .hero h1{font-size:clamp(42px,5.6vw,76px);line-height:1.02;letter-spacing:-.05em;color:var(--navy-950);max-width:12.5ch;}
+  .hero h1 .pill{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;letter-spacing:-.02em;padding:0 .28em .08em;}
+  .hero .lead{font-size:18px;color:var(--gray-600);max-width:480px;margin-top:26px;line-height:1.55;}
+  .hero-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:34px;}
+  .hero-no{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;font-size:13.5px;font-weight:600;color:var(--navy-800);}
+  .hero-no span{display:inline-flex;align-items:center;gap:8px;}
+  .hero-no span::before{content:"✕";width:20px;height:20px;border-radius:50%;background:var(--navy-950);color:var(--mint-300);font-size:10px;display:inline-flex;align-items:center;justify-content:center;}
+
+  .hero-art{position:relative;z-index:1;align-self:stretch;min-height:600px;}
+  .hero-sun{position:absolute;top:0;left:-2%;width:250px;height:250px;border-radius:50%;background:var(--mustard);opacity:.9;}
+  .hero-frame{position:absolute;top:4%;bottom:0;left:6%;right:-4%;background:var(--navy-photo);border-radius:240px 28px 28px 28px;overflow:hidden;box-shadow:0 30px 70px rgba(2,16,65,.28);}
+  .hero-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%;}
+  .hero-sticker{position:absolute;top:13%;left:-4%;z-index:3;background:var(--mint-300);color:var(--navy-950);border-radius:16px;padding:12px 16px;font-weight:800;font-size:13px;letter-spacing:-.01em;line-height:1.25;transform:rotate(-5deg);box-shadow:0 14px 28px rgba(2,16,65,.18);}
+  .hero-sticker small{display:block;font-weight:600;font-size:11px;color:var(--navy-800);}
+  .hero-crn{position:absolute;right:-1%;top:46%;z-index:3;background:#fff;border-radius:14px;padding:10px 14px;font-size:12px;font-weight:700;color:var(--navy-950);box-shadow:var(--shadow);transform:rotate(3deg);}
+  .hero-crn span{display:block;font-size:10.5px;color:var(--gray-600);font-weight:600;}
+
+  /* card de agendamento flutuante */
+  .book-card{position:absolute;z-index:4;left:-14%;bottom:-28px;width:340px;background:#fff;border-radius:20px;padding:22px;box-shadow:0 24px 60px rgba(2,16,65,.22);border:1px solid var(--line);}
+  .book-card h3{font-size:18px;color:var(--navy-950);letter-spacing:-.03em;}
+  .book-card p.sub{font-size:12.5px;color:var(--gray-600);margin:4px 0 14px;}
+  .field{margin-bottom:12px;}
+  .field label{display:block;font-size:11.5px;font-weight:700;color:var(--gray-600);margin-bottom:5px;letter-spacing:.02em;}
+  .field select{width:100%;padding:12px 13px;border-radius:10px;border:1.5px solid var(--line);font-size:14px;color:var(--ink);background:#fff;font-family:'Gothic A1',sans-serif;appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--navy-800) 50%),linear-gradient(135deg,var(--navy-800) 50%,transparent 50%);background-position:calc(100% - 18px) 52%, calc(100% - 13px) 52%;background-size:5px 5px;background-repeat:no-repeat;}
+  .field select:focus{outline:none;border-color:var(--navy-950);}
+  .book-card .btn{width:100%;padding:14px;}
+
+  @media(max-width:1040px){
+    .hero-grid{grid-template-columns:1fr;min-height:auto;padding:40px 20px 56px;gap:28px;}
+    .hero-art{min-height:0;max-width:520px;width:100%;margin:0 auto;display:flex;flex-direction:column;}
+    .hero-frame{position:relative;top:auto;bottom:auto;left:auto;right:auto;height:540px;}
+    .hero-sun{width:180px;height:180px;left:-12px;top:-18px;}
+    .hero-sticker{left:-6px;top:70px;}
+    .hero-crn{top:330px;right:8px;}
+    .book-card{position:relative;left:auto;bottom:auto;width:auto;margin:-80px 14px 0;}
+  }
+  @media(max-width:520px){
+    .hero-frame{height:460px;border-radius:160px 22px 22px 22px;}
+    .hero-crn{top:280px;}
+  }
+
+  /* Isso parece familiar? */
+  .pain{background:var(--navy-950);color:#fff;position:relative;overflow:hidden;}
+  .pain::after{content:"";position:absolute;right:-160px;top:-160px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle, rgba(221,194,115,.22), transparent 70%);pointer-events:none;}
+  .pain .section-head h2{color:#fff;}
+  .pain .section-head .eyebrow{color:var(--mint-300);}
+  .pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;z-index:1;}
+  @media(max-width:980px){.pain-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.pain-grid{grid-template-columns:1fr;}}
+  .pain-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:26px 24px;font-size:16px;line-height:1.5;color:#E3E8F4;}
+  .pain-card .q{font-family:'Playfair Display',serif;font-style:italic;font-size:48px;line-height:.6;color:var(--mustard);display:block;margin-bottom:12px;}
+  .pain-close{position:relative;z-index:1;margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;background:var(--mint-300);color:var(--navy-950);border-radius:22px;padding:28px 32px;}
+  .pain-close p{font-size:18px;font-weight:600;max-width:720px;letter-spacing:-.015em;line-height:1.45;}
+
+  /* fluxo de passos */
+  .steps-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  @media(max-width:980px){.steps-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.steps-grid{grid-template-columns:1fr;}}
+  .steps-line{position:absolute;left:10%;right:10%;top:50px;border-top:2px dashed var(--navy-600);opacity:.35;z-index:0;}
+  .steps-line .node{position:absolute;top:0;width:10px;height:10px;border-radius:50%;background:var(--mustard);transform:translate(-50%,-50%);box-shadow:0 0 0 5px var(--paper);}
+  @media(max-width:980px){.steps-line{display:none;}}
+  .step-card{position:relative;z-index:1;overflow:hidden;background:linear-gradient(165deg,var(--navy-900),var(--navy-950));color:#fff;border-radius:20px;padding:26px 24px 28px;box-shadow:0 16px 34px rgba(2,16,65,.22);transition:transform .3s ease, box-shadow .3s ease;}
+  .step-card::after{content:"";position:absolute;top:-40%;right:-30%;width:170px;height:170px;background:radial-gradient(circle, rgba(197,224,179,.32), transparent 70%);pointer-events:none;}
+  .step-card:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(2,16,65,.32);}
+  .step-card .num{position:absolute;top:18px;right:20px;font-family:'Playfair Display',serif;font-style:italic;font-size:30px;color:rgba(255,255,255,.22);}
+  .step-card .ic{position:relative;z-index:1;width:48px;height:48px;border-radius:14px;background:var(--mint-300);color:var(--navy-950);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px;box-shadow:0 8px 20px rgba(197,224,179,.35);}
+  .step-card h4{position:relative;z-index:1;font-size:17px;margin-bottom:8px;letter-spacing:-.02em;}
+  .step-card p{position:relative;z-index:1;font-size:13.5px;color:#C9D3EA;line-height:1.55;}
+
+  /* galeria duas fileiras */
+  .gallery-section{background:var(--tint);padding-bottom:72px;}
+  .gallery-rows{display:flex;flex-direction:column;gap:22px;}
+  .gallery-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);}
+  .gallery-track{display:flex;width:max-content;gap:22px;animation:galleryLeft 60s linear infinite;}
+  .gallery-track.reverse{animation-name:galleryRight;}
+  .gallery-wrap:hover .gallery-track{animation-play-state:paused;}
+  @keyframes galleryLeft{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  @keyframes galleryRight{0%{transform:translateX(-50%);}100%{transform:translateX(0);}}
+  .g-card{position:relative;width:280px;height:340px;flex-shrink:0;border-radius:22px;overflow:hidden;box-shadow:0 10px 24px rgba(2,16,65,.14);transition:transform .5s ease, box-shadow .5s ease;}
+  .g-card:hover{transform:translateY(-6px);box-shadow:0 24px 46px rgba(2,16,65,.26);}
+  .g-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+  .g-card:hover img{transform:scale(1.08);}
+  .g-card .ov{position:absolute;inset:0;background:linear-gradient(0deg, rgba(2,16,65,.95) 0%, rgba(2,16,65,.55) 42%, rgba(2,16,65,0) 75%);}
+  .g-card .ct{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;}
+  .g-card .gic{width:40px;height:40px;border-radius:12px;background:var(--mint-300);color:var(--navy-950);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px;}
+  .g-card h4{font-size:18px;letter-spacing:-.025em;margin-bottom:3px;}
+  .g-card p{font-size:12.5px;color:#C9D3EA;line-height:1.4;}
+  .g-card .real{position:absolute;top:14px;left:14px;z-index:2;background:rgba(255,255,255,.92);color:var(--navy-950);font-size:10.5px;font-weight:700;border-radius:999px;padding:4px 10px;}
+  @media(max-width:600px){.g-card{width:230px;height:290px;}}
+
+  /* diferenciais */
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:940px){.benefits-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.benefits-grid{grid-template-columns:1fr;}}
+  .benefit{position:relative;background:#fff;border-radius:20px;padding:28px 26px;border:1px solid var(--line);transition:transform .3s ease, box-shadow .3s ease;isolation:isolate;}
+  .benefit:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(2,16,65,.12);}
+  .benefit .ic{position:relative;width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--navy-950),var(--navy-600));color:var(--mint-300);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px;box-shadow:0 10px 22px rgba(2,16,65,.25);}
+  .benefit h4{font-size:18px;color:var(--navy-950);margin-bottom:8px;letter-spacing:-.025em;}
+  .benefit p{font-size:14.5px;color:var(--gray-600);}
+
+  @property --angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
+  .border-run{position:relative;isolation:isolate;}
+  .border-run::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;
+    background:conic-gradient(from var(--angle), transparent 0deg, var(--mint-300) 60deg, var(--mustard) 140deg, transparent 200deg, transparent 360deg);
+    -webkit-mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    animation:borderRun 6s linear infinite;opacity:0;transition:opacity .3s;pointer-events:none;z-index:2;}
+  .border-run:hover::before{opacity:1;animation-duration:2.2s;}
+  @keyframes borderRun{100%{--angle:360deg;}}
+
+  /* prova social — mensagens reais */
+  .proof{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--navy-900),var(--navy-950));color:#fff;border-radius:32px;margin:0 24px;padding:64px 56px;}
+  .proof::after{content:"";position:absolute;top:-30%;right:-8%;width:360px;height:360px;background:radial-gradient(circle, rgba(197,224,179,.25), transparent 70%);pointer-events:none;}
+  .proof-head{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-bottom:40px;}
+  .proof-head h2{font-size:clamp(30px,3.6vw,44px);max-width:16ch;}
+  .proof-head p{color:#C9D3EA;max-width:400px;font-size:15px;}
+  .proof .eyebrow{color:var(--mint-300);}
+  .chats{position:relative;z-index:1;columns:3 260px;column-gap:20px;}
+  .chat{break-inside:avoid;margin-bottom:20px;background:#fff;border-radius:18px;padding:10px;box-shadow:0 16px 36px rgba(0,0,0,.25);}
+  .chat img{border-radius:12px;width:100%;}
+  .chat small{display:block;color:var(--gray-600);font-size:11.5px;padding:8px 6px 2px;}
+  @media(max-width:700px){.proof{margin:0 12px;padding:44px 20px;border-radius:24px;}}
+
+  /* o que inclui */
+  .includes{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  @media(max-width:940px){.includes{grid-template-columns:1fr;gap:36px;}}
+  .inc-media{position:relative;}
+  .inc-media img{border-radius:28px;box-shadow:var(--shadow);width:100%;aspect-ratio:1264/755;object-fit:cover;}
+  .inc-media .tag{position:absolute;left:20px;bottom:-22px;background:var(--mustard);color:var(--navy-950);font-weight:800;border-radius:14px;padding:14px 18px;font-size:14px;letter-spacing:-.01em;box-shadow:0 14px 30px rgba(2,16,65,.18);}
+  .inc-list{display:flex;flex-direction:column;gap:12px;margin-top:8px;}
+  .inc-list li{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:15px;color:var(--navy-800);font-weight:600;}
+  .check{flex:none;width:26px;height:26px;border-radius:50%;background:var(--mint-300);color:var(--navy-950);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;}
+  .inc-list li small{display:block;font-weight:400;color:var(--gray-600);font-size:13px;}
+
+  /* sobre */
+  .about-sec{background:var(--tint);}
+  .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;}
+  @media(max-width:940px){.about{grid-template-columns:1fr;gap:40px;}}
+  .about-media{position:relative;max-width:460px;}
+  .about-media .ph{border-radius:28px 28px 200px 28px;overflow:hidden;background:var(--navy-photo);box-shadow:var(--shadow);}
+  .about-media img{width:100%;aspect-ratio:842/1000;object-fit:cover;object-position:50% 20%;}
+  .about-badge{position:absolute;bottom:26px;left:-18px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 18px 36px rgba(2,16,65,.2);}
+  .about-badge b{display:block;font-size:15px;color:var(--navy-950);letter-spacing:-.02em;}
+  .about-badge small{color:var(--gray-600);font-size:12px;}
+  @media(max-width:520px){.about-badge{left:12px;}}
+  .about h2{font-size:clamp(32px,4vw,46px);color:var(--navy-950);}
+  .about p{color:var(--gray-600);margin-top:18px;font-size:16.5px;}
+  .about-quote{margin-top:26px;border-left:4px solid var(--mustard);padding:6px 0 6px 20px;font-family:'Playfair Display',serif;font-style:italic;font-size:21px;line-height:1.45;color:var(--navy-950);}
+  .about-list{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:560px){.about-list{grid-template-columns:1fr;}}
+  .about-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--navy-800);font-weight:600;}
+
+  /* contato */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;}
+  @media(max-width:940px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:#fff;border-radius:24px;padding:36px;border:1px solid var(--line);box-shadow:var(--shadow);}
+  .c-item{display:flex;gap:14px;margin-bottom:22px;}
+  .c-item .ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--tint);color:var(--navy-950);display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .c-item h5{font-size:12.5px;color:var(--gray-600);font-weight:600;margin-bottom:2px;}
+  .c-item p{font-weight:700;font-size:15.5px;color:var(--navy-950);}
+  .c-item a{border-bottom:1px solid var(--line);}
+  .contact-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;}
+  .contact-btns .btn{flex:1;min-width:200px;}
+  .online-panel{position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(160deg,var(--navy-900),var(--navy-950));color:#fff;padding:40px;display:flex;flex-direction:column;justify-content:center;gap:22px;min-height:360px;}
+  .online-panel::after{content:"";position:absolute;right:-90px;bottom:-90px;width:280px;height:280px;border-radius:50%;background:var(--mustard);opacity:.18;}
+  .online-panel h3{font-size:28px;position:relative;z-index:1;}
+  .online-panel h3 .serif{color:var(--mint-300);}
+  .op-item{position:relative;z-index:1;display:flex;gap:14px;align-items:flex-start;}
+  .op-item .ic{flex:none;width:40px;height:40px;border-radius:12px;background:rgba(197,224,179,.16);color:var(--mint-300);display:flex;align-items:center;justify-content:center;font-size:17px;}
+  .op-item b{display:block;font-size:15.5px;}
+  .op-item span{font-size:13.5px;color:#C9D3EA;}
+
+  /* CTA + footer */
+  .cta-banner{position:relative;overflow:hidden;background:var(--mustard);color:var(--navy-950);border-radius:32px;margin:0 24px;padding:72px 24px;text-align:center;}
+  .cta-banner::before{content:"";position:absolute;left:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.25);}
+  .cta-banner h2{position:relative;font-size:clamp(34px,4.6vw,56px);letter-spacing:-.045em;}
+  .cta-banner p{position:relative;max-width:560px;margin:18px auto 30px;font-size:17px;color:var(--navy-800);}
+  .cta-banner .btn{position:relative;}
+  @media(max-width:700px){.cta-banner{margin:0 12px;border-radius:24px;padding:56px 20px;}}
+
+  footer{background:var(--navy-950);color:#C9D3EA;padding:60px 0 26px;margin-top:96px;}
+  .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;}
+  @media(max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+  footer h5{color:#fff;font-size:14px;margin-bottom:16px;letter-spacing:.04em;}
+  footer li{margin-bottom:10px;font-size:14px;}
+  footer li a:hover{color:var(--mint-300);}
+  footer .logo .name{color:#fff;}
+  footer .logo .sub{color:var(--mint-300);}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--gray-400);}
+
+  .whatsapp-float{position:fixed;bottom:22px;right:22px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px rgba(0,0,0,.25);z-index:60;transition:transform .4s ease;}
+  .whatsapp-float:hover{transform:scale(1.1) rotate(6deg);}
+  .whatsapp-float .ping{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#FF4D4D;border-radius:50%;border:2px solid #fff;animation:pulseDot 2s ease-in-out infinite;}
+  @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.55;transform:scale(1.2);}}
+
+  /* motion — progressive enhancement */
+  .reveal, .reveal-stagger > *{opacity:1;transform:none;}
+  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger > *{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94);}
+  .js .reveal-stagger.is-visible > *{opacity:1;transform:translateY(0);}
+  .js .reveal-stagger.is-visible > *:nth-child(2){transition-delay:.07s;}
+  .js .reveal-stagger.is-visible > *:nth-child(3){transition-delay:.14s;}
+  .js .reveal-stagger.is-visible > *:nth-child(4){transition-delay:.21s;}
+  .js .reveal-stagger.is-visible > *:nth-child(5){transition-delay:.28s;}
+  .js .reveal-stagger.is-visible > *:nth-child(6){transition-delay:.35s;}
+  .js .hero-copy > *{opacity:0;transform:translateY(22px);animation:heroIn .8s cubic-bezier(.25,.46,.45,.94) forwards;}
+  .js .hero-copy > *:nth-child(2){animation-delay:.08s;}
+  .js .hero-copy > *:nth-child(3){animation-delay:.16s;}
+  .js .hero-copy > *:nth-child(4){animation-delay:.24s;}
+  .js .hero-copy > *:nth-child(5){animation-delay:.32s;}
+  .js .hero-frame{animation:frameIn 1s cubic-bezier(.25,.46,.45,.94) both;}
+  @keyframes heroIn{to{opacity:1;transform:none;}}
+  @keyframes frameIn{from{opacity:0;transform:translateY(30px) scale(.97);}to{opacity:1;transform:none;}}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .gallery-track{animation:none;}
+    .border-run::before{animation:none;}
+    .js .reveal, .js .reveal-stagger > *{transition:none;opacity:1;transform:none;}
+    .js .hero-copy > *, .js .hero-frame{animation:none;opacity:1;transform:none;}
+    .whatsapp-float .ping{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div id="expiry-overlay"><div><h1 style="font-size:26px;margin:0 0 14px;">Esta prévia expirou</h1><p style="max-width:420px;margin:0 auto 26px;color:#c7ccd1;line-height:1.5;">Esse site foi uma demonstração da Generation IA Tech. Fale com a gente pra ativar a versão definitiva, com domínio próprio.</p><a href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Vi%20a%20pr%C3%A9via%20do%20meu%20site%20e%20quero%20ativar." style="display:inline-block;background:#25D366;color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;text-decoration:none;">Falar no WhatsApp</a></div></div>
+
+<div class="utility-bar">
+  <div class="container">
+    <span><span class="dot"></span>Consultas 100% online via Google Meet <span class="u-hide">· para todo o Brasil</span></span>
+    <span><span class="u-hide">CRN-3 82527 · </span><a href="https://www.instagram.com/nutrigabrielaajala_/" target="_blank" rel="noopener">@nutrigabrielaajala_</a></span>
+  </div>
+</div>
+
+<header id="siteHeader">
+  <div class="nav">
+    <a class="logo" href="#topo"><span class="name">Gabriela <i>Ajala</i></span><span class="sub">NUTRICIONISTA CLÍNICA</span></a>
+    <nav class="nav-links">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#acompanhamento">Acompanhamento</a>
+      <a href="#pacientes">Pacientes</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-ig" href="https://www.instagram.com/nutrigabrielaajala_/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
+      <a class="btn btn-navy" href="#agendar">Agendar consulta</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="topo">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="hero-tag"><b>100% online</b> Nutricionista Clínica · Emagrecimento e ganho de massa</span>
+      <h1>Emagrecer sem abrir mão da <span class="pill">sua vida.</span></h1>
+      <p class="lead">Acredito que resultados que duram não vêm de restrição, mas de uma alimentação que você consiga manter sem sofrimento.</p>
+      <div class="hero-cta">
+        <a class="btn btn-navy" href="#agendar">Quero marcar minha consulta →</a>
+        <a class="btn btn-outline" href="#como-funciona">Como funciona</a>
+      </div>
+      <div class="hero-no"><span>Sem dietas restritivas</span><span>Sem terrorismo alimentar</span></div>
+    </div>
+
+    <div class="hero-art-wrap">
+      <div class="hero-art">
+        <div class="hero-sun" aria-hidden="true"></div>
+        <div class="hero-frame"><img src="fotos/gabriela-blazer.jpg" alt="Gabriela Ajala, nutricionista clínica" fetchpriority="high"></div>
+        <div class="hero-sticker">Emagrecimento<br>Ganho de massa<small>acompanhamento flexível</small></div>
+        <div class="hero-crn">CRN-3 82527<span>Pós em Nutrição Clínica · PUCRS</span></div>
+        <div class="book-card" id="agendar">
+          <h3>Vamos conversar?</h3>
+          <p class="sub">Escolha as opções e a mensagem já sai pronta no WhatsApp.</p>
+          <div class="field">
+            <label for="fieldObjetivo">Seu objetivo</label>
+            <select id="fieldObjetivo">
+              <option value="emagrecer">Emagrecer</option>
+              <option value="ganhar massa muscular">Ganhar massa muscular</option>
+              <option value="melhorar minha relação com a comida">Melhorar minha relação com a comida</option>
+              <option value="">Ainda não sei, quero conversar</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fieldHistorico">Já fez dieta antes?</label>
+            <select id="fieldHistorico">
+              <option value="Já tentei outras dietas antes, mas não consegui manter.">Já tentei, mas não consegui manter</option>
+              <option value="Seria meu primeiro acompanhamento com nutricionista.">Seria meu primeiro acompanhamento</option>
+              <option value="">Prefiro contar na conversa</option>
+            </select>
+          </div>
+          <button type="button" id="scheduleBtn" class="btn btn-navy">Enviar no WhatsApp →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pain">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Isso parece familiar?</span>
+      <h2>Se você já tentou de tudo, <span class="serif" style="color:var(--mint-300);">não é falta de disciplina.</span></h2>
+    </div>
+    <div class="pain-grid reveal-stagger">
+      <div class="pain-card"><span class="q">“</span>Você já perdeu peso com dieta, mas recuperou tudo depois.</div>
+      <div class="pain-card"><span class="q">“</span>Sente que precisa de uma força de vontade que nunca dura o suficiente.</div>
+      <div class="pain-card"><span class="q">“</span>Tenta comer bem durante a semana, mas no fim de semana “estraga tudo” e a culpa bate junto.</div>
+      <div class="pain-card"><span class="q">“</span>Já tentou tantas coisas que não sabe mais o que realmente funciona para o seu corpo.</div>
+    </div>
+    <div class="pain-close reveal">
+      <p>É falta de um acompanhamento que funcione para a sua vida real, não para uma vida ideal que não existe.</p>
+      <a class="btn btn-navy" href="#agendar">Dar o primeiro passo</a>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como funciona o acompanhamento</span>
+      <h2>Do primeiro contato à sua <span class="pill pill-mint serif">autonomia</span></h2>
+      <p>Mudanças graduais, sustentáveis e, acima de tudo, suas — com ferramentas comportamentais em cada etapa.</p>
+    </div>
+    <div class="steps-grid reveal-stagger">
+      <div class="steps-line" aria-hidden="true"><span class="node" style="left:0%"></span><span class="node" style="left:33.3%"></span><span class="node" style="left:66.6%"></span><span class="node" style="left:100%"></span></div>
+      <a class="step-card border-run" href="#agendar">
+        <span class="num">01</span><div class="ic">💬</div>
+        <h4>Primeiro contato</h4>
+        <p>Uma conversa para entender se faz sentido para você, sem pressa e sem compromisso antes disso.</p>
+      </a>
+      <div class="step-card border-run">
+        <span class="num">02</span><div class="ic">🔎</div>
+        <h4>Diagnóstico completo</h4>
+        <p>Entendo sua rotina, histórico, hábitos e o que você quer alcançar. Sem julgamentos. Criamos juntas um plano para o seu ponto de partida.</p>
+      </div>
+      <div class="step-card border-run">
+        <span class="num">03</span><div class="ic">🔄</div>
+        <h4>Ajuste e evolução</h4>
+        <p>Revisamos o que está funcionando, ajustamos o necessário e aprofundamos o trabalho comportamental.</p>
+      </div>
+      <div class="step-card border-run">
+        <span class="num">04</span><div class="ic">🌱</div>
+        <h4>Autonomia</h4>
+        <p>Você sai sabendo fazer suas próprias escolhas — sem precisar de dieta nem de regras externas para se sentir bem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="acompanhamento">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Trabalhamos com o que é real</span>
+      <h2>Sua rotina, seus hábitos, <span class="serif">seus momentos de celebração.</span></h2>
+      <p>Aqui você não vai receber uma lista de alimentos proibidos nem metas impossíveis. A festa de aniversário e o jantar com amigos fazem parte da vida — e do processo também.</p>
+    </div>
+  </div>
+  <div class="gallery-rows">
+    <div class="gallery-wrap">
+      <div class="gallery-track">
+        <div class="g-card"><img src="fotos/prato-carne-legumes.jpg" alt="Prato de carne com legumes assados, do dia a dia da Gabriela" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">⚖️</div><h4>Emagrecimento</h4><p>Sem restrição, com comida de verdade</p></div></div>
+        <div class="g-card"><img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=75&w=700&auto=format&fit=crop" alt="Mulher treinando com barra na academia (foto ilustrativa)" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">💪</div><h4>Ganho de massa muscular</h4><p>Estratégia nutricional para o seu treino</p></div></div>
+        <div class="g-card"><img src="fotos/gabriela-notebook.jpg" alt="Gabriela Ajala atendendo pelo notebook" style="object-position:30% 50%" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">💻</div><h4>Consultas pelo Google Meet</h4><p>Individuais, de até 1h30 cada</p></div></div>
+        <div class="g-card"><img src="fotos/prato-salmao.jpg" alt="Salmão com batatas e salada, do dia a dia da Gabriela" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">🍽️</div><h4>Cardápio personalizado</h4><p>Feito para a sua rotina, não para uma vida ideal</p></div></div>
+        <div class="g-card"><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=75&w=700&auto=format&fit=crop" alt="Pessoa escrevendo uma lista de tarefas em um caderno (foto ilustrativa)" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">🧠</div><h4>Ferramentas comportamentais</h4><p>Mudanças graduais e sustentáveis</p></div></div>
+        <div class="g-card"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=75&w=700&auto=format&fit=crop" alt="Celular sobre a mesa (foto ilustrativa)" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">⏱️</div><h4>Suporte em até 24h</h4><p>Para dúvidas durante o acompanhamento</p></div></div>
+        <!-- duplicado para o loop -->
+        <div class="g-card" aria-hidden="true"><img src="fotos/prato-carne-legumes.jpg" alt="" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">⚖️</div><h4>Emagrecimento</h4><p>Sem restrição, com comida de verdade</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=75&w=700&auto=format&fit=crop" alt="" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">💪</div><h4>Ganho de massa muscular</h4><p>Estratégia nutricional para o seu treino</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="fotos/gabriela-notebook.jpg" alt="" style="object-position:30% 50%" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">💻</div><h4>Consultas pelo Google Meet</h4><p>Individuais, de até 1h30 cada</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="fotos/prato-salmao.jpg" alt="" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">🍽️</div><h4>Cardápio personalizado</h4><p>Feito para a sua rotina, não para uma vida ideal</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=75&w=700&auto=format&fit=crop" alt="" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">🧠</div><h4>Ferramentas comportamentais</h4><p>Mudanças graduais e sustentáveis</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=75&w=700&auto=format&fit=crop" alt="" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">⏱️</div><h4>Suporte em até 24h</h4><p>Para dúvidas durante o acompanhamento</p></div></div>
+      </div>
+    </div>
+    <div class="gallery-wrap">
+      <div class="gallery-track reverse">
+        <div class="g-card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=75&w=700&auto=format&fit=crop" alt="Jantar entre amigos em restaurante (foto ilustrativa)" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">🥂</div><h4>Festas e jantares</h4><p>Fazem parte da vida e do processo</p></div></div>
+        <div class="g-card"><img src="fotos/dia-mercado.jpg" alt="Gabriela escolhendo produtos no mercado" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">🛒</div><h4>Sem lista de proibidos</h4><p>Escolhas possíveis, no mercado de verdade</p></div></div>
+        <div class="g-card"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=75&w=700&auto=format&fit=crop" alt="Calendário de mesa ao lado de uma xícara de café (foto ilustrativa)" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">📅</div><h4>30 dias de acompanhamento</h4><p>Ajustes conforme a sua evolução</p></div></div>
+        <div class="g-card"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=75&w=700&auto=format&fit=crop" alt="Pessoa estudando com caderno e caneta (foto ilustrativa)" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">📚</div><h4>Conteúdos exclusivos</h4><p>Na plataforma de atendimento</p></div></div>
+        <div class="g-card"><img src="fotos/prato-salada.jpg" alt="Salada com frango, do dia a dia da Gabriela" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">🌱</div><h4>Autonomia alimentar</h4><p>Comer bem como algo natural, não uma batalha</p></div></div>
+        <div class="g-card"><img src="fotos/gabriela-praia.jpg" alt="Gabriela Ajala sorrindo à beira-mar" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">☀️</div><h4>Vida real, sem culpa</h4><p>Resultado que cabe na sua rotina</p></div></div>
+        <!-- duplicado para o loop -->
+        <div class="g-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=75&w=700&auto=format&fit=crop" alt="" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">🥂</div><h4>Festas e jantares</h4><p>Fazem parte da vida e do processo</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="fotos/dia-mercado.jpg" alt="" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">🛒</div><h4>Sem lista de proibidos</h4><p>Escolhas possíveis, no mercado de verdade</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=75&w=700&auto=format&fit=crop" alt="" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">📅</div><h4>30 dias de acompanhamento</h4><p>Ajustes conforme a sua evolução</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=75&w=700&auto=format&fit=crop" alt="" loading="lazy"><div class="ov"></div><div class="ct"><div class="gic">📚</div><h4>Conteúdos exclusivos</h4><p>Na plataforma de atendimento</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="fotos/prato-salada.jpg" alt="" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">🌱</div><h4>Autonomia alimentar</h4><p>Comer bem como algo natural, não uma batalha</p></div></div>
+        <div class="g-card" aria-hidden="true"><img src="fotos/gabriela-praia.jpg" alt="" loading="lazy"><div class="ov"></div><span class="real">do dia a dia dela</span><div class="ct"><div class="gic">☀️</div><h4>Vida real, sem culpa</h4><p>Resultado que cabe na sua rotina</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Por que a Gabriela</span>
+      <h2>Uma abordagem diferente do que você <span class="serif">já tentou</span></h2>
+    </div>
+    <div class="benefits-grid reveal-stagger">
+      <div class="benefit border-run"><div class="ic">🚫</div><h4>Sem dietas restritivas</h4><p>A maioria das pessoas não precisa de mais restrição — precisa de um olhar mais cuidadoso sobre a própria relação com a comida.</p></div>
+      <div class="benefit border-run"><div class="ic">🤍</div><h4>Sem terrorismo alimentar</h4><p>Nenhum alimento vira vilão. Acompanhamento flexível, sem culpa e sem julgamentos.</p></div>
+      <div class="benefit border-run"><div class="ic">🧠</div><h4>Ferramentas comportamentais</h4><p>Para que cada mudança seja gradual, sustentável e, acima de tudo, sua.</p></div>
+      <div class="benefit border-run"><div class="ic">🗓️</div><h4>Feito para a sua rotina</h4><p>Seus horários, seus hábitos e seus momentos de celebração entram no plano.</p></div>
+      <div class="benefit border-run"><div class="ic">💬</div><h4>Suporte em até 24h</h4><p>Dúvidas respondidas durante todo o acompanhamento, sem ficar sozinha no processo.</p></div>
+      <div class="benefit border-run"><div class="ic">🎓</div><h4>Pós em Nutrição Clínica</h4><p>Formada em Nutrição e pós-graduada pela PUCRS, com atualização constante.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pacientes" style="padding-top:0;">
+  <div class="proof">
+    <div class="proof-head reveal">
+      <div>
+        <span class="eyebrow">O que dizem os pacientes</span>
+        <h2>Mensagens reais, <span class="serif" style="color:var(--mint-300);">do jeito que chegaram.</span></h2>
+      </div>
+      <p>Prints de conversas com pacientes, publicados pela própria Gabriela — sem nomes, sem edição de texto.</p>
+    </div>
+    <div class="chats reveal-stagger">
+      <figure class="chat"><img src="fotos/depoimento-2.jpg" alt="Print de conversa: paciente conta que as roupas ficaram largas e que está mais disposta e dormindo melhor" loading="lazy"><small>Paciente · cerca de 30 dias de acompanhamento</small></figure>
+      <figure class="chat"><img src="fotos/depoimento-4.jpg" alt="Print de conversa: paciente agradece pelo atendimento e diz que já viu melhorias na rotina mudando pequenos hábitos" loading="lazy"><small>Paciente · após a primeira consulta</small></figure>
+      <figure class="chat"><img src="fotos/depoimento-1.jpg" alt="Print de conversa: paciente conta que voltou a vestir shorts antigos" loading="lazy"><small>Paciente · conversa no WhatsApp</small></figure>
+      <figure class="chat"><img src="fotos/depoimento-5.jpg" alt="Print de conversa: paciente conta que foi de 60 kg para 73 kg no ganho de massa" loading="lazy"><small>Paciente · ganho de massa muscular</small></figure>
+      <figure class="chat"><img src="fotos/depoimento-3.jpg" alt="Print de conversa: paciente diz ter mais energia e não sentir mais sono durante o dia" loading="lazy"><small>Paciente · conversa no WhatsApp</small></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container includes">
+    <div class="inc-media reveal">
+      <img src="fotos/gabriela-notebook.jpg" alt="Gabriela Ajala em atendimento online pelo notebook" loading="lazy">
+      <div class="tag">💻 Atendimento 100% online</div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">O que inclui</span>
+      <h2 style="font-size:clamp(32px,4vw,46px);color:var(--navy-950);">Tudo o que você recebe no <span class="serif">acompanhamento</span></h2>
+      <ul class="inc-list" style="margin-top:26px;">
+        <li><span class="check">✓</span><span>Consultas individuais via Google Meet<small>Até 1h30 cada</small></span></li>
+        <li><span class="check">✓</span><span>30 dias de acompanhamento</span></li>
+        <li><span class="check">✓</span><span>Suporte para dúvidas em até 24 horas</span></li>
+        <li><span class="check">✓</span><span>Cardápio personalizado</span></li>
+        <li><span class="check">✓</span><span>Ferramentas de mudança comportamental</span></li>
+        <li><span class="check">✓</span><span>Acesso a conteúdos exclusivos<small>Na plataforma de atendimento</small></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="about-sec" id="sobre">
+  <div class="container about">
+    <div class="about-media reveal">
+      <div class="ph"><img src="fotos/gabriela-retrato.jpg" alt="Retrato de Gabriela Ajala, nutricionista clínica" loading="lazy"></div>
+      <div class="about-badge"><b>CRN-3 82527</b><small>Nutricionista Clínica</small></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Olá, sou a Gabi</span>
+      <h2>Gabriela Ajala, <span class="serif">nutricionista clínica</span></h2>
+      <p>Sou formada em Nutrição e pós-graduada em Nutrição Clínica pela PUCRS. Me interesso por saúde e qualidade de vida desde sempre e me atualizo constantemente, porque sei que cuidar de alguém exige responsabilidade.</p>
+      <p>Escolhi trabalhar com emagrecimento porque acredito que a maioria das pessoas não precisa de mais restrição. Precisa de um olhar mais cuidadoso sobre a própria relação com a comida.</p>
+      <blockquote class="about-quote">“Meu trabalho é te ajudar a chegar num lugar onde você não precise mais de dieta: onde comer bem seja algo natural, não uma batalha diária.”</blockquote>
+      <ul class="about-list">
+        <li><span class="check">✓</span>Pós-graduada em Nutrição Clínica (PUCRS)</li>
+        <li><span class="check">✓</span>Emagrecimento e ganho de massa muscular</li>
+        <li><span class="check">✓</span>Atendimento 100% online</li>
+        <li><span class="check">✓</span>Abordagem comportamental e flexível</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contato</span>
+      <h2>A consulta inicial é para entender <span class="serif">se faz sentido para você.</span></h2>
+      <p>Sem pressa e sem compromisso antes disso.</p>
+    </div>
+    <div class="contact-grid reveal-stagger">
+      <div class="contact-card">
+        <div class="c-item"><div class="ic">💬</div><div><h5>WhatsApp</h5><p><a href="https://wa.me/5567981819269?text=Ol%C3%A1%2C%20Gabriela!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20sobre%20suas%20consultas." target="_blank" rel="noopener">(67) 98181-9269</a></p></div></div>
+        <div class="c-item"><div class="ic">💻</div><div><h5>Atendimento</h5><p>100% online, via Google Meet</p></div></div>
+        <div class="c-item"><div class="ic">📷</div><div><h5>Instagram</h5><p><a href="https://www.instagram.com/nutrigabrielaajala_/" target="_blank" rel="noopener">@nutrigabrielaajala_</a></p></div></div>
+        <div class="c-item"><div class="ic">🎓</div><div><h5>Registro profissional</h5><p>CRN-3 82527</p></div></div>
+        <div class="contact-btns">
+          <a class="btn btn-navy" href="https://wa.me/5567981819269?text=Ol%C3%A1%2C%20Gabriela!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20sobre%20suas%20consultas." target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a class="btn btn-outline" href="https://www.instagram.com/nutrigabrielaajala_/" target="_blank" rel="noopener">Seguir no Instagram</a>
+        </div>
+      </div>
+      <div class="online-panel">
+        <h3>Atendimento <span class="serif">de onde você estiver</span></h3>
+        <div class="op-item"><div class="ic">🌍</div><div><b>Online para todo o Brasil</b><span>Consultas por videochamada, sem deslocamento</span></div></div>
+        <div class="op-item"><div class="ic">⏳</div><div><b>Consultas de até 1h30</b><span>Tempo para entender sua rotina de verdade</span></div></div>
+        <div class="op-item"><div class="ic">📲</div><div><b>Suporte em até 24h</b><span>Dúvidas respondidas durante o acompanhamento</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0;">
+  <div class="cta-banner reveal">
+    <h2>Pronta pra dar o <span class="serif">1º passo?</span></h2>
+    <p>Se você chegou até aqui, provavelmente já está pensando nisso há um tempo.</p>
+    <a class="btn btn-navy" href="#agendar">Quero dar o primeiro passo →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:14px;"><span class="name">Gabriela <i>Ajala</i></span><span class="sub">NUTRICIONISTA CLÍNICA</span></div>
+      <p style="max-width:340px;font-size:14px;">Emagrecimento e ganho de massa muscular com acompanhamento flexível: sem dietas restritivas, sem terrorismo alimentar. Atendimento 100% online.</p>
+    </div>
+    <div>
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#acompanhamento">Acompanhamento</a></li>
+        <li><a href="#pacientes">Pacientes</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contato</h5>
+      <ul>
+        <li><a href="https://wa.me/5567981819269" target="_blank" rel="noopener">(67) 98181-9269</a></li>
+        <li><a href="https://www.instagram.com/nutrigabrielaajala_/" target="_blank" rel="noopener">@nutrigabrielaajala_</a></li>
+        <li>CRN-3 82527</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© 2026 Gabriela Ajala Nutricionista. Todos os direitos reservados.</span>
+    <span>Atendimento online · Google Meet</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5567981819269?text=Ol%C3%A1%2C%20Gabriela!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20sobre%20suas%20consultas." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg>
+  <span class="ping"></span>
+</a>
+
+<script>
+(function(){
+  var WA = '5567981819269';
+  var btn = document.getElementById('scheduleBtn');
+  if (btn) {
+    btn.addEventListener('click', function(){
+      var objetivo = document.getElementById('fieldObjetivo').value;
+      var historico = document.getElementById('fieldHistorico').value;
+      var msg = 'Olá, Gabriela! Vim pelo site e gostaria de saber sobre o acompanhamento nutricional.';
+      if (objetivo) msg += ' Meu objetivo é ' + objetivo + '.';
+      if (historico) msg += ' ' + historico;
+      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank');
+    });
+  }
+
+  var header = document.getElementById('siteHeader');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
