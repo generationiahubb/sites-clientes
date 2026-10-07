@@ -307,13 +307,13 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
   .about{background:var(--paper);}
   .about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center;}
   .about-photo{position:relative;}
-  .about-photo .frame{border-radius:4px;overflow:hidden;box-shadow:var(--shadow-lg);transform:rotate(1.5deg);}
+  .about-photo .frame{border-radius:4px;overflow:hidden;box-shadow:var(--shadow-lg);}
   .about-photo img{width:100%;aspect-ratio:11/8;object-fit:cover;}
-  .about-badge{position:absolute;left:-18px;bottom:-26px;background:var(--brand-500);color:#fff;padding:18px 22px;border-radius:4px;box-shadow:var(--shadow-lg);transform:rotate(-3deg);}
+  .about-badge{position:absolute;left:24px;bottom:-26px;background:var(--brand-500);color:#fff;padding:18px 22px;border-radius:4px;box-shadow:var(--shadow-lg);}
   .about-badge b{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;line-height:1;}
   .about-badge span{font-size:13.5px;opacity:.92;}
-  .about-caption{margin-top:30px;padding-left:190px;font-size:13.5px;color:var(--gray-400);}
-  @media(max-width:520px){.about-caption{padding-left:0;margin-top:56px;}}
+  .about-caption{margin-top:30px;padding-left:250px;font-size:13.5px;color:var(--gray-400);}
+  @media(max-width:980px){.about-badge{position:relative;left:auto;bottom:auto;display:inline-block;margin:-28px 0 0 16px;}.about-caption{padding-left:0;margin-top:12px;}}
   .about-text h2{font-weight:800;font-size:clamp(38px,4.4vw,58px);color:var(--brand-600);}
   .about-text h2 .ink{color:var(--ink);}
   .about-text > p{margin-top:18px;color:var(--gray-600);font-size:18px;}
@@ -321,7 +321,7 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
   .checks li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px;}
   .checks li i{flex-shrink:0;width:26px;height:26px;border-radius:3px;background:linear-gradient(135deg,var(--brand-500),var(--brand-400));display:grid;place-items:center;margin-top:1px;}
   .checks li i svg{width:14px;height:14px;}
-  @media(max-width:980px){.about-grid{grid-template-columns:1fr;gap:56px;}.about-badge{left:10px;}}
+  @media(max-width:980px){.about-grid{grid-template-columns:1fr;gap:56px;}}
 
   /* Contato */
   .contact{background:var(--cream);}
