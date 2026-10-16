@@ -118,20 +118,23 @@ h3{font-size:2rem}
 .burger span{display:block;height:2px;background:currentColor;margin:6px 0;transition:transform .3s}
 
 /* HERO */
-.hero{padding:0;position:relative;min-height:calc(100vh - 112px);min-height:calc(100svh - 112px);display:grid;place-items:end center;overflow:hidden;background:radial-gradient(60% 60% at 50% 40%,#1d1a0c 0%,var(--ink) 70%);color:#fff;isolation:isolate}
+.hero{--pw:min(34vw,500px);padding:0;position:relative;min-height:max(calc(100vh - 112px),560px);min-height:max(calc(100svh - 112px),560px);display:grid;place-items:end center;overflow:hidden;background:radial-gradient(60% 60% at 50% 40%,#1d1a0c 0%,var(--ink) 70%);color:#fff;isolation:isolate}
 .hero .wallfx{position:absolute;inset:0;z-index:-2;pointer-events:none;user-select:none}
 .wallfx span{position:absolute;white-space:nowrap;color:rgba(255,255,255,.075);font-family:var(--display);text-transform:uppercase;line-height:1}
 .wallfx span.h{font-family:var(--hand);text-transform:none;color:rgba(255,255,255,.09)}
 .wallfx span.y{color:rgba(249,203,4,.13)}
-.hero .photo{position:absolute;z-index:-1;top:0;bottom:0;left:50%;transform:translateX(-50%);width:min(36vw,520px);margin:0}
+.hero .photo{position:absolute;z-index:-1;top:0;bottom:0;left:50%;transform:translateX(-50%);width:var(--pw);margin:0}
 .hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 0;filter:contrast(1.05) saturate(.92)}
 .hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(11,11,11,0) 16%,rgba(11,11,11,0) 84%,var(--ink) 100%),linear-gradient(0deg,var(--ink) 6%,rgba(11,11,11,.5) 30%,rgba(11,11,11,0) 52%),linear-gradient(180deg,var(--ink) 0%,rgba(11,11,11,0) 9%)}
-.hero .photo figcaption{position:absolute;right:-14px;top:38%;transform:rotate(90deg) translateX(50%);transform-origin:right top;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.5);white-space:nowrap}
-.hero-in{position:relative;text-align:center;padding:0 20px 40px;width:100%}
+.hero .photo figcaption{display:none;position:absolute;right:-14px;top:38%;transform:rotate(90deg) translateX(50%);transform-origin:right top;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.5);white-space:nowrap}
+.hero-in{position:static;text-align:center;padding:0 20px 36px;width:100%}
 .hero .kicker{position:absolute;top:22px;left:50%;transform:translateX(-50%);z-index:2;white-space:nowrap;margin:0;font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--y);background:rgba(0,0,0,.72);padding:9px 16px;border-radius:999px;border:1px solid rgba(249,203,4,.35)}
-.hero h1{font-size:clamp(4.6rem,min(12vw,19vh),11rem);line-height:.8;letter-spacing:.01em;text-shadow:0 6px 40px rgba(0,0,0,.55)}
-.hero h1 .l1{display:block;color:#fff}
-.hero h1 .l2{display:block;color:var(--y)}
+/* desktop: as duas palavras ladeiam a foto na altura do rosto, nunca por cima dele */
+.hero h1{position:absolute;left:0;right:0;top:30%;transform:translateY(-50%);display:flex;justify-content:space-between;align-items:center;padding:0 24px;font-size:clamp(3rem,calc(12vw - 14px),11rem);line-height:.8;letter-spacing:.01em;text-shadow:0 6px 40px rgba(0,0,0,.55);pointer-events:none}
+.hero h1 .l1,.hero h1 .l2{display:block;width:calc((100% - var(--pw)) / 2 - 20px);padding-top:.06em}
+.hero h1 .l1{color:#fff;text-align:right}
+.hero h1 .l2{color:var(--y);text-align:left}
+.hero .wallfx{opacity:.55}
 .hero .sub{max-width:640px;margin:18px auto 0;font-size:1.08rem;color:#DEDCD4}
 .hero .sub b{color:#fff}
 .hero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px}
@@ -365,7 +368,9 @@ footer .legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:22px
   .hero-in{margin-top:-200px;padding-bottom:34px}
   .hero .photo figcaption{display:none}
   .wallfx{display:none}
-  .hero h1{font-size:clamp(4.4rem,24vw,7rem)}
+  .hero h1{position:static;transform:none;display:block;padding:0;font-size:clamp(4.4rem,24vw,7rem)}
+  .hero h1 .l1,.hero h1 .l2{width:auto;text-align:center;padding-top:0}
+  .hero-in{position:relative}
   .hero .sub{font-size:1rem}
   .hero .ctas .btn{width:100%}
   .flow,.mods{grid-template-columns:minmax(0,1fr)}
