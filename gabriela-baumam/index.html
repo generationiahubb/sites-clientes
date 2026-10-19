@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script>
+(function(){
+  var EXPIRES_AT = new Date('2026-10-26T23:59:59-03:00').getTime(); // publicação 19/10/26 + 7 dias
+  if (Date.now() > EXPIRES_AT) { document.documentElement.classList.add('site-expired'); }
+})();
+</script>
+<style>
+html.site-expired #expiry-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#111417;color:#fff;font-family:Arial,Helvetica,sans-serif;text-align:center;padding:32px;box-sizing:border-box;}
+html:not(.site-expired) #expiry-overlay{display:none;}
+html.site-expired body>*:not(#expiry-overlay){display:none!important;}
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriela Baumam · Disciplina & Fitness · Influencer e UGC Creator</title>
+<meta name="description" content="Gabriela Baumam (@gabrielabaumam): 71,3 mil seguidores sobre treino, dieta e disciplina. Reels, stories e UGC para marcas, mídia kit e cupons.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Gabriela Baumam · Disciplina & Fitness">
+<meta property="og:description" content="Rotina, boletos e cansaço — e mesmo assim ela não falha nos treinos. Parcerias, UGC, mídia kit e cupons.">
+<meta property="og:url" content="https://generationiahubb.github.io/sites-clientes/gabriela-baumam/">
+<meta property="og:image" content="https://generationiahubb.github.io/sites-clientes/gabriela-baumam/hero-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gabriela Baumam · Disciplina & Fitness">
+<meta name="twitter:description" content="Influencer e UGC creator fitness. Parcerias, mídia kit e cupons.">
+<meta name="twitter:image" content="https://generationiahubb.github.io/sites-clientes/gabriela-baumam/hero-preview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gabriela Baumam",
+  "alternateName": "@gabrielabaumam",
+  "jobTitle": "Influenciadora digital e UGC creator",
+  "description": "Criadora de conteúdo sobre treino, alimentação, saúde, disciplina e hábitos saudáveis.",
+  "url": "https://generationiahubb.github.io/sites-clientes/gabriela-baumam/",
+  "image": "https://generationiahubb.github.io/sites-clientes/gabriela-baumam/fotos/sobre-retrato.jpg",
+  "email": "mailto:gabriela.baumam@gmail.com",
+  "telephone": "+55 11 99475-9288",
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universidade de São Paulo"},
+  "sameAs": [
+    "https://www.instagram.com/gabrielabaumam/",
+    "https://www.tiktok.com/@gabrielabaumam",
+    "https://msha.ke/gabrielabaumam"
+  ]
+}
+</script>
+<style>
+:root{
+  --paper:#EEE9E4;
+  --paper-2:#E4DDD6;
+  --ink:#17131F;
+  --ink-2:#4A4452;
+  --pink:#D71664;
+  --pink-text:#B10F51;
+  --blush:#FC839B;
+  --magenta:#BB358B;
+  --line:rgba(23,19,31,.14);
+  --sans:'Familjen Grotesk','Helvetica Neue',Arial,sans-serif;
+  --script:'Mrs Saint Delafield',cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+section{padding:104px 0}
+.hero{padding:0}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-text);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--pink)}
+h2.title{font-size:clamp(34px,4.6vw,58px);line-height:.98;font-weight:700;text-transform:uppercase;letter-spacing:.01em;margin:18px 0 22px}
+h2.title em{font-family:var(--script);font-style:normal;text-transform:none;font-weight:400;color:var(--pink);font-size:1.35em;letter-spacing:0;line-height:.6;display:inline-block;transform:translateY(.08em)}
+.lead{font-size:20px;color:var(--ink-2);max-width:620px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:17px 28px;font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:background .25s,color .25s,transform .25s,border-color .25s}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--pink);border-color:var(--pink);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+
+/* barra utilitária */
+.util{background:var(--ink);color:#D9D3CC;font-size:13px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:40px}
+.util a{text-decoration:none}
+.util a:hover{color:#fff}
+.util .verif{display:inline-flex;align-items:center;gap:6px}
+.util .verif svg{width:14px;height:14px}
+.util .dot{opacity:.4;margin:0 8px}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(238,233,228,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
+header.nav.scrolled{border-color:var(--line);box-shadow:0 10px 30px -18px rgba(23,19,31,.35)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:var(--script);font-size:44px;line-height:1;text-decoration:none;color:var(--ink);padding-top:8px}
+.nav ul{display:flex;gap:30px;list-style:none}
+.nav ul a{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--pink);transition:width .3s}
+.nav ul a:hover::after{width:100%}
+.nav-r{display:flex;align-items:center;gap:14px}
+.ig-ico{width:42px;height:42px;display:grid;place-items:center;border:2px solid var(--ink);transition:background .25s,color .25s}
+.ig-ico:hover{background:var(--ink);color:var(--paper)}
+.ig-ico svg{width:18px;height:18px}
+.nav .btn{padding:12px 20px;font-size:12px}
+.burger{display:none;background:none;border:2px solid var(--ink);width:42px;height:42px;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);margin:4px auto}
+
+/* HERO split editorial */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:calc(100vh - 116px);min-height:calc(100svh - 116px)}
+.hero-copy{padding:48px 56px 48px max(32px,calc((100vw - 1240px)/2 + 32px));display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero-sign{font-family:var(--script);font-size:clamp(64px,6.4vw,98px);line-height:1;color:var(--pink);margin:26px 0 22px;transform:rotate(-3deg);transform-origin:left;white-space:nowrap}
+.hero h1{font-size:clamp(32px,3.5vw,52px);line-height:1.1;font-weight:700;text-transform:uppercase;letter-spacing:.005em;max-width:12.5em}
+.hero h1 .hl{background:var(--ink);color:var(--paper);padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero-sub{margin:22px 0 28px;font-size:19px;color:var(--ink-2);max-width:500px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-stats{display:flex;gap:0;margin-top:34px;border-top:1px solid var(--line);padding-top:22px;max-width:560px}
+.hero-stats div{flex:1;padding-right:18px}
+.hero-stats div+div{padding-left:18px;border-left:1px solid var(--line)}
+.hero-stats b{display:block;font-size:30px;line-height:1;font-weight:700}
+.hero-stats span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.hero-photo{position:relative;overflow:hidden;background:var(--paper-2)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;transform:scale(1.04);animation:heroZoom 1.6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-tag{position:absolute;left:24px;bottom:24px;background:var(--paper);padding:14px 18px;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 18px 40px -20px rgba(0,0,0,.5)}
+.hero-tag i{width:10px;height:10px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 0 rgba(215,22,100,.6);animation:pulse 2s infinite}
+.hero-coupon{position:absolute;right:24px;top:24px;background:var(--pink);color:#fff;padding:12px 16px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transform:rotate(3deg)}
+
+/* faixa marcas */
+.brands{padding:30px 0;background:var(--ink);color:var(--paper);overflow:hidden}
+.brands .wrap{display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:space-between}
+.brands small{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#A9A1B0}
+.brands ul{display:flex;gap:46px;list-style:none;flex-wrap:wrap;align-items:center}
+.brands li{font-size:26px;font-weight:700;letter-spacing:.02em}
+.brands li a{text-decoration:none;transition:color .2s}
+.brands li a:hover{color:var(--blush)}
+
+/* sobre */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%}
+.about-photo .sig{position:absolute;right:-18px;bottom:-34px;font-family:var(--script);font-size:86px;color:var(--pink);transform:rotate(-6deg);line-height:1;text-shadow:0 2px 0 var(--paper)}
+.about-photo .badge{position:absolute;left:-18px;top:28px;background:var(--paper);border:2px solid var(--ink);padding:14px 18px;font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.1em;line-height:1.3}
+.about-photo .badge b{display:block;font-size:30px;letter-spacing:0;color:var(--pink-text)}
+.checks{list-style:none;margin:30px 0 36px;display:grid;grid-template-columns:1fr 1fr;gap:14px 26px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
+.checks li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;background:linear-gradient(135deg,var(--pink),var(--magenta));-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-1.6 17.2-5-5 1.8-1.8 3.2 3.2 7-7 1.8 1.8z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-1.6 17.2-5-5 1.8-1.8 3.2 3.2 7-7 1.8 1.8z'/%3E%3C/svg%3E") center/contain no-repeat}
+.quote{font-size:22px;font-style:italic;font-weight:500;border-left:3px solid var(--pink);padding-left:20px;margin-top:8px;max-width:520px}
+
+/* fluxo de passos */
+.steps{background:var(--paper-2)}
+.steps-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+.steps-grid::before{content:"";position:absolute;left:6%;right:6%;top:42px;border-top:2px dashed rgba(215,22,100,.45)}
+.step{position:relative;background:linear-gradient(160deg,#241C2E,var(--ink));color:var(--paper);padding:30px 26px 32px;min-height:250px}
+.step .node{width:84px;height:84px;display:grid;place-items:center;background:var(--paper-2);border:2px solid var(--pink);border-radius:50%;margin:-2px 0 24px;position:relative;z-index:1;font-size:30px;font-weight:700;color:var(--pink-text)}
+.step h3{font-size:19px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.step p{font-size:15px;color:#CFC7D4}
+
+/* galeria duas fileiras */
+.gallery{overflow:hidden;padding-bottom:110px}
+.gallery-head{margin-bottom:48px}
+.marquee{display:flex;gap:20px;width:max-content;animation:scrollL 60s linear infinite}
+.marquee.rev{animation-name:scrollR;margin-top:20px}
+.gallery:hover .marquee{animation-play-state:paused}
+@keyframes scrollL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes scrollR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.gcard{position:relative;width:280px;height:370px;flex:none;overflow:hidden;background:var(--paper-2)}
+.gcard img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.gcard:hover img{transform:scale(1.06)}
+.gcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(23,19,31,.85))}
+.gcard figcaption{position:absolute;left:18px;right:18px;bottom:18px;z-index:1;color:#fff;display:flex;gap:12px;align-items:flex-end}
+.gcard .ic{flex:none;width:40px;height:40px;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--magenta));box-shadow:0 8px 22px -6px rgba(215,22,100,.7)}
+.gcard .ic svg{width:20px;height:20px;stroke:#fff}
+.gcard b{display:block;font-size:17px;text-transform:uppercase;letter-spacing:.06em;line-height:1.1}
+.gcard small{font-size:13px;color:#E6DEE8}
+
+/* números / público */
+.stats{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.stats::after{content:"";position:absolute;right:-220px;top:-220px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(215,22,100,.35),transparent 65%)}
+.stats .eyebrow{color:var(--blush)}
+.stats .eyebrow::before{background:var(--blush)}
+.stats h2.title em{color:var(--blush)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(238,233,228,.18);border-left:1px solid rgba(238,233,228,.18);margin-top:44px;position:relative;z-index:1}
+.stat{padding:30px 26px;border-right:1px solid rgba(238,233,228,.18);border-bottom:1px solid rgba(238,233,228,.18)}
+.stat b{display:block;font-size:clamp(40px,4.6vw,62px);line-height:1;font-weight:700;letter-spacing:-.01em}
+.stat span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#BDB4C4}
+.aud{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;margin-top:64px;position:relative;z-index:1}
+.aud h3{font-size:15px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px;color:#BDB4C4;font-weight:600}
+.gender{display:flex;height:64px;overflow:hidden}
+.gender div{display:flex;align-items:center;padding:0 18px;font-weight:700;font-size:18px}
+.gender .m{background:var(--paper);color:var(--ink)}
+.gender .f{background:var(--pink);color:#fff}
+.bars{list-style:none;display:grid;gap:12px}
+.bars li{display:grid;grid-template-columns:110px 1fr 46px;align-items:center;gap:14px;font-size:15px}
+.bars .track{height:14px;background:rgba(238,233,228,.1);position:relative}
+.bars .fill{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,var(--magenta),var(--pink));width:var(--w);transform-origin:left;transform:scaleX(1);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.js .bars:not(.in) .fill{transform:scaleX(0)}
+.bars em{font-style:normal;font-weight:700;text-align:right}
+.cities{margin-top:26px;font-size:15px;color:#CFC7D4}
+.cities b{color:var(--paper)}
+.src{margin-top:40px;font-size:13px;color:#9F96A8;position:relative;z-index:1}
+.src a{color:var(--blush)}
+
+/* formatos (por que / pagamento) */
+.formats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+.fcard{position:relative;padding:28px 24px;background:#F6F2EE;border:1px solid var(--line);isolation:isolate;overflow:hidden;transition:transform .3s}
+.fcard::before{content:"";position:absolute;inset:-2px;z-index:-2;background:conic-gradient(from var(--a,0deg),transparent 0 70%,var(--pink) 80%,var(--magenta) 90%,transparent 100%);opacity:0;transition:opacity .3s}
+.fcard::after{content:"";position:absolute;inset:2px;z-index:-1;background:#F6F2EE}
+.fcard:hover{transform:translateY(-4px)}
+.fcard:hover::before{opacity:1;animation:spin 2.4s linear infinite}
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes spin{to{--a:360deg}}
+.fcard .ic{width:48px;height:48px;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--magenta));box-shadow:0 10px 26px -8px rgba(215,22,100,.65);margin-bottom:20px}
+.fcard .ic svg{width:22px;height:22px;stroke:#fff}
+.fcard h3{font-size:17px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.fcard p{font-size:15px;color:var(--ink-2)}
+.types{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.types span{border:1.5px solid var(--ink);padding:9px 16px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+
+/* proposta (mecanismo) */
+.proposal{background:var(--paper-2)}
+.prop-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:start}
+.prop-photo{position:relative}
+.prop-photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.prop-photo .stamp{position:absolute;right:-16px;top:-16px;background:var(--ink);color:var(--paper);padding:14px 16px;font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:.14em;transform:rotate(4deg)}
+.form{background:var(--paper);border:2px solid var(--ink);padding:36px 34px;box-shadow:12px 12px 0 var(--pink)}
+.form h3{font-size:26px;text-transform:uppercase;line-height:1.05;margin-bottom:8px}
+.form>p{color:var(--ink-2);font-size:15px;margin-bottom:24px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.field input,.field select{width:100%;font:inherit;font-size:16px;padding:14px 14px;border:1.5px solid rgba(23,19,31,.35);background:#fff;color:var(--ink);border-radius:0;appearance:none;-webkit-appearance:none}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2317131F' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.field input:focus,.field select:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(215,22,100,.18)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{margin:0;cursor:pointer;position:relative}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;border:1.5px solid rgba(23,19,31,.35);padding:9px 13px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:none;transition:all .2s}
+.chips input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chips input:focus-visible+span{outline:2px solid var(--pink);outline-offset:2px}
+.form .btn{width:100%;justify-content:center;margin-top:8px}
+.form .alt{margin-top:16px;font-size:14px;color:var(--ink-2);text-align:center}
+.form .alt a{color:var(--pink-text);font-weight:600}
+
+/* cupons */
+.coupons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.coupon{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:22px;padding:26px 24px;border:2px solid var(--ink);background:#F6F2EE;min-height:200px;transition:transform .3s,box-shadow .3s}
+.coupon:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--pink)}
+.coupon .cat{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-text)}
+.coupon h3{font-size:24px;line-height:1.1;margin-top:6px}
+.coupon p{font-size:14px;color:var(--ink-2);margin-top:6px}
+.coupon-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.code{display:inline-flex;align-items:center;gap:8px;border:1.5px dashed var(--ink);padding:8px 12px;font-weight:700;letter-spacing:.1em;background:#fff;cursor:pointer;font-family:var(--sans);font-size:14px;color:var(--ink)}
+.code svg{width:15px;height:15px}
+.code.ok{border-color:var(--pink);color:var(--pink-text)}
+.coupon .go{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--pink)}
+
+/* contato */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:stretch}
+.ccard{border:2px solid var(--ink);padding:38px 36px;background:#F6F2EE}
+.clist{list-style:none;display:grid;gap:20px;margin:26px 0 30px}
+.clist li{display:flex;gap:16px;align-items:flex-start}
+.clist .ic{flex:none;width:44px;height:44px;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--magenta))}
+.clist .ic svg{width:20px;height:20px;stroke:#fff}
+.clist small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.clist a{font-size:18px;font-weight:600;text-decoration:none}
+.clist a:hover{color:var(--pink-text)}
+.cbtns{display:flex;flex-wrap:wrap;gap:12px}
+.online{position:relative;overflow:hidden;min-height:420px;background:var(--ink)}
+.online img{width:100%;height:100%;object-fit:cover;opacity:.78}
+.online div{position:absolute;left:0;right:0;bottom:0;padding:30px;color:#fff;background:linear-gradient(180deg,transparent,rgba(23,19,31,.92))}
+.online b{font-size:24px;text-transform:uppercase;display:block;line-height:1.1}
+.online p{color:#E2DAE5;font-size:15px;margin-top:8px}
+
+/* CTA + footer */
+.cta{background:var(--pink);color:#fff;padding:90px 0;text-align:center;position:relative;overflow:hidden}
+.cta .sig{font-family:var(--script);font-size:clamp(70px,10vw,150px);line-height:.8;opacity:.12;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-6deg);white-space:nowrap;pointer-events:none}
+.cta h2{font-size:clamp(34px,5vw,64px);text-transform:uppercase;line-height:.98;position:relative}
+.cta p{font-size:19px;margin:18px auto 30px;max-width:560px;position:relative;color:#FFE3EC}
+.cta .btn{border-color:#fff;position:relative}
+.cta .btn-ink{background:#fff;color:var(--ink)}
+.cta .btn-ink:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cta .btn-line{color:#fff}
+.cta .btn-line:hover{background:#fff;color:var(--pink-text)}
+footer{background:var(--ink);color:#BDB4C4;padding:64px 0 36px;font-size:15px}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+.foot .logo{color:var(--paper);font-size:52px}
+.foot h4{color:var(--paper);font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.foot ul{list-style:none;display:grid;gap:8px}
+.foot a{text-decoration:none}
+.foot a:hover{color:#fff}
+.foot-bottom{margin-top:48px;padding-top:22px;border-top:1px solid rgba(238,233,228,.12);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+
+/* WhatsApp flutuante */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transition:transform .25s}
+.wa-float:hover{transform:scale(1.07)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+.wa-float::after{content:"";position:absolute;top:4px;right:4px;width:13px;height:13px;border-radius:50%;background:var(--pink);border:2px solid #fff;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(215,22,100,.6)}70%{box-shadow:0 0 0 12px rgba(215,22,100,0)}100%{box-shadow:0 0 0 0 rgba(215,22,100,0)}}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* responsivo */
+@media (max-width:1080px){
+  .nav ul{gap:20px}
+  .formats-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid::before{display:none}
+}
+@media (max-width:900px){
+  section{padding:80px 0}
+  .wrap{padding:0 20px}
+  .nav ul{display:none}
+  .nav ul.open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:20px;gap:18px;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+  .nav .btn{display:none}
+  .hero-grid{grid-template-columns:minmax(0,1fr);min-height:0}
+  .hero-photo{order:-1;height:62vh;min-height:420px}
+  .hero-copy{padding:44px 20px 56px}
+  .about-grid,.prop-grid,.contact-grid,.aud{grid-template-columns:1fr;gap:48px}
+  .about-photo{max-width:480px}
+  .coupons-grid{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .util .hide-sm{display:none}
+  .util .wrap{justify-content:center}
+  .logo{font-size:38px}
+  .hero-sign{font-size:clamp(52px,16vw,72px);white-space:normal}
+  .hero-stats b{font-size:24px}
+  .hero-stats div{padding-right:10px}
+  .hero-stats div+div{padding-left:10px}
+  .hero-tag{left:14px;bottom:14px;font-size:11px}
+  .hero-coupon{right:14px;top:auto;bottom:18px}
+  .checks{grid-template-columns:1fr}
+  .formats-grid,.coupons-grid,.steps-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat{padding:22px 16px}
+  .gcard{width:220px;height:300px}
+  .about-photo .badge{left:10px}
+  .about-photo .sig{right:0;font-size:68px}
+  .form{padding:26px 20px;box-shadow:8px 8px 0 var(--pink)}
+  .prop-photo .stamp{right:8px}
+  .ccard{padding:28px 22px}
+  .clist a{font-size:16px;word-break:break-word}
+  .bars li{grid-template-columns:92px 1fr 40px;gap:10px;font-size:14px}
+  .gender div{font-size:14px;padding:0 12px;white-space:nowrap}
+  .btn{padding:15px 20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+  .js .bars:not(.in) .fill{transform:none}
+  .hero-photo img{transform:none}
+}
+</style>
+<link rel="canonical" href="https://generationiahubb.github.io/sites-clientes/gabriela-baumam/">
+<meta name="robots" content="noindex, follow">
+</head>
+<body>
+<div id="expiry-overlay"><div><h1 style="font-size:26px;margin:0 0 14px;">Esta prévia expirou</h1><p style="max-width:420px;margin:0 auto 26px;color:#c7ccd1;line-height:1.5;">Esse site foi uma demonstração da Generation IA Tech. Fale com a gente pra ativar a versão definitiva, com domínio próprio.</p><a href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Vi%20a%20pr%C3%A9via%20do%20meu%20site%20e%20quero%20ativar." style="display:inline-block;background:#25D366;color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;text-decoration:none;">Falar no WhatsApp</a></div></div>
+
+<div class="util">
+  <div class="wrap">
+    <span><a href="https://www.instagram.com/gabrielabaumam/" target="_blank" rel="noopener" class="verif">@gabrielabaumam <svg viewBox="0 0 24 24" aria-label="Conta verificada"><path fill="#3897F0" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.3 3.2 1.3 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.4 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path fill="#fff" d="M10.6 15.6l-3.2-3.2 1.4-1.4 1.8 1.8 4.6-4.6 1.4 1.4z"/></svg></a><span class="dot">•</span>71,3 mil seguidores</span>
+    <span class="hide-sm"><a href="mailto:gabriela.baumam@gmail.com">gabriela.baumam@gmail.com</a><span class="dot">•</span>Parcerias e UGC</span>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Gabriela Baumam, início">Gabriela Baumam</a>
+    <ul id="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#conteudo">Conteúdo</a></li>
+      <li><a href="#numeros">Números</a></li>
+      <li><a href="#parcerias">Parcerias</a></li>
+      <li><a href="#cupons">Cupons</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="nav-r">
+      <a class="ig-ico" href="https://www.instagram.com/gabrielabaumam/" target="_blank" rel="noopener" aria-label="Instagram da Gabriela"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a class="btn btn-ink" href="#proposta">Proponha uma parceria</a>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Disciplina &amp; fitness · influencer &amp; UGC creator</p>
+      <p class="hero-sign" aria-hidden="true">Gabriela Baumam</p>
+      <h1 id="hero-title">Tenho rotina, boletos e cansaço. <span class="hl">E mesmo assim não falho nos treinos.</span></h1>
+      <p class="hero-sub">Musculação, dieta e hábitos saudáveis contados de verdade, para quem também tem uma vida corrida. Conteúdo autoral há 8 anos.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-ink" href="#proposta">Sou marca: vamos conversar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="#cupons">Ver meus cupons</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>71,3 mil</b><span>seguidores</span></div>
+        <div><b>1.452</b><span>posts</span></div>
+        <div><b>8 anos</b><span>criando</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="fotos/hero-academia.jpg" alt="Gabriela Baumam sorrindo na academia, de camiseta preta e short de treino" fetchpriority="high">
+      <span class="hero-coupon">Cupom gabriela10</span>
+      <span class="hero-tag"><i></i>Musa @4wellbrasil</span>
+    </div>
+  </div>
+</section>
+
+<div class="brands" aria-label="Marcas com que já trabalhou">
+  <div class="wrap">
+    <small>Algumas marcas com que já trabalhei</small>
+    <ul>
+      <li><a href="https://www.instagram.com/garnierbrasil/" target="_blank" rel="noopener">Garnier</a></li>
+      <li><a href="https://www.instagram.com/pantenebrasil/" target="_blank" rel="noopener">Pantene</a></li>
+      <li><a href="https://www.instagram.com/4wellbrasil/" target="_blank" rel="noopener">4Well</a></li>
+    </ul>
+  </div>
+</div>
+
+<section id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="fotos/sobre-retrato.jpg" alt="Retrato da Gabriela Baumam sorrindo, de óculos e top azul" loading="lazy">
+      <div class="badge"><b>USP</b>Letras</div>
+      <span class="sig" aria-hidden="true">Gabs</span>
+    </div>
+    <div class="reveal" style="--d:.1s">
+      <p class="eyebrow">Olá, eu sou a Gabriela</p>
+      <h2 class="title">Amo me cuidar e <em>incentivar</em> outras pessoas</h2>
+      <p class="lead">Paulistana, 33 anos, formada em Letras pela USP, com Gestão Empresarial e pós em Marketing. Produzo conteúdo para as redes há 8 anos e cada vez mais de forma profissional.</p>
+      <ul class="checks">
+        <li>Treino e musculação</li>
+        <li>Alimentação e dieta</li>
+        <li>Saúde e hábitos saudáveis</li>
+        <li>Disciplina na rotina real</li>
+        <li>Dicas de produtos e serviços</li>
+        <li>Autocuidado</li>
+      </ul>
+      <p class="quote">“Apaixonada por musculação, dieta e hábitos saudáveis.”</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="conteudo" aria-labelledby="g-title">
+  <div class="wrap gallery-head">
+    <p class="eyebrow reveal">Conteúdo autoral</p>
+    <h2 class="title reveal" id="g-title">Do treino ao <em>dia a dia</em></h2>
+    <p class="lead reveal">Os temas do meu perfil e os formatos que eu produzo para marcas.</p>
+  </div>
+  <div class="marquee" id="row1"></div>
+  <div class="marquee rev" id="row2"></div>
+</section>
+
+<section id="numeros" class="stats" aria-labelledby="n-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">Meus números no Instagram</p>
+    <h2 class="title reveal" id="n-title">Uma audiência <em>adulta</em> e engajada</h2>
+    <div class="stats-grid reveal">
+      <div class="stat"><b>71,3 mil</b><span>seguidores</span></div>
+      <div class="stat"><b>60 mil</b><span>alcance</span></div>
+      <div class="stat"><b>470 mil</b><span>impressões</span></div>
+      <div class="stat"><b>14 mil</b><span>visitas ao perfil</span></div>
+    </div>
+    <div class="aud">
+      <div class="reveal">
+        <h3>Quem me acompanha</h3>
+        <div class="gender" role="img" aria-label="60% homens e 40% mulheres">
+          <div class="m" style="width:60%">60% homens</div>
+          <div class="f" style="width:40%">40% mulheres</div>
+        </div>
+        <p class="cities">Principais cidades: <b>São Paulo, Rio de Janeiro, Fortaleza, Manaus e Curitiba</b>.</p>
+      </div>
+      <div class="reveal" style="--d:.1s">
+        <h3>Faixa etária</h3>
+        <ul class="bars" id="bars">
+          <li><span>18 a 24</span><div class="track"><div class="fill" style="--w:10.3%"></div></div><em>4%</em></li>
+          <li><span>25 a 34</span><div class="track"><div class="fill" style="--w:79.5%"></div></div><em>31%</em></li>
+          <li><span>35 a 44</span><div class="track"><div class="fill" style="--w:100%"></div></div><em>39%</em></li>
+          <li><span>45 a 54</span><div class="track"><div class="fill" style="--w:51.3%"></div></div><em>20%</em></li>
+          <li><span>55 ou mais</span><div class="track"><div class="fill" style="--w:15.4%"></div></div><em>6%</em></li>
+        </ul>
+      </div>
+    </div>
+    <p class="src">Seguidores conferidos no perfil em outubro de 2026. Alcance, impressões, visitas e público vêm do <a href="https://drive.google.com/file/d/1h25Ma1yO0fz7-8PTY0PnZQ46fKYUnZT3/view" target="_blank" rel="noopener">mídia kit oficial</a>.</p>
+  </div>
+</section>
+
+<section id="parcerias" aria-labelledby="p-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">Formatos de parceria</p>
+    <h2 class="title reveal" id="p-title">Vamos juntos promover <em>a sua marca</em></h2>
+    <p class="lead reveal">Da publicação no feed ao conteúdo para anúncio, com a linguagem que a minha audiência já reconhece.</p>
+    <div class="formats-grid">
+      <div class="fcard reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18"/><path d="M3 15l5-5 4 4 3-3 6 6"/></svg></div><h3>Post no feed</h3><p>Foto ou carrossel publicado no perfil.</p></div>
+      <div class="fcard reveal" style="--d:.06s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg></div><h3>Sequência de stories</h3><p>Rotina, unboxing e uso real do produto.</p></div>
+      <div class="fcard reveal" style="--d:.12s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M10 9l5 3-5 3z"/></svg></div><h3>Reels patrocinados</h3><p>Vídeo curto com trends, treino ou review.</p></div>
+      <div class="fcard reveal" style="--d:.18s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/></svg></div><h3>UGC para anúncios</h3><p>Conteúdo para a marca rodar nos próprios anúncios.</p></div>
+      <div class="fcard reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3>Pacotes mensais</h3><p>Presença contínua ao longo do mês.</p></div>
+      <div class="fcard reveal" style="--d:.06s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="8" cy="8" r="4"/><path d="M11 11l9 9M16 16l2-2M18 18l2-2"/></svg></div><h3>Licenciamento de imagem</h3><p>Uso das minhas fotos e vídeos pela marca.</p></div>
+      <div class="fcard reveal" style="--d:.12s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-8-5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6-8 11-8 11z"/></svg></div><h3>Conteúdo orgânico</h3><p>Indicação espontânea dentro da rotina.</p></div>
+      <div class="fcard reveal" style="--d:.18s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3v12M8 11l4 4 4-4M4 21h16"/></svg></div><h3>Mídia kit</h3><p><a href="https://drive.google.com/file/d/1h25Ma1yO0fz7-8PTY0PnZQ46fKYUnZT3/view" target="_blank" rel="noopener" style="color:var(--pink-text);font-weight:600">Abrir o PDF completo →</a></p></div>
+    </div>
+    <div class="types reveal" aria-label="Tipos de conteúdo">
+      <span>Reels</span><span>Stories</span><span>Fotos feed</span><span>UGC Ads</span><span>Review de produtos</span><span>Unboxing</span><span>Voice over</span><span>Fotos lifestyle</span><span>Rotina lifestyle</span><span>Trends</span><span>Conteúdo espontâneo</span>
+    </div>
+  </div>
+</section>
+
+<section class="steps" aria-labelledby="s-title">
+  <div class="wrap">
+    <div class="steps-head">
+      <div>
+        <p class="eyebrow reveal">Deu match?</p>
+        <h2 class="title reveal" id="s-title">Do briefing <em>ao ar</em></h2>
+      </div>
+      <a class="btn btn-ink reveal" href="#proposta">Montar proposta</a>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal"><div class="node">1</div><h3>Conte sobre a marca</h3><p>Segmento, produto e objetivo da campanha.</p></div>
+      <div class="step reveal" style="--d:.08s"><div class="node">2</div><h3>Escolha o formato</h3><p>Feed, stories, Reels, UGC ou pacote mensal.</p></div>
+      <div class="step reveal" style="--d:.16s"><div class="node">3</div><h3>Alinhamento direto</h3><p>Conversa direto comigo, por WhatsApp ou e-mail.</p></div>
+      <div class="step reveal" style="--d:.24s"><div class="node">4</div><h3>Conteúdo no ar</h3><p>Produção com a cara do perfil e publicação.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="proposal" id="proposta" aria-labelledby="f-title">
+  <div class="wrap prop-grid">
+    <div class="prop-photo reveal">
+      <img src="fotos/ugc-4well-produtos.jpg" alt="Gabriela Baumam segurando produtos 4Well: whey protein, creatina e vitaminas" loading="lazy">
+      <span class="stamp">UGC · review · unboxing</span>
+    </div>
+    <form class="form reveal" id="propForm" style="--d:.1s" novalidate>
+      <h3 id="f-title">Proposta de parceria</h3>
+      <p>Preencha e a mensagem já sai pronta no meu WhatsApp.</p>
+      <div class="field">
+        <label for="marca">Nome da marca</label>
+        <input id="marca" name="marca" type="text" placeholder="Ex.: sua marca" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="segmento">Segmento</label>
+        <select id="segmento" name="segmento">
+          <option value="suplementos">Suplementos</option>
+          <option value="moda fitness">Moda fitness</option>
+          <option value="beleza e autocuidado">Beleza e autocuidado</option>
+          <option value="alimentação saudável">Alimentação saudável</option>
+          <option value="academia ou estúdio">Academia ou estúdio</option>
+          <option value="saúde e bem-estar">Saúde e bem-estar</option>
+          <option value="acessórios e joias">Acessórios e joias</option>
+          <option value="outro segmento">Outro</option>
+        </select>
+      </div>
+      <div class="field">
+        <span id="fmt-l" style="display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px">Formato de interesse</span>
+        <div class="chips" role="group" aria-labelledby="fmt-l">
+          <label><input type="checkbox" name="fmt" value="Reels" checked><span>Reels</span></label>
+          <label><input type="checkbox" name="fmt" value="Stories"><span>Stories</span></label>
+          <label><input type="checkbox" name="fmt" value="Post no feed"><span>Post no feed</span></label>
+          <label><input type="checkbox" name="fmt" value="UGC para anúncios"><span>UGC para anúncios</span></label>
+          <label><input type="checkbox" name="fmt" value="Pacote mensal"><span>Pacote mensal</span></label>
+          <label><input type="checkbox" name="fmt" value="Licenciamento de imagem"><span>Licenciamento</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="prazo">Quando quer começar?</label>
+        <select id="prazo" name="prazo">
+          <option value="o quanto antes">O quanto antes</option>
+          <option value="ainda este mês">Ainda este mês</option>
+          <option value="no próximo mês">No próximo mês</option>
+          <option value="estou só pesquisando valores">Só pesquisando valores</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-ink">Enviar pelo WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="alt">Prefere e-mail? <a href="mailto:gabriela.baumam@gmail.com?subject=Parceria%20com%20%40gabrielabaumam">gabriela.baumam@gmail.com</a></p>
+    </form>
+  </div>
+</section>
+
+<section id="cupons" aria-labelledby="c-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">Para quem me acompanha</p>
+    <h2 class="title reveal" id="c-title">Meus cupons &amp; <em>indicações</em></h2>
+    <p class="lead reveal">O que eu uso de verdade. Toque no código para copiar.</p>
+    <div class="coupons-grid">
+      <article class="coupon reveal">
+        <div><span class="cat">Suplementos</span><h3>4Well</h3><p>Sou musa da marca: whey, creatina e vitaminas.</p></div>
+        <div class="coupon-foot"><button class="code" data-code="gabriela10" type="button">gabriela10 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12"/><path d="M5 15H3V3h12v2"/></svg></button><a class="go" href="https://www.4well.com.br/" target="_blank" rel="noopener">Ir à loja</a></div>
+      </article>
+      <article class="coupon reveal" style="--d:.06s">
+        <div><span class="cat">Joias de prata</span><h3>Céu de Prata</h3><p>Joias em prata com desconto.</p></div>
+        <div class="coupon-foot"><button class="code" data-code="gabriela10" type="button">gabriela10 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12"/><path d="M5 15H3V3h12v2"/></svg></button><a class="go" href="https://ceudeprata.com.br/" target="_blank" rel="noopener">Ir à loja</a></div>
+      </article>
+      <article class="coupon reveal" style="--d:.12s">
+        <div><span class="cat">LPF · postura e respiração</span><h3>Camila Vencato</h3><p>Low Pressure Fitness com a Camila.</p></div>
+        <div class="coupon-foot"><button class="code" data-code="gabriela" type="button">gabriela <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12"/><path d="M5 15H3V3h12v2"/></svg></button><a class="go" href="https://www.instagram.com/camilavencato_lpf/" target="_blank" rel="noopener">Ver perfil</a></div>
+      </article>
+      <article class="coupon reveal">
+        <div><span class="cat">Onde eu treino</span><h3>Body Express Academia</h3><p>A academia que aparece nos meus treinos.</p></div>
+        <div class="coupon-foot"><a class="go" href="https://www.instagram.com/bodyexpressacademia/" target="_blank" rel="noopener">Ver perfil</a></div>
+      </article>
+      <article class="coupon reveal" style="--d:.06s">
+        <div><span class="cat">Comprinhas</span><h3>Mercado Livre</h3><p>Minha seleção de achadinhos.</p></div>
+        <div class="coupon-foot"><a class="go" href="https://meli.la/29NvXMk" target="_blank" rel="noopener">Ver a lista</a></div>
+      </article>
+      <article class="coupon reveal" style="--d:.12s">
+        <div><span class="cat">Comprinhas</span><h3>Shopee</h3><p>Minha coleção de indicações.</p></div>
+        <div class="coupon-foot"><a class="go" href="https://collshp.com/gabibaumam" target="_blank" rel="noopener">Ver a lista</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contato" style="padding-top:0" aria-labelledby="ct-title">
+  <div class="wrap contact-grid">
+    <div class="ccard reveal">
+      <p class="eyebrow">Contato</p>
+      <h2 class="title" id="ct-title">Vamos <em>conversar</em></h2>
+      <ul class="clist">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg></span><div><small>WhatsApp</small><a href="https://wa.me/5511994759288?text=Ol%C3%A1%2C%20Gabriela!%20Vi%20seu%20site%20e%20quero%20falar%20sobre%20uma%20parceria." target="_blank" rel="noopener">(11) 99475-9288</a></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 6 9-6"/></svg></span><div><small>E-mail</small><a href="mailto:gabriela.baumam@gmail.com">gabriela.baumam@gmail.com</a></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></span><div><small>Instagram</small><a href="https://www.instagram.com/gabrielabaumam/" target="_blank" rel="noopener">@gabrielabaumam</a></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 3v11a4 4 0 1 1-4-4"/><path d="M14 3c0 3 2 5 5 5"/></svg></span><div><small>TikTok</small><a href="https://www.tiktok.com/@gabrielabaumam" target="_blank" rel="noopener">@gabrielabaumam</a></div></li>
+      </ul>
+      <div class="cbtns">
+        <a class="btn btn-ink" href="https://www.instagram.com/gabrielabaumam/" target="_blank" rel="noopener">Seguir no Instagram</a>
+        <a class="btn btn-line" href="https://drive.google.com/file/d/1h25Ma1yO0fz7-8PTY0PnZQ46fKYUnZT3/view" target="_blank" rel="noopener">Baixar mídia kit</a>
+      </div>
+    </div>
+    <div class="online reveal" style="--d:.1s">
+      <img src="fotos/lifestyle-mirante.jpg" alt="Gabriela Baumam de vestido azul em um mirante com mata ao fundo" loading="lazy">
+      <div><b>Atendimento 100% online</b><p>Parcerias com marcas de todo o Brasil, combinadas por WhatsApp ou e-mail.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <span class="sig" aria-hidden="true">Gabriela Baumam</span>
+  <div class="wrap">
+    <h2 id="cta-title">Deu match?</h2>
+    <p>Vamos juntos promover a sua marca.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-ink" href="#proposta">Montar proposta</a>
+      <a class="btn btn-line" href="mailto:gabriela.baumam@gmail.com">Mandar e-mail</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="logo">Gabriela Baumam</a>
+        <p style="margin-top:10px;max-width:340px">Disciplina &amp; fitness. Influencer e UGC creator apaixonada por musculação, dieta e hábitos saudáveis.</p>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <ul><li><a href="#sobre">Sobre</a></li><li><a href="#numeros">Números</a></li><li><a href="#parcerias">Parcerias</a></li><li><a href="#cupons">Cupons</a></li></ul>
+      </div>
+      <div>
+        <h4>Redes &amp; contato</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/gabrielabaumam/" target="_blank" rel="noopener">Instagram @gabrielabaumam</a></li>
+          <li><a href="https://www.tiktok.com/@gabrielabaumam" target="_blank" rel="noopener">TikTok @gabrielabaumam</a></li>
+          <li><a href="mailto:gabriela.baumam@gmail.com">gabriela.baumam@gmail.com</a></li>
+          <li><a href="https://wa.me/5511994759288" target="_blank" rel="noopener">(11) 99475-9288</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Gabriela Baumam</span>
+      <span>Site por Generation IA Tech</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511994759288?text=Ol%C3%A1%2C%20Gabriela!%20Vi%20seu%20site%20e%20quero%20falar%20sobre%20uma%20parceria." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7a10.7 10.7 0 0 1-5.5-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.9.9 3.9.8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.2-.3-.3-.6-.4z"/></svg></a>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var WA='5511994759288';
+  var ico={
+    dumbbell:'<path d="M6 6v12M18 6v12M3 9v6M21 9v6M6 12h12"/>',
+    flame:'<path d="M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-3 2-4 2-7 2 1 3 2 3 4"/>',
+    bag:'<path d="M5 8h14l-1 13H6zM9 8V6a3 3 0 0 1 6 0v2"/>',
+    leaf:'<path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19l8-8"/>',
+    heart:'<path d="M12 21s-8-5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6-8 11-8 11z"/>',
+    clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    play:'<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M10 9l5 3-5 3z"/>',
+    star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
+    camera:'<path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4"/>',
+    plane:'<path d="M2 16l20-8-6 13-3-6z"/>',
+    sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/>',
+    chat:'<path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12z"/>'
+  };
+  var row1=[
+    ['treino-body-express','Treino','Musculação na rotina','dumbbell','Gabriela Baumam na academia, de top preto e short vinho'],
+    ['treino-espelho','Disciplina','Não falhar nos treinos','flame','Gabriela Baumam treinando, foto no espelho da academia'],
+    ['ugc-creatina','Dicas de produtos','O que eu uso de verdade','bag','Gabriela Baumam segurando um pacote de creatina 4Well'],
+    ['treino-ao-ar-livre','Hábitos saudáveis','Corpo em movimento','leaf','Gabriela Baumam de roupa de treino ao ar livre'],
+    ['autocuidado-sorriso','Autocuidado','Se cuidar sem culpa','heart','Gabriela Baumam sorrindo em selfie ao ar livre'],
+    ['rotina-carro','Rotina','Boletos, cansaço e treino','clock','Gabriela Baumam de óculos escuros, selfie no carro']
+  ];
+  var row2=[
+    ['reels-look-rosa','Reels','Trends e treinos','play','Gabriela Baumam com conjunto rosa de treino em loja fitness'],
+    ['review-creatina','Review de produtos','Uso real, sem roteiro decorado','star','Gabriela Baumam mostrando creatina 4Well'],
+    ['stories-selfie','Stories','Bastidores do dia','chat','Selfie da Gabriela Baumam de óculos'],
+    ['trips-roma','Trips','Viagens e lifestyle','plane','Gabriela Baumam em frente à Fontana di Trevi, em Roma'],
+    ['lifestyle-por-do-sol','Fotos lifestyle','Luz, cor e verdade','sun','Gabriela Baumam de óculos escuros ao pôr do sol'],
+    ['trips-praia','Conteúdo espontâneo','Do treino à praia','camera','Gabriela Baumam de biquíni em uma praia']
+  ];
+  function card(c){
+    return '<figure class="gcard"><img src="fotos/'+c[0]+'.jpg" alt="'+c[4]+'" loading="lazy"><figcaption><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+ico[c[3]]+'</svg></span><span><b>'+c[1]+'</b><small>'+c[2]+'</small></span></figcaption></figure>';
+  }
+  function fill(id,list){
+    var el=document.getElementById(id); if(!el) return;
+    var h=list.map(card).join(''); el.innerHTML=h+h;
+    var dup=el.querySelectorAll('.gcard'); for(var i=list.length;i<dup.length;i++){dup[i].setAttribute('aria-hidden','true');dup[i].querySelector('img').alt='';}
+  }
+  fill('row1',row1); fill('row2',row2);
+
+  // header shadow
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
+
+  // menu mobile
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){var o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+
+  // reveal
+  var els=document.querySelectorAll('.reveal,#bars');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('in')}); }
+
+  // copiar cupom
+  document.querySelectorAll('.code').forEach(function(b){
+    b.addEventListener('click',function(){
+      var c=b.getAttribute('data-code');
+      var done=function(){var t=b.firstChild.nodeValue;b.classList.add('ok');b.firstChild.nodeValue='Copiado! ';setTimeout(function(){b.classList.remove('ok');b.firstChild.nodeValue=t},1600)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(c).then(done,done)}else{done()}
+    });
+  });
+
+  // proposta -> WhatsApp
+  document.getElementById('propForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var marca=document.getElementById('marca').value.trim();
+    var seg=document.getElementById('segmento').value;
+    var prazo=document.getElementById('prazo').value;
+    var fmts=[].slice.call(document.querySelectorAll('input[name=fmt]:checked')).map(function(i){return i.value});
+    var msg='Olá, Gabriela! Vi seu site e quero falar sobre uma parceria.';
+    msg+='\nMarca: '+(marca||'(vou informar na conversa)');
+    msg+='\nSegmento: '+seg;
+    msg+='\nFormato de interesse: '+(fmts.length?fmts.join(', '):'quero sugestões');
+    msg+='\nQuando: '+prazo+'.';
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>
