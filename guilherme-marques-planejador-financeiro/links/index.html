@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guilherme Marques | Links</title>
+<meta name="description" content="Guilherme Marques, planejador financeiro pessoal parceiro do Grupo Primo e da Grão Investimentos. Atendimento 100% online para todo o Brasil.">
+<link rel="canonical" href="https://generationiahubb.github.io/sites-clientes/guilherme-marques-planejador-financeiro/links/">
+<meta property="og:title" content="Guilherme Marques | Planejador Financeiro Pessoal">
+<meta property="og:description" content="Organizo o seu caos financeiro e te guio para investir nos seus projetos. Atendimento 100% online, em qualquer lugar do Brasil.">
+<meta property="og:image" content="https://www.souguilhermemarques.com.br/hero-preview.png">
+<meta property="og:url" content="https://generationiahubb.github.io/sites-clientes/guilherme-marques-planejador-financeiro/links/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#0A1230">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand-900:#0A1230;
+    --brand-800:#121B47;
+    --brand-700:#1C2A66;
+    --brand-500:#3A4FAE;
+    --brand-400:#7C8AD6;
+    --brand-100:#E1E4F7;
+    --money-500:#16A249;
+    --money-400:#3FC46D;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    min-height:100vh;min-height:100dvh;
+    font-family:'DM Sans',sans-serif;color:var(--white);line-height:1.6;
+    background:var(--brand-900);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(58,79,174,.55), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgba(22,162,73,.16), transparent 70%);
+    background-attachment:fixed;
+    display:flex;justify-content:center;
+  }
+  main{width:100%;max-width:480px;padding:56px 16px 32px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+
+  .avatar{
+    width:132px;height:132px;border-radius:50%;padding:4px;
+    background:linear-gradient(140deg,var(--money-400),var(--brand-500));
+    box-shadow:0 14px 40px rgba(0,0,0,.35);
+  }
+  .avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 14%;display:block;border:3px solid var(--brand-900);background:var(--brand-800);}
+
+  h1{font-family:'Playfair Display',serif;font-weight:700;font-size:30px;line-height:1.2;margin-top:20px;}
+  .role{
+    display:inline-flex;align-items:center;gap:8px;margin-top:10px;
+    font-size:12.5px;font-weight:600;letter-spacing:.4px;color:var(--brand-100);
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+    padding:6px 14px;border-radius:999px;
+  }
+  .role .dot{width:7px;height:7px;border-radius:50%;background:var(--money-400);box-shadow:0 0 0 3px rgba(63,196,109,.25);}
+
+  .bio{margin-top:20px;font-size:15.5px;color:rgba(225,228,247,.86);max-width:400px;}
+  .bio em{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;color:var(--white);font-size:17px;display:block;margin-bottom:8px;line-height:1.35;}
+
+  .links{width:100%;margin-top:32px;display:flex;flex-direction:column;gap:14px;}
+  .link{
+    position:relative;display:flex;align-items:center;gap:14px;text-align:left;
+    padding:16px 18px;border-radius:16px;text-decoration:none;color:var(--white);
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+    transition:transform .2s ease, background .2s ease, border-color .2s ease;
+  }
+  .link:hover{transform:translateY(-2px);background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.26);}
+  .link:focus-visible{outline:3px solid var(--money-400);outline-offset:3px;}
+  .link.featured{background:linear-gradient(135deg,var(--money-500),#0F7A36);border-color:transparent;box-shadow:0 12px 30px rgba(22,162,73,.28);}
+  .link.featured:hover{background:linear-gradient(135deg,#1AB352,#118A3D);}
+  .link .ic{flex:0 0 46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.12);}
+  .link .ic svg{width:24px;height:24px;stroke:var(--white);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .link .txt{flex:1;min-width:0;}
+  .link b{display:block;font-size:16px;font-weight:700;line-height:1.3;}
+  .link span{display:block;font-size:13px;color:rgba(255,255,255,.78);line-height:1.4;margin-top:3px;}
+  .link .arrow{flex:0 0 auto;width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;opacity:.8;transition:transform .2s ease;}
+  .link:hover .arrow{transform:translateX(3px);}
+
+  footer{margin-top:auto;padding-top:40px;font-size:12px;color:rgba(225,228,247,.5);}
+
+  /* Motion — só some se houver JS */
+  .js .rise{opacity:0;transform:translateY(14px);}
+  .rise{transition:opacity .6s ease, transform .6s ease;}
+  .rise.in{opacity:1;transform:none;}
+
+  @media (max-width:380px){
+    main{padding-top:40px;}
+    h1{font-size:27px;}
+    .avatar{width:116px;height:116px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{transition:none !important;animation:none !important;}
+    .js .rise{opacity:1;transform:none;}
+  }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<main>
+  <div class="avatar rise">
+    <img src="../images/guilherme-hero.png" alt="Guilherme Marques, planejador financeiro pessoal" width="335" height="881">
+  </div>
+
+  <h1 class="rise">Guilherme Marques</h1>
+  <div class="role rise"><span class="dot"></span>Planejador Financeiro Pessoal · 100% Online</div>
+
+  <p class="bio rise">
+    <em>Organizo o seu caos financeiro e te guio para investir nos seus projetos.</em>
+    Parceiro do Grupo Primo e da Grão Investimentos. Um plano real pros seus objetivos — sem fórmula genérica, sem promessa de enriquecimento rápido.
+  </p>
+
+  <nav class="links" aria-label="Links">
+    <a class="link featured rise" href="https://www.souguilhermemarques.com.br/">
+      <span class="ic" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></svg>
+      </span>
+      <span class="txt">
+        <b>Planejamento financeiro pessoal</b>
+        <span>Conheça o meu trabalho e agende o seu diagnóstico gratuito</span>
+      </span>
+      <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+
+    <a class="link rise" href="https://mapaorganizacaofinanceira.com.br/">
+      <span class="ic" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>
+      </span>
+      <span class="txt">
+        <b>Mapa da Organização Financeira</b>
+        <span>Seu planejamento financeiro num aplicativo: orçamento, patrimônio, projetos e aposentadoria</span>
+      </span>
+      <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+  </nav>
+
+  <footer>© <span id="ano">2026</span> Guilherme Marques</footer>
+</main>
+
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+  var els = document.querySelectorAll('.rise');
+  els.forEach(function(el, i){
+    setTimeout(function(){ el.classList.add('in'); }, 80 + i * 90);
+  });
+</script>
+</body>
+</html>
