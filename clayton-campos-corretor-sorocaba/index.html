@@ -91,8 +91,8 @@ section{padding:92px 0}
 header.nav{position:sticky;top:0;z-index:60;background:rgba(2,7,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow .3s}
 header.nav.scrolled{box-shadow:0 10px 30px -14px rgba(34,177,213,.4)}
 header.nav .wrap{display:flex;align-items:center;gap:26px;min-height:76px}
-.brand{position:relative;z-index:2;align-self:flex-start;background:#081A38;padding:22px 20px 20px;margin-bottom:-34px;border-bottom:3px solid var(--neon);box-shadow:0 18px 34px -18px rgba(0,0,0,.7)}
-.brand img{width:176px;height:auto;filter:brightness(1.7) saturate(1.15)}
+.brand{display:block;flex:none}
+.brand img{width:176px;height:auto;margin-left:-20px;filter:brightness(1.7) saturate(1.15)}
 header.nav ul{list-style:none;display:flex;gap:4px;margin:0 0 0 auto;padding:0}
 header.nav ul a{display:block;padding:8px 13px;color:#DCE5EE;font-family:var(--disp);font-weight:700;font-size:14.5px;border-radius:3px;transition:background .2s,color .2s}
 header.nav ul a:hover,header.nav ul a.on{background:rgba(123,227,248,.14);color:#fff}
@@ -398,7 +398,6 @@ footer.site a:hover{color:#fff}
   header.nav.open ul{display:flex}
   .burger{display:inline-flex}
   .nav-cta{display:none}
-  .brand{align-self:center;margin:0;padding:0;background:none;border:0;box-shadow:none}
   .brand img{width:170px}
   .hero{min-height:0}
   .hero-man{position:relative;left:auto;top:auto;bottom:auto;width:100%;height:clamp(290px,46vw,440px);object-position:22% 30%;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent);mask-image:linear-gradient(to bottom,#000 72%,transparent);-webkit-mask-composite:source-over;mask-composite:add}
