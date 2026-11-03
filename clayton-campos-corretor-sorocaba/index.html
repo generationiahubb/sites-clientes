@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script>
+(function(){
+  var EXPIRES_AT = new Date('2026-11-10T23:59:59-03:00').getTime(); // data de publicação + 7 dias
+  if (Date.now() > EXPIRES_AT) { document.documentElement.classList.add('site-expired'); }
+})();
+</script>
+<style>
+html.site-expired #expiry-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#111417;color:#fff;font-family:Arial,Helvetica,sans-serif;text-align:center;padding:32px;box-sizing:border-box;}
+html:not(.site-expired) #expiry-overlay{display:none;}
+html.site-expired body>*:not(#expiry-overlay){display:none!important;}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clayton Campos | Corretor de Imóveis em Sorocaba</title>
+<meta name="description" content="Apartamentos, casas e lançamentos à venda em Sorocaba com Clayton Campos, corretor de imóveis. Nota 5,0 no Google, fotos, valores e visita pelo WhatsApp.">
+<meta property="og:title" content="Clayton Campos | O seu imóvel a um clique">
+<meta property="og:description" content="Imóveis à venda e lançamentos em Sorocaba. Veja fotos e detalhes de cada imóvel e agende sua visita pelo WhatsApp.">
+<meta property="og:image" content="https://generationiahubb.github.io/sites-clientes/clayton-campos-corretor-sorocaba/hero-preview.png">
+<meta property="og:url" content="https://generationiahubb.github.io/sites-clientes/clayton-campos-corretor-sorocaba/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clayton Campos | O seu imóvel a um clique">
+<meta name="twitter:description" content="Imóveis à venda e lançamentos em Sorocaba. Veja fotos e detalhes e agende sua visita pelo WhatsApp.">
+<meta name="twitter:image" content="https://generationiahubb.github.io/sites-clientes/clayton-campos-corretor-sorocaba/hero-preview.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"RealEstateAgent",
+  "name":"Clayton Campos Corretor de Imóveis",
+  "url":"https://generationiahubb.github.io/sites-clientes/clayton-campos-corretor-sorocaba/",
+  "image":"https://generationiahubb.github.io/sites-clientes/clayton-campos-corretor-sorocaba/hero-preview.png",
+  "telephone":"+55-15-99276-6042",
+  "address":{"@type":"PostalAddress","streetAddress":"Av. Cleise Teresinha Rosa Silva, 485 - Jardim Maria Eugenia","addressLocality":"Sorocaba","addressRegion":"SP","postalCode":"18071-024","addressCountry":"BR"},
+  "geo":{"@type":"GeoCoordinates","latitude":-23.4558674,"longitude":-47.5020468},
+  "openingHours":"Mo-Sa 08:00-18:00",
+  "areaServed":"Sorocaba",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"23"},
+  "sameAs":["https://www.instagram.com/claytoncamposcorretor/"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500;700;800&family=Wix+Madefor+Text:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --ink:#02070D;--ink-2:#071325;--navy:#0B2350;--blue:#1E56B0;--blue-t:#14489E;--neon:#22B1D5;--neon-hi:#7BE3F8;--silver:#B3BEBF;
+  --paper:#F4F6F8;--card:#FFFFFF;--text:#0E1A2B;--muted:#566476;--line:#DDE3EA;--wa:#25D366;
+  --disp:'Wix Madefor Display',system-ui,sans-serif;--body:'Wix Madefor Text',system-ui,sans-serif;--neonf:'Satisfy',cursive;
+  --ease:cubic-bezier(.22,.8,.26,1);--sh:0 18px 44px -22px rgba(11,35,80,.34);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);color:var(--text);background:var(--ink);line-height:1.6;font-size:16.5px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+h1,h2,h3{font-family:var(--disp);font-weight:600;letter-spacing:-.018em;line-height:1.08;margin:0}
+p{margin:0}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+section{padding:92px 0}
+.eyebrow{font-family:var(--disp);font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-t);margin-bottom:12px}
+.sec-h{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-h h2{font-size:clamp(30px,3.6vw,46px);color:var(--navy);max-width:720px}
+.sec-h p.d{color:var(--muted);max-width:560px;margin-top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 26px;border:0;border-radius:3px;background:var(--navy);color:#fff;font-family:var(--disp);font-weight:700;font-size:15.5px;transition:transform .25s var(--ease),background .25s,box-shadow .25s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn:hover{transform:translateY(-2px);background:var(--blue)}
+.btn.gold{background:var(--blue);box-shadow:0 10px 30px -12px rgba(34,177,213,.75)}
+.btn.gold:hover{background:#2767CC}
+.btn.ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+.btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+.btn.white{background:#fff;color:var(--navy)}
+.btn.white:hover{background:var(--neon-hi);color:var(--ink)}
+.btn.sm{min-height:42px;padding:8px 20px;font-size:14.5px}
+.reveal{transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal:not(.is-visible){opacity:0;transform:translateY(22px)}
+
+/* topo */
+.util{background:var(--ink);color:#AEBBC8;font-size:13.5px}
+.util .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0}
+.util a:hover{color:#fff}
+.util .st{color:var(--neon-hi)}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(2,7,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow .3s}
+header.nav.scrolled{box-shadow:0 10px 30px -14px rgba(34,177,213,.4)}
+header.nav .wrap{display:flex;align-items:center;gap:26px;min-height:76px}
+.brand{position:relative;z-index:2;align-self:flex-start;background:#081A38;padding:22px 20px 20px;margin-bottom:-34px;border-bottom:3px solid var(--neon);box-shadow:0 18px 34px -18px rgba(0,0,0,.7)}
+.brand img{width:176px;height:auto;filter:brightness(1.7) saturate(1.15)}
+header.nav ul{list-style:none;display:flex;gap:4px;margin:0 0 0 auto;padding:0}
+header.nav ul a{display:block;padding:8px 13px;color:#DCE5EE;font-family:var(--disp);font-weight:700;font-size:14.5px;border-radius:3px;transition:background .2s,color .2s}
+header.nav ul a:hover,header.nav ul a.on{background:rgba(123,227,248,.14);color:#fff}
+.nav-cta{flex:none}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:none;color:#fff;align-items:center;justify-content:center}
+.burger svg{width:22px;height:22px}
+
+/* hero */
+.hero{position:relative;padding:0;background:var(--ink);overflow:hidden;color:#fff;isolation:isolate;min-height:716px;display:flex;flex-direction:column}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:radial-gradient(52% 70% at 78% 30%,rgba(34,177,213,.2),transparent 72%),linear-gradient(180deg,#02070D,#04101E)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:url(img/nevoa.jpg) center/cover;opacity:.2;mix-blend-mode:screen;-webkit-mask-image:linear-gradient(90deg,transparent 34%,#000 70%);mask-image:linear-gradient(90deg,transparent 34%,#000 70%)}
+.hero-man{position:absolute;z-index:-1;left:0;top:0;bottom:118px;width:60%;height:calc(100% - 118px);object-fit:cover;object-position:18% center;-webkit-mask-image:linear-gradient(to right,#000 62%,transparent 98%),linear-gradient(to bottom,#000 76%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,#000 62%,transparent 98%),linear-gradient(to bottom,#000 76%,transparent 100%);mask-composite:intersect}
+.hero-in{flex:1;width:min(1200px,100% - 48px);margin-inline:auto;display:flex;flex-direction:column;justify-content:center;padding:58px 0 34px 54%}
+.hero .kick{font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--neon-hi);margin-bottom:16px}
+.hero h1{font-size:clamp(46px,5.5vw,78px);font-weight:600;letter-spacing:-.025em;line-height:1}
+.neon{display:block;margin-top:6px;font-family:var(--neonf);font-weight:400;letter-spacing:0;font-size:1.1em;line-height:1.12;color:#E9FBFF;text-shadow:0 0 6px rgba(123,227,248,.95),0 0 18px rgba(34,177,213,.9),0 0 46px rgba(34,177,213,.7)}
+.hero .lead{margin:18px 0 22px;max-width:480px;color:#D4DFE9;font-size:18px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:6px 0;font-size:13.5px;color:#C6D3DF}
+.hero-facts span{padding:0 12px;border-left:1px solid rgba(255,255,255,.26)}
+.hero-facts span:first-child{border:0;padding-left:0}
+.hero-facts b{font-family:var(--disp);color:#fff}
+.hero-facts .opt{flex-basis:100%;border:0;padding-left:0}
+.hero-bar{width:min(1200px,100% - 48px);margin:0 auto 34px}
+.tabs{display:flex;align-items:center;gap:22px;margin-bottom:10px}
+.tabs button,.tabs a{border:0;background:none;padding:2px 0;color:#C6D3DF;font-family:var(--disp);font-weight:700;font-size:15px;border-bottom:2px solid transparent}
+.tabs .on{color:#fff;border-color:var(--neon)}
+.tabs .end{margin-left:auto}
+.search{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1fr auto;background:#fff;border-radius:2px;box-shadow:0 24px 60px -24px rgba(34,177,213,.55)}
+.search label{display:block;min-width:0;padding:9px 16px 8px;border-right:1px solid var(--line)}
+.search label>span{display:block;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.search input,.search select{display:block;width:100%;border:0;outline:0;background:none;padding:2px 0;font:inherit;font-size:15.5px;color:var(--text)}
+.search .btn{min-height:62px;border-radius:0 2px 2px 0;padding:0 34px}
+.sheet{position:relative;z-index:2;background:var(--paper)}
+
+/* cards */
+.props{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.prop{display:flex;flex-direction:column;background:var(--card);border-radius:3px;overflow:hidden;box-shadow:var(--sh);transition:opacity .7s var(--ease),transform .4s var(--ease),box-shadow .3s}
+.prop:hover{transform:translateY(-6px);box-shadow:0 26px 54px -22px rgba(11,35,80,.5)}
+.ph{position:relative;aspect-ratio:4/3;background:#D9E0E7;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.prop:hover .ph img{transform:scale(1.05)}
+.badges{position:absolute;left:12px;top:12px;display:flex;gap:6px;flex-wrap:wrap}
+.badges span{padding:4px 11px;border-radius:3px;font-size:12.5px;font-weight:600;background:#fff;color:var(--navy)}
+.badges .g{background:var(--navy);color:#fff}
+.count{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:3px;font-size:12.5px;color:#fff;background:rgba(2,7,13,.72)}
+.count svg{width:14px;height:14px}
+.bd{display:flex;flex-direction:column;flex:1;padding:18px 20px 18px}
+.tag{font-size:13.5px;color:var(--muted)}
+.bd h3{font-size:21px;color:var(--navy);margin:4px 0 10px}
+.sp{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14.5px;color:#34445A;margin-bottom:14px}
+.pr{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:13px;border-top:1px solid var(--line)}
+.pr span{font-family:var(--disp);font-weight:800;font-size:20px;color:var(--navy)}
+.pr small{display:block;font-family:var(--body);font-weight:500;font-size:12px;color:var(--muted)}
+.pr i{font-style:normal;font-size:14px;font-weight:600;color:var(--blue-t);white-space:nowrap}
+.more{display:flex;justify-content:center;margin-top:38px}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
+.empty .btn{margin-top:14px}
+
+/* regiões */
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.zone{position:relative;height:250px;border-radius:3px;overflow:hidden;color:#fff;display:flex;align-items:flex-end;padding:20px 22px}
+.zone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.zone:hover img{transform:scale(1.06)}
+.zone::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,13,.05) 30%,rgba(2,7,13,.82))}
+.zone div{position:relative;z-index:1}
+.zone b{display:block;font-family:var(--disp);font-size:24px;letter-spacing:-.02em}
+
+/* lançamentos */
+.dark{background:linear-gradient(180deg,var(--ink-2),var(--ink));color:#fff;border-radius:0}
+.dark .eyebrow{color:var(--neon-hi)}
+.dark .sec-h h2{color:#fff}
+.dark .sec-h p.d{color:#BCC9D6}
+.lanc{grid-template-columns:repeat(4,1fr);gap:20px}
+.lanc .prop{background:#0D1E38;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.lanc .bd h3,.lanc .pr span{color:#fff}
+.lanc .sp{color:#C5D2DE}.lanc .tag{color:#9FB0C2}.lanc .pr{border-color:rgba(255,255,255,.14)}.lanc .pr i{color:var(--neon-hi)}
+.lanc .pr span{font-size:16px}
+
+/* passos */
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.steps::before{content:"";position:absolute;left:8%;right:8%;top:37px;border-top:2px dashed #B9C7D8}
+.step{position:relative;background:linear-gradient(165deg,var(--navy),#0A1630);color:#fff;border-radius:3px;padding:24px 22px 26px}
+.step .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:2px;background:var(--neon);color:var(--ink);font-family:var(--disp);font-weight:800;margin-bottom:14px}
+.step h3{font-size:19px;margin-bottom:6px}
+.step p{font-size:15px;color:#C9D6E3}
+
+/* galeria */
+.gal{padding:0 0 92px;overflow:hidden}
+.row{display:flex;gap:16px;width:max-content;margin-bottom:16px;animation:mq 58s linear infinite}
+.row.back{animation-direction:reverse}
+.gal:hover .row{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tile{position:relative;display:block;width:300px;height:220px;border-radius:3px;overflow:hidden;flex:none}
+.tile img{width:100%;height:100%;object-fit:cover}
+.tile span{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:10px;padding:26px 14px 12px;color:#fff;background:linear-gradient(transparent,rgba(2,7,13,.82));font-size:13px;line-height:1.25}
+.tile span b{display:block;font-family:var(--disp);font-size:15px}
+.tile svg{width:30px;height:30px;padding:6px;border-radius:50%;background:rgba(123,227,248,.2);color:var(--neon-hi);flex:none}
+
+/* busca guiada */
+.quiz{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;background:var(--card);border-radius:3px;padding:44px;box-shadow:var(--sh)}
+.quiz h2{font-size:clamp(28px,3vw,40px);color:var(--navy)}
+.quiz .d{color:var(--muted);margin-top:12px}
+.q-g{margin-bottom:18px}
+.q-g>span{display:block;font-weight:600;font-size:14.5px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:0;padding:9px 16px;border-radius:3px;background:#EAF0F5;color:var(--navy);font-weight:500;font-size:14.5px;transition:background .2s,color .2s}
+.chip[aria-pressed=true]{background:var(--navy);color:#fff}
+.q-res{margin-top:6px;padding:15px 18px;border-radius:3px;background:#EEF6FA;color:var(--navy);font-size:15.5px}
+.q-res i{font-style:normal;font-weight:700;color:var(--blue-t)}
+.quiz .btn{margin-top:16px}
+
+/* avaliações */
+.proof{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:start}
+.score{position:sticky;top:110px;text-align:center;background:linear-gradient(165deg,var(--navy),#0A1630);color:#fff;border-radius:3px;padding:34px 24px}
+.score b{display:block;font-family:var(--disp);font-size:68px;line-height:1;letter-spacing:-.03em}
+.score .stars{color:#FFD24A;font-size:21px;letter-spacing:3px;margin:8px 0}
+.score p{color:#C9D6E3;font-size:15px;margin-bottom:18px}
+.revs{columns:2;column-gap:18px}
+.rev{break-inside:avoid;margin:0 0 18px;background:var(--card);border-radius:3px;padding:20px 22px;box-shadow:var(--sh)}
+.rev .stars{color:#E5A800;font-size:14px;letter-spacing:2px}
+.rev p{margin:6px 0 10px;font-size:15.5px}
+.rev b{font-family:var(--disp);font-size:14.5px;color:var(--navy)}
+
+/* indique */
+.ind{padding:0}
+.ind .box{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;overflow:hidden;background:var(--ink);color:#fff;border-radius:0}
+.ind .im{min-height:470px;background:url(img/indique.jpg) center 16%/cover}
+.ind .tx{padding:58px 54px;align-self:center}
+.ind .big{font-family:var(--disp);font-weight:800;font-size:clamp(50px,6vw,78px);letter-spacing:-.03em;line-height:1;margin:14px 0 10px;color:#E9FBFF;text-shadow:0 0 20px rgba(34,177,213,.8)}
+.ind h2{font-size:clamp(28px,3vw,38px)}
+.ind p{color:#C6D3DF}
+.ind .eyebrow{color:var(--neon-hi)}
+.ind small{display:block;margin:12px 0 22px;color:#9FB0C2}
+
+/* anunciar */
+.sell{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.sell h2{font-size:clamp(28px,3vw,40px);color:var(--navy)}
+.sell .d{color:var(--muted);margin-top:12px}
+.sell-box{background:var(--card);border-radius:3px;padding:28px;box-shadow:var(--sh)}
+
+/* sobre */
+.about{display:grid;grid-template-columns:400px 1fr;gap:56px;align-items:center}
+.about .pic{position:relative}
+.about .pic img{border-radius:3px;width:100%;aspect-ratio:1/1.05;object-fit:cover;object-position:center top}
+.about .bdg{position:absolute;right:-18px;bottom:24px;background:#fff;border-radius:3px;padding:10px 16px;box-shadow:var(--sh);font-size:14px;color:var(--navy)}
+.about .bdg b{font-family:var(--disp);font-size:20px}
+.about h2{font-size:clamp(30px,3.4vw,44px);color:var(--navy);margin-bottom:14px}
+.about p{color:#34445A;margin-bottom:12px}
+.ck{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.ck li{position:relative;padding-left:30px;font-size:15.5px}
+.ck li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--neon))}
+.ck li::after{content:"";position:absolute;left:6px;top:8px;width:8px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+
+/* contato */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}
+.c-card{background:var(--card);border-radius:3px;padding:30px;box-shadow:var(--sh)}
+.c-card h2{font-size:32px;color:var(--navy);margin-bottom:16px}
+.c-card dl{margin:0 0 20px}
+.c-card dt{font-size:13px;color:var(--muted)}
+.c-card dd{margin:0 0 12px;font-weight:500}
+.c-card .acts{display:flex;flex-wrap:wrap;gap:10px}
+.c-map{border-radius:3px;overflow:hidden;min-height:420px;box-shadow:var(--sh)}
+.c-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* rodapé */
+.cta{padding:0 0 92px}
+.cta .box{background:linear-gradient(120deg,var(--navy),var(--blue));border-radius:3px;color:#fff;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{font-size:clamp(26px,3vw,38px);max-width:620px}
+footer.site{background:var(--ink);color:#AEBBC8;font-size:15px;padding:56px 0 26px}
+footer.site .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+footer.site h4{margin:0 0 10px;color:#fff;font-family:var(--disp);font-size:15px}
+footer.site p{margin-bottom:7px}
+footer.site a:hover{color:#fff}
+.foot-b{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.14);padding-top:18px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13.5px}
+.whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:70;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(37,211,102,.7);transition:bottom .25s}
+.whatsapp-float svg{width:31px;height:31px;fill:#fff}
+.ping{position:absolute;right:3px;top:3px;width:12px;height:12px;border-radius:50%;background:#fff;animation:ping 1.9s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,255,255,.75)}100%{box-shadow:0 0 0 14px rgba(255,255,255,0)}}
+.has-mbar .whatsapp-float{bottom:92px}
+.toast{position:fixed;left:50%;bottom:26px;z-index:300;transform:translate(-50%,24px);padding:12px 20px;border-radius:3px;background:var(--navy);color:#fff;font-size:14.5px;opacity:0;pointer-events:none;transition:.3s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* páginas internas */
+.inner{background:var(--paper);min-height:70vh;padding-bottom:90px}
+.page-head{padding:36px 0 22px}
+.page-head h1{font-size:clamp(34px,4.4vw,54px);color:var(--navy)}
+.page-head p{color:var(--muted);max-width:640px;margin-top:10px}
+.crumb{display:flex;flex-wrap:wrap;gap:7px;font-size:14px;color:var(--muted);margin-bottom:14px}
+.crumb a:hover{color:var(--blue-t)}
+.filters{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:14px;align-items:end;padding:20px;background:var(--card);border-radius:3px;box-shadow:var(--sh)}
+.fgroup{display:block;min-width:0}
+.fgroup>span{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:5px}
+.filters input,.filters select{width:100%;height:46px;border:1px solid var(--line);border-radius:3px;background:#fff;padding:0 12px;font:inherit;font-size:15px;color:var(--text)}
+.f2{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:18px 0 22px}
+.seg{display:inline-flex;gap:2px;padding:4px;border-radius:3px;background:#E3E9EF}
+.seg button{border:0;background:none;padding:7px 16px;border-radius:3px;font-weight:600;font-size:14.5px;color:#3A4C66}
+.seg button.on{background:#fff;color:var(--navy);box-shadow:0 2px 6px rgba(11,35,80,.14)}
+.f2r{display:flex;align-items:center;gap:16px;font-size:14.5px;color:var(--muted)}
+.fclear{border:0;background:none;color:var(--blue-t);font-weight:600;padding:4px}
+.fcount{font-weight:600;color:var(--navy)}
+.cat-cta{margin-top:56px;background:linear-gradient(120deg,var(--navy),var(--blue));color:#fff;border-radius:3px;padding:34px 38px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cat-cta h2{font-size:clamp(24px,2.6vw,32px);max-width:640px}
+
+/* imóvel */
+.d-top{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin:6px 0 20px}
+.d-top h1{font-size:clamp(30px,4vw,48px);color:var(--navy);margin:3px 0 6px}
+.loc{display:flex;align-items:center;gap:6px;color:var(--muted)}
+.loc svg{width:18px;height:18px}
+.gal-wrap{position:relative}
+.mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:232px 232px;gap:10px;border-radius:3px;overflow:hidden}
+.mosaic button{padding:0;border:0;background:#D9E0E7;overflow:hidden;cursor:zoom-in}
+.mosaic button:first-child{grid-row:1/3}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.mosaic button:hover img{transform:scale(1.04)}
+.mosaic.few.n1{grid-template-columns:1fr;grid-template-rows:470px}
+.mosaic.few.n2{grid-template-columns:1.6fr 1fr;grid-template-rows:470px}
+.mosaic.few.n2 button:first-child,.mosaic.few.n1 button:first-child{grid-row:auto}
+.mosaic.few.n3{grid-template-columns:2fr 1fr}
+.mosaic.few.n4{grid-template-columns:2fr 1fr 1fr}
+.mosaic.few.n4 button:nth-child(4){grid-column:2/4}
+.all{position:absolute;right:16px;bottom:16px;display:inline-flex;align-items:center;gap:7px;padding:9px 17px;border:0;border-radius:3px;background:#fff;color:var(--navy);font-weight:600;font-size:14.5px;box-shadow:0 8px 22px -8px rgba(0,0,0,.5)}
+.all svg{width:17px;height:17px}
+.d-grid{display:grid;grid-template-columns:1fr 360px;gap:44px;margin-top:32px;align-items:start}
+.d-specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:12px}
+.d-specs div{background:var(--card);border-radius:3px;padding:13px 15px;box-shadow:0 8px 22px -16px rgba(11,35,80,.4)}
+.d-specs b{display:block;font-family:var(--disp);font-size:20px;color:var(--navy)}
+.d-specs span{font-size:13.5px;color:var(--muted)}
+.d-sec{margin-top:36px}
+.d-sec h2{font-size:25px;color:var(--navy);margin-bottom:12px}
+.d-sec p{white-space:pre-line;color:#2B3A4E}
+.note{margin-top:14px;padding:11px 15px;border-radius:3px;background:#E8EEF4;color:#475669;font-size:14.5px}
+.feat{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:9px 22px}
+.feat li{display:flex;gap:9px;align-items:flex-start;font-size:15.5px}
+.feat i{flex:none;width:21px;height:21px;margin-top:2px;padding:3px;border-radius:50%;background:var(--blue);color:#fff}
+.feat svg{display:block;width:15px;height:15px}
+.d-map{margin-top:12px;border-radius:3px;overflow:hidden}
+.d-map iframe{display:block;width:100%;height:320px;border:0}
+.aside{position:sticky;top:100px;background:linear-gradient(165deg,var(--navy),#081328);color:#fff;border-radius:3px;padding:26px;display:flex;flex-direction:column;gap:9px}
+.aside .k{font-size:14px;color:var(--neon-hi)}
+.aside .st{align-self:flex-start;padding:3px 11px;border-radius:3px;background:#fff;color:var(--navy);font-size:13px;font-weight:600}
+.price{font-family:var(--disp);font-weight:800;font-size:33px;letter-spacing:-.02em;line-height:1.1}
+.price small{display:block;font-family:var(--body);font-weight:500;font-size:14px;letter-spacing:0;color:#C9D6E3}
+.pnote{font-size:14px;color:#C9D6E3;margin-bottom:8px}
+.who{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.14)}
+.who img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top}
+.who b{display:block;font-family:var(--disp)}
+.who span{font-size:13.5px;color:#C9D6E3}
+.aside small{text-align:center;color:#AEBBC8;font-size:13.5px;margin-top:3px}
+.similar{margin-top:66px}
+.similar h2{font-size:clamp(26px,3vw,36px);color:var(--navy)}
+.sel-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:24px;flex-wrap:wrap}
+.mbar{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(2,7,13,.97);display:flex;flex-direction:column;color:#fff}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
+.lb-top button,.lb-nav{width:46px;height:46px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;display:grid;place-items:center}
+.lb svg{width:23px;height:23px}
+.lb-stage{flex:1;min-height:0;position:relative;display:flex;align-items:center;justify-content:center;padding:0 72px}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+.lb-nav{position:absolute;top:50%;margin-top:-23px}
+.lb-prev{left:14px}.lb-next{right:14px}
+.lb-thumbs{display:flex;gap:7px;padding:12px 18px;overflow-x:auto;justify-content:safe center}
+.lb-thumbs button{flex:none;width:74px;height:56px;padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;background:none;opacity:.6}
+.lb-thumbs button.on{border-color:var(--neon);opacity:1}
+.lb-thumbs img{width:100%;height:100%;object-fit:cover}
+
+/* painel */
+.demo{display:flex;gap:10px;flex-wrap:wrap;padding:13px 17px;border-radius:3px;background:#E2F3F9;color:#0C4257;font-size:15px;margin-bottom:22px}
+.pn{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:start}
+.pn-form,.pn-side{background:var(--card);border-radius:3px;padding:26px;box-shadow:var(--sh)}
+.pn-form h2{font-size:25px;color:var(--navy);margin-bottom:16px}
+.pn-side h3{font-size:20px;color:var(--navy)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:13px}
+.frow.c3{grid-template-columns:repeat(3,1fr)}.frow.c4{grid-template-columns:repeat(4,1fr)}
+.fl{display:block;font-size:14px;font-weight:600;color:#34445A;margin-bottom:13px}
+.frow .fl{margin:0}.fl.full{grid-column:1/-1}
+.fl input,.fl select,.fl textarea{display:block;width:100%;margin-top:5px;padding:11px 12px;border:1px solid var(--line);border-radius:3px;background:#fff;font:inherit;font-weight:400;color:var(--text)}
+.fl textarea{min-height:104px;resize:vertical}
+.chk{display:flex;gap:8px;align-items:center;margin-bottom:14px;font-size:15px}
+.drop{padding:26px;text-align:center;border:2px dashed #B9C7D8;border-radius:3px;color:#34445A;cursor:pointer}
+.drop.over{background:#E2F3F9;border-color:var(--neon)}
+.drop small{display:block;color:var(--muted);margin-top:3px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(106px,1fr));gap:9px;margin:13px 0}
+.thumbs>div{position:relative;border-radius:3px;overflow:hidden}
+.thumbs img{width:100%;height:84px;object-fit:cover}
+.cap{position:absolute;left:5px;top:5px;padding:1px 7px;border-radius:3px;background:var(--navy);color:#fff;font-size:11.5px}
+.ctl{display:flex}
+.ctl button{flex:1;border:0;background:#E3E9EF;padding:3px;font-size:15px}
+.pn-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.pn-item{display:grid;grid-template-columns:56px 1fr;gap:4px 11px;padding:11px 0;border-top:1px solid var(--line)}
+.pn-item img{width:56px;height:56px;border-radius:3px;object-fit:cover;grid-row:1/3}
+.pn-item b{display:block;font-size:14.5px;line-height:1.25}
+.pn-item span{font-size:13px;color:var(--muted)}
+.pn-item .acts{grid-column:2;display:flex;gap:13px;font-size:13.5px}
+.pn-item .acts a,.pn-item .acts button{border:0;padding:0;background:none;color:var(--blue-t);font-weight:600}
+.pn-item .acts .del{color:#B4322A}
+.pn-tools{display:flex;flex-wrap:wrap;gap:6px 13px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.pn-tools button{border:0;padding:0;background:none;color:var(--blue-t);font-size:13.5px}
+
+@media (max-width:1180px){
+  header.nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--ink);padding:10px 20px 18px}
+  header.nav.open ul{display:flex}
+  .burger{display:inline-flex}
+  .nav-cta{display:none}
+  .brand{align-self:center;margin:0;padding:0;background:none;border:0;box-shadow:none}
+  .brand img{width:170px}
+  .hero{min-height:0}
+  .hero-man{position:relative;left:auto;top:auto;bottom:auto;width:100%;height:clamp(290px,46vw,440px);object-position:22% 30%;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent);mask-image:linear-gradient(to bottom,#000 72%,transparent);-webkit-mask-composite:source-over;mask-composite:add}
+  .hero-in{padding:0;margin-top:-34px}
+  .search{grid-template-columns:1fr 1fr 1fr}
+  .search .q{grid-column:1/-1;border-bottom:1px solid var(--line);border-right:0}
+  .search .btn{grid-column:1/-1;border-radius:0 0 2px 2px;min-height:54px}
+  .hero-bar{margin-top:26px}
+  .lanc{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:320px 1fr;gap:36px}
+  .filters{grid-template-columns:repeat(3,1fr)}
+  .filters .q{grid-column:1/-1}
+}
+@media (max-width:860px){
+  body{font-size:16px}
+  section{padding:64px 0}
+  .wrap{width:min(1200px,100% - 32px)}
+  .util .hide{display:none}
+  .props,.zones{grid-template-columns:1fr 1fr;gap:14px}
+  .steps{grid-template-columns:1fr 1fr}.steps::before{display:none}
+  .quiz,.sell,.about,.contact,.proof,.d-grid,.pn,.ind .box{grid-template-columns:1fr}
+  .quiz{padding:26px 20px;gap:22px}
+  .score{position:static}
+  .about .pic{max-width:380px}
+  .about .bdg{right:10px}
+  .ind .im{min-height:340px}
+  .ind .tx{padding:34px 24px 38px}
+    .aside{position:static}
+  .mosaic,.mosaic.few.n1,.mosaic.few.n2,.mosaic.few.n3,.mosaic.few.n4{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:3px;gap:6px}
+  .mosaic button{flex:0 0 92%;height:310px;scroll-snap-align:center}
+  .mosaic button:only-child{flex-basis:100%}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:65;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;background:var(--card);box-shadow:0 -10px 26px -14px rgba(11,35,80,.5)}
+  .mbar small{display:block;font-size:12px;color:var(--muted)}
+  .mbar b{font-family:var(--disp);color:var(--navy);font-size:18px;line-height:1.1}
+  .mbar .btn{flex:none;min-height:46px;padding:8px 20px}
+  .has-mbar{padding-bottom:70px}
+}
+@media (max-width:600px){
+  .props,.lanc,.zones{grid-template-columns:1fr}
+  .zone{height:190px}
+  .hero h1{font-size:46px}
+  .hero .lead{font-size:16.5px;margin:14px 0 16px}
+  .hero-in,.hero-bar{width:calc(100% - 32px)}
+  .hero-facts{font-size:13px}
+  .hero-facts span{padding:0 10px}
+  .hero-facts .opt{display:none}
+  .search{grid-template-columns:1fr 1fr}
+  .search label:nth-of-type(3){border-right:0}
+  .search label{border-bottom:1px solid var(--line)}
+  .search .btn{grid-column:1/-1}
+  .tabs{gap:15px}
+  .tabs .end{display:none}
+  .steps{grid-template-columns:1fr}
+  .revs{columns:1}
+  .ck,.feat{grid-template-columns:1fr}
+  .filters{grid-template-columns:1fr 1fr;padding:14px}
+  .frow.c3,.frow.c4{grid-template-columns:1fr 1fr}
+  .lb-stage{padding:0}
+  .lb-nav{display:none}
+  .cta .box,.cat-cta{padding:28px 22px}
+  footer.site .wrap{grid-template-columns:1fr}
+  .tile{width:240px;height:180px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal:not(.is-visible){opacity:1;transform:none}
+}
+</style>
+<link rel="canonical" href="https://generationiahubb.github.io/sites-clientes/clayton-campos-corretor-sorocaba/">
+<meta name="robots" content="noindex, follow">
+</head>
+<body id="top">
+<div id="expiry-overlay"><div><h1 style="font-size:26px;margin:0 0 14px;">Esta prévia expirou</h1><p style="max-width:420px;margin:0 auto 26px;color:#c7ccd1;line-height:1.5;">Esse site foi uma demonstração da Generation IA Tech. Fale com a gente pra ativar a versão definitiva, com domínio próprio.</p><a href="https://wa.me/5514999050398?text=Ol%C3%A1!%20Vi%20a%20pr%C3%A9via%20do%20meu%20site%20e%20quero%20ativar." style="display:inline-block;background:#25D366;color:#fff;padding:14px 30px;border-radius:999px;font-weight:600;text-decoration:none;">Falar no WhatsApp</a></div></div>
+
+<div class="util"><div class="wrap">
+  <span><span class="hide">Av. Cleise Teresinha Rosa Silva, 485 · Sorocaba-SP · </span><a href="tel:+5515992766042">(15) 99276-6042</a></span>
+  <a href="#" data-maps target="_blank" rel="noopener"><span class="st">★ 5,0</span> · 23 avaliações no Google</a>
+</div></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#/" aria-label="Clayton Campos, corretor de imóveis"><img src="img/logo.png" alt="Clayton Campos Corretor de Imóveis" width="400" height="98"></a>
+    <ul>
+      <li><a href="#/imoveis">Imóveis à venda</a></li>
+      <li><a href="#/imoveis?sit=Lan%C3%A7amento">Lançamentos</a></li>
+      <li><a href="#encontre">Encontre meu imóvel</a></li>
+      <li><a href="#indique">Indique e ganhe</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a class="btn white sm nav-cta" href="#" data-wa="Olá, Clayton! Vim pelo site e quero ajuda para encontrar um imóvel.">Falar com o Clayton</a>
+    <button class="burger" type="button" id="burger" aria-label="Abrir menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main id="view-home">
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <img class="hero-man" src="img/hero-clayton.jpg" alt="Clayton Campos, corretor de imóveis em Sorocaba" width="1040" height="566">
+    <div class="hero-in">
+      <p class="kick">Corretor de imóveis em Sorocaba</p>
+      <h1>O seu imóvel <span class="neon">a um clique</span></h1>
+      <p class="lead">Tenho o imóvel certo que irá te atender: investimento ou seu 1º imóvel. Bora conhecer seu novo endereço?</p>
+      <div class="hero-facts">
+        <span><b>5,0 ★</b> no Google</span>
+        <span><b>23</b> avaliações</span>
+        <span><b>8 anos</b> em Sorocaba</span>
+        <span class="opt"><b>CRECI</b> 206530-F</span>
+      </div>
+    </div>
+    <div class="hero-bar">
+      <div class="tabs" role="group" aria-label="O que você procura">
+        <button type="button" class="on" data-sit="">Comprar</button>
+        <button type="button" data-sit="Lançamento">Lançamentos</button>
+        <a href="#anunciar">Anunciar</a>
+        <a class="end" href="#/imoveis?mcmv=1">Minha Casa Minha Vida</a>
+      </div>
+      <form class="search" id="heroSearch" role="search">
+        <label class="q"><span>Buscar</span><input id="hsQ" type="search" placeholder="Bairro ou condomínio"></label>
+        <label><span>Tipo</span><select id="hsT"><option value="">Todos</option><option>Apartamento</option><option>Casa</option></select></label>
+        <label><span>Região</span><select id="hsZ"><option value="">Todas</option><option>Zona Leste</option><option>Zona Oeste</option><option>Zona Norte</option></select></label>
+        <label><span>Dormitórios</span><select id="hsD"><option value="">Todos</option><option value="2">2 ou mais</option><option value="3">3 ou mais</option></select></label>
+        <label><span>Valor até</span><select id="hsM"><option value="">Qualquer</option><option value="260000">R$ 260 mil</option><option value="300000">R$ 300 mil</option><option value="360000">R$ 360 mil</option><option value="500000">R$ 500 mil</option><option value="900000">R$ 900 mil</option></select></label>
+        <button class="btn gold" type="submit">Buscar</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="sheet">
+    <section id="imoveis">
+      <div class="wrap">
+        <div class="sec-h">
+          <div><p class="eyebrow">Imóveis à venda</p><h2>Apartamentos e casas em Sorocaba</h2></div>
+          <a class="btn ghost sm" href="#/imoveis">Ver todos os imóveis</a>
+        </div>
+        <div class="props" id="homeGrid"></div>
+      </div>
+    </section>
+
+    <section id="regioes" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-h"><div><p class="eyebrow">Por região</p><h2>Onde você quer morar?</h2></div></div>
+        <div class="zones">
+          <a class="zone" href="#/imoveis?zona=Zona%20Leste"><img src="img/esperanza-1.jpg" alt="" loading="lazy"><div><b>Zona Leste</b><span data-zc="Zona Leste"></span></div></a>
+          <a class="zone" href="#/imoveis?zona=Zona%20Oeste"><img src="img/petunias-1.jpg" alt="" loading="lazy" style="object-position:center 30%"><div><b>Zona Oeste</b><span data-zc="Zona Oeste"></span></div></a>
+          <a class="zone" href="#/imoveis?zona=Zona%20Norte"><img src="img/garden-3.jpg" alt="" loading="lazy" style="object-position:center 40%"><div><b>Zona Norte</b><span data-zc="Zona Norte"></span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="lancamentos">
+      <div class="wrap">
+        <div class="sec-h">
+          <div><p class="eyebrow">Lançamentos</p><h2>Especializado em lançamentos em Sorocaba</h2><p class="d">Plantas, valores e condições de cada empreendimento, direto com o Clayton. Ele também trabalha com imóveis de terceiros, terrenos e áreas rurais.</p></div>
+          <a class="btn white sm" href="#/imoveis?sit=Lan%C3%A7amento">Ver lançamentos</a>
+        </div>
+        <div class="props lanc" id="homeLanc"></div>
+      </div>
+    </section>
+
+    <section id="como">
+      <div class="wrap">
+        <div class="sec-h"><div><p class="eyebrow">Como funciona</p><h2>Do clique até a chave</h2></div></div>
+        <div class="steps">
+          <div class="step reveal"><span class="n">1</span><h3>Escolha pelo site</h3><p>Filtre por região, tipo e valor. Cada imóvel tem fotos e ficha completa.</p></div>
+          <div class="step reveal"><span class="n">2</span><h3>Chame no WhatsApp</h3><p>A mensagem já sai com o imóvel que você viu e o link do anúncio.</p></div>
+          <div class="step reveal"><span class="n">3</span><h3>Agende a visita</h3><p>De segunda a sábado, das 8h às 18h. Domingo fechado.</p></div>
+          <div class="step reveal"><span class="n">4</span><h3>Compare o financiamento</h3><p>Já tem simulação? Mande para o Clayton, que ele ajuda a comparar.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gal" aria-label="Fotos dos imóveis anunciados">
+      <div class="row" id="row1"></div>
+      <div class="row back" id="row2"></div>
+    </section>
+
+    <section id="encontre" style="padding-top:0">
+      <div class="wrap">
+        <div class="quiz reveal">
+          <div>
+            <p class="eyebrow">Encontre meu imóvel</p>
+            <h2>Não achou? Conte o que você procura.</h2>
+            <p class="d">Marque as opções e a mensagem chega pronta no WhatsApp do Clayton. O catálogo aqui é só uma parte do que ele tem para te mostrar.</p>
+          </div>
+          <div>
+            <div class="q-g"><span>Qual é o objetivo?</span><div class="chips" data-group="obj" data-single>
+              <button type="button" class="chip" aria-pressed="true" data-v="para ser meu 1º imóvel">Meu 1º imóvel</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="para trocar de imóvel">Trocar de imóvel</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="para investir">Investimento</button>
+            </div></div>
+            <div class="q-g"><span>Tipo</span><div class="chips" data-group="tipo" data-single>
+              <button type="button" class="chip" aria-pressed="true" data-v="um apartamento">Apartamento</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="uma casa">Casa</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="um lançamento">Lançamento</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="um terreno">Terreno</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="uma área rural">Área rural</button>
+            </div></div>
+            <div class="q-g"><span>Região</span><div class="chips" data-group="reg" data-single>
+              <button type="button" class="chip" aria-pressed="true" data-v="">Tanto faz</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="na Zona Leste">Zona Leste</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="na Zona Oeste">Zona Oeste</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="na Zona Norte">Zona Norte</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="na Zona Sul">Zona Sul</button>
+            </div></div>
+            <div class="q-g"><span>Até quanto?</span><div class="chips" data-group="val" data-single>
+              <button type="button" class="chip" aria-pressed="true" data-v="">Ainda não sei</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="até R$ 300 mil">Até R$ 300 mil</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="até R$ 500 mil">Até R$ 500 mil</button>
+              <button type="button" class="chip" aria-pressed="false" data-v="acima de R$ 500 mil">Acima de R$ 500 mil</button>
+            </div></div>
+            <p class="q-res" id="qRes" aria-live="polite"></p>
+            <a class="btn gold" id="qBtn" href="#">Enviar para o Clayton</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-h"><div><p class="eyebrow">Avaliações reais do Google</p><h2>Quem foi atendido recomenda</h2></div></div>
+        <div class="proof">
+          <div class="score"><b>5,0</b><div class="stars" aria-hidden="true">★★★★★</div><p>23 avaliações no Google</p><a class="btn white sm" href="#" data-maps target="_blank" rel="noopener">Ver no Google</a></div>
+          <div class="revs">
+            <figure class="rev"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>Atendimento nota 10 (Perfeito), Clayton foi super atencioso, paciente e explicou tudo com muita clareza sobre o financiamento. Me passou muita segurança do início ao fim. Recomendo de olhos fechados!!</p><b>Talita Siqueira</b></figure>
+            <figure class="rev"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>Atendimento excelente, profissionalismo e confiança do início ao fim. Recomendo muito!!!</p><b>Priscilla ramos</b></figure>
+            <figure class="rev"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>Excelente corretor. Super indico como profissional! Muito receptivo, atencioso e prestativo!</p><b>Larissa França</b></figure>
+            <figure class="rev"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>Atendimento incrível, com ótimas opções de imóveis, com certeza indicaria para outras pessoas</p><b>Fabiana Santana</b></figure>
+            <figure class="rev"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>Experiência incrível, ótimo profissional e amigo!!</p><b>Maria Vitoria Xavier</b></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ind" id="indique">
+      <div class="wrap">
+        <div class="box reveal">
+          <div class="im" role="img" aria-label="Clayton Campos com o letreiro em neon da campanha Indique e ganhe"></div>
+          <div class="tx">
+            <p class="eyebrow">Campanha Indique e ganhe</p>
+            <h2>Indicou e a pessoa comprou? Você ganha</h2>
+            <p class="big">R$ 1.000</p>
+            <p>Ao fazer uma indicação, seja de amigo ou parente, e o indicado adquirir seu imóvel, você que indicou ganha R$ 1.000,00 no Pix.</p>
+            <small>*Campanha por tempo limitado.</small>
+            <a class="btn white" href="#" data-wa="Olá, Clayton! Quero indicar uma pessoa na campanha Indique e ganhe.">Quero indicar alguém</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="anunciar">
+      <div class="wrap sell">
+        <div class="reveal">
+          <p class="eyebrow">Para proprietários</p>
+          <h2>Tem um imóvel para vender?</h2>
+          <p class="d">Além dos lançamentos, o Clayton trabalha com imóveis de terceiros, terrenos e áreas rurais. Conte o que você tem e ele retorna pelo WhatsApp.</p>
+        </div>
+        <div class="sell-box reveal">
+          <div class="q-g"><span>O que você quer vender?</span><div class="chips" data-group="vend" data-single>
+            <button type="button" class="chip" aria-pressed="true" data-v="um apartamento">Apartamento</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="uma casa">Casa</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="um terreno">Terreno</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="uma área rural">Área rural</button>
+          </div></div>
+          <a class="btn" id="vBtn" href="#">Anunciar com o Clayton</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" style="padding-top:0">
+      <div class="wrap about">
+        <div class="pic reveal"><img src="img/sobre.jpg" alt="Clayton Campos, corretor de imóveis em Sorocaba" loading="lazy"><div class="bdg"><b>5,0 ★</b> no Google</div></div>
+        <div class="reveal">
+          <p class="eyebrow">Sobre</p>
+          <h2>Clayton Campos</h2>
+          <p>São 8 anos conectando pessoas ao imóvel certo em Sorocaba. Especializado em lançamentos, ele também trabalha com imóveis de terceiros, terrenos e áreas rurais.</p>
+          <p>Seja para o 1º imóvel ou para investir, o trabalho é o mesmo: entender o que cabe no seu bolso e te levar até o seu novo endereço.</p>
+          <ul class="ck">
+            <li>Lançamentos e prontos para morar</li>
+            <li>Imóveis de terceiros</li>
+            <li>Terrenos e áreas rurais</li>
+            <li>1º imóvel e investimento</li>
+            <li>Ajuda para comparar simulações</li>
+            <li>CRECI 206530-F</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" style="padding-top:0">
+      <div class="wrap contact">
+        <div class="c-card reveal">
+          <h2>Contato</h2>
+          <dl>
+            <dt>Endereço</dt><dd>Av. Cleise Teresinha Rosa Silva, 485 · Jardim Maria Eugenia, Sorocaba-SP · 18071-024</dd>
+            <dt>WhatsApp e telefone</dt><dd><a href="tel:+5515992766042">(15) 99276-6042</a></dd>
+            <dt>Horário</dt><dd>Segunda a sábado, das 8h às 18h · Domingo fechado</dd>
+            <dt>Google</dt><dd>5,0 ★ · 23 avaliações</dd>
+          </dl>
+          <div class="acts">
+            <a class="btn gold sm" href="#" data-wa="Olá, Clayton! Vim pelo site.">Chamar no WhatsApp</a>
+            <a class="btn ghost sm" href="https://www.instagram.com/claytoncamposcorretor/" target="_blank" rel="noopener">Seguir no Instagram</a>
+          </div>
+        </div>
+        <div class="c-map reveal"><iframe title="Mapa do endereço do Clayton Campos" loading="lazy" src="https://maps.google.com/maps?q=Av.%20Cleise%20Teresinha%20Rosa%20Silva%2C%20485%2C%20Sorocaba%20-%20SP&z=15&output=embed"></iframe></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap"><div class="box reveal">
+        <h2>Bora conhecer seu novo endereço?</h2>
+        <a class="btn white" href="#" data-wa="Olá, Clayton! Vim pelo site e quero conhecer meu novo endereço.">Falar com o Clayton</a>
+      </div></div>
+    </section>
+  </div>
+</main>
+
+<main id="view-catalog" class="inner" hidden>
+  <div class="wrap">
+    <div class="page-head">
+      <nav class="crumb" aria-label="Você está em"><a href="#/">Início</a><span>/</span><span>Imóveis</span></nav>
+      <h1 id="catTitle">Imóveis à venda em Sorocaba</h1>
+      <p>Clique em um imóvel para ver as fotos, a ficha completa e agendar sua visita.</p>
+    </div>
+    <div class="filters" role="search">
+      <label class="fgroup q"><span>Buscar</span><input id="fQ" type="search" placeholder="Bairro ou condomínio"></label>
+      <label class="fgroup"><span>Tipo</span><select id="fTipo"></select></label>
+      <label class="fgroup"><span>Região</span><select id="fZona"></select></label>
+      <label class="fgroup"><span>Dormitórios</span><select id="fQuartos"><option value="">Todos</option><option value="2">2 ou mais</option><option value="3">3 ou mais</option></select></label>
+      <label class="fgroup"><span>Valor até</span><select id="fMax"><option value="">Qualquer valor</option><option value="260000">R$ 260 mil</option><option value="300000">R$ 300 mil</option><option value="360000">R$ 360 mil</option><option value="500000">R$ 500 mil</option><option value="900000">R$ 900 mil</option></select></label>
+    </div>
+    <div class="f2">
+      <div class="seg" data-f="sit"><button type="button" data-v="" class="on">Todos</button><button type="button" data-v="Pronto para morar">Prontos</button><button type="button" data-v="Lançamento">Lançamentos</button></div>
+      <div class="f2r"><span class="fcount" id="catCount" aria-live="polite"></span><label>Ordenar <select id="fOrd" aria-label="Ordenar imóveis"><option value="">Destaques</option><option value="asc">Menor valor</option><option value="desc">Maior valor</option></select></label><button class="fclear" id="fClear" type="button">Limpar</button></div>
+    </div>
+    <div class="props" id="catGrid"></div>
+    <div class="cat-cta">
+      <h2>Não achou o que procura? O Clayton tem mais opções.</h2>
+      <a class="btn white" href="#encontre">Contar o que eu procuro</a>
+    </div>
+  </div>
+</main>
+
+<main id="view-detail" class="inner" hidden><div class="wrap" id="detail"></div></main>
+
+<main id="view-painel" class="inner" hidden>
+  <div class="wrap">
+    <div class="page-head">
+      <nav class="crumb" aria-label="Você está em"><a href="#/">Início</a><span>/</span><span>Área do corretor</span></nav>
+      <h1>Anunciar um imóvel</h1>
+      <p>Preencha os dados, adicione as fotos e publique. O imóvel entra no catálogo e ganha uma página própria, com galeria e botão de WhatsApp.</p>
+    </div>
+    <div class="demo"><b>Modo demonstração</b><span>Nesta prévia, os anúncios ficam salvos só neste aparelho. Na versão definitiva, o Clayton entra com login e os anúncios aparecem para todos os visitantes.</span></div>
+    <div class="pn">
+      <form class="pn-form" id="pnForm" novalidate>
+        <h2 id="pnFormTitle">Novo anúncio</h2>
+        <div class="frow">
+          <label class="fl full">Título do anúncio<input name="titulo" required placeholder="Ex.: Apartamento de 2 dormitórios no Jd. Simus"></label>
+          <label class="fl full">Linha de apoio<input name="sub" placeholder="Ex.: Apartamento · Jd. Simus"></label>
+        </div>
+        <div class="frow c3">
+          <label class="fl">Tipo<select name="tipo"><option>Apartamento</option><option>Casa</option><option>Terreno</option><option>Área rural</option><option>Comercial</option></select></label>
+          <label class="fl">Situação<select name="situacao"><option value="">Não informar</option><option>Pronto para morar</option><option>Lançamento</option></select></label>
+          <label class="fl">Status<select name="status"><option value="">Normal</option><option>Reservado</option><option>Vendido</option><option>Oculto</option></select></label>
+        </div>
+        <div class="frow c3">
+          <label class="fl">Valor (R$)<input name="preco" inputmode="numeric" placeholder="Vazio = sob consulta"></label>
+          <label class="fl">Bairro<input name="bairro" placeholder="Ex.: Jd. Simus"></label>
+          <label class="fl">Região<select name="zona"><option value="">Não informar</option><option>Zona Leste</option><option>Zona Oeste</option><option>Zona Norte</option><option>Zona Sul</option><option>Centro</option></select></label>
+        </div>
+        <div class="frow"><label class="fl full">Endereço para o mapa (opcional)<input name="mapa" placeholder="Ex.: Jd. Simus, Sorocaba - SP"></label></div>
+        <div class="frow c4">
+          <label class="fl">Dormitórios<input name="quartos" inputmode="numeric"></label>
+          <label class="fl">Suítes<input name="suites" inputmode="numeric"></label>
+          <label class="fl">Banheiros<input name="banheiros" inputmode="numeric"></label>
+          <label class="fl">Vagas<input name="vagas" inputmode="numeric"></label>
+        </div>
+        <div class="frow">
+          <label class="fl">Área (m²)<input name="area" inputmode="numeric"></label>
+          <label class="fl">Terreno (m²)<input name="terreno" inputmode="numeric"></label>
+        </div>
+        <label class="fl">Descrição<textarea name="descricao" placeholder="Conte o que torna esse imóvel especial."></textarea></label>
+        <label class="fl">Características (uma por linha)<textarea name="feats" placeholder="Varanda gourmet&#10;Garagem coberta&#10;Elevador"></textarea></label>
+        <label class="chk"><input type="checkbox" name="destaque" checked> Mostrar na página inicial</label>
+        <p class="fl" style="margin-bottom:8px">Fotos</p>
+        <div class="drop" id="drop" tabindex="0" role="button" aria-label="Adicionar fotos">Arraste as fotos aqui ou <u>clique para escolher</u><small>A primeira foto vira a capa. As fotos são reduzidas automaticamente.</small></div>
+        <input type="file" id="pnFiles" accept="image/*" multiple hidden>
+        <div class="thumbs" id="pnThumbs"></div>
+        <div class="pn-acts"><button class="btn gold" type="submit" id="pnSubmit">Publicar anúncio</button><button class="btn ghost" type="button" id="pnCancel" hidden>Cancelar edição</button></div>
+      </form>
+      <aside class="pn-side">
+        <h3>Anúncios publicados</h3>
+        <p id="pnCount"></p>
+        <div id="pnList"></div>
+        <div class="pn-tools"><button type="button" id="pnExport">Baixar backup</button><button type="button" id="pnImportBtn">Restaurar backup</button><input type="file" id="pnImport" accept="application/json" hidden><button type="button" id="pnReset">Voltar aos anúncios originais</button></div>
+      </aside>
+    </div>
+  </div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <a href="#/"><img src="img/logo.png" alt="Clayton Campos Corretor de Imóveis" width="190" style="height:auto"></a>
+      <p style="margin-top:14px;max-width:340px">O seu imóvel a um clique. Lançamentos, imóveis de terceiros, terrenos e áreas rurais em Sorocaba.</p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <p><a href="#" data-wa="Olá, Clayton! Vim pelo site.">(15) 99276-6042</a></p>
+      <p>Av. Cleise Teresinha Rosa Silva, 485<br>Jardim Maria Eugenia, Sorocaba-SP</p>
+      <p>Seg a sáb · 8h às 18h</p>
+    </div>
+    <div>
+      <h4>Siga</h4>
+      <p><a href="https://www.instagram.com/claytoncamposcorretor/" target="_blank" rel="noopener">Instagram @claytoncamposcorretor</a></p>
+      <p><a href="#" data-maps target="_blank" rel="noopener">Google Maps</a></p>
+      <p><a href="https://g.page/r/CS1CRM85F0WKEAE/review" target="_blank" rel="noopener">Deixar uma avaliação</a></p>
+      <p><a href="#/painel">Área do corretor · anunciar imóvel</a></p>
+    </div>
+    <div class="foot-b"><span>© 2026 Clayton Campos · CRECI 206530-F</span><span>Valores e disponibilidade sujeitos a confirmação.</span></div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="#" data-wa="Olá, Clayton! Vim pelo site e quero ajuda para encontrar um imóvel." aria-label="Conversar no WhatsApp"><span class="ping"></span><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg></a>
+<script>
+/* Catálogo de imóveis, página de cada imóvel e área do corretor (roteador por hash) */
+(function(){
+'use strict';
+var PHONE = '5515992766042';
+var MAPS = 'https://www.google.com/maps/place/Clayton+Campos+Corretor%7C+Corretor+de+im%C3%B3veis+em+Sorocaba/@-23.4558428,-47.5046217,17z/data=!4m6!3m5!1s0x94cf5f773578a757:0x8a451739cf44422d!8m2!3d-23.4558674!4d-47.5020468!16s%2Fg%2F11m_5rfp5z';
+function F(n, k){ var a = []; for(var i = 1; i <= k; i++) a.push('img/' + n + '-' + i + '.jpg'); return a; }
+
+/* Imóveis reais anunciados pelo Clayton (legendas e artes do Instagram, jul–nov/2026, e fotos do perfil no Google). */
+var BASE = [
+  {id:'casa-reserva-ipanema', ordem:100, titulo:'Casa no Condomínio Reserva Ipanema', sub:'Casa em condomínio fechado', tipo:'Casa', situacao:'', status:'', preco:880000,
+   bairro:'', zona:'', mapa:'', quartos:3, suites:1, banheiros:null, vagas:null, area:140, terreno:200, destaque:true,
+   descricao:'Casa moderna com área gourmet em condomínio fechado.\n\nSão 140 m² construídos em um terreno de 200 m², com 3 dormitórios, sendo 1 suíte.',
+   feats:['3 dormitórios, sendo 1 suíte','140 m² construídos','200 m² de terreno','Área gourmet em destaque','Condomínio fechado'],
+   fotos:F('ipanema', 7).concat('img/ipanema-arte.jpg')},
+  {id:'apartamento-jd-saira', ordem:95, titulo:'Apartamento de 65 m² no Jd. Saira', sub:'Apartamento · Zona Leste', tipo:'Apartamento', situacao:'', status:'', preco:359000,
+   bairro:'Jd. Saira', zona:'Zona Leste', mapa:'Jardim Saira, Sorocaba - SP', quartos:2, suites:1, banheiros:null, vagas:null, area:65, terreno:null, destaque:false,
+   descricao:'Em Sorocaba, no Jd. Saira, esse de 65 m² entrega o que a maioria só promete: 2 quartos, sendo 1 suíte, varanda gourmet, garagem coberta e elevador. Sem escada com sacola de compra no fim do dia.\n\nE os detalhes de conforto já estão previstos: ponto de ar-condicionado na sala e nos dois quartos. Quem mora em Sorocaba sabe o quanto isso pesa em janeiro.\n\nO condomínio é novo e tem salão de festas, salão de jogos e brinquedoteca.',
+   feats:['2 quartos, sendo 1 suíte','Varanda gourmet','Garagem coberta','Elevador','Banheiros com box','Pontos de ar-condicionado na sala e nos 2 quartos','Salão de festas','Salão de jogos','Brinquedoteca','Condomínio novo'],
+   fotos:['img/saira-1.jpg','img/saira-arte.jpg']},
+  {id:'residencial-sun-like', ordem:92, titulo:'Residencial Sun Like', sub:'Apartamento reformado · Zona Oeste', tipo:'Apartamento', situacao:'Pronto para morar', status:'', preco:335000,
+   bairro:'', zona:'Zona Oeste', mapa:'', quartos:2, suites:null, banheiros:null, vagas:1, area:52, terreno:null, destaque:true,
+   descricao:'Apartamento reformado, equipado e pronto pra morar.\n\nSão 52 m² com 2 quartos, varanda com churrasqueira, Alexa integrada e LED em todo o apê, ar-condicionado incluso e torneiras aquecidas no banheiro e na cozinha. Eletrodomésticos inclusos (a TV não acompanha).\n\nZona Oeste: região em plena expansão, com fácil acesso ao centro, às avenidas principais e a toda a infraestrutura de Sorocaba.',
+   feats:['2 quartos','Varanda com churrasqueira','Alexa integrada + LED em todo o apê','Ar-condicionado incluso','Torneiras aquecidas no banheiro e na cozinha','Eletrodomésticos inclusos (TV não acompanha)','1 vaga de garagem','Mercadinho','Portaria 24h','Academia','Churrasqueiras','Playground','Área pet'],
+   fotos:['img/sunlike-2.jpg','img/sunlike-3.jpg','img/sunlike-4.jpg','img/sunlike-1.jpg','img/sunlike-arte.jpg']},
+  {id:'residencial-sion', ordem:90, titulo:'Residencial Sion', sub:'Apartamento térreo com quintal · Zona Norte', tipo:'Apartamento', situacao:'Pronto para morar', status:'', preco:250000, mcmv:true,
+   bairro:'Caguaçu', zona:'Zona Norte', mapa:'Caguaçu, Sorocaba - SP', quartos:2, suites:null, banheiros:null, vagas:null, area:null, areaTxt:'48 m² + quintal', terreno:null, destaque:true,
+   descricao:'No Residencial Sion, no Caguaçu, você encontra um lar térreo com a tranquilidade de quem tem espaço de sobra e a segurança de um condomínio completo.\n\nSão 48 m² de área privativa mais quintal privativo de 9 m², com porcelanato, cozinha com pia em mármore e pronto pra morar: sem obra, sem dor de cabeça.\n\nR$ 250.000: você ainda paga R$ 10 mil a menos que o preço original.',
+   feats:['48 m² de área privativa','Quintal privativo de 9 m², com piso, tanque e infra para cobertura','Porcelanato na sala, cozinha e dormitórios','Cozinha com pia em mármore','Portaria remota 24h','Câmeras','Playground','Salão de festas','Financiamento pelo Minha Casa Minha Vida'],
+   fotos:['img/sion-1.jpg','img/sion-arte.jpg']},
+  {id:'residencial-mangueiras', ordem:88, titulo:'Residencial Mangueiras', sub:'Apartamento de 130 m² · Zona Oeste', tipo:'Apartamento', situacao:'', status:'', preco:456000,
+   bairro:'Jd. Itanguá', zona:'Zona Oeste', mapa:'Jardim Itanguá, Sorocaba - SP', quartos:3, suites:1, banheiros:null, vagas:null, area:130, terreno:null, destaque:true,
+   descricao:'130 m², 3 dormitórios com suíte no Jardim Itanguá, em Sorocaba.\n\nO Residencial Mangueiras entrega conforto de sobra: apartamento com ar-condicionado, móveis planejados e espaço de sobra pra família inteira. E o condomínio não fica atrás.',
+   feats:['3 dormitórios com suíte','Ar-condicionado','Móveis planejados','Porcelanato nas áreas comuns','Quadra poliesportiva','Futebol de salão','Espaço gourmet','Academia (praça) e churrasqueira','Bicicletário','Área verde','Elevador','Porteiro 24 horas'],
+   fotos:['img/mangueiras-1.jpg','img/mangueiras-arte.jpg']},
+  {id:'residencial-petunias', ordem:86, titulo:'Residencial Petúnias', sub:'Apartamento · Zona Oeste', tipo:'Apartamento', situacao:'Pronto para morar', status:'', preco:223700, aPartir:true,
+   bairro:'Jd. Simus', zona:'Zona Oeste', mapa:'Jardim Simus, Sorocaba - SP', quartos:2, suites:null, banheiros:1, vagas:null, area:52, terreno:null, destaque:true,
+   descricao:'Saia do aluguel morando na Zona Oeste de Sorocaba.\n\nApartamento de 52 m² com varanda, 2 dormitórios, sala, cozinha, banheiro e área de lavanderia. Prédio com térreo + 7 andares, 4 apartamentos por andar e elevador.\n\nSem burocracia de "imóvel novo": a simulação é feita como usado, o que facilita (e muito!) sua aprovação.',
+   feats:['2 dormitórios','Varanda','Elevador','4 apartamentos por andar','Garagem: 1 vaga (térreo ao 5º andar) ou 2 vagas (6º e 7º andar)','Playground','Salão de festas'],
+   fotos:['img/petunias-1.jpg','img/petunias-arte.jpg']},
+  {id:'casa-residencial-esperanza', ordem:84, titulo:'Casa no Residencial Esperanza', sub:'Casa · Zona Leste', tipo:'Casa', situacao:'Pronto para morar', status:'', preco:285000,
+   bairro:'', zona:'Zona Leste', mapa:'', quartos:2, suites:null, banheiros:1, vagas:null, area:60, terreno:null, destaque:false,
+   descricao:'Casa pronta para morar no Residencial Esperanza.\n\nTudo pronto, sem obra, sem dor de cabeça: é só chegar e morar. Com iluminação inteligente com Sonoff: dá pra controlar as luzes pela Alexa.',
+   feats:['2 dormitórios com piso laminado','Sala e cozinha com móveis planejados','Porcelanato nas áreas sociais','Rebaixo de gesso','Iluminação inteligente com Sonoff','1 banheiro com box','Área de serviço'],
+   fotos:['img/esperanza-1.jpg','img/esperanza-arte.jpg']},
+  {id:'condominio-brisa-do-parque-2', ordem:82, titulo:'Condomínio Brisa do Parque 2', sub:'Apartamento · Zona Leste', tipo:'Apartamento', situacao:'', status:'', preco:340000,
+   bairro:'Vila Gabriel', zona:'Zona Leste', mapa:'Vila Gabriel, Sorocaba - SP', quartos:2, suites:null, banheiros:null, vagas:1, area:54, terreno:null, destaque:true,
+   descricao:'Localização privilegiada na Vila Gabriel: ao lado de mercado, escolas e farmácias, com tudo que você precisa a poucos passos de casa.\n\nAceita-se permuta por imóvel.',
+   feats:['Porcelanato em todos os cômodos','Sanca de gesso','Ar-condicionado instalado','Sacada','Elevador','Garagem coberta (1 vaga)','Piscina','Academia','Salão de festas','Salão de jogos','Quiosques com churrasqueira','Campo de areia','Mini mercado','Aceita permuta'],
+   fotos:['img/brisa-1.jpg','img/brisa-arte.jpg']},
+  {id:'residencial-planalto', ordem:80, titulo:'Residencial Planalto', sub:'Apartamento · Zona Leste', tipo:'Apartamento', situacao:'', status:'', preco:259000,
+   bairro:'Odim Antão', zona:'Zona Leste', mapa:'Odim Antão, Sorocaba - SP', quartos:2, suites:null, banheiros:1, vagas:1, area:60, terreno:null, destaque:false,
+   descricao:'60 m² de puro conforto: apartamento bem espaçoso, em condomínio arborizado e tranquilo.\n\nCondomínio de R$ 302,00, com água inclusa.',
+   feats:['2 dormitórios','1 banheiro social','Gás encanado para fogão','2º andar','Sol da manhã','Garagem coberta com portão','Condomínio arborizado e espaçoso','Condomínio R$ 302,00 (água inclusa)'],
+   fotos:['img/planalto-1.jpg','img/planalto-arte.jpg']},
+  {id:'the-garden-horto', ordem:78, titulo:'The Garden Horto Residencial', sub:'Lançamento Maccris · Zona Norte', tipo:'Apartamento', situacao:'Lançamento', status:'', preco:null,
+   bairro:'Horto Florestal', zona:'Zona Norte', mapa:'Rua Professor Antônio Firmino Proença, 260 - Horto Florestal, Sorocaba - SP', quartos:2, suites:null, banheiros:null, vagas:null, area:null, terreno:null, destaque:true,
+   descricao:'E se o seu próximo endereço tivesse o verde da natureza na porta de casa?\n\nO The Garden Horto Residencial é o lançamento da Maccris Construtora na Zona Norte de Sorocaba: plantas pensadas para o máximo aproveitamento do espaço, ambientes integrados, ventilação natural e aquecimento a gás.\n\nPertinho do Shopping Cidade Sorocaba, São Roque, academias, Terminal São Bento e da Castelo Branco.',
+   feats:['2 dormitórios','Varanda Grill com churrasqueira','Espaço Zen com redário','Quiosques com churrasqueira','Lazer completo no térreo','Smart Market dentro do prédio','Aquecimento a gás','Realização: Maccris Construtora'],
+   aviso:'Fotos do vídeo de apresentação do empreendimento, publicado pelo Clayton.',
+   fotos:F('garden', 7)},
+  {id:'reserva-lobato', ordem:76, titulo:'Reserva Lobato', sub:'Lançamento · Minha Casa Minha Vida', tipo:'Apartamento', situacao:'Lançamento', status:'', preco:null, mcmv:true,
+   bairro:'', zona:'', mapa:'', quartos:2, suites:null, banheiros:null, vagas:1, area:null, areaTxt:'48 e 55 m²', terreno:null, destaque:true,
+   descricao:'Apartamentos de 48 m², com 2 dormitórios e 1 vaga (opção de vaga coberta), e de 55 m², com 2 dormitórios sendo 1 suíte e 1 vaga (opção de vaga coberta).\n\nEntregues com metais instalados, piso laminado no living e nos dormitórios e cerâmica nas áreas molhadas (exceto nas unidades garden).',
+   feats:['Apto de 48 m²: 2 dormitórios','Apto de 55 m²: 2 dormitórios, sendo 1 suíte','1 vaga (opção de vaga coberta)','Metais instalados','Piso laminado no living e nos dormitórios','Minha Casa Minha Vida'],
+   aviso:'Imagens ilustrativas do projeto.',
+   fotos:['img/lobato-1.jpg','img/lobato-p1.jpg','img/lobato-p2.jpg','img/lobato-arte.jpg']},
+  {id:'access-jd-gutierres', ordem:74, titulo:'Access Jd. Gutierres', sub:'Lançamento Grupo Planeta · Minha Casa Minha Vida', tipo:'Apartamento', situacao:'Lançamento', status:'', preco:null, mcmv:true,
+   bairro:'Jd. Gutierres', zona:'', mapa:'Jardim Gutierres, Sorocaba - SP', quartos:2, suites:1, banheiros:null, vagas:null, area:null, areaTxt:'52 e 55 m²', terreno:null, destaque:true,
+   descricao:'Super lançamento no Jd. Gutierres, da Access, uma marca do Grupo Planeta. Apartamentos de 2 dormitórios com 1 suíte, de 52 e 55 m², com lazer elevado.\n\nITBI + registro grátis em oferta por tempo limitado. Últimas unidades.',
+   feats:['2 dormitórios, 1 suíte','52 e 55 m²','Lazer elevado','ITBI + registro grátis (oferta por tempo limitado)','Minha Casa Minha Vida'],
+   aviso:'Imagens ilustrativas do projeto.',
+   fotos:['img/access-1.jpg','img/access-arte.jpg']},
+  {id:'flor-de-ipe-campolim', ordem:72, titulo:'Flor de Ipê Campolim', sub:'Lançamento · Campolim', tipo:'Apartamento', situacao:'Lançamento', status:'', preco:null,
+   bairro:'Campolim', zona:'', mapa:'Campolim, Sorocaba - SP', quartos:2, suites:1, banheiros:null, vagas:null, area:null, areaTxt:'61 e 78 m²', terreno:null, destaque:false,
+   descricao:'Onde a moradia se estende ao estilo de vida.\n\n2 dormitórios com suíte, de 61 e 78 m², com opção de Garden e lazer completo.',
+   feats:['2 dormitórios com suíte','Opção de Garden','61 e 78 m²','Lazer completo','Pet Place','Estação de recarga','Mini market'],
+   fotos:['img/flor-1.jpg','img/flor-arte.jpg']}
+];
+
+var KEY = 'cc_imoveis_v1';
+function load(){
+  try{ var s = localStorage.getItem(KEY); if(s){ var a = JSON.parse(s); if(Array.isArray(a)) return a; } }catch(e){}
+  return BASE.slice();
+}
+function persist(list){
+  try{ localStorage.setItem(KEY, JSON.stringify(list)); return true; }
+  catch(e){ toast('Sem espaço para salvar neste aparelho. Use menos fotos.'); return false; }
+}
+var DB = load();
+
+/* utilidades */
+function $(s, r){ return (r || document).querySelector(s); }
+function $$(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+function wa(msg){ return 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(msg); }
+function openWA(msg){ window.open(wa(msg), '_blank', 'noopener'); }
+function money(v){ return 'R$ ' + Number(v).toLocaleString('pt-BR', {maximumFractionDigits:0}); }
+function priceText(p){ return p.preco == null || p.preco === '' ? 'Valor sob consulta' : money(p.preco); }
+function visible(p){ return p.status !== 'Oculto'; }
+function byOrder(a, b){ return (b.ordem || 0) - (a.ordem || 0); }
+function slug(s){ return String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'imovel'; }
+var toastT;
+function toast(m){ var t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function(){ t.classList.remove('show'); }, 2600); }
+function sv(d, sw){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="' + (sw || 1.6) + '" aria-hidden="true">' + d + '</svg>'; }
+var I = {
+  photo: sv('<rect x="3" y="5" width="18" height="14"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 8"/>'),
+  pin: sv('<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/>'),
+  share: sv('<circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.3 10.8 7.4-4.3M8.3 13.2l7.4 4.3"/>'),
+  x: sv('<path d="M6 6l12 12M18 6 6 18"/>'),
+  l: sv('<path d="m15 5-7 7 7 7"/>'),
+  r: sv('<path d="m9 5 7 7-7 7"/>'),
+  check: sv('<path d="m5 12 5 5 9-10"/>', 2.4),
+  wa: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>'
+};
+
+function specList(p){
+  var s = [];
+  if(p.areaTxt) s.push(p.areaTxt);
+  if(p.area) s.push(p.area + ' m²');
+  if(p.quartos) s.push(p.quartos + (p.quartos > 1 ? ' dormitórios' : ' dormitório'));
+  if(p.suites) s.push(p.suites + (p.suites > 1 ? ' suítes' : ' suíte'));
+  if(p.vagas) s.push(p.vagas + (p.vagas > 1 ? ' vagas' : ' vaga'));
+  if(!p.area && p.terreno) s.push(p.terreno + ' m² de terreno');
+  return s;
+}
+function badges(p){
+  var b = [];
+  if(p.situacao) b.push('<span class="g">' + esc(p.situacao) + '</span>');
+  if(p.status === 'Reservado' || p.status === 'Vendido') b.push('<span class="d">' + esc(p.status) + '</span>');
+  return b.join('');
+}
+function cardHTML(p){
+  var n = (p.fotos || []).length;
+  return '<a class="prop reveal" href="#/imovel/' + encodeURIComponent(p.id) + '">' +
+    '<div class="ph">' + (n ? '<img src="' + esc(p.fotos[0]) + '" alt="' + esc(p.titulo) + '" loading="lazy">' : '') +
+    '<div class="badges">' + badges(p) + '</div>' + (n > 1 ? '<span class="count">' + I.photo + n + ' fotos</span>' : '') + '</div>' +
+    '<div class="bd"><span class="tag">' + esc(p.sub || p.tipo) + '</span><h3>' + esc(p.titulo) + '</h3>' +
+    '<div class="sp">' + specList(p).map(function(x){ return '<span>' + esc(x) + '</span>'; }).join('') + '</div>' +
+    '<div class="pr"><span>' + (p.aPartir ? '<small>A partir de</small>' : '') + esc(priceText(p)) + '</span><i>Ver imóvel</i></div></div></a>';
+}
+
+/* reveal dos cards criados via JS */
+var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+}, {threshold:.1, rootMargin:'0px 0px -30px 0px'}) : null;
+function observe(root){
+  $$('.reveal:not(.is-visible)', root).forEach(function(el, i){
+    if(!io){ el.classList.add('is-visible'); return; }
+    el.style.transitionDelay = (i % 3) * 80 + 'ms';
+    io.observe(el);
+  });
+}
+
+/* ---------- início ---------- */
+function isLanc(p){ return p.situacao === 'Lançamento'; }
+function renderHome(){
+  var pub = DB.filter(visible).sort(byOrder);
+  var list = pub.filter(function(p){ return p.destaque && !isLanc(p); }).slice(0, 6);
+  var lanc = pub.filter(isLanc).slice(0, 4);
+  var g = $('#homeGrid'), l = $('#homeLanc');
+  g.innerHTML = list.map(cardHTML).join('') || '<p class="empty">Novos imóveis em breve. Fale com o Clayton pelo WhatsApp.</p>';
+  l.innerHTML = lanc.map(cardHTML).join('');
+  $('#lancamentos').hidden = !lanc.length;
+  $$('[data-zc]').forEach(function(s){
+    var n = pub.filter(function(p){ return p.zona === s.dataset.zc; }).length;
+    s.textContent = n + (n === 1 ? ' imóvel' : ' imóveis');
+  });
+  observe(g); observe(l);
+}
+
+/* ---------- catálogo ---------- */
+function emptyFL(){ return {q:'', tipo:'', zona:'', quartos:'', max:'', sit:'', ord:'', mcmv:''}; }
+var FL = emptyFL();
+function norm(s){ return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+function fillSelects(){
+  var tipos = {}, zonas = {};
+  DB.filter(visible).forEach(function(p){ if(p.tipo) tipos[p.tipo] = 1; if(p.zona) zonas[p.zona] = 1; });
+  $('#fTipo').innerHTML = '<option value="">Todos</option>' + Object.keys(tipos).sort().map(function(t){ return '<option>' + esc(t) + '</option>'; }).join('');
+  $('#fZona').innerHTML = '<option value="">Todas</option>' + Object.keys(zonas).sort().map(function(b){ return '<option>' + esc(b) + '</option>'; }).join('');
+}
+function syncFilters(){
+  $$('.seg[data-f] button').forEach(function(b){ b.classList.toggle('on', b.dataset.v === FL.sit); });
+  $('#fQ').value = FL.q; $('#fTipo').value = FL.tipo; $('#fZona').value = FL.zona; $('#fQuartos').value = FL.quartos; $('#fMax').value = FL.max; $('#fOrd').value = FL.ord;
+}
+function renderCatalog(){
+  var q = norm(FL.q);
+  var list = DB.filter(function(p){
+    if(!visible(p)) return false;
+    if(FL.tipo && p.tipo !== FL.tipo) return false;
+    if(FL.zona && p.zona !== FL.zona) return false;
+    if(FL.sit && p.situacao !== FL.sit) return false;
+    if(FL.mcmv && !p.mcmv) return false;
+    if(FL.quartos && (p.quartos || 0) < +FL.quartos) return false;
+    if(FL.max && (p.preco == null || p.preco === '' || p.preco > +FL.max)) return false;
+    if(q && norm([p.titulo, p.sub, p.bairro, p.zona, p.tipo].join(' ')).indexOf(q) < 0) return false;
+    return true;
+  }).sort(byOrder);
+  if(FL.ord){
+    var sg = FL.ord === 'asc' ? 1 : -1;
+    list.sort(function(a, b){
+      if(a.preco == null) return 1;
+      if(b.preco == null) return -1;
+      return (a.preco - b.preco) * sg;
+    });
+  }
+  $('#catTitle').textContent = FL.sit === 'Lançamento' ? 'Lançamentos em Sorocaba' : FL.mcmv ? 'Minha Casa Minha Vida em Sorocaba' : FL.zona ? 'Imóveis à venda na ' + FL.zona : 'Imóveis à venda em Sorocaba';
+  $('#catCount').textContent = list.length + (list.length === 1 ? ' imóvel' : ' imóveis');
+  var g = $('#catGrid');
+  g.innerHTML = list.length ? list.map(cardHTML).join('') :
+    '<div class="empty"><p>Nenhum imóvel com esses filtros agora.</p><button class="btn gold" type="button" id="catAsk">' + I.wa + 'Pedir ajuda ao Clayton</button></div>';
+  var ask = $('#catAsk');
+  if(ask) ask.addEventListener('click', function(){ openWA('Olá, Clayton! Vim pelo site e não encontrei o imóvel que procuro. Pode me ajudar?'); });
+  observe(g);
+}
+$('.seg[data-f]').addEventListener('click', function(e){
+  var b = e.target.closest('button'); if(!b) return;
+  FL.sit = b.dataset.v; syncFilters(); renderCatalog();
+});
+[['#fTipo', 'tipo'], ['#fZona', 'zona'], ['#fQuartos', 'quartos'], ['#fMax', 'max'], ['#fOrd', 'ord']].forEach(function(x){
+  $(x[0]).addEventListener('change', function(e){ FL[x[1]] = e.target.value; renderCatalog(); });
+});
+$('#fQ').addEventListener('input', function(e){ FL.q = e.target.value; renderCatalog(); });
+$('#fClear').addEventListener('click', function(){ FL = emptyFL(); syncFilters(); renderCatalog(); });
+
+/* ---------- imóvel ---------- */
+var cur = null;
+function renderDetail(id){
+  var p = DB.filter(function(x){ return x.id === id; })[0], d = $('#detail');
+  document.body.classList.remove('has-mbar');
+  if(!p || !visible(p)){
+    d.innerHTML = '<div class="page-head"><nav class="crumb"><a href="#/">Início</a><span>/</span><a href="#/imoveis">Imóveis</a></nav><h1>Imóvel não encontrado</h1><p>Esse anúncio pode ter sido retirado.</p><p><a class="btn" href="#/imoveis" style="margin-top:12px">Ver os imóveis</a></p></div>';
+    document.title = 'Imóvel não encontrado · Clayton Campos';
+    return;
+  }
+  cur = p;
+  document.title = p.titulo + ' · Clayton Campos Corretor de Imóveis';
+  var fotos = p.fotos || [], shown = fotos.slice(0, 5), n = shown.length;
+  var gal = n ? '<div class="gal-wrap"><div class="mosaic' + (n < 5 ? ' few n' + n : '') + '">' + shown.map(function(f, i){
+      return '<button type="button" data-i="' + i + '" aria-label="Abrir foto ' + (i + 1) + '"><img src="' + esc(f) + '" alt="' + esc(p.titulo) + ', foto ' + (i + 1) + '"' + (i ? ' loading="lazy"' : '') + '></button>';
+    }).join('') + '</div>' + (fotos.length > 1 ? '<button type="button" class="all" data-i="0">' + I.photo + 'Ver as ' + fotos.length + ' fotos</button>' : '') + '</div>' : '';
+
+  var specs = [];
+  if(p.areaTxt) specs.push([esc(p.areaTxt), 'área']);
+  if(p.area) specs.push([p.area + ' m²', p.terreno ? 'construídos' : 'área']);
+  if(p.terreno) specs.push([p.terreno + ' m²', 'terreno']);
+  if(p.quartos) specs.push([p.quartos, p.quartos > 1 ? 'dormitórios' : 'dormitório']);
+  if(p.suites) specs.push([p.suites, p.suites > 1 ? 'suítes' : 'suíte']);
+  if(p.banheiros) specs.push([p.banheiros, p.banheiros > 1 ? 'banheiros' : 'banheiro']);
+  if(p.vagas) specs.push([p.vagas, p.vagas > 1 ? 'vagas' : 'vaga']);
+  specs.push([esc(p.tipo), 'à venda']);
+
+  var parts = [p.bairro, p.zona].filter(Boolean).join(' · ');
+  var where = parts ? parts + ' · Sorocaba-SP' : 'Localização informada no atendimento';
+  var mapa = p.mapa ? 'https://maps.google.com/maps?q=' + encodeURIComponent(p.mapa) + '&z=15&output=embed' : '';
+  var simil = DB.filter(function(x){ return x.id !== p.id && visible(x); }).sort(function(a, b){ return (isLanc(b) === isLanc(p)) - (isLanc(a) === isLanc(p)) || byOrder(a, b); }).slice(0, 3);
+  var st = p.status === 'Reservado' || p.status === 'Vendido' ? '<span class="st">' + esc(p.status) + '</span>' : '';
+  var noPrice = p.preco == null || p.preco === '';
+
+  d.innerHTML =
+    '<div class="page-head" style="padding-bottom:0"><nav class="crumb" aria-label="Você está em"><a href="#/">Início</a><span>/</span><a href="#/imoveis">Imóveis</a><span>/</span><span>' + esc(p.titulo) + '</span></nav></div>' +
+    '<div class="d-top"><div><span class="tag">' + esc(p.sub || p.tipo) + '</span><h1>' + esc(p.titulo) + '</h1><p class="loc">' + I.pin + esc(where) + '</p></div>' +
+    '<button class="btn ghost sm" type="button" id="dShare">' + I.share + 'Compartilhar</button></div>' +
+    gal +
+    '<div class="d-grid"><div>' +
+      '<div class="d-specs">' + specs.map(function(s){ return '<div><b>' + s[0] + '</b><span>' + s[1] + '</span></div>'; }).join('') + '</div>' +
+      (p.descricao ? '<div class="d-sec"><h2>Sobre o imóvel</h2><p>' + esc(p.descricao) + '</p>' + (p.aviso ? '<div class="note">' + esc(p.aviso) + '</div>' : '') + '</div>' : '') +
+      (p.feats && p.feats.length ? '<div class="d-sec"><h2>Características</h2><ul class="feat">' + p.feats.map(function(f){ return '<li><i>' + I.check + '</i>' + esc(f) + '</li>'; }).join('') + '</ul></div>' : '') +
+      '<div class="d-sec"><h2>Localização</h2>' + (mapa
+        ? '<p>' + esc(p.mapa) + '. O endereço exato é passado no atendimento.</p><div class="d-map"><iframe title="Mapa da região do imóvel" loading="lazy" src="' + esc(mapa) + '"></iframe></div>'
+        : '<p>' + esc(parts ? where + '. O endereço é informado no atendimento, junto com o agendamento da visita.' : 'O endereço é informado no atendimento, junto com o agendamento da visita.') + '</p>') + '</div>' +
+      '<p class="note" style="margin-top:36px">Dados e imagens dos anúncios do Clayton no Instagram e no Google. Valores, disponibilidade e condições são confirmados no atendimento.</p>' +
+    '</div>' +
+    '<aside class="aside">' +
+      '<span class="k">Venda' + (p.situacao ? ' · ' + esc(p.situacao) : '') + '</span>' + st +
+      '<div class="price">' + (p.aPartir ? '<small>A partir de</small>' : '') + esc(noPrice ? 'Valor sob consulta' : money(p.preco)) + '</div>' +
+      '<p class="pnote">' + (noPrice ? 'Valores, plantas e condições direto com o Clayton.' : 'Consulte condições e disponibilidade.') + '</p>' +
+      '<div class="who"><img src="img/sobre.jpg" alt="Clayton Campos"><div><b>Clayton Campos</b><span>CRECI 206530-F · 5,0 ★ no Google</span></div></div>' +
+      '<button class="btn gold" type="button" id="dVisit">' + I.wa + 'Agendar uma visita</button>' +
+      '<button class="btn line" type="button" id="dInfo">' + (noPrice ? 'Receber valores e plantas' : 'Simular financiamento') + '</button>' +
+      '<small>Seg a sáb, das 8h às 18h · (15) 99276-6042</small>' +
+    '</aside></div>' +
+    (simil.length ? '<div class="similar"><div class="sel-head"><h2>Veja também</h2><a class="btn ghost sm" href="#/imoveis">Ver todos</a></div><div class="props">' + simil.map(cardHTML).join('') + '</div></div>' : '') +
+    '<div class="mbar"><div><small>' + (p.aPartir ? 'A partir de' : 'Venda') + '</small><b>' + esc(noPrice ? 'Sob consulta' : money(p.preco)) + '</b></div><button class="btn gold" type="button" id="mVisit">Agendar visita</button></div>';
+  document.body.classList.add('has-mbar');
+
+  $$('.mosaic button, .gal-wrap .all', d).forEach(function(b){ b.addEventListener('click', function(){ openLB(+b.dataset.i); }); });
+  function visit(){ openWA('Olá, Clayton! Vi no seu site o imóvel "' + p.titulo + '" e gostaria de agendar uma visita.\n' + location.href); }
+  $('#dVisit').addEventListener('click', visit);
+  $('#mVisit').addEventListener('click', visit);
+  $('#dInfo').addEventListener('click', function(){
+    openWA(noPrice
+      ? 'Olá, Clayton! Vi no seu site o "' + p.titulo + '" e quero receber os valores e as plantas.\n' + location.href
+      : 'Olá, Clayton! Vi no seu site o imóvel "' + p.titulo + '" e quero simular o financiamento.\n' + location.href);
+  });
+  $('#dShare').addEventListener('click', function(){
+    var data = {title:p.titulo, text:p.titulo + ' · Clayton Campos Corretor de Imóveis', url:location.href};
+    if(navigator.share){ navigator.share(data).catch(function(){}); return; }
+    if(navigator.clipboard){ navigator.clipboard.writeText(location.href).then(function(){ toast('Link copiado!'); }, function(){ toast(location.href); }); }
+    else toast(location.href);
+  });
+  observe(d);
+}
+
+/* lightbox */
+var lb = null, lbI = 0;
+function openLB(i){
+  if(!cur || !cur.fotos || !cur.fotos.length) return;
+  lb = document.createElement('div');
+  lb.className = 'lb'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true'); lb.setAttribute('aria-label', 'Fotos do imóvel');
+  lb.innerHTML = '<div class="lb-top"><span id="lbC"></span><button type="button" id="lbX" aria-label="Fechar">' + I.x + '</button></div>' +
+    '<div class="lb-stage"><button class="lb-nav lb-prev" type="button" aria-label="Foto anterior">' + I.l + '</button><img id="lbImg" alt=""><button class="lb-nav lb-next" type="button" aria-label="Próxima foto">' + I.r + '</button></div>' +
+    '<div class="lb-thumbs">' + cur.fotos.map(function(f, k){ return '<button type="button" data-k="' + k + '" aria-label="Foto ' + (k + 1) + '"><img src="' + esc(f) + '" alt="" loading="lazy"></button>'; }).join('') + '</div>';
+  document.body.appendChild(lb);
+  document.body.style.overflow = 'hidden';
+  $('#lbX').addEventListener('click', closeLB);
+  $('.lb-prev', lb).addEventListener('click', function(){ showLB(lbI - 1); });
+  $('.lb-next', lb).addEventListener('click', function(){ showLB(lbI + 1); });
+  $$('.lb-thumbs button', lb).forEach(function(b){ b.addEventListener('click', function(){ showLB(+b.dataset.k); }); });
+  var x0 = null, stage = $('.lb-stage', lb);
+  stage.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  stage.addEventListener('touchend', function(e){ if(x0 == null) return; var dx = e.changedTouches[0].clientX - x0; if(Math.abs(dx) > 40) showLB(lbI + (dx < 0 ? 1 : -1)); x0 = null; });
+  showLB(i);
+  $('#lbX').focus();
+}
+function showLB(i){
+  var n = cur.fotos.length; lbI = (i + n) % n;
+  $('#lbImg').src = cur.fotos[lbI];
+  $('#lbImg').alt = cur.titulo + ', foto ' + (lbI + 1);
+  $('#lbC').textContent = (lbI + 1) + ' / ' + n;
+  $$('.lb-thumbs button', lb).forEach(function(b, k){ b.classList.toggle('on', k === lbI); if(k === lbI && b.scrollIntoView) b.scrollIntoView({block:'nearest', inline:'center'}); });
+}
+function closeLB(){ if(lb){ lb.remove(); lb = null; document.body.style.overflow = ''; } }
+document.addEventListener('keydown', function(e){
+  if(!lb) return;
+  if(e.key === 'Escape') closeLB();
+  if(e.key === 'ArrowRight') showLB(lbI + 1);
+  if(e.key === 'ArrowLeft') showLB(lbI - 1);
+});
+
+/* ---------- área do corretor (demonstração em localStorage) ---------- */
+var draft = [], editId = null, form = $('#pnForm');
+function renderPainel(){
+  $('#pnCount').textContent = DB.length + (DB.length === 1 ? ' anúncio' : ' anúncios');
+  $('#pnList').innerHTML = DB.slice().sort(byOrder).map(function(p){
+    return '<div class="pn-item"><img src="' + esc((p.fotos || [])[0] || '') + '" alt=""><div><b>' + esc(p.titulo) + '</b><span>' + esc((p.status || 'Publicado') + ' · ' + priceText(p)) + '</span></div>' +
+      '<div class="acts"><a href="#/imovel/' + encodeURIComponent(p.id) + '">Ver</a><button type="button" data-edit="' + esc(p.id) + '">Editar</button><button type="button" class="del" data-del="' + esc(p.id) + '">Excluir</button></div></div>';
+  }).join('') || '<p class="empty">Nenhum anúncio ainda.</p>';
+}
+function renderThumbs(){
+  $('#pnThumbs').innerHTML = draft.map(function(f, i){
+    return '<div><img src="' + esc(f) + '" alt="">' + (i === 0 ? '<span class="cap">Capa</span>' : '') +
+      '<div class="ctl"><button type="button" data-mv="' + i + '" aria-label="Mover para a esquerda">‹</button><button type="button" data-rm="' + i + '" aria-label="Remover foto">×</button><button type="button" data-mv2="' + i + '" aria-label="Mover para a direita">›</button></div></div>';
+  }).join('');
+}
+$('#pnThumbs').addEventListener('click', function(e){
+  var b = e.target.closest('button'); if(!b) return;
+  var i;
+  if(b.dataset.rm != null){ draft.splice(+b.dataset.rm, 1); }
+  else if(b.dataset.mv != null){ i = +b.dataset.mv; if(i > 0) draft.splice(i - 1, 0, draft.splice(i, 1)[0]); }
+  else if(b.dataset.mv2 != null){ i = +b.dataset.mv2; if(i < draft.length - 1) draft.splice(i + 1, 0, draft.splice(i, 1)[0]); }
+  renderThumbs();
+});
+function resize(file){
+  return new Promise(function(res, rej){
+    var r = new FileReader();
+    r.onload = function(){
+      var im = new Image();
+      im.onload = function(){
+        var M = 1280, w = im.width, h = im.height, k = Math.min(1, M / Math.max(w, h));
+        var c = document.createElement('canvas'); c.width = Math.round(w * k); c.height = Math.round(h * k);
+        c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+        res(c.toDataURL('image/jpeg', .72));
+      };
+      im.onerror = rej; im.src = r.result;
+    };
+    r.onerror = rej; r.readAsDataURL(file);
+  });
+}
+function addFiles(files){
+  var imgs = Array.prototype.filter.call(files, function(f){ return /^image\//.test(f.type); });
+  if(!imgs.length) return;
+  toast('Preparando ' + imgs.length + (imgs.length > 1 ? ' fotos…' : ' foto…'));
+  Promise.all(imgs.map(resize)).then(function(urls){ draft = draft.concat(urls); renderThumbs(); }, function(){ toast('Não consegui ler uma das fotos.'); });
+}
+var drop = $('#drop'), files = $('#pnFiles');
+drop.addEventListener('click', function(){ files.click(); });
+drop.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); files.click(); } });
+files.addEventListener('change', function(){ addFiles(files.files); files.value = ''; });
+['dragover', 'dragenter'].forEach(function(ev){ drop.addEventListener(ev, function(e){ e.preventDefault(); drop.classList.add('over'); }); });
+['dragleave', 'drop'].forEach(function(ev){ drop.addEventListener(ev, function(e){ e.preventDefault(); drop.classList.remove('over'); }); });
+drop.addEventListener('drop', function(e){ addFiles(e.dataTransfer.files); });
+
+function num(v){ if(v === '' || v == null) return null; var n = Number(String(v).replace(/[^\d,]/g, '').replace(',', '.')); return isNaN(n) || String(v).trim() === '' ? null : n; }
+function resetForm(){
+  form.reset(); draft = []; editId = null; renderThumbs();
+  $('#pnFormTitle').textContent = 'Novo anúncio'; $('#pnSubmit').textContent = 'Publicar anúncio'; $('#pnCancel').hidden = true;
+}
+function fillForm(p){
+  editId = p.id;
+  var el = form.elements;
+  ['titulo', 'sub', 'tipo', 'situacao', 'status', 'bairro', 'zona', 'mapa', 'descricao'].forEach(function(k){ el[k].value = p[k] || ''; });
+  ['quartos', 'suites', 'banheiros', 'vagas', 'area', 'terreno'].forEach(function(k){ el[k].value = p[k] == null ? '' : p[k]; });
+  el.preco.value = p.preco == null ? '' : Number(p.preco).toLocaleString('pt-BR');
+  el.feats.value = (p.feats || []).join('\n');
+  el.destaque.checked = !!p.destaque;
+  draft = (p.fotos || []).slice(); renderThumbs();
+  $('#pnFormTitle').textContent = 'Editar anúncio'; $('#pnSubmit').textContent = 'Salvar alterações'; $('#pnCancel').hidden = false;
+  form.scrollIntoView({behavior:'smooth', block:'start'});
+}
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  var el = form.elements, titulo = el.titulo.value.trim();
+  if(!titulo){ toast('Dê um título ao anúncio.'); el.titulo.focus(); return; }
+  if(!draft.length){ toast('Adicione pelo menos uma foto.'); return; }
+  var old = editId ? DB.filter(function(x){ return x.id === editId; })[0] : null;
+  var id = old ? old.id : slug(titulo);
+  if(!old){ var base = id, k = 2; while(DB.some(function(x){ return x.id === id; })) id = base + '-' + k++; }
+  var p = {
+    id:id, ordem: old ? old.ordem : Date.now(), titulo:titulo, sub:el.sub.value.trim(), tipo:el.tipo.value,
+    situacao:el.situacao.value, status:el.status.value, preco:num(el.preco.value), bairro:el.bairro.value.trim(), zona:el.zona.value, mapa:el.mapa.value.trim(),
+    quartos:num(el.quartos.value), suites:num(el.suites.value), banheiros:num(el.banheiros.value), vagas:num(el.vagas.value),
+    area:num(el.area.value), terreno:num(el.terreno.value), destaque:el.destaque.checked,
+    descricao:el.descricao.value.trim(),
+    feats:el.feats.value.split('\n').map(function(s){ return s.trim(); }).filter(Boolean),
+    fotos:draft.slice()
+  };
+  if(old){ ['aviso', 'areaTxt', 'aPartir', 'mcmv'].forEach(function(k){ if(old[k]) p[k] = old[k]; }); }
+  var next = old ? DB.map(function(x){ return x.id === old.id ? p : x; }) : DB.concat([p]);
+  if(!persist(next)) return;
+  DB = next;
+  toast(old ? 'Anúncio atualizado!' : 'Anúncio publicado!');
+  resetForm();
+  location.hash = '#/imovel/' + encodeURIComponent(p.id);
+});
+$('#pnCancel').addEventListener('click', resetForm);
+$('#pnList').addEventListener('click', function(e){
+  var b = e.target.closest('button'); if(!b) return;
+  if(b.dataset.edit) fillForm(DB.filter(function(x){ return x.id === b.dataset.edit; })[0]);
+  if(b.dataset.del){
+    var p = DB.filter(function(x){ return x.id === b.dataset.del; })[0];
+    if(p && confirm('Excluir o anúncio "' + p.titulo + '"?')){
+      var next = DB.filter(function(x){ return x.id !== p.id; });
+      if(persist(next)){ DB = next; renderPainel(); toast('Anúncio excluído.'); }
+    }
+  }
+});
+$('#pnReset').addEventListener('click', function(){
+  if(!confirm('Voltar aos anúncios originais? O que foi cadastrado neste aparelho será apagado.')) return;
+  try{ localStorage.removeItem(KEY); }catch(e){}
+  DB = BASE.slice(); resetForm(); renderPainel(); toast('Anúncios originais restaurados.');
+});
+$('#pnExport').addEventListener('click', function(){
+  var blob = new Blob([JSON.stringify(DB)], {type:'application/json'});
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'clayton-campos-anuncios.json';
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
+});
+$('#pnImportBtn').addEventListener('click', function(){ $('#pnImport').click(); });
+$('#pnImport').addEventListener('change', function(){
+  var f = this.files[0]; if(!f) return;
+  var r = new FileReader();
+  r.onload = function(){
+    try{ var a = JSON.parse(r.result); if(!Array.isArray(a)) throw 0; if(persist(a)){ DB = a; renderPainel(); toast('Backup restaurado.'); } }
+    catch(err){ toast('Arquivo de backup inválido.'); }
+  };
+  r.readAsText(f); this.value = '';
+});
+
+/* ---------- roteador ---------- */
+var views = {home:$('#view-home'), catalog:$('#view-catalog'), detail:$('#view-detail'), painel:$('#view-painel')};
+var HOME_TITLE = document.title;
+function show(v){
+  Object.keys(views).forEach(function(k){ views[k].hidden = k !== v; });
+  if(v !== 'detail') document.body.classList.remove('has-mbar');
+  $('header.nav').classList.remove('open');
+  $$('header.nav ul a').forEach(function(a){ a.classList.toggle('on', v === 'catalog' && a.getAttribute('href') === '#/imoveis' && FL.sit !== 'Lançamento'); });
+}
+function parseQS(s){ var o = {}; (s || '').split('&').forEach(function(kv){ if(!kv) return; var p = kv.split('='); o[decodeURIComponent(p[0])] = decodeURIComponent((p[1] || '').replace(/\+/g, ' ')); }); return o; }
+function route(){
+  closeLB();
+  var raw = location.hash.slice(1);
+  if(raw.charAt(0) !== '/'){
+    /* âncoras da página inicial (#encontre, #contato…) */
+    var wasHome = !views.home.hidden;
+    show('home'); renderHome(); document.title = HOME_TITLE;
+    var el = raw && document.getElementById(raw);
+    if(el) requestAnimationFrame(function(){ el.scrollIntoView(); }); else if(!wasHome) window.scrollTo(0, 0);
+    return;
+  }
+  var h = raw.slice(1), qs = h.split('?'), parts = qs[0].split('/'), page = parts[0];
+  if(page === 'imoveis'){
+    var o = parseQS(qs[1]);
+    FL = emptyFL(); Object.keys(FL).forEach(function(k){ if(o[k]) FL[k] = o[k]; });
+    show('catalog'); fillSelects(); syncFilters(); renderCatalog();
+    document.title = 'Imóveis à venda em Sorocaba · Clayton Campos Corretor';
+    window.scrollTo(0, 0);
+  } else if(page === 'imovel'){
+    show('detail'); renderDetail(decodeURIComponent(parts[1] || '')); window.scrollTo(0, 0);
+  } else if(page === 'painel'){
+    show('painel'); renderPainel(); document.title = 'Área do corretor · Clayton Campos'; window.scrollTo(0, 0);
+  } else {
+    show('home'); renderHome(); document.title = HOME_TITLE; window.scrollTo(0, 0);
+  }
+}
+window.addEventListener('hashchange', route);
+
+/* ---------- página inicial: links, busca, chips, galeria ---------- */
+$$('[data-maps]').forEach(function(a){ a.href = MAPS; });
+$$('a[data-wa]').forEach(function(a){ a.href = wa(a.getAttribute('data-wa')); a.target = '_blank'; a.rel = 'noopener'; });
+
+var hsSit = '';
+$$('.tabs button').forEach(function(b){
+  b.addEventListener('click', function(){
+    hsSit = b.dataset.sit;
+    $$('.tabs button').forEach(function(x){ x.classList.toggle('on', x === b); });
+  });
+});
+$('#heroSearch').addEventListener('submit', function(e){
+  e.preventDefault();
+  var o = [];
+  [['q', '#hsQ'], ['tipo', '#hsT'], ['zona', '#hsZ'], ['quartos', '#hsD'], ['max', '#hsM']].forEach(function(x){
+    var v = $(x[1]).value.trim(); if(v) o.push(x[0] + '=' + encodeURIComponent(v));
+  });
+  if(hsSit) o.push('sit=' + encodeURIComponent(hsSit));
+  location.hash = '#/imoveis' + (o.length ? '?' + o.join('&') : '');
+});
+
+function pick(g){ var c = $('[data-group="' + g + '"] .chip[aria-pressed="true"]'); return c ? c.getAttribute('data-v') : ''; }
+function buildQuiz(){
+  var val = pick('val'), reg = pick('reg');
+  var txt = 'Procuro <i>' + pick('tipo') + '</i>' + (reg ? ' <i>' + reg + '</i>' : '') + (val ? ', <i>' + val + '</i>' : '') + ', <i>' + pick('obj') + '</i>.';
+  $('#qRes').innerHTML = txt;
+  var b = $('#qBtn'); b.href = wa('Olá, Clayton! Vim pelo site. ' + $('#qRes').textContent + ' Pode me ajudar?'); b.target = '_blank'; b.rel = 'noopener';
+  var v = $('#vBtn'); v.href = wa('Olá, Clayton! Vim pelo site e quero vender ' + pick('vend') + '.'); v.target = '_blank'; v.rel = 'noopener';
+}
+$$('.chips').forEach(function(g){
+  g.addEventListener('click', function(e){
+    var c = e.target.closest('.chip'); if(!c) return;
+    $$('.chip', g).forEach(function(x){ x.setAttribute('aria-pressed', x === c ? 'true' : 'false'); });
+    buildQuiz();
+  });
+});
+buildQuiz();
+
+var ROW1 = [
+  ['ipanema-1','casa-reserva-ipanema','Fachada moderna','Reserva Ipanema'],
+  ['garden-3','the-garden-horto','Cozinha integrada','The Garden Horto'],
+  ['sunlike-2','residencial-sun-like','Sala com varanda','Residencial Sun Like'],
+  ['ipanema-2','casa-reserva-ipanema','Living e área gourmet','Reserva Ipanema'],
+  ['petunias-1','residencial-petunias','Fachada do prédio','Residencial Petúnias'],
+  ['garden-5','the-garden-horto','Dormitório','The Garden Horto']
+];
+var ROW2 = [
+  ['garden-1','the-garden-horto','Ambientes integrados','The Garden Horto'],
+  ['ipanema-3','casa-reserva-ipanema','Cozinha com ilha','Reserva Ipanema'],
+  ['sunlike-3','residencial-sun-like','Cozinha equipada','Residencial Sun Like'],
+  ['lobato-1','reserva-lobato','Lançamento','Reserva Lobato'],
+  ['ipanema-4','casa-reserva-ipanema','Churrasqueira','Reserva Ipanema'],
+  ['garden-7','the-garden-horto','Living com marcenaria','The Garden Horto']
+];
+var IC = sv('<path d="M3 11 12 4l9 7"/><path d="M6 10v9h12v-9"/>');
+function fillRow(id, items){
+  var html = items.map(function(it){
+    return '<a class="tile" href="#/imovel/' + it[1] + '"><img src="img/' + it[0] + '.jpg" alt="' + esc(it[2] + ', ' + it[3]) + '" loading="lazy"><span>' + IC + '<span style="all:unset"><b>' + esc(it[2]) + '</b>' + esc(it[3]) + '</span></span></a>';
+  }).join('');
+  $(id).innerHTML = html + html.replace(/<a class="tile"/g, '<a class="tile" aria-hidden="true" tabindex="-1"');
+}
+fillRow('#row1', ROW1); fillRow('#row2', ROW2);
+
+var header = $('header.nav');
+window.addEventListener('scroll', function(){ header.classList.toggle('scrolled', window.scrollY > 12); }, {passive:true});
+$('#burger').addEventListener('click', function(){
+  var o = header.classList.toggle('open'); this.setAttribute('aria-expanded', o ? 'true' : 'false');
+});
+$$('header.nav ul a').forEach(function(a){ a.addEventListener('click', function(){ header.classList.remove('open'); }); });
+observe(document);
+route();
+})();
+</script>
+</body>
+</html>
