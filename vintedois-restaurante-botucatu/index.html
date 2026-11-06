@@ -28,7 +28,7 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
 <meta name="twitter:description" content="Feijoada aos sábados, Rodízio de Risotos, lasanha no forno à lenha e um encanto de lugar.">
 <meta name="twitter:image" content="https://generationiahubb.github.io/sites-clientes/vintedois-restaurante-botucatu/hero-preview.png">
 <meta name="theme-color" content="#141210">
-<link rel="icon" href="images/logo-vintedois.jpg">
+<link rel="icon" type="image/webp" href="images/logo-vintedois.webp">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -51,9 +51,10 @@ html.site-expired body>*:not(#expiry-overlay){display:none!important;}
   "sameAs":["https://www.instagram.com/vintedoisrestaurante/","https://www.facebook.com/111621596095394"]
 }
 </script>
+<link rel="preload" as="image" type="image/webp" imagesrcset="images/casa-noite-640.webp 640w, images/casa-noite-800.webp 800w, images/casa-noite-1100.webp 1100w" imagesizes="(max-width:860px) 380px, 1000px" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=League+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=League+Gothic&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#FAF4EC; --paper-2:#F1E8DA; --ink:#141210; --ink-2:#2A2622; --muted:#6B6258;
@@ -280,6 +281,9 @@ h1,h2,h3,p{margin:0}
 .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .links .btn{min-height:48px;padding:12px 18px 10px;font-size:15px}
 .map{min-height:420px;border:0;width:100%;height:100%;filter:saturate(.9)}
+.mapbox{position:relative;display:grid;place-items:center;min-height:420px;overflow:hidden;background:var(--paper-2);text-decoration:none}
+.mapbox img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mapbox .btn{position:relative;z-index:1}
 
 /* FOOTER */
 .foot{background:var(--ink);color:var(--paper);overflow:hidden}
@@ -373,7 +377,7 @@ h1,h2,h3,p{margin:0}
   .deliver>:nth-child(2){border-right:0;margin-right:0}
   .deliver>:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .contact{grid-template-columns:1fr}
-  .map{min-height:320px;height:320px}
+  .map,.mapbox{min-height:320px;height:320px}
   .fab{display:none}
   .mbar{display:grid;grid-template-columns:1fr auto;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);padding:9px 12px calc(9px + env(safe-area-inset-bottom));gap:8px}
   .mbar a{min-height:48px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;text-decoration:none;font-size:16px;padding-top:3px}
@@ -408,7 +412,7 @@ h1,h2,h3,p{margin:0}
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#topo" aria-label="VinteDois Restaurante, início">
-      <img src="images/logo-vintedois.jpg" alt="Logo do VinteDois Restaurante" width="44" height="44">
+      <img src="images/logo-vintedois.webp" alt="Logo do VinteDois Restaurante" width="44" height="44">
       <span>VinteDois</span>
     </a>
     <nav aria-label="Principal">
@@ -436,9 +440,9 @@ h1,h2,h3,p{margin:0}
     </div>
   </div>
   <div class="hero-photo">
-    <img src="images/casa-noite.jpg" alt="Fachada do VinteDois Restaurante à noite, em Botucatu, com as janelas acesas" width="1427" height="1041" fetchpriority="high">
+    <img src="images/casa-noite-640.webp" srcset="images/casa-noite-640.webp 640w, images/casa-noite-800.webp 800w, images/casa-noite-1100.webp 1100w" sizes="(max-width:860px) 380px, 1000px" alt="Fachada do VinteDois Restaurante à noite, em Botucatu, com as janelas acesas" fetchpriority="high" width="1100" height="802">
     <a class="rating" href="https://www.google.com/maps?cid=14892624092494399395" target="_blank" rel="noopener" aria-label="Nota 4,6 no Google, 429 avaliações"><b>4,6</b><span>429 avaliações<br>no Google</span></a>
-    <div class="plate" aria-hidden="true"><img id="plate" src="images/prato-chorizo.jpg" alt="" width="900" height="900"></div>
+    <div class="plate" aria-hidden="true"><img id="plate" src="images/prato-chorizo-320.webp" srcset="images/prato-chorizo-320.webp 320w, images/prato-chorizo-640.webp 640w" sizes="(max-width:860px) 134px, 330px" alt="" width="640" height="640"></div>
   </div>
 </section>
 
@@ -502,7 +506,7 @@ h1,h2,h3,p{margin:0}
     </div>
     <div class="cards">
       <article class="card rv">
-        <div class="ph"><span class="tag hot">Em cartaz nesta semana</span><img src="images/risoto.jpg" alt="Prato de risoto servido em louça azul" loading="lazy" width="744" height="992"></div>
+        <div class="ph"><span class="tag hot">Em cartaz nesta semana</span><img src="images/risoto-420.webp" srcset="images/risoto-420.webp 420w, images/risoto-744.webp 744w" sizes="(max-width:860px) 92vw, 34vw" alt="Prato de risoto servido em louça azul" loading="lazy" width="744" height="992" decoding="async"></div>
         <h3>Rodízio de Risotos</h3>
         <p class="when">Quinta, sexta e sábado, a partir das 19h</p>
         <p class="desc">Filé mignon com gorgonzola, camarão com tomate confitado, frango com limão e shitake com funghi seco chileno. Para fechar, brigadeiro de colher ou doce de leite.</p>
@@ -510,7 +514,7 @@ h1,h2,h3,p{margin:0}
         <button type="button" class="btn" data-dow="6" data-period="jantar">Reservar para o jantar</button>
       </article>
       <article class="card rv" style="--d:.08s">
-        <div class="ph"><span class="tag">Sábado</span><img src="images/feijoada.jpg" alt="Prato de feijoada com arroz, couve, farofa e laranja" loading="lazy" width="832" height="1008"></div>
+        <div class="ph"><span class="tag">Sábado</span><img src="images/feijoada-420.webp" srcset="images/feijoada-420.webp 420w, images/feijoada-760.webp 760w" sizes="(max-width:860px) 92vw, 34vw" alt="Prato de feijoada com arroz, couve, farofa e laranja" loading="lazy" width="760" height="920" decoding="async"></div>
         <h3>Feijoadas à vontade</h3>
         <p class="when">Sábado, no almoço · quantidade limitada</p>
         <p class="desc">Com carne (calabresa, paio, bacon, costelinha defumada e carne seca) ou vegana (shitake, linguiça defumada de plantas, legumes e mix de castanhas). Acompanham arroz, farofa, couve, torresmo ou banana frita, laranja e vinagrete.</p>
@@ -518,7 +522,7 @@ h1,h2,h3,p{margin:0}
         <button type="button" class="btn" data-dow="6" data-period="almoco">Reservar para sábado</button>
       </article>
       <article class="card rv" style="--d:.16s">
-        <div class="ph"><span class="tag">Domingo</span><img src="images/carne-de-panela.jpg" alt="Carne de panela com batatas" loading="lazy" width="900" height="900"></div>
+        <div class="ph"><span class="tag">Domingo</span><img src="images/carne-de-panela-420.webp" srcset="images/carne-de-panela-420.webp 420w, images/carne-de-panela-760.webp 760w" sizes="(max-width:860px) 92vw, 34vw" alt="Carne de panela com batatas" loading="lazy" width="760" height="760" decoding="async"></div>
         <h3>Lasanhas no forno à lenha e buffet à vontade</h3>
         <p class="when">Domingo, no almoço</p>
         <p class="desc">Lasanhas de bolonhesa, palmito com catupiry ou pernil com abacaxi. No buffet: sobrecoxa de frango assado, carne de panela, arroz, feijão, salada de maionese, linguine ao sugo e mix de folhas verdes.</p>
@@ -537,18 +541,18 @@ h1,h2,h3,p{margin:0}
   </div>
   <div class="rows" aria-label="Pratos do VinteDois">
     <div class="row"><div class="track" data-clone>
-      <figure class="dish"><img src="images/prato-chorizo.jpg" alt="Churrasco de Chorizo de Angus" loading="lazy"><figcaption>Churrasco de Chorizo de Angus</figcaption></figure>
-      <figure class="dish"><img src="images/file-risoto-parmesao.jpg" alt="Filé mignon com risoto" loading="lazy"><figcaption>Filé mignon com risoto de parmesão</figcaption></figure>
-      <figure class="dish"><img src="images/costela-bafo.jpg" alt="Costela no bafo" loading="lazy"><figcaption>Costela no bafo</figcaption></figure>
-      <figure class="dish"><img src="images/moqueca.jpg" alt="Moqueca servida na panela" loading="lazy"><figcaption>Moqueca</figcaption></figure>
-      <figure class="dish"><img src="images/dadinho-tapioca.jpg" alt="Dadinhos de tapioca" loading="lazy"><figcaption>Dadinho de tapioca</figcaption></figure>
+      <figure class="dish"><img src="images/prato-chorizo-320.webp" srcset="images/prato-chorizo-320.webp 320w, images/prato-chorizo-640.webp 640w" sizes="(max-width:1000px) 230px, 340px" alt="Churrasco de Chorizo de Angus" loading="lazy" width="640" height="640" decoding="async"><figcaption>Churrasco de Chorizo de Angus</figcaption></figure>
+      <figure class="dish"><img src="images/file-risoto-parmesao-420.webp" srcset="images/file-risoto-parmesao-420.webp 420w, images/file-risoto-parmesao-760.webp 760w" sizes="(max-width:1000px) 230px, 340px" alt="Filé mignon com risoto" loading="lazy" width="760" height="1013" decoding="async"><figcaption>Filé mignon com risoto de parmesão</figcaption></figure>
+      <figure class="dish"><img src="images/costela-bafo-420.webp" srcset="images/costela-bafo-420.webp 420w, images/costela-bafo-760.webp 760w" sizes="(max-width:1000px) 230px, 340px" alt="Costela no bafo" loading="lazy" width="760" height="608" decoding="async"><figcaption>Costela no bafo</figcaption></figure>
+      <figure class="dish"><img src="images/moqueca-420.webp" srcset="images/moqueca-420.webp 420w, images/moqueca-760.webp 760w" sizes="(max-width:1000px) 230px, 340px" alt="Moqueca servida na panela" loading="lazy" width="760" height="1013" decoding="async"><figcaption>Moqueca</figcaption></figure>
+      <figure class="dish"><img src="images/dadinho-tapioca-420.webp" srcset="images/dadinho-tapioca-420.webp 420w, images/dadinho-tapioca-640.webp 640w" sizes="(max-width:1000px) 230px, 340px" alt="Dadinhos de tapioca" loading="lazy" width="640" height="1136" decoding="async"><figcaption>Dadinho de tapioca</figcaption></figure>
     </div></div>
     <div class="row rev"><div class="track" data-clone>
-      <figure class="dish"><img src="images/aruana.jpg" alt="Aruanã ao molho de ervas com banana da terra à milanesa" loading="lazy"><figcaption>Aruanã ao molho de ervas com banana da terra</figcaption></figure>
-      <figure class="dish"><img src="images/parmegiana.jpg" alt="Parmegiana" loading="lazy"><figcaption>Parmegianas</figcaption></figure>
-      <figure class="dish"><img src="images/panacota.jpg" alt="Panacota" loading="lazy"><figcaption>Panacota</figcaption></figure>
-      <figure class="dish"><img src="images/carreteiro-vegano.jpg" alt="Arroz carreteiro vegano de carne de jaca" loading="lazy"><figcaption>Arroz carreteiro vegano de jaca</figcaption></figure>
-      <figure class="dish"><img src="images/mesa-completa.jpg" alt="Mesa com vários pratos do restaurante vistos de cima" loading="lazy"><figcaption>Para dividir à mesa</figcaption></figure>
+      <figure class="dish"><img src="images/aruana-420.webp" srcset="images/aruana-420.webp 420w, images/aruana-689.webp 689w" sizes="(max-width:1000px) 230px, 340px" alt="Aruanã ao molho de ervas com banana da terra à milanesa" loading="lazy" width="689" height="769" decoding="async"><figcaption>Aruanã ao molho de ervas com banana da terra</figcaption></figure>
+      <figure class="dish"><img src="images/parmegiana-420.webp" srcset="images/parmegiana-420.webp 420w, images/parmegiana-760.webp 760w" sizes="(max-width:1000px) 340px, 560px" alt="Parmegiana" loading="lazy" width="760" height="510" decoding="async"><figcaption>Parmegianas</figcaption></figure>
+      <figure class="dish"><img src="images/panacota-420.webp" srcset="images/panacota-420.webp 420w, images/panacota-640.webp 640w" sizes="(max-width:1000px) 230px, 340px" alt="Panacota" loading="lazy" width="640" height="1136" decoding="async"><figcaption>Panacota</figcaption></figure>
+      <figure class="dish"><img src="images/carreteiro-vegano-420.webp" srcset="images/carreteiro-vegano-420.webp 420w, images/carreteiro-vegano-755.webp 755w" sizes="(max-width:1000px) 230px, 340px" alt="Arroz carreteiro vegano de carne de jaca" loading="lazy" width="755" height="759" decoding="async"><figcaption>Arroz carreteiro vegano de jaca</figcaption></figure>
+      <figure class="dish"><img src="images/mesa-completa-560.webp" srcset="images/mesa-completa-560.webp 560w, images/mesa-completa-720.webp 720w, images/mesa-completa-900.webp 900w" sizes="(max-width:1000px) 340px, 560px" alt="Mesa com vários pratos do restaurante vistos de cima" loading="lazy" width="900" height="599" decoding="async"><figcaption>Para dividir à mesa</figcaption></figure>
     </div></div>
   </div>
   <div class="wrap">
@@ -569,7 +573,7 @@ h1,h2,h3,p{margin:0}
         <li>Parmegianas de proteína vegana, abobrinha e berinjela</li>
       </ul>
     </div>
-    <div class="ph"><img src="images/carreteiro-vegano.jpg" alt="Arroz carreteiro vegano de carne de jaca do VinteDois" loading="lazy"></div>
+    <div class="ph"><img src="images/carreteiro-vegano-420.webp" srcset="images/carreteiro-vegano-420.webp 420w, images/carreteiro-vegano-755.webp 755w" sizes="(max-width:860px) 100vw, 50vw" alt="Arroz carreteiro vegano de carne de jaca do VinteDois" loading="lazy" width="755" height="759" decoding="async"></div>
   </div>
 </section>
 
@@ -580,7 +584,7 @@ h1,h2,h3,p{margin:0}
       <span class="eyebrow">Há 8 anos em Botucatu</span>
       <p>A culinária é uma das expressões mais evidentes da cultura brasileira, e o VinteDois se inspira no modernismo para tratar a comida como patrimônio a ser reconhecido e difundido.</p>
       <p>Por trás de cada prato existe uma equipe que chega cedo, ingredientes escolhidos com cuidado e uma cozinha em movimento.</p>
-      <figure><img src="images/cozinha-chef.jpg" alt="Cozinheiro finalizando o molho roti na cozinha do VinteDois, em Botucatu" loading="lazy"></figure>
+      <figure><img src="images/cozinha-chef-480.webp" srcset="images/cozinha-chef-480.webp 480w, images/cozinha-chef-800.webp 800w" sizes="(max-width:860px) 92vw, 38vw" alt="Cozinheiro finalizando o molho roti na cozinha do VinteDois, em Botucatu" loading="lazy" width="800" height="832" decoding="async"></figure>
     </div>
   </div>
 </section>
@@ -592,10 +596,10 @@ h1,h2,h3,p{margin:0}
       <p>Estrutura em forma de quiosque, amplo salão com ar-condicionado, lago com cascata e estacionamento próprio.</p>
     </div>
     <div class="place-grid">
-      <figure class="p1 rv"><img src="images/salao-quiosque.jpg" alt="Salão do VinteDois com estrutura de madeira, em Botucatu" loading="lazy"><figcaption>O salão</figcaption></figure>
-      <figure class="p2 rv" style="--d:.06s"><img src="images/lago-cascata.jpg" alt="Lago com cascata do VinteDois" loading="lazy"><figcaption>Lago com cascata</figcaption></figure>
-      <figure class="p3 rv" style="--d:.12s"><img src="images/placa.jpg" alt="Placa VinteDois na entrada do restaurante" loading="lazy"><figcaption>A entrada</figcaption></figure>
-      <figure class="p4 rv" style="--d:.1s"><img src="images/salao-mesas.jpg" alt="Mesas do salão do VinteDois" loading="lazy"><figcaption>Espaço para reunir quem você gosta</figcaption></figure>
+      <figure class="p1 rv"><img src="images/salao-quiosque-560.webp" srcset="images/salao-quiosque-560.webp 560w, images/salao-quiosque-760.webp 760w, images/salao-quiosque-1000.webp 1000w" sizes="(max-width:860px) 92vw, 42vw" alt="Salão do VinteDois com estrutura de madeira, em Botucatu" loading="lazy" width="1000" height="1333" decoding="async"><figcaption>O salão</figcaption></figure>
+      <figure class="p2 rv" style="--d:.06s"><img src="images/lago-cascata-480.webp" srcset="images/lago-cascata-480.webp 480w, images/lago-cascata-760.webp 760w" sizes="(max-width:860px) 46vw, 32vw" alt="Lago com cascata do VinteDois" loading="lazy" width="760" height="1013" decoding="async"><figcaption>Lago com cascata</figcaption></figure>
+      <figure class="p3 rv" style="--d:.12s"><img src="images/placa-360.webp" srcset="images/placa-360.webp 360w, images/placa-600.webp 600w" sizes="(max-width:860px) 46vw, 24vw" alt="Placa VinteDois na entrada do restaurante" loading="lazy" width="600" height="972" decoding="async"><figcaption>A entrada</figcaption></figure>
+      <figure class="p4 rv" style="--d:.1s"><img src="images/salao-mesas-560.webp" srcset="images/salao-mesas-560.webp 560w, images/salao-mesas-1000.webp 1000w" sizes="(max-width:860px) 92vw, 56vw" alt="Mesas do salão do VinteDois" loading="lazy" width="1000" height="562" decoding="async"><figcaption>Espaço para reunir quem você gosta</figcaption></figure>
     </div>
     <ol class="reasons rv">
       <li><b>1</b><strong>Comida que surpreende</strong><span>Sabores da culinária brasileira, do jeito da casa.</span></li>
@@ -657,7 +661,10 @@ h1,h2,h3,p{margin:0}
         <a class="btn line" href="https://www.instagram.com/vintedoisrestaurante/" target="_blank" rel="noopener">Seguir no Instagram</a>
       </div>
     </div>
-    <iframe class="map" title="Mapa do VinteDois Restaurante em Botucatu" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=-22.8784367,-48.4881038&z=14&hl=pt-BR&output=embed"></iframe>
+    <a class="mapbox" id="mapbox" href="https://www.google.com/maps?cid=14892624092494399395" target="_blank" rel="noopener">
+      <img src="images/entrada-tijolo-560.webp" alt="Entrada do VinteDois Restaurante, em Botucatu" loading="lazy" decoding="async" width="560" height="746">
+      <span class="btn">Ver no mapa</span>
+    </a>
   </div>
 </section>
 </main>
@@ -834,6 +841,25 @@ h1,h2,h3,p{margin:0}
       var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');t.appendChild(k);
     });
   });
+
+  // Mapa do Google só carrega quando o visitante pede: o embed sozinho pesa mais que o site inteiro.
+  var mb=$('mapbox');
+  if(mb)mb.addEventListener('click',function(ev){
+    ev.preventDefault();
+    var f=document.createElement('iframe');
+    f.className='map';f.title='Mapa do VinteDois Restaurante em Botucatu';
+    f.referrerPolicy='no-referrer-when-downgrade';
+    f.src='https://www.google.com/maps?q=-22.8784367,-48.4881038&z=14&hl=pt-BR&output=embed';
+    mb.replaceWith(f);
+  });
+
+  // Galeria só anima enquanto está na tela.
+  if('IntersectionObserver' in window){
+    var gio=new IntersectionObserver(function(es){es.forEach(function(e){
+      e.target.querySelector('.track').style.animationPlayState=e.isIntersecting?'':'paused';
+    })});
+    document.querySelectorAll('.row').forEach(function(r){gio.observe(r)});
+  }
 
   // Prato gira com a rolagem.
   var plate=$('plate'),calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
