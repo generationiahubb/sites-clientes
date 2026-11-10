@@ -380,6 +380,98 @@ body.tray-on .fab{bottom:100px}
 .js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
 
 /* ---------- responsivo ---------- */
+/* ---------- entrega express ---------- */
+.banner a{text-decoration:none}.banner a:hover{text-decoration:underline}
+.express{background:var(--navy);color:#fff;padding:84px 0;position:relative;overflow:hidden}
+.express::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 2px,transparent 2px 22px);pointer-events:none}
+.ex-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative}
+.express .eyebrow{color:#9DBBF7}
+.express .eyebrow svg{width:22px;height:22px}
+.express h2{color:#fff;max-width:680px}
+.express h2 em{font-style:normal;color:#fff;background:var(--blue);padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.ex-l p{color:#C9D6F0;font-size:18px;max-width:560px}
+.ex-l .ast{display:block;margin-top:10px;font-size:14px;color:#9DB0D6}
+.ex-card{background:#fff;color:var(--ink);padding:28px;border-top:4px solid var(--red)}
+.route{display:flex;align-items:center;gap:12px;font-family:"Red Hat Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin-bottom:22px}
+.route i{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--blue) 0 8px,transparent 8px 14px);position:relative}
+.route i::after{content:"";position:absolute;right:-2px;top:-4px;width:10px;height:10px;background:var(--blue)}
+.ex-card label{display:block;font-weight:600;font-size:15px;margin-bottom:8px}
+.ex-row{display:flex;border:1.5px solid var(--ink)}
+.ex-row input{flex:1;min-width:0;border:0;padding:15px 16px;font:inherit;font-size:19px;font-family:"Red Hat Mono",monospace;letter-spacing:.04em;outline:0}
+.ex-row .btn{flex:none}
+.ex-foot{font-size:13.5px;color:var(--ink-3);margin-top:12px}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}.btn-ghost:hover{background:#fff;color:var(--deep)}
+.more{display:inline-flex;gap:10px;align-items:center;margin-top:36px;color:#fff;font-weight:600;text-decoration:none;border-bottom:1.5px solid rgba(255,255,255,.4);padding-bottom:4px}
+.more svg{width:18px;height:18px}.more:hover{border-color:#fff}
+
+/* ---------- contato ---------- */
+.ct-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ct{background:#fff;border:1px solid var(--line);border-top:3px solid var(--blue);padding:28px 26px;display:flex;flex-direction:column}
+.ct .mono{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3)}
+.ct h3{font-size:21px;letter-spacing:-.015em;margin:8px 0 18px;line-height:1.15}
+.ct .tel{display:flex;gap:10px;align-items:center;font-size:24px;font-weight:700;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+.ct .tel svg{width:22px;height:22px;color:#1EA952}
+.ct .em{font-size:14.5px;color:var(--blue);margin:6px 0 22px;word-break:break-all}
+.ct .btn{margin-top:auto}
+.biz{margin-top:18px;background:var(--deep);color:#C9D3E6;padding:28px 30px;display:flex;gap:30px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.biz .mono{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#8FB0F2}
+.biz h3{color:#fff;font-size:22px;margin:6px 0;letter-spacing:-.015em}
+.biz p{max-width:640px;font-size:15.5px}
+.biz .btn-line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}.biz .btn-line:hover{background:#fff;color:var(--deep)}
+
+/* ---------- páginas internas ---------- */
+main [id],.page{scroll-margin-top:84px}
+.js .page{display:none}
+.js .page.on{display:block}
+.js body.on-page main{display:none}
+.pg-head{background:var(--mist);border-bottom:1px solid var(--line);padding:56px 0 64px}
+.pg-head.dark{background:var(--deep);color:#fff;border:0}
+.pg-head.dark .eyebrow{color:#8FB0F2}
+.pg-head.dark .lead{color:#B5C1D9}
+.pg-head.dark .crumb,.pg-head.dark .crumb a{color:#8FA0C2}
+.crumb{font-size:13.5px;color:var(--ink-3);display:flex;gap:10px;margin-bottom:28px}
+.crumb a{color:var(--ink-3)}
+.pg-head h1{font-weight:700;font-size:clamp(34px,4.4vw,62px);line-height:1.02;letter-spacing:-.035em;margin:14px 0 18px;max-width:980px}
+.pg-head h1 em{font-style:normal;color:var(--blue)}
+.pg-head.dark h1 em{color:#7FA4F5}
+.pg-head .lead{font-size:19px;color:var(--ink-2);max-width:680px}
+.pg-sec{padding:80px 0}
+.pg-split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.pg-fig{position:relative;margin:0}
+.pg-fig img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--mist-2)}
+.pg-fig figcaption{font-family:"Red Hat Mono",monospace;font-size:12.5px;color:var(--ink-3);margin-top:10px;text-transform:uppercase;letter-spacing:.08em}
+.pillars{display:grid;border-top:1.5px solid var(--ink)}
+.pillars>div{padding:20px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;column-gap:10px}
+.pillars .mono{color:var(--blue);font-size:13px;padding-top:5px;grid-row:span 2}
+.pillars h3{font-size:21px;letter-spacing:-.015em}
+.pillars p{color:var(--ink-2);font-size:16px}
+.pillars.row{grid-template-columns:repeat(3,1fr);gap:28px;border-top:0}
+.pillars.row>div{border-top:1.5px solid var(--ink);border-bottom:0}
+.pg-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.pg-box{background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);padding:28px;display:flex;flex-direction:column;gap:4px}
+.pg-box .mono{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3)}
+.pg-box h3{font-size:24px;letter-spacing:-.015em;line-height:1.15;margin:8px 0 6px}
+.pg-box p{color:var(--ink-2);margin-bottom:18px}
+.pg-box .btn{align-self:flex-start}
+.pg-box a:not(.btn){color:var(--blue);word-break:break-all}
+.pg-box .tel{font-size:22px;font-weight:700;color:var(--ink)!important;text-decoration:none}
+.pg-box .tel.sm{font-size:17px;font-weight:600}
+.hrs div{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.hrs dt{color:var(--ink-2)}.hrs dd{font-weight:600}
+.svc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;border-top:1.5px solid var(--ink);margin-top:22px}
+.svc-list li{display:flex;gap:12px;padding:14px 12px 14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.svc-list svg{width:18px;height:18px;color:var(--blue);flex:none;margin-top:3px}
+.elet.light{border-color:var(--line);color:var(--ink-2);background:var(--mist)}
+.elet.light b{color:var(--ink)}
+.pg-depts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--ink)}
+.pg-depts>div{padding:20px 20px 20px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.pg-depts .mono{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.pg-depts a{color:var(--blue);font-size:14.5px;word-break:break-all}
+.pg-depts .tel{font-size:22px;font-weight:700;color:var(--ink);text-decoration:none}
+.pg-addr{display:flex;gap:10px;align-items:flex-start;margin-top:26px;color:var(--ink-2);font-size:15px}
+.pg-addr svg{width:20px;height:20px;color:var(--blue);flex:none;margin-top:2px}
+footer.site .wrap{grid-template-columns:1.3fr 1fr 1fr 1fr}
+
 @media (max-width:1080px){
   .nav ul{display:none}
   .nav .btn{margin-left:auto}
@@ -462,6 +554,33 @@ body.tray-on .fab{bottom:100px}
   body.tray-on .fab{bottom:132px}
   .fab{right:16px;bottom:16px;width:56px;height:56px}
 }
+@media (max-width:1080px){
+  .ex-grid,.pg-split{grid-template-columns:1fr;gap:36px}
+  .ct-grid,.pg-depts{grid-template-columns:1fr}
+  .pillars.row{grid-template-columns:1fr;gap:0}
+  footer.site .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .banner .hide-m,.banner .sep{display:none}
+  .express{padding:60px 0}
+  .ex-card{padding:22px 18px}
+  .ex-row{flex-direction:column}
+  .ex-row .btn{width:100%}
+  .ct{padding:22px 18px}
+  .ct .tel{font-size:22px}
+  .biz{padding:24px 18px}
+  .biz .btn{width:100%}
+  .pg-head{padding:36px 0 44px}
+  .pg-head h1{font-size:clamp(30px,8.4vw,38px)}
+  .pg-head .lead{font-size:17px}
+  .pg-sec{padding:56px 0}
+  .svc-list{grid-template-columns:1fr}
+  .pg-box{padding:22px 18px}
+  .pg-links .btn{width:100%}
+  footer.site .wrap{grid-template-columns:1fr}
+}
+.mnav{display:none}
+@media (max-width:1080px){.mnav{display:flex;gap:22px;overflow-x:auto;padding:0 16px 10px;scrollbar-width:none;white-space:nowrap}.mnav::-webkit-scrollbar{display:none}.mnav a{font-size:14.5px;font-weight:500;text-decoration:none;color:var(--ink-2);padding:4px 0}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .js .rv{opacity:1;transform:none}
@@ -489,6 +608,7 @@ body.tray-on .fab{bottom:100px}
     <symbol id="i-store" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3.5 9.5 5 4h14l1.5 5.5M4.5 9.5V20h15V9.5M3.5 9.5h17"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M9.5 20v-6h5v6"/></symbol>
     <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
     <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21z"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5v3h-7"/><circle cx="6.5" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
     <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13.2 2 4.5 13.5h6L9.8 22l8.7-11.5h-6z"/></symbol>
   </defs>
 </svg>
@@ -514,15 +634,16 @@ body.tray-on .fab{bottom:100px}
     </a>
     <ul>
       <li><a href="#pecas">Peças</a></li>
-      <li><a href="#parede">Recuperação</a></li>
-      <li><a href="#assistencia">Assistência</a></li>
-      <li><a href="#marcas">Marcas</a></li>
-      <li><a href="#visite">Como chegar</a></li>
+      <li><a href="#entrega">Entrega Express</a></li>
+      <li><a href="#atendimento-domicilio">Assistência</a></li>
+      <li><a href="#quem-somos">Quem somos</a></li>
+      <li><a href="#contato">Contato</a></li>
     </ul>
     <a class="btn btn-blue" href="#balcao" data-focus><svg><use href="#i-cam"/></svg><span class="t">Identificar peça</span></a>
   </div>
+  <nav class="mnav" aria-label="Seções"><a href="#pecas">Peças</a><a href="#entrega">Entrega Express</a><a href="#atendimento-domicilio">Assistência</a><a href="#quem-somos">Quem somos</a><a href="#contato">Contato</a></nav>
 </header>
-<div class="banner"><b>Estacionamento gratuito para clientes</b>, com manobrista e seguro · Rua Jaceru, 151, a 100 m da loja</div>
+<div class="banner"><a href="#entrega"><b>Entrega Express</b> em até 1 dia útil · SP e Grande SP</a><span class="sep"> · </span><span class="hide-m"><b>Estacionamento gratuito</b> na Rua Jaceru, 151</span></div>
 
 <main id="topo">
 <!-- ================= HERO ================= -->
@@ -591,6 +712,26 @@ body.tray-on .fab{bottom:100px}
     <div class="step rv d1"><span class="node"></span><span class="n">02 / IDENTIFICAMOS</span><h3>O balcão acha a peça</h3><p>A equipe identifica tipo, medida e linha, e indica a opção certa para a sua instalação.</p></div>
     <div class="step rv d2"><span class="node"></span><span class="n">03 / RETIRE OU RECEBA</span><h3>Loja ou Entrega Express</h3><p>Retire no Brooklin com estacionamento grátis, ou consulte a entrega para São Paulo e Grande SP.</p></div>
     <div class="step rv d3"><span class="node"></span><span class="n">04 / SE PRECISAR</span><h3>Técnico em casa</h3><p>Não quer instalar? A assistência técnica vai até você e resolve no local.</p></div>
+  </div>
+</section>
+
+<!-- ================= ENTREGA EXPRESS ================= -->
+<section class="express" id="entrega">
+  <div class="wrap ex-grid">
+    <div class="ex-l rv">
+      <span class="eyebrow"><svg><use href="#i-truck"/></svg>Entrega Express · São Paulo e Grande SP</span>
+      <h2>Compre conosco e receba em casa em até <em>1 dia útil.</em></h2>
+      <p>Identificou a peça com o balcão? Ela pode ir até você, sem atravessar a cidade. <span class="ast">*Consulte a disponibilidade para o seu CEP.</span></p>
+    </div>
+    <form class="ex-card rv d1" id="exForm" autocomplete="off">
+      <div class="route" aria-hidden="true"><span>Loja Brooklin</span><i></i><span>Sua casa</span></div>
+      <label for="exCep">Seu CEP</label>
+      <div class="ex-row">
+        <input type="text" id="exCep" inputmode="numeric" maxlength="9" placeholder="00000-000">
+        <button type="submit" class="btn btn-wa"><svg><use href="#i-wa"/></svg>Consultar</button>
+      </div>
+      <p class="ex-foot">Abre o WhatsApp da loja, (11) 94805-1720, perguntando se a entrega atende o seu CEP.</p>
+    </form>
   </div>
 </section>
 
@@ -774,6 +915,7 @@ body.tray-on .fab{bottom:100px}
         <div class="foot">Assistência: <a href="https://wa.me/5511999448670" target="_blank" rel="noopener">(11) 99944-8670</a> · <a href="mailto:assistencia@universodosreparos.com.br">assistencia@universodosreparos.com.br</a></div>
       </div>
     </div>
+    <a class="more" href="#atendimento-domicilio">Tudo sobre o atendimento em domicílio <svg><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
@@ -891,6 +1033,50 @@ body.tray-on .fab{bottom:100px}
   </div>
 </section>
 
+<!-- ================= CONTATO ================= -->
+<section class="mist" id="contato">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">Contato</span>
+        <h2>Fale direto com o setor certo.</h2>
+        <p class="sub">Cada área tem o próprio WhatsApp e e-mail. A conversa já chega em quem resolve.</p>
+      </div>
+    </div>
+    <div class="ct-grid">
+      <div class="ct rv">
+        <span class="mono">01 · Vendas</span>
+        <h3>Peças e balcão da loja</h3>
+        <a class="tel" href="https://wa.me/5511948051720" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>(11) 94805-1720</a>
+        <a class="em" href="mailto:vendas@universodosreparos.com.br">vendas@universodosreparos.com.br</a>
+        <a class="btn btn-blue" href="https://wa.me/5511948051720?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20vendas." target="_blank" rel="noopener">Falar com vendas</a>
+      </div>
+      <div class="ct rv d1">
+        <span class="mono">02 · Assistência</span>
+        <h3>Assistência técnica em domicílio</h3>
+        <a class="tel" href="https://wa.me/5511999448670" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>(11) 99944-8670</a>
+        <a class="em" href="mailto:assistencia@universodosreparos.com.br">assistencia@universodosreparos.com.br</a>
+        <a class="btn btn-blue" href="https://wa.me/5511999448670?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20a%20assist%C3%AAncia%20t%C3%A9cnica%20em%20domic%C3%ADlio." target="_blank" rel="noopener">Agendar um técnico</a>
+      </div>
+      <div class="ct rv d2">
+        <span class="mono">03 · Financeiro</span>
+        <h3>Financeiro e outros assuntos</h3>
+        <a class="tel" href="https://wa.me/5511953201974" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>(11) 95320-1974</a>
+        <a class="em" href="mailto:contato@universodosreparos.com.br">contato@universodosreparos.com.br</a>
+        <a class="btn btn-line" href="https://wa.me/5511953201974?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20financeiro." target="_blank" rel="noopener">Falar com o financeiro</a>
+      </div>
+    </div>
+    <div class="biz rv">
+      <div>
+        <span class="mono">Para empresas</span>
+        <h3>Traga sua empresa para a Universo dos Reparos.</h3>
+        <p>Fornecemos diversos materiais para a sua empresa e faturamos no final do mês. Envie a sua ficha cadastral; após a análise, entramos em contato.</p>
+      </div>
+      <a class="btn btn-line" href="mailto:vendas@universodosreparos.com.br?subject=Ficha%20cadastral%20-%20faturamento%20mensal">Enviar ficha para vendas@ <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= VISITE ================= -->
 <section id="visite">
   <div class="wrap">
@@ -923,13 +1109,13 @@ body.tray-on .fab{bottom:100px}
           <li>Sábado <b>8h às 13h</b></li>
           <li>Domingo <b>Fechado</b></li>
         </ul>
-        <p style="margin-top:14px;font-size:14.5px">Dúvida por foto no WhatsApp: das 8h às 17h.<br><b style="color:var(--ink)">Entrega Express</b> para São Paulo e Grande SP: compre conosco e receba em casa em até 1 dia útil. Consulte a disponibilidade para o seu CEP.</p>
+        <p style="margin-top:14px;font-size:14.5px">Dúvida por foto no WhatsApp: das 8h às 17h.</p>
       </div>
       <div class="vcol">
-        <h3><svg><use href="#i-phone"/></svg>Fale com o setor certo</h3>
-        <div class="dept"><span class="mono">Vendas</span><a class="tel" href="https://wa.me/5511948051720" target="_blank" rel="noopener">(11) 94805-1720</a><a class="em" href="mailto:vendas@universodosreparos.com.br">vendas@universodosreparos.com.br</a></div>
-        <div class="dept"><span class="mono">Assistência técnica em domicílio</span><a class="tel" href="https://wa.me/5511999448670" target="_blank" rel="noopener">(11) 99944-8670</a><a class="em" href="mailto:assistencia@universodosreparos.com.br">assistencia@universodosreparos.com.br</a></div>
-        <div class="dept"><span class="mono">Financeiro e outros assuntos</span><a class="tel" href="https://wa.me/5511953201974" target="_blank" rel="noopener">(11) 95320-1974</a><a class="em" href="mailto:contato@universodosreparos.com.br">contato@universodosreparos.com.br</a></div>
+        <h3><svg><use href="#i-truck"/></svg>Não pode vir?</h3>
+        <p><b style="color:var(--ink)">Entrega Express</b> para São Paulo e Grande SP: compre conosco e receba em casa em até 1 dia útil.</p>
+        <p style="margin-top:10px;font-size:14.5px">*Consulte a disponibilidade para o seu CEP.</p>
+        <p style="margin-top:14px"><a href="#entrega">Consultar meu CEP →</a></p>
       </div>
     </div>
     <div class="map"><iframe title="Mapa da Universo dos Reparos no Brooklin" loading="lazy" src="https://maps.google.com/maps?q=Universo%20dos%20Reparos%20-%20Brooklin%2C%20R.%20Jaceru%2C%2051%2C%20S%C3%A3o%20Paulo&z=16&output=embed"></iframe></div>
@@ -948,6 +1134,132 @@ body.tray-on .fab{bottom:100px}
 </section>
 </main>
 
+<!-- ================= PÁGINA: QUEM SOMOS ================= -->
+<article class="page" id="quem-somos" data-title="Quem somos · Universo dos Reparos">
+  <div class="pg-head">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Você está em"><a href="#topo">Início</a><span>/</span>Quem somos</nav>
+      <span class="eyebrow">Quem somos</span>
+      <h1>A Universo dos Reparos é voltada para o segmento de <em>reparos hidráulicos.</em></h1>
+      <p class="lead">Oferecemos serviço de qualidade, variedade de produtos e mão de obra especializada. Trabalhamos com todas as marcas e modelos.</p>
+    </div>
+  </div>
+  <section class="pg-sec">
+    <div class="wrap pg-split">
+      <figure class="pg-fig"><img data-from="#visite .visit-top img" alt="Fachada da Universo dos Reparos na Rua Jaceru, 51, no Brooklin"><figcaption>Loja Brooklin · Rua Jaceru, 51</figcaption></figure>
+      <div>
+        <div class="pillars">
+          <div><span class="mono">01</span><h3>Serviço de qualidade</h3><p>Do balcão que identifica a peça à assistência técnica que instala na sua casa.</p></div>
+          <div><span class="mono">02</span><h3>Variedade de produtos</h3><p>Reparos e peças originais e paralelas de hidráulica, gás, elétrica e ferragens.</p></div>
+          <div><span class="mono">03</span><h3>Mão de obra especializada</h3><p>Técnicos para válvulas, caixas acopladas, registros, duchas e revisão hidráulica.</p></div>
+        </div>
+        <div class="pg-links">
+          <a class="btn btn-blue" href="#marcas"><span>Veja nosso catálogo</span><svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-line" href="#visite">Onde estamos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pg-sec mist">
+    <div class="wrap pg-split rev">
+      <div>
+        <span class="eyebrow">Recuperamos seu produto</span>
+        <h2>Não quebre sua parede ou troque seu produto.</h2>
+        <p class="sub">Temos diversas soluções. Faça sua consulta e tire sua dúvida.</p>
+        <ul class="list">
+          <li><span>01</span>Salva registro de gaveta e registro de pressão, de qualquer marca</li>
+          <li><span>02</span>Mecanismos de torneiras, misturadores e monocomandos</li>
+          <li><span>03</span>Válvulas de descarga e caixa acoplada</li>
+          <li><span>04</span>Filtros, encanamentos e tubulações</li>
+          <li><span>05</span>Ducha higiênica, ducha manual e sifão</li>
+          <li><span>06</span>Engates flexíveis, adaptadores, conversores e prolongadores</li>
+        </ul>
+      </div>
+      <div class="pg-box">
+        <span class="mono">Loja Brooklin</span>
+        <h3>Envie a foto do seu produto e tire sua dúvida.</h3>
+        <p>Atendimento por foto no WhatsApp das 8h às 17h.</p>
+        <a class="btn btn-wa" href="https://wa.me/5511948051720?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20tirar%20uma%20d%C3%BAvida%20sobre%20um%20produto.%20Vou%20enviar%20a%20foto." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enviar a foto</a>
+      </div>
+    </div>
+  </section>
+  <section class="pg-sec">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Contato</span><h2>Vendas, assistência e financeiro.</h2></div><a class="btn btn-line" href="#contato">Todos os contatos <svg><use href="#i-arrow"/></svg></a></div>
+      <div class="pg-depts">
+        <div><span class="mono">Vendas</span><a class="tel" href="https://wa.me/5511948051720" target="_blank" rel="noopener">(11) 94805-1720</a><a href="mailto:vendas@universodosreparos.com.br">vendas@universodosreparos.com.br</a></div>
+        <div><span class="mono">Assistência técnica em domicílio</span><a class="tel" href="https://wa.me/5511999448670" target="_blank" rel="noopener">(11) 99944-8670</a><a href="mailto:assistencia@universodosreparos.com.br">assistencia@universodosreparos.com.br</a></div>
+        <div><span class="mono">Financeiro e outros assuntos</span><a class="tel" href="https://wa.me/5511953201974" target="_blank" rel="noopener">(11) 95320-1974</a><a href="mailto:contato@universodosreparos.com.br">contato@universodosreparos.com.br</a></div>
+      </div>
+      <p class="pg-addr"><svg><use href="#i-pin"/></svg>Rua Jaceru, 51 · Brooklin · São Paulo/SP · CEP 04705-000 · Seg a sex 7h às 18h · Sáb 8h às 13h · Estacionamento conveniado gratuito na Rua Jaceru, 151</p>
+    </div>
+  </section>
+</article>
+
+<!-- ================= PÁGINA: ATENDIMENTO EM DOMICÍLIO ================= -->
+<article class="page" id="atendimento-domicilio" data-title="Atendimento em domicílio · Universo dos Reparos">
+  <div class="pg-head dark">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Você está em"><a href="#topo">Início</a><span>/</span>Atendimento em domicílio</nav>
+      <span class="eyebrow">Assistência técnica em domicílio</span>
+      <h1>A gente vai até você, <em>com peças originais.</em></h1>
+      <p class="lead">Mande fotos do local pelo WhatsApp da assistência e agende o atendimento.</p>
+      <div class="pg-links">
+        <a class="btn btn-wa" href="https://wa.me/5511999448670?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20a%20assist%C3%AAncia%20t%C3%A9cnica%20em%20domic%C3%ADlio.%20Vou%20enviar%20fotos%20do%20local." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Agendar no WhatsApp</a>
+        <a class="btn btn-ghost" href="#assistencia">Escolher o serviço</a>
+      </div>
+    </div>
+  </div>
+  <section class="pg-sec">
+    <div class="wrap pg-split">
+      <div>
+        <span class="eyebrow">Serviços</span>
+        <h2>O que a assistência faz.</h2>
+        <ul class="svc-list">
+          <li><svg><use href="#i-check"/></svg>Peças originais</li>
+          <li><svg><use href="#i-check"/></svg>Válvulas de descarga</li>
+          <li><svg><use href="#i-check"/></svg>Caixas acopladas</li>
+          <li><svg><use href="#i-check"/></svg>Registros de pressão e gaveta</li>
+          <li><svg><use href="#i-check"/></svg>Sifão</li>
+          <li><svg><use href="#i-check"/></svg>Duchas e chuveiros</li>
+          <li><svg><use href="#i-check"/></svg>Mangueiras de ligação (engate flexível)</li>
+          <li><svg><use href="#i-check"/></svg>Encanamentos e tubulações</li>
+          <li><svg><use href="#i-check"/></svg>Instalação de produtos e acessórios</li>
+          <li><svg><use href="#i-check"/></svg>Conversores para registros</li>
+          <li><svg><use href="#i-check"/></svg>Soluções para erros de instalação</li>
+          <li><svg><use href="#i-check"/></svg>Revisão hidráulica</li>
+        </ul>
+        <div class="elet light"><svg><use href="#i-bolt"/></svg><span><b>Também fazemos serviços elétricos</b> em escritórios, consultórios, lojas, condomínios e pequenos estabelecimentos.</span></div>
+      </div>
+      <aside class="pg-box">
+        <span class="mono">Agendamento</span>
+        <dl class="hrs">
+          <div><dt>Segunda a sexta</dt><dd>08h30 às 18h00</dd></div>
+          <div><dt>Sábados</dt><dd>08h30 às 13h00</dd></div>
+        </dl>
+        <span class="mono" style="margin-top:22px">WhatsApp da assistência</span>
+        <a class="tel" href="https://wa.me/5511999448670" target="_blank" rel="noopener">(11) 99944-8670</a>
+        <span class="mono" style="margin-top:18px">Telefones</span>
+        <a class="tel sm" href="tel:+551155431361">(11) 5543-1361 · ramal 2</a>
+        <a class="tel sm" href="tel:+551150935288">(11) 5093-5288 · ramal 2</a>
+        <a class="tel sm" href="tel:+551128655759">(11) 2865-5759</a>
+        <span class="mono" style="margin-top:18px">E-mail</span>
+        <a href="mailto:assistencia@universodosreparos.com.br">assistencia@universodosreparos.com.br</a>
+      </aside>
+    </div>
+  </section>
+  <section class="pg-sec mist">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Como agendar</span><h2>Agendar leva três passos.</h2></div></div>
+      <div class="pillars row">
+        <div><span class="mono">01</span><h3>Fotografe o local</h3><p>Uma foto do ambiente inteiro e outra de perto do problema.</p></div>
+        <div><span class="mono">02</span><h3>Envie à assistência</h3><p>Pelo WhatsApp (11) 99944-8670, dizendo o serviço e o bairro.</p></div>
+        <div><span class="mono">03</span><h3>Combine o horário</h3><p>A equipe avalia e confirma a visita dentro do horário de agendamento.</p></div>
+      </div>
+    </div>
+  </section>
+</article>
+
 <footer class="site">
   <div class="wrap">
     <div>
@@ -960,6 +1272,13 @@ body.tray-on .fab{bottom:100px}
       <p><a href="https://wa.me/5511948051720" target="_blank" rel="noopener">Vendas (11) 94805-1720</a></p>
       <p><a href="https://wa.me/5511999448670" target="_blank" rel="noopener">Assistência (11) 99944-8670</a></p>
       <p><a href="https://wa.me/5511953201974" target="_blank" rel="noopener">Financeiro (11) 95320-1974</a></p>
+    </div>
+    <div>
+      <h4>Páginas</h4>
+      <p><a href="#quem-somos">Quem somos</a></p>
+      <p><a href="#atendimento-domicilio">Atendimento em domicílio</a></p>
+      <p><a href="#entrega">Entrega Express</a></p>
+      <p><a href="#contato">Contato</a></p>
     </div>
     <div>
       <h4>Redes</h4>
@@ -1079,6 +1398,32 @@ body.tray-on .fab{bottom:100px}
 
   /* galeria: duplica para loop */
   ['#row1','#row2'].forEach(function(id){var r=$(id); if(r && !r.dataset.dup){r.dataset.dup='1'; r.innerHTML+=r.innerHTML; $$('figure',r).slice(r.children.length/2).forEach(function(f){f.setAttribute('aria-hidden','true');});}});
+
+  /* entrega express: CEP */
+  var cep=$('#exCep');
+  cep.addEventListener('input',function(){var d=cep.value.replace(/\D/g,'').slice(0,8);cep.value=d.length>5?d.slice(0,5)+'-'+d.slice(5):d;});
+  $('#exForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=cep.value.replace(/\D/g,'');
+    var t='Olá! Vim pelo site e quero saber se a Entrega Express atende o meu '+(d.length===8?'CEP: '+cep.value+'.':'endereço.')+' Preciso de uma peça.';
+    window.open(wa(LOJA,t),'_blank','noopener');
+  });
+
+  /* páginas internas (#quem-somos, #atendimento-domicilio) */
+  var pages=$$('.page'), baseTitle=document.title;
+  $$('.page img[data-from]').forEach(function(im){var src=$(im.getAttribute('data-from')); if(src) im.src=src.src;});
+  function route(){
+    var h=decodeURIComponent(location.hash.slice(1)), el=h?document.getElementById(h):null;
+    var pg=el&&el.classList.contains('page')?el:null;
+    document.body.classList.toggle('on-page',!!pg);
+    pages.forEach(function(p){p.classList.toggle('on',p===pg);});
+    document.title=pg?pg.getAttribute('data-title'):baseTitle;
+    if(pg){window.scrollTo(0,0);}
+    else if(el){requestAnimationFrame(function(){el.scrollIntoView();});}
+    if(typeof sweep==='function') setTimeout(sweep,60);
+  }
+  window.addEventListener('hashchange',route);
+  route();
 
   /* reveal */
   var els=$$('.rv, #bars');
